@@ -1,4 +1,5 @@
 from bs4 import BeautifulSoup
+import os
 import spotipy
 import spotipy.util as util
 import urllib
@@ -6,16 +7,15 @@ import urllib
 def main():
     #create a spotify folder on my own account for these playlists
     #update: spotify folders cannot be created through web API
-    user = "1246540326"
-    sp = get_token(user)
+    user = os.environ['SPOTIFY_USER']
+    sp = get_token(user) #TODO: Error uncaught
 
     #find every available year
     for year in range(1958, 2017): #ends at 2016
-        year_songs = get_years_top_songs(year)
+        print year
+        year_songs = get_years_top_songs_by_week(year)
         make_playlist(sp, user, year, year_songs)
-        break
-
-    print "in main"
+        #TODO: Token expires before end
 
 def get_token(user):
     scope = 'playlist-modify-public'
@@ -25,12 +25,17 @@ def get_token(user):
     else:
         raise RuntimeError("No Spotify token retrieved.")
 
+def get_years_top_songs_by_year(year):
+    #TODO Some pages have ready-made top songs
+    #http://www.billboard.com/charts/year-end/2015/hot-100-songs
+    pass
+
 #for every year on billboard
 #   for each week of year
 #       assign each song a number of points
 #   sort by number of points
 #   make a new playlist where songs are ordered by significance
-def get_years_top_songs(year):
+def get_years_top_songs_by_week(year):
     year_URL = "http://www.billboard.com/archive/charts/{0}/hot-100".format(year)
     year_page = urllib.urlopen(year_URL).read()
     year_soup = BeautifulSoup(year_page, "html.parser")
@@ -60,8 +65,6 @@ def get_years_top_songs(year):
         reverse=True)
     return ranked_songs[0:100]
 
-
-
 def get_weeks_top_songs(week):
     week_URL = "https://www.billboard.com" + week
     week_page = urllib.urlopen(week_URL)
@@ -86,29 +89,38 @@ def extract_song_info(row):
 
     return { "title":title, "artist":artist, "spotify":spotify, "score":0 }
 
-    #(title, artist, spotify, 0) #last is score
-
 def make_playlist(sp, user, year, songs):
     playlist = sp.user_playlist_create(user, year)
     id = playlist["id"]
 
     for song_without_link in [song for song in songs if song["spotify"] is None]:
-        print song_without_link
         song_link = get_song_link(sp, song_without_link["title"], \
             song_without_link["artist"])
         song_without_link["spotify"] = song_link
 
-    uris = [song for song in songs if song["spotify"] is not None]
+    uris = [song["spotify"] for song in songs if song["spotify"] is not None]
 
     sp.user_playlist_add_tracks(user, id, uris)
+    print(len(sp.user_playlist_tracks(user, id)["items"]))
 
 def get_song_link(sp, title, artist):
-    query = title + " " + artist
+    title_two = " ".join( title.split()[0:2] )
+    artist_two = " ".join( artist.split()[0:2] )
+    query = title_two + " " + artist_two
     search_results = sp.search(query)
 
-    for result in search_results:
-        print result
+    #TODO: Not good enough at accommodating differences.
+    for result in search_results["tracks"]["items"]:
+        for artist_result in result["artists"]:
+            artist_lower = artist.lower()
+            artist_result_lower = artist_result["name"].lower()
+
+            if artist_lower in artist_result_lower \
+                    or artist_result_lower in artist_lower:
+                return result["uri"]
+
+    print artist + ", " + title
+    return None
 
 if __name__ == "__main__":
-    print "Main program!"
     main()
