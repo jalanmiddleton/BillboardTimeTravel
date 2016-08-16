@@ -1,8 +1,12 @@
 from bs4 import BeautifulSoup
 import os
+import pprint
+import requests
 import spotipy
 import spotipy.util as util
 import urllib
+
+#15Aug16 API doesn't support delete!!!!!!
 
 def main():
     #create a spotify folder on my own account for these playlists
@@ -122,5 +126,43 @@ def get_song_link(sp, title, artist):
     print artist + ", " + title
     return None
 
+def delete_main():
+    user = os.environ['SPOTIFY_USER']
+    sp = get_token(user)
+    delete_all_playlists(sp, user)
+
+def delete_all_playlists(sp, user):
+    playlists = sp.user_playlists(user)
+    for playlist in playlists['items']:
+        name = playlist['name']
+        if name is not None and name.isdigit() \
+                and int(name) in range(1958, 2017):
+            delete_playlist(sp, user, playlist['id'])
+
+def delete_playlist(sp, user, playlist):
+    rest = "https://api.spotify.com/v1/users/{0}/playlists/{1}/followers" \
+        .format(user, playlist)
+    response = sp._delete(rest)
+
+def rename_main():
+    user = os.environ['SPOTIFY_USER']
+    sp = get_token(user)
+
+    playlists = sp.user_playlists(user)
+    for playlist in playlists['items']:
+        name = playlist['name']
+        if name is not None and name == "Rename This!":
+            rename_playlist(sp, user, playlist['id'], "Successful Change!")
+
+def rename_playlist(sp, user, playlist, new_name):
+    rest = "https://api.spotify.com/v1/users/{0}/playlists/{1}" \
+        .format(user, playlist)
+    data = {
+        "name": new_name
+    }
+
+    response = sp._put(rest, payload=data)
+
 if __name__ == "__main__":
-    main()
+    #main()
+    rename_main()
