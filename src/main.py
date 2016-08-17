@@ -17,8 +17,10 @@ def main():
     #find every available year
     for year in range(1958, 2017): #ends at 2016
         print year
-        year_songs = get_years_top_songs_by_week(year)
-        make_playlist(sp, user, year, year_songs)
+        year_songs = get_years_top_songs_by_year(year)
+        if year_songs is not None:
+            make_playlist(sp, user, year, year_songs)
+            break
         #TODO: Token expires before end
 
 def get_token(user):
@@ -30,9 +32,15 @@ def get_token(user):
         raise RuntimeError("No Spotify token retrieved.")
 
 def get_years_top_songs_by_year(year):
-    #TODO Some pages have ready-made top songs
     #http://www.billboard.com/charts/year-end/2015/hot-100-songs
-    pass
+    if year not in range(2006, 2017): #manaully determined
+        return None
+
+    year_url = "http://www.billboard.com/charts/year-end/{0}/hot-100-songs" \
+        .format(year)
+    songs = get_songs_from_page(year_url)
+
+    return songs
 
 #for every year on billboard
 #   for each week of year
@@ -47,12 +55,13 @@ def get_years_top_songs_by_week(year):
 
     all_songs = {}
     for week in week_links:
-        destination = week["href"]
-        if not destination.endswith("hot-100") or destination.count('/') != 3:
+        #https://www.billboard.com/charts/1958-08-09/hot-100
+        destination = "https://www.billboard.com" + week["href"]
+        if not destination.endswith("hot-100") or destination.count('/') != 5:
             continue
 
         try:
-            week_songs = get_weeks_top_songs(destination)
+            week_songs = get_songs_from_page(destination)
         except IOError as ex:
             continue
 
@@ -69,11 +78,10 @@ def get_years_top_songs_by_week(year):
         reverse=True)
     return ranked_songs[0:100]
 
-def get_weeks_top_songs(week):
-    week_URL = "https://www.billboard.com" + week
-    week_page = urllib.urlopen(week_URL)
-    week_soup = BeautifulSoup(week_page, "html.parser")
-    chart_rows = week_soup.find_all("div", "chart-row__main-display")
+def get_songs_from_page(page):
+    page_html = urllib.urlopen(page)
+    page_soup = BeautifulSoup(page_html, "html.parser")
+    chart_rows = page_soup.find_all("div", "chart-row__main-display")
 
     songs = []
     for row in chart_rows:
@@ -114,6 +122,8 @@ def get_song_link(sp, title, artist):
     search_results = sp.search(query)
 
     #TODO: Not good enough at accommodating differences.
+    #isolated t d or s needs to be connected to previous word
+    #featuring is a distraction
     for result in search_results["tracks"]["items"]:
         for artist_result in result["artists"]:
             artist_lower = artist.lower()
@@ -125,11 +135,6 @@ def get_song_link(sp, title, artist):
 
     print artist + ", " + title
     return None
-
-def delete_main():
-    user = os.environ['SPOTIFY_USER']
-    sp = get_token(user)
-    delete_all_playlists(sp, user)
 
 def delete_all_playlists(sp, user):
     playlists = sp.user_playlists(user)
@@ -144,16 +149,6 @@ def delete_playlist(sp, user, playlist):
         .format(user, playlist)
     response = sp._delete(rest)
 
-def rename_main():
-    user = os.environ['SPOTIFY_USER']
-    sp = get_token(user)
-
-    playlists = sp.user_playlists(user)
-    for playlist in playlists['items']:
-        name = playlist['name']
-        if name is not None and name == "Rename This!":
-            rename_playlist(sp, user, playlist['id'], "Successful Change!")
-
 def rename_playlist(sp, user, playlist, new_name):
     rest = "https://api.spotify.com/v1/users/{0}/playlists/{1}" \
         .format(user, playlist)
@@ -164,5 +159,4 @@ def rename_playlist(sp, user, playlist, new_name):
     response = sp._put(rest, payload=data)
 
 if __name__ == "__main__":
-    #main()
-    rename_main()
+    main()
