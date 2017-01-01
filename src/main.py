@@ -1,27 +1,44 @@
 from bs4 import BeautifulSoup
+import math
 import os
 import pprint
 import requests
 import spotipy
 import spotipy.util as util
+import sys
 import urllib
 
 #15Aug16 API doesn't support delete!!!!!!
 
-def main():
+#TODO: I don't want default to be all years.
+def main(years=range(1958, 2018), replace=False):
+    if isinstance(years, int):
+        if years < 1958 or years > 2017:
+            print "Year {} beyond available data.".format(years)
+            return
+        years = [years]
+    elif not isinstance(years, list):
+        print "Bad format for years."
+        return
+
     #create a spotify folder on my own account for these playlists
     #update: spotify folders cannot be created through web API
     user = os.environ['SPOTIFY_USER']
     sp = get_token(user) #TODO: Error uncaught
 
     #find every available year
-    for year in range(1958, 2017): #ends at 2016
-        print year
+    for year in years: #ends at 2016
+        print "Making list for", year
         year_songs = get_years_top_songs_by_year(year)
-        if year_songs is not None:
+        if year_songs is None:
+            year_songs = get_years_top_songs_by_week(year)
+
+        if replace:
+            replace_playlist(sp, user, year, year_songs)
+        else:
             make_playlist(sp, user, year, year_songs)
-            break
-        #TODO: Token expires before end
+
+        #TODO: Token might expire for a long list before end
 
 def get_token(user):
     scope = 'playlist-modify-public'
@@ -36,7 +53,7 @@ def get_years_top_songs_by_year(year):
     if year not in range(2006, 2017): #manaully determined
         return None
 
-    year_url = "http://www.billboard.com/charts/year-end/{0}/hot-100-songs" \
+    year_url = "http://www.billboard.com/charts/year-end/{}/hot-100-songs" \
         .format(year)
     songs = get_songs_from_page(year_url)
 
@@ -48,7 +65,7 @@ def get_years_top_songs_by_year(year):
 #   sort by number of points
 #   make a new playlist where songs are ordered by significance
 def get_years_top_songs_by_week(year):
-    year_URL = "http://www.billboard.com/archive/charts/{0}/hot-100".format(year)
+    year_URL = "http://www.billboard.com/archive/charts/{}/hot-100".format(year)
     year_page = urllib.urlopen(year_URL).read()
     year_soup = BeautifulSoup(year_page, "html.parser")
     week_links = year_soup.find_all("a")
@@ -76,7 +93,7 @@ def get_years_top_songs_by_week(year):
 
     ranked_songs = sorted(all_songs.values(), key=lambda x: x["score"], \
         reverse=True)
-    return ranked_songs[0:100]
+    return ranked_songs[:100]
 
 def get_songs_from_page(page):
     page_html = urllib.urlopen(page)
@@ -101,23 +118,54 @@ def extract_song_info(row):
 
     return { "title":title, "artist":artist, "spotify":spotify, "score":0 }
 
-def make_playlist(sp, user, year, songs):
-    playlist = sp.user_playlist_create(user, year)
-    id = playlist["id"]
+def replace_playlist(sp, user, year, songs, partitions=6):
+    all_playlists = sp.user_playlists(user)["items"]
+    relevant_playlists = [playlist for playlist in all_playlists \
+        if playlist["name"].startswith("BB-")]
 
+    if not relevant_playlists:
+        make_playlist(sp, user, year, songs, partitions)
+    else:
+        if len(relevant_playlists) != partitions:
+            raise IOError("Unexpected number of playlists: " + str(len(relevant_playlists)))
+
+        relevant_playlists.sort(key = lambda x : x["name"])
+        uris = get_good_uris(sp, songs)
+        playlist_len = int(math.ceil(len(uris) / float(partitions)))
+
+        for idx, playlist in enumerate(relevant_playlists):
+            start = idx*playlist_len
+            sp.user_playlist_replace_tracks(user, playlist["id"], uris[start:start+playlist_len])
+
+            oldname = playlist["name"]
+            newname = oldname.split(":")[0] + ": " + year
+            rename_playlist(sp, user, playlist["id"], newname)
+
+def make_playlist(sp, user, year, songs, partitions=6):
+    uris = get_good_uris(sp, songs)
+    playlist_len = int(math.ceil(len(uris) / float(partitions)))
+    for i in range(0, len(uris), playlist_len):
+        idx = i/playlist_len + 1
+        playlist = sp.user_playlist_create(user, "BB-{}: {}".format(idx, year))
+        playlist_id = playlist["id"]
+        sp.user_playlist_add_tracks(user, playlist_id, uris[i:i+playlist_len])
+
+    print len(uris), "songs added"
+
+def get_good_uris(sp, songs):
     for song_without_link in [song for song in songs if song["spotify"] is None]:
         song_link = get_song_link(sp, song_without_link["title"], \
             song_without_link["artist"])
         song_without_link["spotify"] = song_link
 
     uris = [song["spotify"] for song in songs if song["spotify"] is not None]
+    uris = map(lambda x : x.split("?")[0], uris)
 
-    sp.user_playlist_add_tracks(user, id, uris)
-    print(len(sp.user_playlist_tracks(user, id)["items"]))
+    return uris
 
 def get_song_link(sp, title, artist):
-    title_two = " ".join( title.split()[0:2] )
-    artist_two = " ".join( artist.split()[0:2] )
+    title_two = " ".join( title.split()[:2] )
+    artist_two = " ".join( artist.split()[:2] )
     query = title_two + " " + artist_two
     search_results = sp.search(query)
 
@@ -133,7 +181,7 @@ def get_song_link(sp, title, artist):
                     or artist_result_lower in artist_lower:
                 return result["uri"]
 
-    print artist + ", " + title
+    print "Missing:", artist, ",", title
     return None
 
 def delete_all_playlists(sp, user):
@@ -145,12 +193,12 @@ def delete_all_playlists(sp, user):
             delete_playlist(sp, user, playlist['id'])
 
 def delete_playlist(sp, user, playlist):
-    rest = "https://api.spotify.com/v1/users/{0}/playlists/{1}/followers" \
+    rest = "https://api.spotify.com/v1/users/{}/playlists/{}/followers" \
         .format(user, playlist)
     response = sp._delete(rest)
 
 def rename_playlist(sp, user, playlist, new_name):
-    rest = "https://api.spotify.com/v1/users/{0}/playlists/{1}" \
+    rest = "https://api.spotify.com/v1/users/{}/playlists/{}" \
         .format(user, playlist)
     data = {
         "name": new_name
@@ -159,4 +207,5 @@ def rename_playlist(sp, user, playlist, new_name):
     response = sp._put(rest, payload=data)
 
 if __name__ == "__main__":
-    main()
+    years = sys.argv[1:]
+    main(years, True)
