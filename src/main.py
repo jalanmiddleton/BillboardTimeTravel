@@ -26,18 +26,21 @@ def main(years=range(1958, 2018), replace=False):
     user = os.environ['SPOTIFY_USER']
     sp = get_token(user) #TODO: Error uncaught
 
+
     #find every available year
     for year in years: #ends at 2016
         print "Making list for", year
+
         year_songs = get_years_top_songs_by_year(year)
         if year_songs is None:
             year_songs = get_years_top_songs_by_week(year)
 
         if replace:
-            replace_playlist(sp, user, year, year_songs)
+            replace_playlist(sp, user, "BB", year, year_songs)
         else:
-            make_playlist(sp, user, year, year_songs)
+            make_playlist(sp, user, "BB", year, year_songs)
 
+        make_grammy_playlist(sp, user, year)
         #TODO: Token might expire for a long list before end
 
 def get_token(user):
@@ -118,13 +121,13 @@ def extract_song_info(row):
 
     return { "title":title, "artist":artist, "spotify":spotify, "score":0 }
 
-def replace_playlist(sp, user, year, songs, partitions=6):
+def replace_playlist(sp, user, prefix, year, songs, partitions=6):
     all_playlists = sp.user_playlists(user)["items"]
     relevant_playlists = [playlist for playlist in all_playlists \
-        if playlist["name"].startswith("BB-")]
+        if playlist["name"].startswith(prefix + "-")]
 
     if not relevant_playlists:
-        make_playlist(sp, user, year, songs, partitions)
+        make_playlist(sp, user, prefix, year, songs, partitions)
     else:
         if len(relevant_playlists) != partitions:
             raise IOError("Unexpected number of playlists: " + str(len(relevant_playlists)))
@@ -141,12 +144,12 @@ def replace_playlist(sp, user, year, songs, partitions=6):
             newname = oldname.split(":")[0] + ": " + year
             rename_playlist(sp, user, playlist["id"], newname)
 
-def make_playlist(sp, user, year, songs, partitions=6):
+def make_playlist(sp, user, prefix, year, songs, partitions=6):
     uris = get_good_uris(sp, songs)
     playlist_len = int(math.ceil(len(uris) / float(partitions)))
     for i in range(0, len(uris), playlist_len):
         idx = i/playlist_len + 1
-        playlist = sp.user_playlist_create(user, "BB-{}: {}".format(idx, year))
+        playlist = sp.user_playlist_create(user, "{}-{}: {}".format(prefix, idx, year))
         playlist_id = playlist["id"]
         sp.user_playlist_add_tracks(user, playlist_id, uris[i:i+playlist_len])
 
@@ -177,6 +180,9 @@ def get_song_link(sp, title, artist):
             artist_lower = artist.lower()
             artist_result_lower = artist_result["name"].lower()
 
+            if "tribute" in artist_result_lower or "karaoke" in artist_result_lower:
+                continue
+
             if artist_lower in artist_result_lower \
                     or artist_result_lower in artist_lower:
                 return result["uri"]
@@ -184,13 +190,61 @@ def get_song_link(sp, title, artist):
     print "Missing:", artist, ",", title
     return None
 
+def make_grammy_playlist(sp, user, year):
+    songs = get_grammy_songs(sp, year)
+    replace_playlist(sp, user, "GRAMMY", year, songs, partitions=1)
+
+def get_grammy_songs(sp, year):
+    grammy_url = "https://www.grammy.com/nominees/search?year={}".format(year)
+    grammy_html = urllib.urlopen(grammy_url)
+    grammy_soup = BeautifulSoup(grammy_html, "html.parser")
+
+    songs = []
+    entries = grammy_soup.find_all("tr")
+    for entry in entries:
+        yearstr = entry.find(class_="views-field-year").getText().strip()
+        category = entry.find(class_="views-field-category-code").getText().strip().lower()
+        work = entry.find(class_="views-field-field-nominee-work").getText().strip().lower()
+        nominee = entry.find(class_="views-field-field-nominee-extended").getText().strip().lower()
+
+        if  yearstr != year or work == "" or "comedy" in category:
+            continue
+
+        artists_raw = nominee.split(",")[0]
+        all_artists = artists_raw.split("&")
+        first_artist = all_artists[0]
+
+        if "album" in category:
+            query = work + " " + first_artist
+            album_search = sp.search(query, type="album")
+            for r in album_search["albums"]["items"]:
+                album_name =  r["name"].lower()
+                if "tribute" in album_name or "karaoke" in album_name:
+                    continue
+
+                album_uri = r["uri"]
+                album_songs = sp.album_tracks(album_uri)
+                songs[0:0] = [ \
+                    {"title":s["name"], "artist":first_artist, "spotify":s["uri"]} \
+                    for s in album_songs["items"] \
+                ]
+            #add album
+        else:
+            song_link = get_song_link(sp, work, first_artist)
+            if song_link is not None:
+                songs.append({ "title": work, "artist": first_artist, "spotify": song_link})
+            #add song
+
+    return songs
+
+'''
 def delete_all_playlists(sp, user):
     playlists = sp.user_playlists(user)
     for playlist in playlists['items']:
         name = playlist['name']
         if name is not None and name.isdigit() \
                 and int(name) in range(1958, 2017):
-            delete_playlist(sp, user, playlist['id'])
+            delete_playlist(sp, user, playlist['id'])'''
 
 def delete_playlist(sp, user, playlist):
     rest = "https://api.spotify.com/v1/users/{}/playlists/{}/followers" \
@@ -208,4 +262,4 @@ def rename_playlist(sp, user, playlist, new_name):
 
 if __name__ == "__main__":
     years = sys.argv[1:]
-    main(years, True)
+    main(years, years)#True)
