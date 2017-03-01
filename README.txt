@@ -1,1 +1,1 @@
-An vast improvement over my last idea, which was a jukebox that plays only "We Built This City."
+A vast improvement over my last idea, which was a jukebox that plays only "We Built This City."
