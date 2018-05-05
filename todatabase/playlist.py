@@ -20,8 +20,8 @@ def main(year, replace=True):
     sp = get_token(user) #TODO: Error uncaught
 
     cur.execute("SELECT uri FROM ( \
-        SELECT distinct songid as id, song, artist, popularity FROM billboard.topsongs join songs on (songid = id) where year(week) = 2000 group by songid) o \
-        JOIN uris using (id) where uri is not null  order by popularity desc")
+        SELECT distinct songid as id, song, artist, popularity FROM billboard.topsongs join songs on (songid = id) where year(week) = {} group by songid) o \
+        JOIN uris using (id) where uri is not null  order by popularity desc".format(year))
 
     uris = []
     for r in cur:
