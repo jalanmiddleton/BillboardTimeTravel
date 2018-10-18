@@ -14,7 +14,7 @@ import urllib2
 
 import MySQLdb
 conn = MySQLdb.connect(host="localhost", user="root",
-                       passwd=os.environ["MYSQL_PASSWORD"], db="billboard")
+                       passwd=os.environ["HOST_PASSWORD"], db="billboard")
 cur = conn.cursor()
 
 
@@ -29,17 +29,18 @@ def spotify():
         return _sp
 
 
-def scrape_bb(start=datetime(2018, 10, 13), years=range(1955, 2018)):
+def scrape_bb(day=datetime(2018, 10, 13), years=range(1955, 2018)):
     while day.year > 1957:
-        songs = get_songs_from_page(day)
+        songs = get_from_page(day)
         add_songs(songs, day)
         day -= timedelta(7)
+        break
 
 
-def get_songs_from_page(day, get_tracks=True):
+def get_from_page(day, get_tracks=True):
     print day
 
-    day_url = ("https://www.billboard.com/charts/hot-100/{}-{}-{}" if get_tracks
+    day_url = ("https://www.billboard.com/charts/hot-100/{}-{}-{}" if get_tracks \
                else "https://www.billboard.com/charts/billboard-200/{}-{}-{}") \
         .format(day.year, format(day.month, '02'), format(day.day, '02'))
     raw_html = urllib2.urlopen(urllib2.Request(
@@ -85,8 +86,9 @@ def add_songs(songs, day):
             idres = cur.fetchall()
 
             if uri:
-                cur.execute("INSERT IGNORE INTO billboard.uris (id, uri, song, artist) VALUES (%s, '%s', '%s', '%s')" % (
-                    idres[0][0], uri["uri"], uri["title"], uri["artist"]))
+                insert_uri = "INSERT IGNORE INTO billboard.uris (id, uri, song, artist) VALUES (%s, '%s', '%s', '%s')" \
+                    % (idres[0][0], uri["uri"], uri["title"], uri["artist"])
+                cur.execute(insert_uri)
 
         id = idres[0][0]
         week = "{}-{}-{}".format(day.year, day.month if + day.month >= 10 else "0" +
@@ -128,15 +130,15 @@ def get_song_link(title, artist):
             print
             if LSSMatch(artist, artist_result_lower) >= .75 and LSSMatch(track, title) >= .75:
                 return {"uri": result["uri"],
-                        "artist": artist_result["name"].replace("'", "").replace("\\", "\\\\").encode("utf-8"),
-                        "title": result["name"].replace("'", "").replace("\\", "\\\\").encode("utf-8"),
+                        "artist": artist_result["name"].encode("utf8"),
+                        "title": result["name"].encode("utf8"),
                         "popularity": result["popularity"]}
 
     return None
 
 
 def LSSMatch(one, two):
-    shortest = (one, two) if len(one) < len(two) else (two, one)
+    shortest, longest = (one, two) if len(one) < len(two) else (two, one)
 
     if len(shortest) == 0:
         return 0
@@ -207,8 +209,8 @@ def rename_playlist(user, playlist, new_name):
 
 
 if __name__ == "__main__":
-    # main()
+    scrape_bb()
     # fill_in_uris()
-    cur.execute("select distinct uri from weeks join uris on (songid = id) join songs using (id) where idx <= 3 and week between '2000-01-01' and '2006-01-01' order by popularity desc")
-    replace_playlist(get_token(), os.environ['SPOTIFY_USER'], "BB", [
-                     x[0] for x in cur.fetchall()], "1-3s from Early Aughts")
+    #cur.execute("select distinct uri from weeks join uris on (songid = id) join songs using (id) where idx <= 3 and week between '2000-01-01' and '2006-01-01' order by popularity desc")
+    #replace_playlist(get_token(), os.environ['SPOTIFY_USER'], "BB", [
+    #                 x[0] for x in cur.fetchall()], "1-3s from Early Aughts")
