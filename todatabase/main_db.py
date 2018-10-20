@@ -6,7 +6,7 @@ import pprint
 import re
 import requests
 import spotipy
-import spotipy.oauth2
+import spotipy.oauth2 as oauth2
 import spotipy.util as util
 import string
 import sys
@@ -14,33 +14,34 @@ import urllib2
 
 import MySQLdb
 conn = MySQLdb.connect(host="localhost", user="root",
-                       passwd=os.environ["HOST_PASSWORD"], db="billboard")
+                       passwd=os.environ["HOST_PASSWORD"], db="billboard",
+                       use_unicode=True, charset="utf8")
 cur = conn.cursor()
 
 
+_token = None
 _sp = None
+_credentials = oauth2.SpotifyClientCredentials()
 def spotify():
-    try:
-        _sp.me()
-    except Exception as e:
-        token = util.prompt_for_user_token(os.environ['SPOTIFY_USER'], 'playlist-modify-public')
-        _sp = spotipy.Spotify(auth=token)
-    finally:
-        return _sp
+    if not _token or _credentials.is_token_expired(_token):
+        token = util.prompt_for_user_token(
+            os.environ['SPOTIFY_USER'], 'playlist-modify-public')
+        _sp = spotipy.Spotify(auth=token, client_credentials_manager=_credentials)
+
+    return _sp
 
 
-def scrape_bb(day=datetime(2018, 10, 13), years=range(1955, 2018)):
+def scrape_bb(day=datetime(1966, 12, 24), years=range(1955, 2018)):
     while day.year > 1957:
         songs = get_from_page(day)
         add_songs(songs, day)
         day -= timedelta(7)
-        break
 
 
 def get_from_page(day, get_tracks=True):
     print day
 
-    day_url = ("https://www.billboard.com/charts/hot-100/{}-{}-{}" if get_tracks \
+    day_url = ("https://www.billboard.com/charts/hot-100/{}-{}-{}" if get_tracks
                else "https://www.billboard.com/charts/billboard-200/{}-{}-{}") \
         .format(day.year, format(day.month, '02'), format(day.day, '02'))
     raw_html = urllib2.urlopen(urllib2.Request(
@@ -50,10 +51,15 @@ def get_from_page(day, get_tracks=True):
     return extract_song_info(page_soup)
 
 
+def sql_prep(str): return unicode(
+    str.strip().replace("\\", "").replace("\'", "\\\'").encode("utf8"), "utf8")
+
 # Expect all chart items to have two and only two internal divs.
+
+
 def html_to_dict(html): return {
-    "title": html[0].getText().strip().replace("\'", "\\\'").encode("utf8"),
-    "artist": html[1].getText().strip().replace("\'", "\\\'").encode("utf8")
+    "title": sql_prep(html[0].getText()),
+    "artist": sql_prep(html[1].getText())
 }
 
 
@@ -71,7 +77,7 @@ def extract_song_info(page):
 def add_songs(songs, day):
     for i, song in enumerate(songs):
         select = "SELECT id from songs where song = '%s' and artist = '%s'" \
-                    % (song["title"], song["artist"])
+            % (song["title"], song["artist"])
 
         cur.execute(select)
         idres = cur.fetchall()
@@ -79,15 +85,15 @@ def add_songs(songs, day):
         if not idres:
             uri = get_song_link(song["title"], song["artist"])
             cur.execute("INSERT IGNORE INTO billboard.songs (song, artist, popularity) \
-                VALUES ('%s', '%s', %s)" % (song["title"], song["artist"], \
-                uri["popularity"] if uri else "null"))
+                VALUES ('%s', '%s', %s)" % (song["title"], song["artist"],
+                                            uri["popularity"] if uri else "null"))
 
             cur.execute(select)
             idres = cur.fetchall()
 
             if uri:
-                insert_uri = "INSERT IGNORE INTO billboard.uris (id, uri, song, artist) VALUES (%s, '%s', '%s', '%s')" \
-                    % (idres[0][0], uri["uri"], uri["title"], uri["artist"])
+                insert_uri = u"INSERT IGNORE INTO billboard.uris (id, uri, song, artist) VALUES (%s, '%s', '%s', '%s')" \
+                    % (idres[0][0], uri["uri"], sql_prep(uri["title"]), sql_prep(uri["artist"]))
                 cur.execute(insert_uri)
 
         id = idres[0][0]
@@ -99,39 +105,34 @@ def add_songs(songs, day):
 
 
 def get_song_link(title, artist):
-    title = "".join([l if l not in string.punctuation else "'" if l == "'"
-                     else "*" if l == "*" else " " for l in title.lower().strip()])
-    title = " ".join([l for l in title.split() if "*" not in l])
-    artist = " ".join(
-        [w for w in artist.lower().split() if w != "featuring" and w != "&"])
+    title = " ".join([word for word in title.lower().split() if word not in string.punctuation])
+    artist = " ".join(filter(
+        lambda word: word != "featuring" and word not in string.punctuation and len(word) > 1, artist.lower().split()))
 
-    query = title + " artist:" + " ".join(artist.split()[:2])
+    query = title + " " + " ".join(artist.split()[:2])
     search_results = spotify().search(q=query, type="track", limit=50)
 
     print query
     for result in search_results["tracks"]["items"]:
-        track = result["name"].lower().encode("utf-8")
+        track = sql_prep(result["name"].lower())
         if ("cover" not in title and "cover" in track) or \
             ("karaoke" not in title and "karaoke" in track) or \
                 ("remix" not in title and "remix" in track):
             continue
 
         for artist_result in result["artists"]:
-            artist_lower = artist.strip().lower().encode("utf-8")
-            artist_result_lower = artist_result["name"].strip(
-            ).lower().encode("utf-8")
+            artist_lower = sql_prep(artist_result["name"].lower())
 
-            if "tribute" in artist_result_lower or "karaoke" in artist_result_lower:
+            if "tribute" in artist_lower or "karaoke" in artist_lower:
                 continue
 
-            print artist, artist_result_lower, LSSMatch(
-                artist, artist_result_lower)
-            print track, title, LSSMatch(track, title)
+            print artist, artist_lower.encode("utf8"), LSSMatch(artist, artist_lower)
+            print track.encode("utf8"), title, LSSMatch(track, title)
             print
-            if LSSMatch(artist, artist_result_lower) >= .75 and LSSMatch(track, title) >= .75:
+            if LSSMatch(artist, artist_lower) >= .75 and LSSMatch(track, title) >= .75:
                 return {"uri": result["uri"],
-                        "artist": artist_result["name"].encode("utf8"),
-                        "title": result["name"].encode("utf8"),
+                        "artist": artist_result["name"],
+                        "title": result["name"],
                         "popularity": result["popularity"]}
 
     return None
@@ -155,6 +156,7 @@ def LSSMatch(one, two):
 
 ################################################################################
 
+
 def fill_in_uris():
     cur.execute("SELECT * FROM songs where id not in (SELECT id FROM uris)")
     for song in cur.fetchall():
@@ -163,14 +165,15 @@ def fill_in_uris():
         uri = get_song_link(songname, song[2])
 
         if uri:
-            newuri = ("INSERT IGNORE INTO billboard.uris (id, uri, song, artist) VALUES (%s, '%s', '%s', '%s')"
-                      % (song[0], uri["uri"], uri["title"].decode("utf8"), uri["artist"].decode("utf8"))).encode("utf8")
+            newuri = "INSERT IGNORE INTO billboard.uris (id, uri, song, artist) VALUES (%s, '%s', '%s', '%s')" \
+                      % (song[0], uri["uri"], sql_prep(uri["title"]), sql_prep(uri["artist"]))
             cur.execute(newuri)
             cur.execute("UPDATE billboard.songs SET song='%s', popularity = %s where id = %s"
                         % (songname.replace("'", "\\'"), uri["popularity"], song[0]))
             conn.commit()
 
 ################################################################################
+
 
 def replace_playlist(user, prefix, uris, newname, partitions=6):
     all_playlists = spotify().user_playlists(user)["items"]
@@ -179,7 +182,8 @@ def replace_playlist(user, prefix, uris, newname, partitions=6):
     while len(all_playlists) > 0:
         relevant_playlists += [playlist for playlist in all_playlists
                                if playlist["name"].startswith(prefix + ":")]
-        all_playlists = spotify().user_playlists(user, offset=offset_now)["items"]
+        all_playlists = spotify().user_playlists(
+            user, offset=offset_now)["items"]
         offset_now += 50
 
     if len(relevant_playlists) < partitions:
@@ -209,8 +213,8 @@ def rename_playlist(user, playlist, new_name):
 
 
 if __name__ == "__main__":
-    scrape_bb()
-    # fill_in_uris()
+    # scrape_bb()
+    fill_in_uris()
     #cur.execute("select distinct uri from weeks join uris on (songid = id) join songs using (id) where idx <= 3 and week between '2000-01-01' and '2006-01-01' order by popularity desc")
-    #replace_playlist(get_token(), os.environ['SPOTIFY_USER'], "BB", [
+    # replace_playlist(get_token(), os.environ['SPOTIFY_USER'], "BB", [
     #                 x[0] for x in cur.fetchall()], "1-3s from Early Aughts")
