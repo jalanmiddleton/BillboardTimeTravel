@@ -1,0 +1,1 @@
+truncate albums; truncate `billboard-200`; truncate `hot-100`; truncate tracks; 
