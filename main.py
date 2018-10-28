@@ -145,9 +145,9 @@ def get_item_link(title, artist, info):
             if "tribute" in artist_lower or "karaoke" in artist_lower:
                 continue
 
-            print artist, artist_lower.encode(
+            print artist.encode("utf8"), artist_lower.encode(
                 "utf8"), LSSMatch(artist, artist_lower)
-            print item.encode("utf8"), title, LSSMatch(item, title)
+            print item.encode("utf8"), title.encode("utf8"), LSSMatch(item, title)
             print
             if LSSMatch(artist, artist_lower) >= .75 and LSSMatch(item, title) >= .75:
                 return {"uri": result["uri"],
