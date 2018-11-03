@@ -54,7 +54,8 @@ INFO = {
 def scrape(day=datetime(2018, 10, 20), end_year=1957):
     while day.year > end_year:
         add_items(get_from_page(INFO["hot-100"], day), day, INFO["hot-100"])
-        add_items(get_from_page(INFO["billboard-200"], day), day, INFO["billboard-200"])
+        add_items(get_from_page(
+            INFO["billboard-200"], day), day, INFO["billboard-200"])
         day -= timedelta(7)
 
 
@@ -108,14 +109,16 @@ def add_items(items, day, info):
                            item["title"], item["artist"],
                             "'%s'" % (uri["uri"]) if uri else "NULL",
                            uri["popularity"] if uri else "NULL",
-                           "'%s'" % (sql_prep(uri["title"])) if uri else "NULL",
+                           "'%s'" % (sql_prep(uri["title"])
+                                     ) if uri else "NULL",
                            "'%s'" % (sql_prep(uri["artist"])) if uri else "NULL"))
 
             cur.execute(select)
             idres = cur.fetchall()
 
         id = idres[0][0]
-        week = "{}-{}-{}".format(day.year, format(day.month, "02"), format(day.day, "02"))
+        week = "{}-{}-{}".format(day.year,
+                                 format(day.month, "02"), format(day.day, "02"))
         cur.execute("INSERT IGNORE INTO billboard.`%s` (week, idx, item_id) VALUES ('%s', %s, %s)"
                     % (info["chart"], week, i + 1, id))
         conn.commit()
@@ -147,7 +150,8 @@ def get_item_link(title, artist, info):
 
             print artist.encode("utf8"), artist_lower.encode(
                 "utf8"), LSSMatch(artist, artist_lower)
-            print item.encode("utf8"), title.encode("utf8"), LSSMatch(item, title)
+            print item.encode("utf8"), title.encode(
+                "utf8"), LSSMatch(item, title)
             print
             if LSSMatch(artist, artist_lower) >= .75 and LSSMatch(item, title) >= .75:
                 return {"uri": result["uri"],
@@ -174,6 +178,13 @@ def LSSMatch(one, two):
 
     return float(matrix[-1][-1]) / len(shortest)
 
+
+def truncate_all():
+    global cur
+    cur.execute(
+        "truncate albums; truncate `billboard-200`; truncate `hot-100`; truncate tracks;")
+    cur.close()
+    cur = conn.cursor()
 ################################################################################
 
 
@@ -290,6 +301,7 @@ def quiz():
 
 
 if __name__ == "__main__":
+    truncate_all()
     scrape()
     # fill_in_uris()
     #cur.execute("select distinct uri from weeks join uris on (songid = id) join songs using (id) where idx <= 3 and week between '2000-01-01' and '2006-01-01' order by popularity desc")
