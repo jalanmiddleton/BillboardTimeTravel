@@ -51,12 +51,15 @@ INFO = {
 }
 
 
-def scrape(day=datetime(2018, 10, 20), end_year=1957):
+def scrape(day=datetime(2018, 11, 3), end_year=1957):
     while day.year > end_year:
-        add_items(get_from_page(INFO["hot-100"], day), day, INFO["hot-100"])
-        add_items(get_from_page(
-            INFO["billboard-200"], day), day, INFO["billboard-200"])
-        day -= timedelta(7)
+        try:
+            add_items(get_from_page(INFO["hot-100"], day), day, INFO["hot-100"])
+            add_items(get_from_page(
+                INFO["billboard-200"], day), day, INFO["billboard-200"])
+            day -= timedelta(7)
+        except Exception:
+            continue
 
 
 def get_from_page(info, day):
@@ -74,13 +77,11 @@ def get_from_page(info, day):
 def sql_prep(str): return unicode(
     str.strip().replace("\\", "").replace("\'", "\\\'").encode("utf8"), "utf8")
 
-# Expect all chart items to have two and only two internal divs.
-
 
 def extract_item_info(page):
     def html_to_dict(html): return {
-        "title": sql_prep(html[0].getText()),
-        "artist": sql_prep(html[1].getText())
+        "title": html[0].getText(),
+        "artist": html[1].getText()
     }
 
     # The number one spot is in a format of its own, so extract as a single item.
@@ -96,7 +97,7 @@ def extract_item_info(page):
 def add_items(items, day, info):
     for i, item in enumerate(items):
         select = "SELECT id from %ss where title = '%s' and artist = '%s'" \
-            % (info["item_type"], item["title"], item["artist"])
+            % (info["item_type"], sql_prep(item["title"]), sql_prep(item["artist"]))
         cur.execute(select)
         idres = cur.fetchall()
 
@@ -106,7 +107,7 @@ def add_items(items, day, info):
             cur.execute("INSERT IGNORE INTO %ss (title, artist, uri, popularity, \
                 spoffy_title, spoffy_artist) VALUES ('%s', '%s', %s, %s, %s, %s)"
                         % (info["item_type"],
-                           item["title"], item["artist"],
+                           sql_prep(item["title"]), sql_prep(item["artist"]),
                             "'%s'" % (uri["uri"]) if uri else "NULL",
                            uri["popularity"] if uri else "NULL",
                            "'%s'" % (sql_prep(uri["title"])
@@ -125,39 +126,40 @@ def add_items(items, day, info):
 
 
 def get_item_link(title, artist, info):
-    title = " ".join([word for word in title.lower().split()
-                      if word not in string.punctuation])
+    title = " ".join(filter(lambda word: word not in string.punctuation,
+                            title.lower().split()))
     artist = " ".join(filter(
-        lambda word: word != "featuring" and word not in string.punctuation and len(word) > 1, artist.lower().split()))
+        lambda word: word != "featuring" and word not in string.punctuation and len(
+            word) > 1,
+        artist.lower().split()))
 
-    query = title + " " + " ".join(artist.split()[:2])
+    query = re.sub(r"\(.+\)|[.+]", "", title) + " " + " ".join(artist.split()[:2])
     search_results = Spotify().search(
         q=query, type=info["item_type"], limit=50)
 
-    print query.encode("utf8")
+    failed = []
     for result in search_results[info["item_type"] + "s"]["items"]:
-        item = sql_prep(result["name"].lower())
+        item = re.sub(r"\(.+\)|[.+]", "", result["name"].lower())
         if ("cover" not in title and "cover" in item) or \
             ("karaoke" not in title and "karaoke" in item) or \
                 ("remix" not in title and "remix" in item):
             continue
 
         for artist_result in result["artists"]:
-            artist_lower = sql_prep(artist_result["name"].lower())
-
+            artist_lower = artist_result["name"].lower()
             if "tribute" in artist_lower or "karaoke" in artist_lower:
                 continue
 
-            print artist.encode("utf8"), artist_lower.encode(
-                "utf8"), LSSMatch(artist, artist_lower)
-            print item.encode("utf8"), title.encode(
-                "utf8"), LSSMatch(item, title)
-            print
-            if LSSMatch(artist, artist_lower) >= .75 and LSSMatch(item, title) >= .75:
+            if (LSSMatch(artist, artist_lower) >= .75 or artist == "soundtrack") and LSSMatch(item, title) >= .75:
                 return {"uri": result["uri"],
                         "artist": artist_result["name"],
                         "title": result["name"],
                         "popularity": info["popularity"](result)}
+        failed.append("\"%s\" by %s" % (item, result["artists"][0]["name"]))
+
+    print "\"%s\" not found" % (query.encode("utf8"))
+    for fail in failed[:5]:
+        print "\t", fail.encode("utf8")
 
     return None
 
@@ -192,15 +194,14 @@ def fill_in_uris():
     cur.execute("SELECT * FROM songs where id not in (SELECT id FROM uris)")
     for song in cur.fetchall():
         print song
-        songname = re.sub(r"'s(\w)", r"'\1", song[1])
-        uri = get_song_link(songname, song[2])
 
+        uri = get_song_link(song[1], song[2])
         if uri:
             newuri = "INSERT IGNORE INTO billboard.uris (id, uri, song, artist) VALUES (%s, '%s', '%s', '%s')" \
                 % (song[0], uri["uri"], sql_prep(uri["title"]), sql_prep(uri["artist"]))
             cur.execute(newuri)
             cur.execute("UPDATE billboard.songs SET song='%s', popularity = %s where id = %s"
-                        % (songname.replace("'", "\\'"), uri["popularity"], song[0]))
+                        % (song[1].replace("'", "\\'"), uri["popularity"], song[0]))
             conn.commit()
 
 
@@ -301,7 +302,7 @@ def quiz():
 
 
 if __name__ == "__main__":
-    truncate_all()
+    #truncate_all()
     scrape()
     # fill_in_uris()
     #cur.execute("select distinct uri from weeks join uris on (songid = id) join songs using (id) where idx <= 3 and week between '2000-01-01' and '2006-01-01' order by popularity desc")
