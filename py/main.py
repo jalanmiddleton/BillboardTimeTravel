@@ -192,7 +192,7 @@ def fill_in_uris():
     cur.execute("SELECT * FROM songs where id not in (SELECT id FROM uris)")
     for song in cur.fetchall():
         print song
-        songname = re.sub(r"'s(\w)", r"'\1", song[1])
+        songname = song[1]
         uri = get_song_link(songname, song[2])
 
         if uri:
