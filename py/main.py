@@ -6,6 +6,7 @@ import string
 import sys
 import urllib2
 from datetime import datetime, timedelta
+from random import shuffle
 
 import MySQLdb
 import requests
@@ -59,7 +60,8 @@ def scrape(day=datetime(2018, 11, 3), end_year=1957):
             add_items(get_from_page(
                 INFO["billboard-200"], day), day, INFO["billboard-200"])
             day -= timedelta(7)
-        except Exception:
+        except Exception as e:
+            print e
             continue
 
 
@@ -103,8 +105,8 @@ def add_items(items, day, info):
         idres = cur.fetchall()
 
         if not idres:
-            uri = get_item_link(
-                item["title"], item["artist"], info)
+            uri = get_item_link(item["title"], item["artist"], info)
+
             cur.execute("INSERT IGNORE INTO %ss (title, artist, uri, popularity, \
                 spoffy_title, spoffy_artist) VALUES ('%s', '%s', %s, %s, %s, %s)"
                         % (info["item_type"],
@@ -127,11 +129,10 @@ def add_items(items, day, info):
 
 
 def get_item_link(title, artist, info):
-    title = " ".join(filter(lambda word: word not in string.punctuation,
-                            title.lower().split()))
+    title = title.lower().strip()
     artist = " ".join(filter(
-        lambda word: word != "featuring" and word not in string.punctuation and len(
-            word) > 1,
+        lambda word: "feat" not in word \
+            and word not in string.punctuation and len(word) > 1,
         artist.lower().split()))
 
     query = re.sub(r"\(.+\)|[.+]", "", title) + \
@@ -210,31 +211,10 @@ def fill_in_uris():
 ################################################################################
 
 
-def replace_playlist(user, prefix, uris, newname, partitions=6):
-    all_playlists = Spotify().user_playlists(user)["items"]
-    relevant_playlists = []
-    offset_now = 50
-    while len(all_playlists) > 0:
-        relevant_playlists += [playlist for playlist in all_playlists
-                               if playlist["name"].startswith(prefix + ":")]
-        all_playlists = Spotify().user_playlists(
-            user, offset=offset_now)["items"]
-        offset_now += 50
-
-    if len(relevant_playlists) < partitions:
-        raise IOError("Unexpected number of playlists: " +
-                      str(len(relevant_playlists)))
-    else:
-        relevant_playlists = relevant_playlists[:partitions]
-
-    relevant_playlists.sort(key=lambda x: x["name"])
-    playlist_len = int(math.ceil(len(uris) / float(partitions)))
-
-    for idx, playlist in enumerate(relevant_playlists):
-        start = idx * playlist_len
-        Spotify().user_playlist_replace_tracks(
-            user, playlist["id"], uris[start:start + playlist_len])
-        rename_playlist(user, playlist["id"], "BB: " + newname)
+def replace_playlist(id, newname, tracks):
+    Spotify().user_playlist_replace_tracks(
+        os.environ['SPOTIFY_USER'], id, tracks)
+    rename_playlist(os.environ['SPOTIFY_USER'], id, newname)
 
 
 def rename_playlist(user, playlist, new_name):
@@ -252,20 +232,43 @@ def delete_playlist(sp, user, playlist):
         .format(user, playlist)
     response = sp._delete(rest)
 
+
 ################################################################################
 
 
-def findplaylist(sp, user, name):
+def scramble():
+    def pop(playlist):
+        if playlist["name"] in ["POP-START", "POP-END"]:
+            pop.between = not pop.between
+            return False
+        else:
+            return pop.between
+    pop.between = False
+
+    playlists = findplaylists(Spotify(), os.environ['SPOTIFY_USER'], pop)
+    ids, tracks = [p[0] for p in playlists], [(p[1], [u["track"]["uri"] for u in p[2]["tracks"]["items"]]) for p in playlists]
+    shuffle(tracks)
+
+    for id, track in zip(ids, tracks):
+        replace_playlist(id, track[0], track[1])
+
+def findplaylists(sp, user, filt):
     all_playlists = sp.user_playlists(user)["items"]
     offset_now = 50
+    results = []
+
     while len(all_playlists) > 0:
         for playlist in all_playlists:
-            if playlist["name"].startswith(name):
-                return playlist["id"], sp.user_playlist(user, playlist["id"], fields="tracks,next")
+            if filt(playlist):
+                results.append((playlist["id"], playlist["name"], sp.user_playlist(user, playlist["id"], fields="tracks,next")))
+
         all_playlists = sp.user_playlists(user, offset=offset_now)["items"]
         offset_now += 50
 
-    return None
+    return results
+
+
+################################################################################
 
 
 def quiz():
@@ -304,8 +307,10 @@ def quiz():
 
 
 if __name__ == "__main__":
+    scramble()
+
     # truncate_all()
-    scrape()
+    # scrape()
     # fill_in_uris()
     #cur.execute("select distinct uri from weeks join uris on (songid = id) join songs using (id) where idx <= 3 and week between '2000-01-01' and '2006-01-01' order by popularity desc")
     # replace_playlist(get_token(), os.environ['SPOTIFY_USER'], "BB", [
