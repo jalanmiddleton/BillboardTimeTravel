@@ -52,7 +52,7 @@ INFO = {
 }
 
 
-def scrape(day=datetime(2018, 11, 3), end_year=1957):
+def scrape(day=datetime(2018, 12, 29), end_year=1957):
     while day.year > end_year:
         try:
             add_items(get_from_page(
@@ -310,7 +310,7 @@ if __name__ == "__main__":
     scramble()
 
     # truncate_all()
-    # scrape()
+    #scrape()
     # fill_in_uris()
     #cur.execute("select distinct uri from weeks join uris on (songid = id) join songs using (id) where idx <= 3 and week between '2000-01-01' and '2006-01-01' order by popularity desc")
     # replace_playlist(get_token(), os.environ['SPOTIFY_USER'], "BB", [

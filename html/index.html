@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>Billboard Time Travel Interface</title>
+        <style>
+            body {
+                background: rgb(59, 55, 85);
+            }
+
+            #appbox {             
+                margin: 0 auto;
+                text-align: center;
+            }
+
+        </style>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="./secret.js"></script> 
+        <script>
+            //  spotify green 84bd00
+
+            // http://jsfiddle.net/JMPerez/62wafrm7/
+            function login(callback) {
+                let authorize = 'https://accounts.spotify.com/authorize?client_id=' + secrets.CLIENT_ID +
+                    '&redirect_uri=' + encodeURIComponent(secrets.REDIRECT) +
+                    '&scope=' + encodeURIComponent("playlist-modify-public") +
+                    '&response_type=token';
+
+                var width = 450,
+                    height = 730,
+                    left = (screen.width / 2) - (width / 2),
+                    top = (screen.height / 2) - (height / 2);
+
+                var w = window.open(authorize, "Spotify", 
+                    'menubar=no,location=no,resizable=no,scrollbars=no,status=no, width=' + width 
+                    + ', height=' + height + ', top=' + top + ', left=' + left)
+
+                w.addEventListener("load", function() {
+                    let access = w.location.hash.substr(1).split('&')[0].split("=")[1]
+                    w.close()
+                    callback(access)
+                })
+            }
+
+            function iterate_playlists(access) {
+                let start = 'https://api.spotify.com/v1/users/1246540326/playlists'
+                userdata(start, access, [])
+                .then((results) => {
+                    console.log(results)
+                })
+            }
+
+            function userdata(url, access, lists) {
+                return $.ajax({
+                    url: url,
+                    headers: {
+                        'Authorization': 'Bearer ' + access
+                    },
+                    
+                    success: function(response) {
+                        lists = lists.concat(response.items)
+                        console.log(response.next != null)
+                        if (response.next != null) {
+                            console.log("ye")
+                            return userdata(response.next, access, lists)
+                        } else {
+                            return Promise.resolve(lists)
+                        }
+                    }
+                })
+            }
+            
+        </script>
+    </head>
+    <body>
+        <div id="appbox">
+            <input type="submit" value="Log In" id="login" onclick="login(iterate_playlists)">
+        </div>
+    </body>
+</html>
