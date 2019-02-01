@@ -1,56 +1,19 @@
 <html>
     <head>
         <title>Billboard Time Travel Interface</title>
-        <style>
-            body {
-                background: rgb(59, 55, 85);
-                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
-            }
-
-            #appbox {      
-                text-align: center;       
-                margin: 0 auto;
-            }
-
-            .loading {
-                font-size: 16pt;
-            }
-
-            .album {
-                text-align: left;
-                height: 150px;
-                width: 500px;
-            }
-
-            .art {
-                width: 150px;
-                height: 150px;
-                border-right: 2px solid white;
-                margin-right: 5px;
-                float: left;
-            }
-
-            .info {
-                color: white;
-                position: relative;
-                top: 19%;
-                z-index: -1;
-            }
-
-            .name {
-                font-size: 24pt;
-            }
-
-        </style>
+        <link rel="stylesheet" href="index.css">
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
         <script type="text/javascript" src="./secret.js"></script> 
         <script>
             window.onload = function() { 
-                login(iterate_playlists)
+                login(function() {
+                    iterate_playlists(when_i_have_everything)
+                })
             }
 
             //  spotify green 84bd00
             // http://jsfiddle.net/JMPerez/62wafrm7/
+            var access_header
             function login(callback) {
                 let authorize = 'https://accounts.spotify.com/authorize?client_id=' + secrets.CLIENT_ID +
                     '&redirect_uri=' + encodeURIComponent(secrets.REDIRECT) +
@@ -67,33 +30,29 @@
                     + ', height=' + height + ', top=' + top + ', left=' + left)
 
                 w.addEventListener("load", function() {
-                    let access = w.location.hash.substr(1).split('&')[0].split("=")[1]
+                    access_header = {
+                        'Authorization': 'Bearer ' + w.location.hash.substr(1).split('&')[0].split("=")[1]
+                    }
+
                     w.close()
-                    callback(access)
+                    callback()
                 })
             }
 
-            function iterate_playlists(access) {
-                let start = 'https://api.spotify.com/v1/users/1246540326/playlists'
-                userdata(start, access, [])
+            function iterate_playlists(callback) {
+                getplaylists('https://api.spotify.com/v1/users/1246540326/playlists', [], callback)
             }
 
-            function userdata(url, access, lists) {
+            function getplaylists(url, lists, callback) {
                 return $.ajax({
                     url: url,
-                    headers: {
-                        'Authorization': 'Bearer ' + access
-                    },
-                    
-                    success: function(response) {
-                        lists = lists.concat(response.items)
-                        if (response.next != null) {
-                            return userdata(response.next, access, lists)
-                        } else {
-                            return new Promise(function() {
-                                when_i_have_everything(lists)
-                            })
-                        }
+                    headers: access_header,                    
+                }).then(function(response) {
+                    lists = lists.concat(response.items)
+                    if (response.next != null) {
+                        return getplaylists(response.next, lists, callback)
+                    } else {
+                        return callback(lists)
                     }
                 })
             }
@@ -108,29 +67,47 @@
                     })
                 )
 
-                let box = document.querySelector("#appbox")
-                box.removeChild(document.querySelector(".loading"))
-                box.style.textAlign = "left";
+                Promise.all(pop_docket.map(x => {
+                    return $.ajax({
+                        url: x.tracks.href,
+                        headers: access_header
+                    })
+                })).then((results) => {
+                    let box = document.querySelector("#appbox")
+                    box.removeChild(document.querySelector(".loading"))
+                    box.style.textAlign = "left";
 
-                let template = document.getElementById("albumtemp")
-                    .content.querySelector("div")
+                    let template = document.getElementById("albumtemp")
+                        .content.querySelector("div")
 
-                pop_docket.forEach(x => {    
-                    console.log(x)   
-                    let newAlbum = document.importNode(template, true)
+                    pop_docket.forEach((x, i) => {    
+                        let newAlbum = document.importNode(template, true)
 
-                    let image = x.images[0]                    
-                    let image_node = newAlbum.querySelector(".art").src = image.url
-                    image_node.src = image.url
+                        let image = x.images[0]                    
+                        let image_node = newAlbum.querySelector(".art").src = image.url
+                        image_node.src = image.url
 
-                    let [name, artist] = x.name.split("–")
-                    newAlbum.querySelector(".name").innerText = name
-                    newAlbum.querySelector(".artist").innerText = artist
+                        let [name, artist] = x.name.split("–")
+                        newAlbum.querySelector(".name").innerText = name
+                        newAlbum.querySelector(".artist").innerText = artist
+                        newAlbum.querySelector(".year").innerText = results[i].items[0].track.album.release_date
+                        
+                        let duration_ms = results[i].items.reduce((a, b) => {
+                            return a + b.track.duration_ms
+                        }, 0)
 
-                    box.appendChild(newAlbum)
-                });
+                        newAlbum.querySelector(".length").innerText = 
+                            results[i].items.length + " tracks / " + Math.round(duration_ms / 1000 / 60) + "m"
+
+                        box.appendChild(newAlbum)
+                    });
+                })
             }
             
+            function newalbums() {
+                
+            }
+
         </script>
     </head>
     <body>

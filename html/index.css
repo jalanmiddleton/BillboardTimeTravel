@@ -1,0 +1,38 @@
+body {
+    background: rgb(59, 55, 85);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+#appbox {      
+    text-align: center;       
+    margin: 0 auto;
+}
+
+.loading {
+    font-size: 16pt;
+}
+
+.album {
+    text-align: left;
+    height: 150px;
+    width: 500px;
+}
+
+.art {
+    width: 150px;
+    height: 150px;
+    border-right: 2px solid white;
+    margin-right: 5px;
+    float: left;
+}
+
+.info {
+    color: white;
+    position: relative;
+    top: 15%;
+    z-index: -1;
+}
+
+.name {
+    font-size: 24pt;
+}
