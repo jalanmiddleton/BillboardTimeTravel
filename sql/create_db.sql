@@ -1,3 +1,6 @@
+CREATE SCHEMA `billboard` DEFAULT CHARACTER SET utf8mb4
+COLLATE utf8mb4_0900_ai_ci;
+
 CREATE TABLE `tracks` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(100) DEFAULT NULL,
@@ -33,4 +36,3 @@ CREATE TABLE `billboard-200` (
   `item_id` int(11) NOT NULL,
   PRIMARY KEY (`week`,`idx`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-

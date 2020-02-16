@@ -5,6 +5,7 @@ import spotipy.util as util
 import os
 
 def get_token(user):
+    # Scopes listed here: https://developer.spotify.com/documentation/general/guides/scopes/
     scope = 'playlist-modify-public'
     token = util.prompt_for_user_token(user, scope)
     if token:
