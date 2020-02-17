@@ -1,72 +1,63 @@
-import math
-import os
-import pprint
-import re
-import string
-import sys
-import urllib2
-from datetime import datetime, timedelta
+from core import Spotify
+from secrets import secrets
 from random import shuffle
 
-import MySQLdb
-import requests
-from bs4 import BeautifulSoup
-
-from core import _conn, _cur, InitDB, Spotify
-
-
-def replace_playlist(id, newname, tracks):
-    Spotify().user_playlist_replace_tracks(
-        secrets['SPOTIFY_USER'], id, tracks)
-    rename_playlist(secrets['SPOTIFY_USER'], id, newname)
-
-
-def rename_playlist(user, playlist, new_name):
-    rest = "https://api.spotify.com/v1/users/{}/playlists/{}" \
-        .format(user, playlist)
-    data = {
-        "name": new_name
-    }
-
-    response = Spotify()._put(rest, payload=data)
-
-
-def delete_playlist(sp, user, playlist):
-    rest = "https://api.spotify.com/v1/users/{}/playlists/{}/followers" \
-        .format(user, playlist)
-    response = sp._delete(rest)
-
-
-def scramble():
-    def pop(playlist):
-        if playlist["name"] in ["POP-START", "POP-END"]:
-            pop.between = not pop.between
+'''
+Randomly reorder a set of Spotify playlists on my account.
+The set is identified by two flags---empty playlists by a certain name---before
+  and after the playlists I want.
+'''
+def scramble(flag_start="POP-START", flag_end="POP-END"):
+    def playlist_filter(playlist):
+        if playlist["name"] in [flag_start, flag_end]:
+            playlist_filter.between = not playlist_filter.between
             return False
         else:
-            return pop.between
-    pop.between = False
+            return playlist_filter.between
+    playlist_filter.between = False
 
-    playlists = findplaylists(Spotify(), secrets['SPOTIFY_USER'], pop)
-    ids, tracks = [p[0] for p in playlists], [(p[1], [u["track"]["uri"] for u in p[2]["tracks"]["items"]]) for p in playlists]
-    shuffle(tracks)
+    playlists = findplaylists(secrets['SPOTIFY_USER'], playlist_filter)
+    ids = [p.id for p in playlists]
+    shuffle(playlists)
 
-    for id, track in zip(ids, tracks):
-        replace_playlist(id, track[0], track[1])
+    for id, album in zip(ids, playlists):
+        Spotify().user_playlist_replace_tracks(secrets['SPOTIFY_USER'], id, album.tracks)
+        Spotify().user_playlist_change_details(secrets['SPOTIFY_USER'], id, album.name)
 
-def findplaylists(sp, user, filt):
-    all_playlists = sp.user_playlists(user)["items"]
+
+class Playlist:
+    def __init__(self, playlist):
+        self.id = playlist['id']
+        self.name = playlist['name']
+        self.tracks = [t['track']['uri'] for t in playlist['tracks']['items']]
+
+'''
+Returns the set of personal playlists as identified by a passed-in filter.
+The order by which playlists are processed is assumed to be the top-to-bottom
+  order as is on the Spotify interface.
+
+sp: The Spotipy object
+user: The Spotify user id.
+filt: A function that returns true or false for whether the playlist qualifies.
+'''
+def findplaylists(user, filt):
+    all_playlists = Spotify().current_user_playlists()["items"]
     offset_now = 50
     results = []
 
     while len(all_playlists) > 0:
         for playlist in all_playlists:
             if filt(playlist):
-                results.append((playlist["id"], playlist["name"], sp.user_playlist(user, playlist["id"], fields="tracks,next")))
+                results.append(Playlist(
+                    Spotify().user_playlist(user, playlist["id"],
+                        fields="id,name,tracks,next")
+                ))
 
-        all_playlists = sp.user_playlists(user, offset=offset_now)["items"]
+        all_playlists = Spotify().current_user_playlists(offset=offset_now)["items"]
         offset_now += 50
 
     return results
+
 
 if __name__ == "__main__":
     scramble()
