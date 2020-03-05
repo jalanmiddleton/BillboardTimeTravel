@@ -8,7 +8,10 @@ from secrets import secrets
 def get_token(user):
     # Scopes listed here: https://developer.spotify.com/documentation/general/guides/scopes/
     scope = 'playlist-modify-public'
-    token = util.prompt_for_user_token(user, scope)
+    token = util.prompt_for_user_token(user, scope,
+                            client_id=secrets["SPOTIPY_CLIENT_ID"],
+                            client_secret=secrets["SPOTIPY_SECRET"],
+                            redirect_uri=secrets["SPOTIPY_REDIRECT_URI"])
     if token:
         return spotipy.Spotify(auth=token)
     else:
@@ -39,7 +42,7 @@ for link in play_links:
     try:
         album_link = link.find("a").get("href")
         tracks = sp.album_tracks(album_link)
-        all_songs += [x["uri"] for x in tracks["items"]]
+        all_songs += [x["uri"] for x in tracks["items"][:3]]
     except Exception as e:
         print(str(e))
 sp.user_playlist_replace_tracks(user, playlist, [])
