@@ -1,8 +1,9 @@
 from bs4 import BeautifulSoup
-import urllib
+from urllib.request import urlopen
 import spotipy
 import spotipy.util as util
 import os
+from secrets import secrets
 
 def get_token(user):
     # Scopes listed here: https://developer.spotify.com/documentation/general/guides/scopes/
@@ -19,17 +20,18 @@ def find_playlist(sp, user):
     offset_now = 50
     while len(all_playlists) > 0:
         for playlist in all_playlists:
-            if playlist["name"] == "New Albums":
+            print(playlist["name"])
+            if playlist["name"] == "Weekly New Albums":
                 return playlist
         all_playlists = sp.user_playlists(user, offset=offset_now)["items"]
         offset_now += 50
 
     return None
 
-page_html = urllib.urlopen("http://www.spotifynewmusic.com/")
+page_html = urlopen("http://www.spotifynewmusic.com/")
 page_soup = BeautifulSoup(page_html, "html.parser")
 play_links = page_soup.find_all("div", "play")
-user = os.environ['SPOTIFY_USER']
+user = secrets['SPOTIFY_USER']
 sp = get_token(user) #TODO: Error uncaught
 playlist = find_playlist(sp, user)["uri"]
 all_songs = []
@@ -39,7 +41,7 @@ for link in play_links:
         tracks = sp.album_tracks(album_link)
         all_songs += [x["uri"] for x in tracks["items"]]
     except Exception as e:
-        print str(e)
+        print(str(e))
 sp.user_playlist_replace_tracks(user, playlist, [])
 for i in range(0, len(all_songs), 100):
     sp.user_playlist_add_tracks(user, playlist, all_songs[i:i+100])
