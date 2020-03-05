@@ -1,3 +1,4 @@
+import MySQLdb
 import spotipy
 import spotipy.oauth2 as oauth2
 import spotipy.util as util
@@ -12,10 +13,10 @@ _credentials = oauth2.SpotifyClientCredentials(
 )
 
 def InitDB():
-    _conn = MySQLdb._connect(host="localhost", user="root",
+    _conn = MySQLdb.connect(host="localhost", user="root",
         passwd=secrets["HOST_PASSWORD"], db="billboard",
         use_unicode=True, charset="utf8")
-    _cur = _conn._cursor()
+    _cur = _conn.cursor()
 
 # Defining Spotify.sp allows persistence
 def Spotify():

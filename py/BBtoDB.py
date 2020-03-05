@@ -1,9 +1,11 @@
+import json
 import math
 import os
 import pprint
 import re
 import string
 import sys
+
 from urllib.request import urlopen, Request
 from datetime import datetime, timedelta
 from random import shuffle
@@ -13,7 +15,6 @@ import requests
 from bs4 import BeautifulSoup
 
 from core import _conn, _cur, InitDB, Spotify
-
 
 INFO = {
     "hot-100": {
@@ -32,6 +33,8 @@ INFO = {
 
 
 def scrape(day=datetime(2020, 2, 15), end_year=1957):
+    InitDB()
+
     while day.year > end_year:
         try:
             add_items(get_from_page(
@@ -57,45 +60,38 @@ def get_from_page(info, day):
     return extract_item_info(page_soup)
 
 
-def sql_prep(str): return unicode(
-    str.strip().replace("\\", "").replace("\'", "\\\'").encode("utf8"), "utf8")
-
+def sql_prep(str): return str.strip().replace("\\", "").replace("\'", "\\\'").encode("utf8")
 
 def extract_item_info(page):
     def html_to_dict(html): return {
-        "title": html[0].getText(),
-        "artist": html[1].getText()
+        'title': html[0].getText(),
+        'artist': html[1].getText()
     }
 
-    # The number one spot is in a format of its own, so extract as a single item.
-    items = [html_to_dict(page.find(class_="chart-number-one__details")
-                          .find_all("div"))]
-
-    for item in [item.find_all("div")
-                 for item in page.find_all(class_="chart-list-item__text")]:
-        items.append(html_to_dict(item))
+    x = json.loads(page.find("div", id="charts")['data-charts'])
+    items = [{'title': y['title'], 'artist': y['artist_name']} for y in x]
     return items
 
 
 def add_items(items, day, info):
     for i, item in enumerate(items):
         select = "SELECT id from %ss where title = '%s' and artist = '%s'" \
-            % (info["item_type"], sql_prep(item["title"]), sql_prep(item["artist"]))
+            % (info['item_type'], sql_prep(item['title']), sql_prep(item['artist']))
         _cur.execute(select)
         idres = _cur.fetchall()
 
         if not idres:
-            uri = get_item_link(item["title"], item["artist"], info)
+            uri = get_item_link(item['title'], item['artist'], info)
 
             _cur.execute("INSERT IGNORE INTO %ss (title, artist, uri, popularity, \
                 spoffy_title, spoffy_artist) VALUES ('%s', '%s', %s, %s, %s, %s)"
                         % (info["item_type"],
-                           sql_prep(item["title"]), sql_prep(item["artist"]),
+                           sql_prep(item['title']), sql_prep(item['artist']),
                             "'%s'" % (uri["uri"]) if uri else "NULL",
                            uri["popularity"] if uri else "NULL",
-                           "'%s'" % (sql_prep(uri["title"])
+                           "'%s'" % (sql_prep(uri['title'])
                                      ) if uri else "NULL",
-                           "'%s'" % (sql_prep(uri["artist"])) if uri else "NULL"))
+                           "'%s'" % (sql_prep(uri['artist'])) if uri else "NULL"))
 
             _cur.execute(select)
             idres = _cur.fetchall()
@@ -135,8 +131,8 @@ def get_item_link(title, artist, info):
 
             if (LSSMatch(artist, artist_lower) >= .75 or artist == "soundtrack") and LSSMatch(item, title) >= .75:
                 return {"uri": result["uri"],
-                        "artist": artist_result["name"],
-                        "title": result["name"],
+                        'artist': artist_result["name"],
+                        'title': result["name"],
                         "popularity": info["popularity"](result)}
         failed.append("\"%s\" by %s" % (item, result["artists"][0]["name"]))
 
@@ -179,7 +175,7 @@ def fill_in_uris():
         uri = get_song_link(song[1], song[2])
         if uri:
             newuri = "INSERT IGNORE INTO billboard.uris (id, uri, song, artist) VALUES (%s, '%s', '%s', '%s')" \
-                % (song[0], uri["uri"], sql_prep(uri["title"]), sql_prep(uri["artist"]))
+                % (song[0], uri["uri"], sql_prep(uri['title']), sql_prep(uri['artist']))
             _cur.execute(newuri)
             _cur.execute("UPDATE billboard.songs SET song='%s', popularity = %s where id = %s"
                         % (song[1].replace("'", "\\'"), uri["popularity"], song[0]))
