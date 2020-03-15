@@ -22,13 +22,13 @@ INFO = {
 		"chart": "hot-100",
 		"url": "https://www.billboard.com/charts/hot-100/{}-{}-{}",
 		"item_type": "track",
-		"popularity": lambda result: result["popularity"]
+		"get_popularity": lambda result: result["popularity"]
 	},
 	"billboard-200": {
 		"chart": "billboard-200",
 		"url": "https://www.billboard.com/charts/billboard-200/{}-{}-{}",
 		"item_type": "album",
-		"popularity": lambda result: Spotify().album(result["uri"])["popularity"]
+		"get_popularity": lambda result: Spotify().album(result["uri"])["popularity"]
 	}
 }
 
@@ -132,38 +132,47 @@ def add_items(items, day, info):
 		_conn.commit()
 
 
-def get_item_link(title, artist, info):
-	title = title.lower().strip()
+remove_parens = lambda s: re.sub(r"\(.+\)|[.+]", "", s)
+
+
+def has_bad_words(original, result, words):
+	return any(word in original != word in result for word in words)
+
+
+def get_query(title, artist)
 	artist = " ".join(filter(
 		lambda word: "feat" not in word \
 			and word not in string.punctuation and len(word) > 1,
-		artist.lower().split())) if artist else ""
+		artist.lower().split()))
 
-	query = re.sub(r"\(.+\)|[.+]", "", title) + \
-		" " + " ".join(artist.split()[:3])
+	return remove_parens(title) + " " + " ".join(artist.split()[:3])
+
+
+def get_item_link(title, artist, info):
+	title_bb = title.lower().strip()
+	artist_bb = artist.lower().split() if artist else ""
 	search_results = Spotify().search(
-		q=query, type=info["item_type"], limit=50)
+		q=get_query(title_bb, artist_bb), type=info["item_type"], limit=50)
 
 	failed = []
 	for result in search_results[info["item_type"] + "s"]["items"]:
-		item = re.sub(r"\(.+\)|[.+]", "", result["name"].lower())
-		if ("cover" not in title and "cover" in item) or \
-			("karaoke" not in title and "karaoke" in item) or \
-				("remix" not in title and "remix" in item):
+		item = remove_parens(result["name"].lower())
+		if has_bad_words(title_bb, item, ["cover", "karaoke", "remix"]):
 			continue
 
 		for artist_result in result["artists"]:
-			artist_lower = artist_result["name"].lower()
-			if "tribute" in artist_lower or "karaoke" in artist_lower:
-				continue
+			artist_spoffy = artist_result["name"].lower()
+			if has_bad_words(artist_bb, artist_spoffy, ["tribute", "karaoke"]):
+				break
 
-			if (LSSMatch(artist, artist_lower) >= .75 or artist == "soundtrack") \
-				and LSSMatch(item, title) >= .75:
+			if (LSSMatch(artist_bb, artist_spoffy) >= .75 \
+				or artist_bb == "soundtrack") \
+				and LSSMatch(item, title_bb) >= .75:
 				print(result.keys())
 				return URI(uri=result["uri"], \
-					artist=artist_result["name"], \
+					artist=artist_spoffy["name"], \
 					title=result["name"], \
-					popularity=info["popularity"](result), \
+					popularity=info["get_popularity"](result), \
 					duration=result["duration_ms"] if "duration_ms" \
 					in result else None)
 
@@ -196,9 +205,11 @@ def LSSMatch(one, two):
 def truncate_all():
 	global _conn, _cur
 	_cur.execute(
-		"truncate albums; truncate `billboard-200`; truncate `hot-100`; truncate tracks;")
+		"truncate albums; truncate `billboard-200`; truncate `hot-100`; \
+		truncate tracks;")
 	_cur.close()
 	_cur = _conn._cursor()
+
 
 def fill_in_uris():
 	global _conn, _cur
@@ -208,12 +219,16 @@ def fill_in_uris():
 
 		uri = get_song_link(song[1], song[2])
 		if uri:
-			newuri = "INSERT IGNORE INTO billboard.uris (id, uri, song, artist) VALUES (%s, '%s', '%s', '%s')" \
-				% (song[0], uri["uri"], sql_prep(uri['title']), sql_prep(uri['artist']))
+			newuri = "INSERT IGNORE INTO billboard.uris (id, uri, song, artist)\
+				VALUES (%s, '%s', '%s', '%s')" \
+				% (song[0], uri["uri"], sql_prep(uri['title']), \
+				sql_prep(uri['artist']))
 			_cur.execute(newuri)
-			_cur.execute("UPDATE billboard.songs SET song='%s', popularity = %s where id = %s"
-						% (song[1].replace("'", "\\'"), uri["popularity"], song[0]))
+			_cur.execute("UPDATE billboard.songs SET song='%s', popularity = %s\
+				where id = %s"	% (song[1].replace("'", "\\'"), \
+				uri["popularity"], song[0]))
 			_conn.commit()
+
 
 if __name__=="__main__":
 	scrape()
