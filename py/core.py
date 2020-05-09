@@ -23,6 +23,16 @@ def InitDB():
 
 # Defining Spotify.sp allows persistence
 
+def insert(query):
+    global _conn, _cur
+    _cur.execute(query)
+    _conn.commit()
+
+def select(query):
+    global _conn, _cur
+    _cur.execute(query)
+    return _cur.fetchall()
+
 
 def Spotify():
     # Scopes here: https://developer.spotify.com/documentation/general/guides/scopes/
