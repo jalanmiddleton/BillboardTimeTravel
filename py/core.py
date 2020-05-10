@@ -46,5 +46,33 @@ def Spotify():
                                      client_credentials_manager=_credentials)
     return Spotify.sp
 
-
 Spotify.sp = None
+
+### Below are things I don't have a good place for.
+
+def truncate_all():
+    global _conn, _cur
+    _cur.execute(
+            "truncate albums; truncate `billboard-200`; truncate `hot-100`; \
+		truncate tracks;")
+    _cur.close()
+    _cur = _conn._cursor()
+
+
+def fill_in_uris():
+    global _conn, _cur
+    _cur.execute("SELECT * FROM songs where id not in (SELECT id FROM uris)")
+    for song in _cur.fetchall():
+        print(song)
+
+        uri = get_song_link(song[1], song[2])
+        if uri:
+            newuri = "INSERT IGNORE INTO billboard.uris (id, uri, song, artist)\
+				VALUES (%s, '%s', '%s', '%s')" \
+                    % (song[0], uri["uri"], sql_prep(uri['title']),
+                       sql_prep(uri['artist']))
+            _cur.execute(newuri)
+            _cur.execute("UPDATE billboard.songs SET song='%s', popularity = %s\
+				where id = %s" % (song[1].replace("'", "\\'"),
+                      uri["popularity"], song[0]))
+            _conn.commit()

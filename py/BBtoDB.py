@@ -41,8 +41,7 @@ def scrape(day=datetime(2020, 5, 9), end_year=1957):
 
 
 def get_from_page(info, day):
-    day_url = info["url"].format(day.year, format(day.month, '02'),
-                                 format(day.day, '02'))
+    day_url = info["get_url"](format_date(day))
     raw_html = urlopen(Request(day_url, headers={'User-Agent': 'Mozilla/5.0'}))
     page_soup = BeautifulSoup(raw_html, "html.parser")
 
@@ -51,24 +50,15 @@ def get_from_page(info, day):
 
 
 def extract_item_info(page):
-    def html_to_dict(html): return {
-        'title': html[0].getText(),
-        'artist': html[1].getText()
-    }
+    charts = json.loads(page.find("div", id="charts")['data-charts'])
+    return [{'title': y['title'], 'artist': y['artist_name']} for y in charts]
 
-    x = json.loads(page.find("div", id="charts")['data-charts'])
-    items = [{'title': y['title'], 'artist': y['artist_name']} for y in x]
-    return items
 
 def add_bb_entry(items, day, info):
-    global _conn, _cur
     for i, item in enumerate(items):
-        id = get_and_add_id(info['item_type'], item["title"], item["artist"],
-                            info)
-        week = "{}-{}-{}".format(day.year,
-                                 format(day.month, "02"), format(day.day, "02"))
+        id = get_and_add_id(info['item_type'], item["title"], item["artist"], info)
         insert("INSERT IGNORE INTO billboard.`%s` (week, idx, item_id) \
-		       VALUES ('%s', %s, %s)" % (info["chart"], week, i + 1, id))
+		       VALUES ('%s', %s, %s)" % (info["chart"], format_date(day), i + 1, id))
 
 def get_and_add_id(item_type, title, artist, info):
     select_id = "SELECT id, bb_title, bb_artist, spoffy_title, spoffy_artist \
@@ -80,27 +70,29 @@ def get_and_add_id(item_type, title, artist, info):
 
     # Add this item if it's not here already.
     if not id:
-        item = search_item(title, artist, info)
+        item = search_item(type, title, artist)
 
         # Add its associated album too
         # uri not in details means it wasn't found in search
         # tracks and singles shouldn't be added to the albums
-        if item_type == "track" and "uri" in item.details and item.album_type != "single":
-            album_item = SpotifyItem(uri=item.album_uri)
+        if item_type == "track" and item.album_type != "single" \
+           and "uri" in item.details:
+            album_item = SpotifyItem(type="album", title, artist, uri=item.album_uri)
             item.details["album_id"] = \
                 get_and_add_id("album", album_item.details["spoffy_title"],
                                album_item.details["spoffy_artist"], info)
 
-        add_item(item, item_type)
+        insert("INSERT IGNORE INTO %ss (%s) VALUES (%s)" % \
+               (item_type, item.getKeys(), item.getValues()))
         id = select(select_id)
 
     return id[0][0]
 
-def add_item(item, type):
-    insert("INSERT IGNORE INTO %ss (%s) VALUES (%s)" % \
-           (type, item.getKeys(), item.getValues()))
-
 def remove_parens(s): return re.sub(r"\(.+\)|[.+]", "", s)
+
+def format_date(day):
+    return "{}-{}-{}".format(day.year, format(day.month, "02"),
+                             format(day.day, "02"))
 
 def has_bad_words(original, result, words):
     return any(word in original != word in result for word in words)
@@ -113,15 +105,14 @@ def get_query(title, artist):
 
     return remove_parens(title) + " " + " ".join(artist.split()[:3])
 
-def search_item(title, artist, info):
+def search_item(item_type, title, artist):
     title_bb = title.lower().strip()
     artist_bb = artist.lower().strip() if artist else ""
     query = get_query(title_bb, artist_bb)
-    search_results = Spotify().search(
-        q=query, type=info["item_type"], limit=50)
+    search_results = Spotify().search(q=query, type=item_type, limit=50)
 
     failed = []
-    for result in search_results[info["item_type"] + "s"]["items"]:
+    for result in search_results[item_type + "s"]["items"]:
         item = remove_parens(result["name"].lower())
         if has_bad_words(title_bb, item, ["cover", "karaoke", "remix"]):
             continue
@@ -130,10 +121,9 @@ def search_item(title, artist, info):
         if has_bad_words(artist_bb, artist_spoffy, ["tribute", "karaoke"]):
             break
 
-        if (LSSMatch(artist_bb, artist_spoffy) >= .75
-                or artist_bb == "soundtrack") \
-                and LSSMatch(item, title_bb) >= .75:
-            return info["make_item"](title, artist, result)
+        if (LSSMatch(artist_bb, artist_spoffy) >= .75 or artist_bb == "soundtrack") \
+            and LSSMatch(item, title_bb) >= .75:
+            return SpotifyItem(item_type, title, artist, search=search_result)
 
         failed.append("\"%s\" by %s" % (item, result["artists"][0]["name"]))
 
@@ -141,7 +131,7 @@ def search_item(title, artist, info):
     for fail in failed[:5]:
         print("\t", fail)
 
-    return SpotifyItem(title, artist)
+    return SpotifyItem(item_type, title, artist)
 
 
 def LSSMatch(one, two):
@@ -161,84 +151,54 @@ def LSSMatch(one, two):
     return float(matrix[-1][-1]) / len(shortest)
 
 
-def truncate_all():
-    global _conn, _cur
-    _cur.execute(
-            "truncate albums; truncate `billboard-200`; truncate `hot-100`; \
-		truncate tracks;")
-    _cur.close()
-    _cur = _conn._cursor()
-
-
-def fill_in_uris():
-    global _conn, _cur
-    _cur.execute("SELECT * FROM songs where id not in (SELECT id FROM uris)")
-    for song in _cur.fetchall():
-        print(song)
-
-        uri = get_song_link(song[1], song[2])
-        if uri:
-            newuri = "INSERT IGNORE INTO billboard.uris (id, uri, song, artist)\
-				VALUES (%s, '%s', '%s', '%s')" \
-                    % (song[0], uri["uri"], sql_prep(uri['title']),
-                       sql_prep(uri['artist']))
-            _cur.execute(newuri)
-            _cur.execute("UPDATE billboard.songs SET song='%s', popularity = %s\
-				where id = %s" % (song[1].replace("'", "\\'"),
-                      uri["popularity"], song[0]))
-            _conn.commit()
-
-INFO = {
-    "hot-100": {
-        "chart": "hot-100",
-        "url": "https://www.billboard.com/charts/hot-100/{}-{}-{}",
-        "item_type": "track",
-        "make_item": lambda t, a, r: SpotifyItem(t, a, r)
-    },
-
-    "billboard-200": {
-        "chart": "billboard-200",
-        "url": "https://www.billboard.com/charts/billboard-200/{}-{}-{}",
-        "item_type": "album",
-        "make_item": lambda t, a, r: SpotifyItem(t, a, uri=r["uri"])
-    }
-}
-
-
 def sql_prep(s):
     return "\"%s\"" % MySQLdb.escape_string(s) if isinstance(s, str) \
            else MySQLdb.escape_string(str(s))
 
+INFO = {
+    "hot-100": {
+        "chart": "hot-100",
+        "url": lambda x: "https://www.billboard.com/charts/hot-100/" + x,
+        "item_type": "track",
+    },
+
+    "billboard-200": {
+        "chart": "billboard-200",
+        "url": lambda x: "https://www.billboard.com/charts/billboard-200/" + x,
+        "item_type": "album",
+    }
+}
+
 
 class SpotifyItem:
-    def __init__(self, title=None, artist=None, search_result=None, uri=None):
+    def __init__(self, item_type, title, artist, search_result=None, uri=None):
+        self.type = item_type
         self.details = {
             "bb_artist": artist,
             "bb_title": title
         }
 
         if uri:
-            album = Spotify().album(uri)
-            self.details.update({
-                "uri": uri,
-                "spoffy_artist": album["artists"][0]["name"],
-                "spoffy_title": album["name"],
-                "popularity": album["popularity"],
-                "duration": sum(track["duration_ms"] for track
-                                in album["tracks"]["items"]),
-                "genres": ",".join(album["genres"])
-            })
+            uri_object = Spotify().album(uri) if type=="album" else Spotify().track(uri)
+        elif search_result:
+            uri_object = search_result
+            if item_type == "track":
+                self.album_uri = search_result["album"]["uri"]
+                self.album_type = search_result["album"]["album_type"]
         else:
-            self.album_uri = search_result["album"]["uri"]
-            self.album_type = search_result["album"]["album_type"]
-            self.details.update({
-                "uri": search_result["uri"],
-                "spoffy_artist": search_result["artists"][0]["name"],
-                "spoffy_title": search_result["name"],
-                "popularity": search_result["popularity"],
-                "duration": search_result["duration_ms"],
-                "album_id": None
-            })
+            return
+
+        self.details.update({
+            "uri": uri if uri else uri_object["uri"],
+            "spoffy_artist": ",".join(x["name"] for x in uri_object["artists"]),
+            "spoffy_title": uri_object["name"],
+            "popularity": uri_object["popularity"],
+            "duration": sum(uri_object["duration_ms"] for track
+                            in uri_object["tracks"]["items"]) if item_type == "album" \
+                        else uri_object["duration_ms"],
+            "genres": ",".join(uri_object["genres"])
+        })
+
 
     def getKeys(self):
         return ",".join(x for x in self.details.keys()
