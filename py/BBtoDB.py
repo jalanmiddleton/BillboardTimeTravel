@@ -18,10 +18,12 @@ from bs4 import BeautifulSoup
 from core import select, insert, InitDB, Spotify
 
 
-def scrape(day=datetime(2020, 5, 9), end_year=1957):
+def scrape(day=datetime(2020, 5, 9), end=datetime(1957, 12, 31)):
+    InitDB()
+
     # TODO: set date to previous or current saturday?
     # TODO: figure out the day that it transitioned from some other day to Saturday
-    while day.year > end_year:
+    while day > end:
         try:
             add_bb_entry("track",
                          get_from_page("https://www.billboard.com/charts/hot-100/" +
@@ -88,7 +90,7 @@ def get_and_add_id(item_type, title, artist):
     return id[0][0]
 
 
-def remove_parens(s): return re.sub(r"\(.+\)|[.+]", "", s)
+def remove_parens(s): return re.sub(r"\(.+\)|\[.+\]", "", s)
 
 
 def format_date(day):
@@ -106,7 +108,7 @@ def get_query(title, artist):
         and word not in string.punctuation and len(word) > 1,
         artist.lower().split()))
 
-    return remove_parens(title) + " " + " ".join(artist.split()[:3])
+    return remove_parens(title) + " " + " ".join(re.split(r"\s|,", artist)[:3])
 
 
 def search_item(item_type, title, artist):
@@ -117,8 +119,8 @@ def search_item(item_type, title, artist):
 
     failed = []
     for result in search_results[item_type + "s"]["items"]:
-        item = remove_parens(result["name"].lower())
-        if has_bad_words(title_bb, item, ["cover", "karaoke", "remix"]):
+        title_spoffy = remove_parens(result["name"].lower())
+        if has_bad_words(title_bb, title_spoffy, ["cover", "karaoke", "remix"]):
             continue
 
         artist_spoffy = result["artists"][0]["name"].lower()
@@ -126,14 +128,14 @@ def search_item(item_type, title, artist):
             break
 
         if (LSSMatch(artist_bb, artist_spoffy) >= .75 or artist_bb == "soundtrack") \
-            and LSSMatch(item, title_bb) >= .75:
+            and LSSMatch(title_spoffy, title_bb) >= .75:
             return SpotifyItem(item_type, title, artist, search_result=result)
 
-        failed.append("\"%s\" by %s" % (item, result["artists"][0]["name"]))
+        failed.append("\t\"%s\" by %s" % (title_spoffy, result["artists"][0]["name"]))
 
-    print("\"%s\" not found" % (query))
+    print("\t\"%s\" not found" % (query))
     for fail in failed[:5]:
-        print("\t", fail)
+        print("\t\t", fail)
 
     return SpotifyItem(item_type, title, artist)
 
@@ -156,7 +158,8 @@ def LSSMatch(one, two):
 
 
 def sql_prep(s):
-    return "\"%s\"" % MySQLdb.escape_string(s).decode("utf8") if isinstance(s, str) else str(s)
+    return "\"%s\"" % MySQLdb.escape_string(s).decode("utf8") if isinstance(s, str) \
+           else str(s)
 
 
 class SpotifyItem:
@@ -206,4 +209,5 @@ class SpotifyItem:
 ######################
 
 if __name__ == "__main__":
+    InitDB()
     scrape()
