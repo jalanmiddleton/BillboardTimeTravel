@@ -14,6 +14,7 @@ export default class Quiz extends React.Component {
     this.onSubmit = this.onSubmit.bind(this)
     this.onChange = this.onChange.bind(this)
     this.renderMenu = this.renderMenu.bind(this)
+    this.playnext = this.playnext.bind(this)
   }
 
   onChange(event) {
@@ -24,25 +25,32 @@ export default class Quiz extends React.Component {
 
   onSubmit(event) {
     event.preventDefault()
-    this.props.player.togglePlay()
 
     console.log(this.state.song)
     console.log(this.state.playlist[this.state.index].track.name.toLowerCase())
     console.log(this.state.playlist.slice(0, 5).map(x => x.track.name)) 
     console.log(this.state.index)
 
+    let songname = this.state.playlist[this.state.index].track.name.toLowerCase()
+    songname = songname.split(" - ")[0]
 
-    let reaction = "";
-    if (this.state.song.toLowerCase() === 
-        this.state.playlist[this.state.index].track.name.toLowerCase()) {
+    let reaction = ""
+    let next = null
+    if (this.state.song.toLowerCase() === songname) {
       reaction += "Song correct! "
+      this.props.player.togglePlay()
+      next = (res) => {
+        return new Promise(resolve => setTimeout(resolve, 2000))
+                .then(this.playnext)
+      }
     } else {
       reaction += "Song incorrect! "
     }
 
     ReactDOM.render(
       <span>{reaction}</span>,
-      document.getElementById("answer")
+      document.getElementById("answer"),
+      next
     )
   }
 
