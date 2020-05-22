@@ -6,6 +6,7 @@ export default class Quiz extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      playlist: null,
       index: -1,
       song: "",
       artist: "",
@@ -17,41 +18,22 @@ export default class Quiz extends React.Component {
     this.playnext = this.playnext.bind(this)
   }
 
-  onChange(event) {
-    let newstate = Object.assign({}, this.state)
-    newstate[event.target.name] = event.target.value 
-    this.setState(newstate)
-  }
-
-  onSubmit(event) {
-    event.preventDefault()
-
-    console.log(this.state.song)
-    console.log(this.state.playlist[this.state.index].track.name.toLowerCase())
-    console.log(this.state.playlist.slice(0, 5).map(x => x.track.name)) 
-    console.log(this.state.index)
-
-    let songname = this.state.playlist[this.state.index].track.name.toLowerCase()
-    songname = songname.split(" - ")[0]
-
-    let reaction = ""
-    let next = null
-    if (this.state.song.toLowerCase() === songname) {
-      reaction += "Song correct! "
-      this.props.player.togglePlay()
-      next = (res) => {
-        return new Promise(resolve => setTimeout(resolve, 2000))
-                .then(this.playnext)
-      }
-    } else {
-      reaction += "Song incorrect! "
-    }
-
-    ReactDOM.render(
-      <span>{reaction}</span>,
-      document.getElementById("answer"),
-      next
-    )
+  renderMenu() {    
+    this.getplaylist("Quizzable").then(result => {
+      return $.ajax({
+        url: `https://api.spotify.com/v1/playlists/${result.id}/tracks`,
+        headers: this.props.auth
+      })
+    }).then(result => {
+      return this.setState({
+        playlist: this.shufflePlaylist(result),
+        index: -1,
+        song: "",
+        artist: "",
+      }, this.playnext)
+    }).catch(err => {
+      console.log(err)
+    })
   }
 
   async getplaylist(playlist_name, url) {
@@ -81,6 +63,38 @@ export default class Quiz extends React.Component {
     }
 
     return shuffled
+  }
+
+  onChange(event) {
+    let newstate = Object.assign({}, this.state)
+    newstate[event.target.name] = event.target.value 
+    this.setState(newstate)
+  }
+
+  onSubmit(event) {
+    event.preventDefault()
+
+    let songname = this.state.playlist[this.state.index].track.name.toLowerCase()
+    songname = songname.split(" - ")[0]
+    let reaction = ""
+    let next = null
+
+    if (this.state.song.toLowerCase() === songname) {
+      reaction += "Song correct! "
+      this.props.player.togglePlay()
+      next = (res) => {
+        return new Promise(resolve => setTimeout(resolve, 2000))
+                .then(this.playnext)
+      }
+    } else {
+      reaction += "Song incorrect! "
+    }
+
+    ReactDOM.render(
+      <span>{reaction}</span>,
+      document.getElementById("answer"),
+      next
+    )
   }
 
   async play({
@@ -118,24 +132,6 @@ export default class Quiz extends React.Component {
     this.setState(newstate);
   }
 
-  renderMenu() {    
-    this.getplaylist("Quizzable").then(result => {
-      return $.ajax({
-        url: `https://api.spotify.com/v1/playlists/${result.id}/tracks`,
-        headers: this.props.auth
-      })
-    }).then(result => {
-      return this.setState({
-        playlist: this.shufflePlaylist(result),
-        index: -1,
-        song: "",
-        artist: "",
-      }, this.playnext)
-    }).catch(err => {
-      console.log(err)
-    })
-  }
-
   render() {
     if (this.state.index === -1)
       return (
@@ -145,21 +141,37 @@ export default class Quiz extends React.Component {
       )
     else 
       return (
-        <Song onChange={this.onChange} onSubmit={this.onSubmit} />
+        <div id="quiz">
+          <Song onChange={this.onChange} onSubmit={this.onSubmit} />
+          <button onClick={() => {
+            let song = this.state.playlist[this.state.index].track.name 
+            ReactDOM.render(
+              <span>Quitter! The song was {song}.</span>,
+              document.getElementById("answer"),
+              () => new Promise(resolve => setTimeout(resolve, 2000))
+                          .then(this.playnext)
+            )
+          }}>Give up</button>
+          <div id="answer"></div>
+        </div>
       )
   }
 }
 
 function Song(props) {
-  return (<div><form onSubmit={props.onSubmit}>
-    <label>
+  return (
+    <div id="song"><form onSubmit={props.onSubmit}>
+      <label>
+        Song Title:
+        <input type="text" name="song" onChange={props.onChange} />
+      </label>
+      <input type="submit" value="Submit" />
+      </form>
+    </div>
+  )
+}
+
+/* <label>
       Song Artist:
       <input type="text" name="artist" onChange={props.onChange} />
-    </label>
-    <label>
-      Song Title:
-      <input type="text" name="song" onChange={props.onChange} />
-    </label>
-    <input type="submit" value="Submit" />
-    </form><div id="answer"></div></div>)
-}
+    </label> */
