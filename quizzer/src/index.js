@@ -44,7 +44,7 @@ window.onSpotifyWebPlaybackSDKReady = () => {
         ReactDOM.render(
           <Quiz player={player} auth={{
             'Authorization': 'Bearer ' + hash.access_token
-          }}/>,
+          }} />,
           document.getElementById('root')
         );    
       } else {

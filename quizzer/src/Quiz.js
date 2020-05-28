@@ -25,12 +25,9 @@ export default class Quiz extends React.Component {
         headers: this.props.auth
       })
     }).then(result => {
-      return this.setState({
-        playlist: this.shufflePlaylist(result),
-        index: -1,
-        song: "",
-        artist: "",
-      }, this.playnext)
+      let newstate = Object.assign({}, this.state)
+      newstate.playlist = this.shufflePlaylist(result)
+      return this.setState(newstate, this.playnext)
     }).catch(err => {
       console.log(err)
     })
@@ -67,7 +64,7 @@ export default class Quiz extends React.Component {
 
   onChange(event) {
     let newstate = Object.assign({}, this.state)
-    newstate[event.target.name] = event.target.value 
+    newstate[event.target.id] = event.target.value 
     this.setState(newstate)
   }
 
@@ -80,21 +77,20 @@ export default class Quiz extends React.Component {
     let next = null
 
     if (this.state.song.toLowerCase() === songname) {
+      console.log(this)
       reaction += "Song correct! "
       this.props.player.togglePlay()
-      next = (res) => {
+      next = () => {
         return new Promise(resolve => setTimeout(resolve, 2000))
-                .then(this.playnext)
+                .then(() => {
+                  document.getElementById("song")
+                }).then(this.playnext)
       }
     } else {
       reaction += "Song incorrect! "
     }
 
-    ReactDOM.render(
-      <span>{reaction}</span>,
-      document.getElementById("answer"),
-      next
-    )
+    this.print(reaction, next)
   }
 
   async play({
@@ -132,6 +128,14 @@ export default class Quiz extends React.Component {
     this.setState(newstate);
   }
 
+  async print(text, callback) {
+    return ReactDOM.render(
+      <span>{text}</span>,
+      document.getElementById("answer"),
+      callback
+    )
+  }
+
   render() {
     if (this.state.index === -1)
       return (
@@ -144,13 +148,12 @@ export default class Quiz extends React.Component {
         <div id="quiz">
           <Song onChange={this.onChange} onSubmit={this.onSubmit} />
           <button onClick={() => {
+            this.props.player.togglePlay()}}>Pause</button>
+          <button onClick={() => {
             let song = this.state.playlist[this.state.index].track.name 
-            ReactDOM.render(
-              <span>Quitter! The song was {song}.</span>,
-              document.getElementById("answer"),
+            this.print(`Quitter! The song was ${song}.`,
               () => new Promise(resolve => setTimeout(resolve, 2000))
-                          .then(this.playnext)
-            )
+                      .then(this.playnext))
           }}>Give up</button>
           <div id="answer"></div>
         </div>
@@ -163,7 +166,7 @@ function Song(props) {
     <div id="song"><form onSubmit={props.onSubmit}>
       <label>
         Song Title:
-        <input type="text" name="song" onChange={props.onChange} />
+        <input type="text" id="song" onChange={props.onChange} />
       </label>
       <input type="submit" value="Submit" />
       </form>
