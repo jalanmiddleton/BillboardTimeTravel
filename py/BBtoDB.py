@@ -18,7 +18,7 @@ from bs4 import BeautifulSoup
 from core import select, insert, InitDB, Spotify
 
 
-def scrape(day=datetime(2020, 5, 9), end=datetime(1957, 12, 31)):
+def scrape(day=datetime(2020, 6, 20), end=datetime(1957, 12, 31)):
     InitDB()
 
     # TODO: set date to previous or current saturday?

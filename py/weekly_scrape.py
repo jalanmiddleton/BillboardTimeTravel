@@ -1,7 +1,10 @@
 from BBtoDB import scrape
-import datetime
+from datetime import date, datetime, timedelta
 
-today = datetime.date.today()
-aweekago = today - datetime.timedelta(days=7)
+today = date.today()
 
-scrape(today, aweekago)
+# 0 - 2, 1 - 3, 2 - 4...5 - 0, 6 - 1
+recentsaturday = today - timedelta((today.weekday() + 2) % 7)
+aweekago = recentsaturday - timedelta(days=7)
+
+scrape(recentsaturday, aweekago)
