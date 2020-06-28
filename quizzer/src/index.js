@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import secrets from './secrets.js';
 import Quiz from './Quiz.js';
+import Playlister from './Playlister.js';
 
 // https://levelup.gitconnected.com/how-to-build-a-spotify-player-with-react-in-15-minutes-7e01991bc4b6
 // Get the hash of the url
@@ -37,20 +38,41 @@ class Login extends React.Component {
   }
 }
 
+class Choose extends React.Component {
+  render() {
+    return (
+      <div>
+        <button onClick={() => {
+          setupPlayer().then(player => {
+            if (player) {
+              ReactDOM.render(
+                <Quiz player={player} auth={{
+                  'Authorization': 'Bearer ' + hash.access_token
+                }} />,
+                document.getElementById('root')
+              );
+            } else {
+              // When failure...
+            }
+          });
+        }}>Quiz</button><br />
+        <button onClick={() => {
+          ReactDOM.render(
+            <Playlister />,
+            document.getElementById("root")
+          )
+        }}>Make New Playlists</button>
+      </div>
+    )
+  }
+}
+
 window.onSpotifyWebPlaybackSDKReady = () => {
   if (hash.access_token) {   
-    setupPlayer().then(player => {
-      if (player) {
-        ReactDOM.render(
-          <Quiz player={player} auth={{
-            'Authorization': 'Bearer ' + hash.access_token
-          }} />,
-          document.getElementById('root')
-        );    
-      } else {
-        // When failure...
-      }
-    });
+    ReactDOM.render(
+      <Choose />,
+      document.getElementById('root')
+    );
   }
 };
 

@@ -163,14 +163,13 @@ export default class Quiz extends React.Component {
 
 function Song(props) {
   return (
-    <div id="song"><form onSubmit={props.onSubmit}>
+    <form onSubmit={props.onSubmit}>
       <label>
         Song Title:
         <input type="text" id="song" onChange={props.onChange} />
       </label>
       <input type="submit" value="Submit" />
-      </form>
-    </div>
+    </form>
   )
 }
 
