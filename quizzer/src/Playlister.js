@@ -1,9 +1,6 @@
 import React from 'react';
-import secrets from './secrets.js';
 
 //import ReactDOM from 'react-dom';
-
-const mysql = require('mysql')
 
 /*
   When selected:
@@ -31,7 +28,8 @@ export default class Playlister extends React.Component {
       weeks: 1,
       highest: 1,
       songsper: 20,
-      playlists: 5
+      playlists: 5,
+      name: null
     }
 
     this.onFieldChange = this.onFieldChange.bind(this)
@@ -47,33 +45,87 @@ export default class Playlister extends React.Component {
   onSubmit(event) {
     event.preventDefault()
     
-    let limit = this.state.songsper * this.state.playlists;
-    let query =  `SELECT 
-        uri,
-        popularity,
-        MAX(idx),
-        COUNT(*),
-        ${this.state.popularity} * popularity / 100 + 
-          ${this.state.highest} * (101 - MAX(idx)) / 100 + 
-          ${this.state.weeks} * COUNT(*) / 87 AS points
-    FROM
-        billboard.tracks
-            JOIN
-        \`hot-100\` ON id = item_id
-    WHERE
-        uri IS NOT NULL and year(week) between ${this.state.start} and 
-          ${this.state.end || this.state.start}
-    GROUP BY id
-    ORDER BY points DESC limit ${limit};`
-
-    let connection = mysql.createConnection({
-      host: 'localhost', user: 'root', password: secrets.mysqlpass, 
-      database: 'billboard'
+    Promise.all([this.getPlaylists(), this.getTracks()])
+    .then((res) => {
+      this.replacePlaylists(...res)
+    }).then(console.log).catch((err) => {
+      console.log(err)
     })
-    connection.connect()
-    connection.query(query, (error, results, fields) => {
-      if (error) throw error;
-      console.log(results[0])
+  }
+
+  getTracks() {
+    return fetch("http://localhost:3300", {
+      method: "POST",
+      mode: "cors",
+      cache: 'no-cache', 
+      credentials: 'same-origin', 
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      redirect: 'follow', 
+      referrerPolicy: 'no-referrer',   
+      body: JSON.stringify(this.state)
+    }).then((response) => {
+      return response.json()
+    }).then(res => {
+      return res.tracks
+    })
+  } 
+
+  getPlaylists(url, playlists) {
+    if (!url) {
+      url = "https://api.spotify.com/v1/me/playlists"
+    }
+    if (!playlists) {
+      playlists = []
+    }
+
+    return fetch(url, {
+      method: "GET",
+      headers: {...this.props.auth,
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      }
+    }).then(res => {
+      return res.json()
+    }).then(res => {
+      playlists = playlists.concat(res.items.filter(item => item.name.startsWith("BB")))
+      if (playlists.length >= this.state.playlists) {
+        return playlists.slice(0, this.state.playlists)
+      } else {
+        return this.getPlaylists(res.next, playlists)
+      }
+    })
+  }
+
+  replacePlaylists(playlists, songs) {
+    if (!playlists.length || !songs.length)
+      return "Done!"
+
+    return fetch(`https://api.spotify.com/v1/playlists/${playlists[0].id}/tracks`, {
+      method: "PUT",
+      headers: {...this.props.auth,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        "uris": songs.slice(0, 20)
+      })
+    }).then(res => {
+      if (this.state.name) {
+        let number = this.state.playlists - songs.length / this.state.songsper + 1
+        return fetch(`https://api.spotify.com/v1/playlists/${playlists[0].id}`, {
+          method: "PUT",
+          headers: {
+            ...this.props.auth,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            name: `BB ${number}: ${this.state.name}`
+          })
+        })
+      }
+    }).then(res => {
+      return this.replacePlaylists(playlists.slice(1), songs.slice(20))
     })
   }
 
@@ -82,7 +134,7 @@ export default class Playlister extends React.Component {
       <form onSubmit={this.onSubmit}>
         <em>Range</em><br />
         <label>Start Year: </label>        
-        <input type="number" id="start" min="1957" max="2020" value="1990" onChange={this.onFieldChange} />
+        <input type="number" id="start" min="1957" max="2020" onChange={this.onFieldChange} />
         <br />
 
         <label>End Year: (leave blank for single year) </label>
@@ -92,25 +144,30 @@ export default class Playlister extends React.Component {
 
         <em>Weights</em>Weights<br />
         <label>Spotify Popularity </label>
-        <input type="number" id="popularity" value="1" onChange={this.onFieldChange} />
+        <input type="number" id="popularity" onChange={this.onFieldChange} />
         <br />
 
         <label>Billboard Weeks </label>
-        <input type="number" id="weeks" value="1" onChange={this.onFieldChange} />
+        <input type="number" id="weeks" onChange={this.onFieldChange} />
         <br />
 
         <label>Billboard Highest </label>
-        <input type="number" id="highest" value="1" onChange={this.onFieldChange} />
+        <input type="number" id="highest" onChange={this.onFieldChange} />
         <br />
         <br />
 
         <em>Playlist Details </em><br />
         <label>Songs Per Playlist </label>
-        <input type="number" id="songsper" value="20" onChange={this.onFieldChange} />
+        <input type="number" id="songsper" onChange={this.onFieldChange} />
         <br />
 
         <label>Number of Playlists </label>
-        <input type="number" id="playlists" value="5" onChange={this.onFieldChange} />
+        <input type="number" id="playlists" onChange={this.onFieldChange} />
+        <br />
+        <br />
+
+        <label>Name </label>
+        <input type="text" id="name" onChange={this.onFieldChange} />
         <br />
       <input type="submit" value="Submit" />
     </form>

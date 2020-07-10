@@ -40,15 +40,16 @@ class Login extends React.Component {
 
 class Choose extends React.Component {
   render() {
+    let auth = {
+      'Authorization': 'Bearer ' + hash.access_token
+    }
     return (
       <div>
         <button onClick={() => {
           setupPlayer().then(player => {
             if (player) {
               ReactDOM.render(
-                <Quiz player={player} auth={{
-                  'Authorization': 'Bearer ' + hash.access_token
-                }} />,
+                <Quiz player={player} auth={auth} />,
                 document.getElementById('root')
               );
             } else {
@@ -58,7 +59,7 @@ class Choose extends React.Component {
         }}>Quiz</button><br />
         <button onClick={() => {
           ReactDOM.render(
-            <Playlister />,
+            <Playlister auth={auth} />,
             document.getElementById("root")
           )
         }}>Make New Playlists</button>
