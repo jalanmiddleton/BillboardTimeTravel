@@ -137,12 +137,27 @@ export default class Playlister extends React.Component {
         <input type="number" id="start" min="1957" max="2020" onChange={this.onFieldChange} />
         <br />
 
-        <label>End Year: (leave blank for single year) </label>
+        <label>End Year: </label>
         <input type="number" id="end" min="1957" max="2020" onChange={this.onFieldChange} />
+         (leave blank for single year)
         <br />
         <br />
 
-        <em>Weights</em>Weights<br />
+        <em>Playlist Details </em><br />        
+        <label>Name </label>
+        <input type="text" id="name" onChange={this.onFieldChange} />
+        <br />
+
+        <label>Songs Per Playlist </label>
+        <input type="number" id="songsper" onChange={this.onFieldChange} />
+        <br />
+
+        <label>Number of Playlists </label>
+        <input type="number" id="playlists" onChange={this.onFieldChange} />
+        <br />
+        <br />
+        
+        <em>Weights</em><br />
         <label>Spotify Popularity </label>
         <input type="number" id="popularity" onChange={this.onFieldChange} />
         <br />
@@ -154,20 +169,6 @@ export default class Playlister extends React.Component {
         <label>Billboard Highest </label>
         <input type="number" id="highest" onChange={this.onFieldChange} />
         <br />
-        <br />
-
-        <em>Playlist Details </em><br />
-        <label>Songs Per Playlist </label>
-        <input type="number" id="songsper" onChange={this.onFieldChange} />
-        <br />
-
-        <label>Number of Playlists </label>
-        <input type="number" id="playlists" onChange={this.onFieldChange} />
-        <br />
-        <br />
-
-        <label>Name </label>
-        <input type="text" id="name" onChange={this.onFieldChange} />
         <br />
       <input type="submit" value="Submit" />
     </form>

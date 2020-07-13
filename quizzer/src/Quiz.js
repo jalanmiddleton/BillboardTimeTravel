@@ -6,7 +6,8 @@ export default class Quiz extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      playlist: null,
+      playlists: null,
+      tracks: null,
       index: -1,
       song: "",
       artist: "",
@@ -16,17 +17,22 @@ export default class Quiz extends React.Component {
     this.onChange = this.onChange.bind(this)
     this.renderMenu = this.renderMenu.bind(this)
     this.playnext = this.playnext.bind(this)
+    this.replaceList = this.replaceList.bind(this)
   }
 
-  renderMenu() {    
-    this.getplaylist("Quizzable").then(result => {
-      return $.ajax({
-        url: `https://api.spotify.com/v1/playlists/${result.id}/tracks`,
-        headers: this.props.auth
-      })
+  renderMenu(event) { 
+    event.preventDefault()   
+
+    let options = document.getElementById("playlists")
+    let uri = options.children[options.selectedIndex]
+              .getAttribute("uri").split(":").pop()
+
+    return $.ajax({
+      url: `https://api.spotify.com/v1/playlists/${uri}/tracks`,
+      headers: this.props.auth
     }).then(result => {
       let newstate = Object.assign({}, this.state)
-      newstate.playlist = this.shufflePlaylist(result)
+      newstate.tracks = this.shufflePlaylist(result)
       return this.setState(newstate, this.playnext)
     }).catch(err => {
       console.log(err)
@@ -71,7 +77,7 @@ export default class Quiz extends React.Component {
   onSubmit(event) {
     event.preventDefault()
 
-    let songname = this.state.playlist[this.state.index].track.name.toLowerCase()
+    let songname = this.state.tracks[this.state.index].track.name.toLowerCase()
     songname = songname.split(" - ")[0]
     let reaction = ""
     let next = null
@@ -123,7 +129,7 @@ export default class Quiz extends React.Component {
     newstate.index += 1;
     await this.play({
       playerInstance: this.props.player,
-      spotify_uri: this.state.playlist[newstate.index].track.uri,
+      spotify_uri: this.state.tracks[newstate.index].track.uri,
     });
     this.setState(newstate);
   }
@@ -136,21 +142,63 @@ export default class Quiz extends React.Component {
     )
   }
 
+  async getPlaylists(url, playlists) {
+    if (!url) {
+      url = "https://api.spotify.com/v1/me/playlists"
+    }
+
+    if (!playlists) {
+      playlists = []
+    }
+
+    return fetch(url, {
+      method: "GET",
+      headers: {...this.props.auth,
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      }
+    }).then(res => {
+      return res.json()
+    }).then(res => {
+      playlists = playlists.concat(res.items.filter(item => item.name.startsWith("BB")))
+      if (res.next) {
+        return this.getPlaylists(res.next, playlists)     
+      } else {
+        return playlists
+      }
+    })
+  }
+
+  replaceList(playlists) {
+    let newstate = Object.assign({}, this.state)
+    newstate.playlists = playlists.map((elem, idx) => 
+      <option key={`${elem.name}_${idx}`} uri={elem.uri}>{elem.name}</option>
+    )
+    this.setState(newstate)
+  }
+
   render() {
-    if (this.state.index === -1)
+    if (this.state.playlists === null) {
+      this.getPlaylists().then(this.replaceList)
       return (
-        <button id="start" onClick={this.renderMenu}>
-          Start the Quiz!
-        </button>
+        <div id="choose">Loading...</div>
       )
-    else 
+    } else if (this.state.index === -1) {
+      return (
+        <form id="playlistlist" onSubmit={this.renderMenu}>      
+          <label>Choose the playlist to quiz: </label><br />
+          <select name="playlists" id="playlists">{this.state.playlists}</select><br />
+          <button id="start">Start the Quiz!</button>
+        </form>
+      )
+    } else 
       return (
         <div id="quiz">
           <Song onChange={this.onChange} onSubmit={this.onSubmit} />
           <button onClick={() => {
             this.props.player.togglePlay()}}>Pause</button>
           <button onClick={() => {
-            let song = this.state.playlist[this.state.index].track.name 
+            let song = this.state.tracks[this.state.index].track.name 
             this.print(`Quitter! The song was ${song}.`,
               () => new Promise(resolve => setTimeout(resolve, 2000))
                       .then(this.playnext))
