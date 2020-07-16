@@ -11,6 +11,7 @@ export default class Quiz extends React.Component {
       index: -1,
       song: "",
       artist: "",
+      playing: true
     }
 
     this.onSubmit = this.onSubmit.bind(this)
@@ -127,6 +128,7 @@ export default class Quiz extends React.Component {
   async playnext() {
     let newstate = { ...this.state };
     newstate.index += 1;
+    newstate.playing = true;
     await this.play({
       playerInstance: this.props.player,
       spotify_uri: this.state.tracks[newstate.index].track.uri,
@@ -178,11 +180,14 @@ export default class Quiz extends React.Component {
   }
 
   render() {
+    // On first loading.
     if (this.state.playlists === null) {
       this.getPlaylists().then(this.replaceList)
       return (
         <div id="choose">Loading...</div>
       )
+
+    // After songs are loaded.
     } else if (this.state.index === -1) {
       return (
         <form id="playlistlist" onSubmit={this.renderMenu}>      
@@ -191,21 +196,34 @@ export default class Quiz extends React.Component {
           <button id="start">Start the Quiz!</button>
         </form>
       )
-    } else 
+
+    // After a playlist is chosen.
+    } else {
+      let playmessage = this.state.playing ? "Playing..." : "Paused"
       return (
-        <div id="quiz">
+        <div id="quiz">                    
+          <div id="state">{playmessage}</div>
+          
           <Song onChange={this.onChange} onSubmit={this.onSubmit} />
+          
           <button onClick={() => {
-            this.props.player.togglePlay()}}>Pause</button>
+            this.props.player.togglePlay().then(() => {
+              let newstate = Object.assign({}, this.state)
+              newstate.playing = !newstate.playing
+              this.setState(newstate)
+            })}}>Pause</button>
+
           <button onClick={() => {
             let song = this.state.tracks[this.state.index].track.name 
             this.print(`Quitter! The song was ${song}.`,
               () => new Promise(resolve => setTimeout(resolve, 2000))
                       .then(this.playnext))
           }}>Give up</button>
+
           <div id="answer"></div>
         </div>
       )
+    }
   }
 }
 
