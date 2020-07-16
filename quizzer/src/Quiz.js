@@ -1,4 +1,4 @@
-import $ from "jquery";
+import $, { map } from "jquery";
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -8,6 +8,7 @@ export default class Quiz extends React.Component {
     this.state = {
       playlists: null,
       tracks: null,
+      score: null,
       index: -1,
       song: "",
       artist: "",
@@ -33,7 +34,8 @@ export default class Quiz extends React.Component {
       headers: this.props.auth
     }).then(result => {
       let newstate = Object.assign({}, this.state)
-      newstate.tracks = this.shufflePlaylist(result)
+      newstate.tracks = this.shuffle(result)
+      newstate.score = []
       return this.setState(newstate, this.playnext)
     }).catch(err => {
       console.log(err)
@@ -56,7 +58,7 @@ export default class Quiz extends React.Component {
       return null;
   }
 
-  shufflePlaylist(playlist) {
+  shuffle(playlist) {
     // I don't want to queue things up, just shuffle.
     let shuffled = []
     let unshuffled = playlist.items.slice()
@@ -84,14 +86,16 @@ export default class Quiz extends React.Component {
     let next = null
 
     if (this.state.song.toLowerCase() === songname) {
-      console.log(this)
       reaction += "Song correct! "
-      this.props.player.togglePlay()
+
+      if (this.state.playing)
+        this.props.player.togglePlay()
+
       next = () => {
         return new Promise(resolve => setTimeout(resolve, 2000))
                 .then(() => {
                   document.getElementById("song")
-                }).then(this.playnext)
+                }).then(() => this.playnext(true))
       }
     } else {
       reaction += "Song incorrect! "
@@ -125,15 +129,18 @@ export default class Quiz extends React.Component {
     }
   }
 
-  async playnext() {
+  async playnext(correct) {
     let newstate = { ...this.state };
     newstate.index += 1;
     newstate.playing = true;
+    if (correct !== undefined)
+      newstate.score.push(correct)
+    this.setState(newstate);
+
     await this.play({
       playerInstance: this.props.player,
       spotify_uri: this.state.tracks[newstate.index].track.uri,
     });
-    this.setState(newstate);
   }
 
   async print(text, callback) {
@@ -144,6 +151,7 @@ export default class Quiz extends React.Component {
     )
   }
 
+  // redundant with getplaylist
   async getPlaylists(url, playlists) {
     if (!url) {
       url = "https://api.spotify.com/v1/me/playlists"
@@ -203,7 +211,7 @@ export default class Quiz extends React.Component {
       return (
         <div id="quiz">                    
           <div id="state">{playmessage}</div>
-          
+
           <Song onChange={this.onChange} onSubmit={this.onSubmit} />
           
           <button onClick={() => {
@@ -217,8 +225,16 @@ export default class Quiz extends React.Component {
             let song = this.state.tracks[this.state.index].track.name 
             this.print(`Quitter! The song was ${song}.`,
               () => new Promise(resolve => setTimeout(resolve, 2000))
-                      .then(this.playnext))
+                      .then(() => this.playnext(false)))
           }}>Give up</button>
+
+          <button onClick={() => {
+            console.log(this.state.score)
+            this.props.player.disconnect()
+            ReactDOM.render(
+              <End tracks={this.state.tracks} score={this.state.score} />,
+              document.getElementById("root"))
+          }}>Quit</button>
 
           <div id="answer"></div>
         </div>
@@ -237,6 +253,41 @@ function Song(props) {
       <input type="submit" value="Submit" />
     </form>
   )
+}
+
+class End extends React.Component {
+  render() {
+    let correct = [], incorrect = []
+    for (let i in this.props.score) {
+      console.log(i)
+      if (this.props.score[i] === true) {
+        correct.push(this.props.tracks[i])
+      } else {
+        incorrect.push(this.props.tracks[i])
+        console.log(incorrect)
+      }
+    }
+
+    console.log(correct)
+    console.log(incorrect)
+
+    // TODO: wrong but do more important stuff first
+    let correctmessage = correct.length > 0 ?
+      `You got ${correct.length} songs correct:\n\t` + map(correct, x => x.track.name).join("\n\t") :
+      "You got NOTHING correct. 😡"
+
+    let incorrectmessage = incorrect.length > 0 ?
+      `You got ${incorrect.length} songs incorrect:\n\t` + map(incorrect, x => x.track.name).join("\n\t") :
+      "You got them all, hot stuff. 😳"
+     
+    return (
+      <div id="results">
+        <h4>Game Over!</h4>
+        <div id="correct">{correctmessage}</div>
+        <div id="incorrect">{incorrectmessage}</div>
+      </div>
+    )
+  }
 }
 
 /* <label>
