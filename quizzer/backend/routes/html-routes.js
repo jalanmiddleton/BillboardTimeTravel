@@ -25,4 +25,24 @@ module.exports = function(app, connection) {
       (err)? res.send(err) : res.json({tracks: data.map(x => x.uri)})
     })
   })
+
+  app.post("/score", function(req, res) {
+    // let strs = "(" + 
+    //     req.body.songs.map(x => `${x.track.name} ${x.track.artists.map(y => y.name).join(",")}`).join(",") +
+    //     ")"
+    // strs = strs;
+    // let query = `UPDATE tracks SELECT id, uri FROM tracks limit 5;` // WHERE concat(spoffy_title, " ", spoffy_artist)`
+    
+    console.log(req.body)
+    let addby = req.body.correct ? 1 : 0;
+    let idquery = `INSERT INTO quiz
+      SELECT id, now(), 1, ${addby}  FROM tracks WHERE uri IN
+      (${req.body.songs.map(x => `"${x.track.uri}"`).join(",")})
+      ON DUPLICATE KEY UPDATE	 
+        tries = tries + 1,
+        correct = correct + ${addby}`
+    connection.query(idquery, function(err, data) {
+      (err)? res.send(err) : res.json({ msg: "cool" })
+    })
+  })
 }

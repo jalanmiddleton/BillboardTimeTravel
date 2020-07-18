@@ -44,6 +44,7 @@ export default class Quiz extends React.Component {
 
   async getplaylist(playlist_name, url) {
     url = url || `https://api.spotify.com/v1/me/playlists`
+
     const response = await $.ajax({
       url: url,
       headers: this.props.auth
@@ -56,6 +57,34 @@ export default class Quiz extends React.Component {
       return this.getplaylist(playlist_name, response.next);
     else
       return null;
+  }
+  
+  // redundant with getplaylist
+  async getPlaylists(playlists, url) {
+    if (!url) {
+      url = "https://api.spotify.com/v1/me/playlists"
+    }
+
+    if (!playlists) {
+      playlists = []
+    }
+
+    return fetch(url, {
+      method: "GET",
+      headers: {...this.props.auth,
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      }
+    }).then(res => {
+      return res.json()
+    }).then(res => {
+      playlists = playlists.concat(res.items.filter(item => item.name.startsWith("BB")))
+      if (res.next) {
+        return this.getPlaylists(playlists, res.next)     
+      } else {
+        return playlists
+      }
+    })
   }
 
   shuffle(playlist) {
@@ -151,34 +180,6 @@ export default class Quiz extends React.Component {
     )
   }
 
-  // redundant with getplaylist
-  async getPlaylists(url, playlists) {
-    if (!url) {
-      url = "https://api.spotify.com/v1/me/playlists"
-    }
-
-    if (!playlists) {
-      playlists = []
-    }
-
-    return fetch(url, {
-      method: "GET",
-      headers: {...this.props.auth,
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      }
-    }).then(res => {
-      return res.json()
-    }).then(res => {
-      playlists = playlists.concat(res.items.filter(item => item.name.startsWith("BB")))
-      if (res.next) {
-        return this.getPlaylists(res.next, playlists)     
-      } else {
-        return playlists
-      }
-    })
-  }
-
   replaceList(playlists) {
     let newstate = Object.assign({}, this.state)
     newstate.playlists = playlists.map((elem, idx) => 
@@ -256,20 +257,38 @@ function Song(props) {
 }
 
 class End extends React.Component {
+  updatePlays(songs, iscorrect) {
+    return fetch("http://localhost:3300/score", {
+      method: "POST",
+      mode: "cors",
+      cache: 'no-cache', 
+      credentials: 'same-origin', 
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      redirect: 'follow', 
+      referrerPolicy: 'no-referrer',   
+      body: JSON.stringify({ songs: songs, 
+                             correct: iscorrect })
+    }).then((res) => {
+      return res.json()
+    }).then((res) => {
+      console.log(res)
+    }).catch(console.log)
+  }
+
   render() {
     let correct = [], incorrect = []
     for (let i in this.props.score) {
-      console.log(i)
       if (this.props.score[i] === true) {
         correct.push(this.props.tracks[i])
       } else {
         incorrect.push(this.props.tracks[i])
-        console.log(incorrect)
       }
     }
 
-    console.log(correct)
-    console.log(incorrect)
+    this.updatePlays(correct, true)
+    this.updatePlays(incorrect, false)
 
     // TODO: wrong but do more important stuff first
     let correctmessage = correct.length > 0 ?
