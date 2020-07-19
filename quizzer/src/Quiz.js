@@ -137,7 +137,6 @@ export default class Quiz extends React.Component {
     spotify_uri,
     playerInstance: {
       _options: {
-        // getOAuthToken,
         id
       }
     }
@@ -166,10 +165,18 @@ export default class Quiz extends React.Component {
       newstate.score.push(correct)
     this.setState(newstate);
 
-    await this.play({
-      playerInstance: this.props.player,
-      spotify_uri: this.state.tracks[newstate.index].track.uri,
-    });
+    if (newstate.index < newstate.tracks.length)
+      await this.play({
+        playerInstance: this.props.player,
+        spotify_uri: this.state.tracks[newstate.index].track.uri,
+      }).then(() => {
+        this.print("", null)
+      });
+    else 
+      ReactDOM.render(
+        <End tracks={this.state.tracks} score={this.state.score} />,
+        document.getElementById("root")
+      )
   }
 
   async print(text, callback) {
@@ -224,6 +231,7 @@ export default class Quiz extends React.Component {
 
           <button onClick={() => {
             let song = this.state.tracks[this.state.index].track.name 
+            song = song.split(" - ")[0]
             this.print(`Quitter! The song was ${song}.`,
               () => new Promise(resolve => setTimeout(resolve, 2000))
                       .then(() => this.playnext(false)))
