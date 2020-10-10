@@ -111,23 +111,28 @@ export default class Quiz extends React.Component {
 
     let songname = this.state.tracks[this.state.index].track.name.toLowerCase()
     songname = songname.split(" - ")[0]
+    let artist = this.state.tracks[this.state.index].track.artists[0].name.toLowerCase()
+    
     let reaction = ""
     let next = null
+    
+    reaction += this.state.song.toLowerCase() === songname ?
+                    "Song correct! " :
+                    "Song incorrect! "
 
-    if (this.state.song.toLowerCase() === songname) {
-      reaction += "Song correct! "
+    reaction += this.state.artist.toLowerCase() === artist ? 
+                    "Artist correct!" : 
+                    "Artist incorrect!" 
 
+    if (this.state.song.toLowerCase() === songname && 
+        this.state.artist.toLowerCase() === artist) {
       if (this.state.playing)
         this.props.player.togglePlay()
-
+  
       next = () => {
         return new Promise(resolve => setTimeout(resolve, 2000))
-                .then(() => {
-                  document.getElementById("song")
-                }).then(() => this.playnext(true))
+               .then(() => this.playnext(true))
       }
-    } else {
-      reaction += "Song incorrect! "
     }
 
     this.print(reaction, next)
@@ -258,7 +263,11 @@ function Song(props) {
       <label>
         Song Title:
         <input type="text" id="song" onChange={props.onChange} />
+        <br />
+        Artist:
+        <input type="text" id="artist" onChange={props.onChange} />
       </label>
+      <br />
       <input type="submit" value="Submit" />
     </form>
   )

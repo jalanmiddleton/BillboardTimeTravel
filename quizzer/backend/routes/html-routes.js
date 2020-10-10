@@ -3,11 +3,11 @@ const mysql = require("mysql")
 module.exports = function(app, connection) {
   app.post("/", function(req, res) {
     let limit = req.body.songsper * req.body.playlists
-    let query =  `SELECT uri
+    let query =  `SELECT uri,
         ${req.body.popularity} * popularity / 100 + 
           ${req.body.highest} * (101 - MIN(idx)) / 100 + 
           ${req.body.weeks} * COUNT(*) / 87 -
-          least(power(coalesce(tries, 0) / 5, 2), 1) AS points
+          least(power(coalesce(correct, 0) / 6, 2), 1) AS points
     FROM
         billboard.tracks
             JOIN
@@ -19,6 +19,7 @@ module.exports = function(app, connection) {
     GROUP BY id
     ORDER BY points DESC limit ${limit};`
 
+    console.log(query)
     connection.query(query, function(err, data) {
       (err)? res.send(err) : res.json({tracks: data.map(x => x.uri)})
     })
@@ -31,7 +32,7 @@ module.exports = function(app, connection) {
       (${req.body.songs.map(x => `"${x.track.uri}"`).join(",")})
       ON DUPLICATE KEY UPDATE	 
         tries = tries + 1,
-        correct = case when ${addby} = 1 then correct + 1 else max(correct - 2, 0) end,
+        correct = case when ${addby} = 1 then correct + 1 else greatest(correct - 2, 0) end,
         lastattempt = case when ${addby} = 1 then now() else lastattempt end`
     connection.query(idquery, function(err, data) {
       (err)? res.send(err) : res.json({ msg: "cool" })
