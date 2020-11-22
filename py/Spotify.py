@@ -7,7 +7,7 @@ class Spotify:
     __instance = None
 
     @staticmethod
-    def getInstance():
+    def get_instance():
         if Spotify.__instance is None:
             Spotify()
 
