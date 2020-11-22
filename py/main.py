@@ -22,22 +22,20 @@ The set is identified by two flags---empty playlists by a certain name---before
 '''
 
 
-def scramble():
-    playlists = filter_playlists(secrets['SPOTIFY_USER'], flag_filter())
+def scramble(user):
+    playlists = get_playlists(flag_filter())
     ids = [p.id for p in playlists]
     shuffle(playlists)
 
     for id, album in zip(ids, playlists):
-        Spotify().user_playlist_replace_tracks(
-            secrets['SPOTIFY_USER'], id, album.tracks)
-        Spotify().user_playlist_change_details(
-            secrets['SPOTIFY_USER'], id, album.name)
+        Spotify.getInstance().user_playlist_replace_tracks(user, id, album.tracks)
+        Spotify.getInstance().user_playlist_change_details(user, id, album.name)
 
 
 class Playlist:
-    def __init__(self, user, partial_playlist):
-        playlist = Spotify().user_playlist(user, partial_playlist["id"],
-                                           fields="id,name,tracks,uri,next")
+    def __init__(self, partial_playlist):
+        playlist = Spotify.getInstance().playlist(partial_playlist["id"],
+                                      fields="id,name,tracks,uri,next")
 
         self.id = playlist['id']
         self.name = playlist['name']
@@ -58,18 +56,18 @@ filt: A function that returns true or false for whether the playlist qualifies.
 '''
 
 
-def filter_playlists(user, filt):
-    all_playlists = Spotify().current_user_playlists()["items"]
+def get_playlists(filt):
+    all_playlists = Spotify.getInstance().current_user_playlists()["items"]
     offset_now = 50
     results = []
 
     while len(all_playlists) > 0:
-        results.extend(Playlist(user, p) for p in all_playlists if filt(p))
-        all_playlists = Spotify().current_user_playlists(offset=offset_now)["items"]
+        results.extend(Playlist(p) for p in all_playlists if filt(p))
+        all_playlists = Spotify.getInstance().current_user_playlists(offset=offset_now)["items"]
         offset_now += 50
 
     return results
 
 
 if __name__ == "__main__":
-    scramble()
+    scramble(user=secrets['SPOTIFY_USER'])
