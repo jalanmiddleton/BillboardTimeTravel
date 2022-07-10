@@ -35,3 +35,8 @@ def get_and_add_id(item_type, title, artist):
         id = select(select_id)
 
     return id[0][0]
+
+
+def sql_prep(s):
+    return "\"%s\"" % MySQLdb.escape_string(s).decode("utf8") if isinstance(s, str) \
+           else str(s)

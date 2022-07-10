@@ -12,31 +12,9 @@ from random import shuffle
 from bs4 import BeautifulSoup
 
 from Spotify import Spotify
+from logger import LOG
 
-class Logger:
-    __instance = None
-
-    @staticmethod
-    def get_instance(log=True):
-        if Logger.__instance is None:
-            Logger(log)
-        else:
-            log = Logger.__instance.log
-        return Logger.__instance
-
-    def __init__(self, log=True):
-        if Logger is None:
-            self.log = log
-            Logger.__instance = self
-        # TODO: else, return __instance?
-
-    def LOG(self, text):
-        if self.log:
-            LOG(text)
-
-LOG = Logger.get_instance().print
-
-def scrape(day=datetime(2020, 11, 21), end=datetime(1957, 12, 31)):
+def scrape(day=datetime(2022, 7, 9), end=datetime(1957, 12, 31)):
     # TODO: set date to previous or current saturday?
     # TODO: figure out the day that it transitioned from some other day to Saturday
 
@@ -133,11 +111,6 @@ def LSSMatch(one, two):
     return float(matrix[-1][-1]) / len(shortest)
 
 
-def sql_prep(s):
-    return "\"%s\"" % MySQLdb.escape_string(s).decode("utf8") if isinstance(s, str) \
-           else str(s)
-
-
 class SpotifyItem:
     def __init__(self, item_type, title, artist, search_result=None, uri=None):
         self.type = item_type
@@ -173,6 +146,8 @@ class SpotifyItem:
             "genres": ",".join(uri_object["genres"]) if "genres" in uri_object else None
         })
 
+    def sql_prep(s):
+        return s # TODO: Stub
 
     def get_keys(self):
         return ",".join(x for x in self.details.keys()
@@ -180,8 +155,7 @@ class SpotifyItem:
 
     # TODO: this should NOT be calling an external function
     def get_values(self):
-        return ",".join([sql_prep(x) for x in self.details.values()
-                         if x is not None]))
+        return ",".join(self.sql_prep(x) for x in self.details.values() if x is not None)
 
     def __str__(self):
         return str(self.details)
