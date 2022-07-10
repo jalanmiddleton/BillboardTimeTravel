@@ -1,7 +1,5 @@
 import json
-import math
-import os
-import pprint
+from pprint import pprint
 import re
 import string
 import sys
@@ -11,15 +9,13 @@ from urllib.request import urlopen, Request
 from datetime import datetime, timedelta
 from random import shuffle
 
-import MySQLdb
-import requests
 from bs4 import BeautifulSoup
 
 from Spotify import Spotify
-from Database import Database
 
 class Logger:
     __instance = None
+
     @staticmethod
     def get_instance(log=True):
         if Logger.__instance is None:
@@ -27,12 +23,15 @@ class Logger:
         else:
             log = Logger.__instance.log
         return Logger.__instance
+
     def __init__(self, log=True):
         if Logger is None:
             self.log = log
             Logger.__instance = self
+        # TODO: else, return __instance?
+
     def LOG(self, text):
-        if log:
+        if self.log:
             LOG(text)
 
 LOG = Logger.get_instance().print
@@ -43,10 +42,9 @@ def scrape(day=datetime(2020, 11, 21), end=datetime(1957, 12, 31)):
 
     while day > end:
         top_tracks = scrape_chart("hot-100", day)
-        add_bb_entry("track", top_tracks, day, chart)
-
+        pprint(top_tracks)
         top_albums = scrape_chart("billboard-200", day)
-        add_bb_entry("album", top_albums, day, chart)
+        pprint(top_tracks)
 
         day -= timedelta(7)
 
@@ -68,43 +66,6 @@ def get_from_page(url):
 def extract_item_info(page):
     charts = json.loads(page.find("div", id="charts")['data-charts'])
     return [{'title': y['title'], 'artist': y['artist_name']} for y in charts]
-
-
-def add_bb_entry(item_type, items, day, chart):
-    for i, item in enumerate(items):
-        id = get_and_add_id(item_type, item["title"], item["artist"])
-        insert("INSERT IGNORE INTO billboard.`%s` (week, idx, item_id) \
-		       VALUES ('%s', %s, %s)" % (chart, format_date(day), i + 1, id))
-
-
-def get_and_add_id(item_type, title, artist):
-    select_id = "SELECT id, bb_title, bb_artist, spoffy_title, spoffy_artist \
-    	from {item_type}s where bb_title = {title}s and bb_artist {artist}s".format(
-            item_type=item_type,
-            title=sql_prep(title),
-            artist=("=" + sql_prep(artist)) if artist is not None else " is NULL"
-        )
-    id = select(select_id)
-
-    # Add this item if it's not here already.
-    if not id:
-        item = search_item(item_type, title, artist)
-
-        # Add its associated album too
-        # uri not in details means it wasn't found in search
-        # tracks and singles shouldn't be added to the albums
-        if item_type == "track" and "uri" in item.details and item.album_type != "single":
-            album_item = SpotifyItem("album", title, artist, uri=item.album_uri)
-            item.details["album_id"] = \
-                get_and_add_id("album", album_item.details["spoffy_title"],
-                               album_item.details["spoffy_artist"])
-
-        insert("INSERT IGNORE INTO %ss (%s) VALUES (%s)" % \
-               (item_type, item.get_keys(), item.get_values()))
-        id = select(select_id)
-
-    return id[0][0]
-
 
 def remove_parens(s): return re.sub(r"\(.+\)|\[.+\]", "", s)
 

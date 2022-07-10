@@ -1,4 +1,4 @@
-from core import Spotify
+from Spotify import Spotify
 from secrets import secrets
 from random import shuffle
 

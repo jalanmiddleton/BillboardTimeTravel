@@ -1,3 +1,7 @@
+'''
+TODO: Likely broken after directory move.
+'''
+
 from BBtoDB import scrape
 from datetime import date, timedelta
 
