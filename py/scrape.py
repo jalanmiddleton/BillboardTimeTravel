@@ -1,55 +1,72 @@
+'''
+Scrape billboard.come, week-by-week.
+Put the information into a database or json file.
+Used to be DB, but JSON is more portable.
+'''
+
 import json
 from pprint import pprint
 import re
 import string
-import sys
-import traceback
+#import sys
+#import traceback
 
 from urllib.request import urlopen, Request
 from datetime import datetime, timedelta
-from random import shuffle
+#from random import shuffle
 
 from bs4 import BeautifulSoup
 
-from Spotify import Spotify
-from logger import LOG
+from Spotify import Spotify #pylint: disable=import-error
+from logger import LOG #pylint: disable=import-error
 
-def scrape(day=datetime(2022, 7, 9), end=datetime(1957, 12, 31)):
+def scrape(start=datetime(2022, 7, 9), end=datetime(1958, 1, 1)):
+    '''
+    Iterate week by week and scrape each page.
+    start: first day to scrape
+    end: last day to scrape, inclusive
+    '''
     # TODO: set date to previous or current saturday?
     # TODO: figure out the day that it transitioned from some other day to Saturday
-
-    while day > end:
-        top_tracks = scrape_chart("hot-100", day)
-        pprint(top_tracks)
-        top_albums = scrape_chart("billboard-200", day)
-        pprint(top_tracks)
-
+    day = start
+    while day >= end:
+        pprint(scrape_chart("hot-100", day))
+        pprint(scrape_chart("billboard-200", day))
         day -= timedelta(7)
 
 def scrape_chart(chart, day):
-    try:
-        url = "https://www.billboard.com/charts/%s/%s" % (chart, format_date(day))
-        top_items = get_from_page(url)
-    except Exception as e:
-        LOG(e)
-        traceback.print_exc(file=sys.stdout)
-
-def get_from_page(url):
+    '''
+    Scrape a chart from billboard.com.
+    chart: the chart/URL directory.
+    day: the YYYY-MM-DD for the billboard.
+    '''
+    day_fmt = f"{day.year}-{str(day.month).zfill(2)}-{str(day.day).zfill(2)}"
+    url = f"https://www.billboard.com/charts/{chart}/{day_fmt}"
     raw_html = urlopen(Request(url, headers={'User-Agent': 'Mozilla/5.0'}))
     page_soup = BeautifulSoup(raw_html, "html.parser")
+    return scrape_soup(page_soup)
+    #return [{'title': y['title'], 'artist': y['artist_name']} for y in charts]
+    #try:
+    #except Exception as error:
+        #raise error
+        #LOG(e)
+        #traceback.print_exc(file=sys.stdout)
 
-    LOG(url)
-    return extract_item_info(page_soup)
-
-def extract_item_info(page):
-    charts = json.loads(page.find("div", id="charts")['data-charts'])
-    return [{'title': y['title'], 'artist': y['artist_name']} for y in charts]
+def scrape_soup(soup):
+    '''
+    Valid as of 10 July 2022.
+    '''
+    songsoup = soup.find_all("div", class_="o-chart-results-list-row-container")
+    songs = []
+    for song in songsoup:
+        title_elem = song.find("h3")
+        songs.append({
+            'title': title_elem.text.strip(),
+            'artist': title_elem.find_next().text.strip()
+        })
+    return songs
 
 def remove_parens(s): return re.sub(r"\(.+\)|\[.+\]", "", s)
-
-
-def format_date(day):
-    return "{}-{}-{}".format(day.year, format(day.month, "02"), format(day.day, "02"))
 
 
 def has_bad_words(original, result, words):
@@ -146,7 +163,7 @@ class SpotifyItem:
             "genres": ",".join(uri_object["genres"]) if "genres" in uri_object else None
         })
 
-    def sql_prep(s):
+    def sql_prep(self, s):
         return s # TODO: Stub
 
     def get_keys(self):
