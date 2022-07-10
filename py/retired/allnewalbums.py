@@ -1,3 +1,8 @@
+'''
+This script used the independent website http://www.spotifynewmusic.com/ to find a selection of 
+new albums every week. This website no longer exists! This script is therefore obsolete.
+'''
+
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
 import spotipy
