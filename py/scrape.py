@@ -4,6 +4,8 @@ Put the information into a database or json file.
 Used to be DB, but JSON is more portable.
 '''
 
+import json
+import os
 import traceback
 
 from urllib.request import urlopen, Request
@@ -25,16 +27,20 @@ def scrape(chart, start=datetime(2022, 7, 9), end=datetime(1958, 1, 1)):
 
     while day >= end:
         try:
-            chart = scrape_chart(chart, day)
+            charts = scrape_chart(chart, day)
+            filename = f"./py/data/{chart}/{day.year}/{day.month}-{day.day}.json"
+            os.makedirs(os.path.dirname(filename), exist_ok=True)
+            with open(filename, "w", encoding="utf-8") as outfile:
+                outfile.write(json.dumps(charts, indent=2))
         except Exception: #pylint: disable=broad-except
-            with open("./py/data/errors.txt", "w+", encoding="utf-8") as errorfile:
+            with open("./py/data/errors.txt", "a", encoding="utf-8") as errorfile:
                 print("Writing to error file...")
                 errorfile.write("For " + str(day) + "...\n")
                 traceback.print_exc(file=errorfile)
+                errorfile.write("\n\n")
+            break
 
-        nextday = day - timedelta(7)
-        # TODO: Make JSON directories...
-        day = nextday
+        day -= timedelta(7)
 
 def scrape_chart(chart, day):
     '''
