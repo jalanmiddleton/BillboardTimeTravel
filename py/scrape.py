@@ -22,7 +22,7 @@ def scrape(chart, start=datetime(2022, 7, 9), end=datetime(1958, 1, 1)):
     '''
     # TODO: figure out the day that it transitioned from some other day to Saturday
 
-    # Start at the most recent saturday.
+    # Start at the most recent saturday. (which is weekday = 5)
     day = start - timedelta((start.weekday() + 2) % 7)
 
     while day >= end:
@@ -55,16 +55,16 @@ def scrape_chart(chart, day):
     url = f"https://www.billboard.com/charts/{chart}/{day_fmt}"
 
     with urlopen(Request(url, headers={'User-Agent': 'Mozilla/5.0'})) as raw_html:
-        page_soup = BeautifulSoup(raw_html, "html.parser")
-        songs = scrape_soup(page_soup)
+        songs = scrape_html(raw_html)
 
     return songs
 
-def scrape_soup(soup):
+def scrape_html(html):
     '''
     Valid as of 10 July 2022.
     '''
-    songsoup = soup.find_all("div", class_="o-chart-results-list-row-container")
+    page_soup = BeautifulSoup(html, "html.parser")
+    songsoup = page_soup.find_all("div", class_="o-chart-results-list-row-container")
     songs = []
     for song in songsoup:
         title_elem = song.find("h3")
