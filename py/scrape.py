@@ -20,8 +20,6 @@ def scrape(chart, start=datetime(2022, 7, 9), end=datetime(1958, 1, 1)):
     start: first day to scrape
     end: last day to scrape, inclusive
     '''
-    # TODO: figure out the day that it transitioned from some other day to Saturday
-
     # Start at the most recent saturday. (which is weekday = 5)
     day = start - timedelta((start.weekday() + 2) % 7)
 
