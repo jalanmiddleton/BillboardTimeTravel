@@ -27,11 +27,12 @@ def scrape(chart, start=datetime(2022, 7, 9), end=datetime(1958, 1, 1)):
 
     while day >= end:
         try:
-            charts = scrape_chart(chart, day)
             filename = f"./py/data/{chart}/{day.year}/{day.month}-{day.day}.json"
-            os.makedirs(os.path.dirname(filename), exist_ok=True)
-            with open(filename, "w", encoding="utf-8") as outfile:
-                outfile.write(json.dumps(charts, indent=2))
+            if not os.path.exists(filename):
+                charts = scrape_chart(chart, day)
+                os.makedirs(os.path.dirname(filename), exist_ok=True)
+                with open(filename, "w", encoding="utf-8") as outfile:
+                    outfile.write(json.dumps(charts, indent=2))
         except Exception: #pylint: disable=broad-except
             with open("./py/data/errors.txt", "a", encoding="utf-8") as errorfile:
                 print("Writing to error file...")
@@ -41,6 +42,8 @@ def scrape(chart, start=datetime(2022, 7, 9), end=datetime(1958, 1, 1)):
             break
 
         day -= timedelta(7)
+
+    consolidate(chart)
 
 def scrape_chart(chart, day):
     '''
@@ -70,6 +73,41 @@ def scrape_soup(soup):
             'artist': title_elem.find_next().text.strip()
         })
     return songs
+
+def consolidate(chart):
+    '''
+    Load local json files.
+    '''
+    path = f"./py/data/{chart}"
+    if not os.path.exists(path):
+        raise ValueError(f"No data for chart {chart} exists.")
+
+    songs = {}
+    for year in os.listdir(path):
+        if not year.isdecimal():
+            continue
+
+        # weekpath will have ".json" in it, so it's not quite just the week.
+        for weekpath in os.listdir(f"{path}/{year}"):
+            with open(f"{path}/{year}/{weekpath}", encoding="utf8") as songfile:
+                weeksongs = json.loads(songfile.read())
+            week = weekpath.split(".")[0]
+            for idx, song in enumerate(weeksongs, 1):
+                key = f"{song['title']} BY {song['artist']}"
+                if key not in songs:
+                    song["weeks"] = [{
+                        "week": f"{year}-{week}",
+                        "position": idx
+                    }]
+                    songs[key] = song
+                else:
+                    songs[key]["weeks"].append({
+                        "week": f"{year}-{week}",
+                        "position": idx
+                    })
+
+    with open(f"./py/data/{chart}/total.json", "w", encoding="utf8") as outfile:
+        outfile.write(json.dumps(list(songs.values()), indent=2))
 
 if __name__ == "__main__":
     # Charts: "hot-100", "billboard-200"
