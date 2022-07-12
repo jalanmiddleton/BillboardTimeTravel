@@ -2,10 +2,11 @@
 Spotify wrapper.
 '''
 
+from secrets import secrets #pylint: disable=import-error,no-name-in-module
+
 import spotipy
 import spotipy.oauth2 as oauth2
 #import spotipy.util as util
-from secrets import secrets #pylint: disable=import-error,no-name-in-module
 
 class Spotify:
     __instance = None

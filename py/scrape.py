@@ -109,4 +109,4 @@ def consolidate(chart):
 
 if __name__ == "__main__":
     # Charts: "hot-100", "billboard-200"
-    scrape("hot-100")
+    scrape("billboard-200")
