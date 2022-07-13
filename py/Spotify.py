@@ -3,8 +3,10 @@ Spotify wrapper.
 '''
 
 import re
+from string import punctuation
 
 from secrets import secrets #pylint: disable=import-error,no-name-in-module
+from logger import LOG      #pylint: disable=import-error
 
 import spotipy
 from spotipy import oauth2
@@ -42,53 +44,79 @@ class Spotify:
                                                oauth_manager=self.__oauth)
 
     @staticmethod
-    def search_item(item_type, title, artist):
-        title_bb = title.lower().strip()
-        artist_bb = artist.lower().strip() if artist else ""
-        query = get_query(title_bb, artist_bb)
-        search_results = Spotify.get_instance().search(q=query, type=item_type, limit=50)
+    def search(item_type, title, artist):
+        '''
+        Search for a given item on Spotify.
+        '''
+        if item_type not in ["track", "album"]:
+            raise ValueError(f"Unknown type of Spotify item: {item_type}")
 
-        failed = []
-        for result in search_results[item_type + "s"]["items"]:
-            title_spoffy = remove_parens(result["name"].lower())
-            if has_bad_words(title_bb, title_spoffy, ["cover", "karaoke", "remix"]):
+        title_bb    = title.lower().strip()
+        artist_bb   = artist.lower().strip() if artist else ""
+        query       = Spotify.get_query(title, artist)
+        failed      = []
+
+        searchresults = Spotify.get_instance().search(q=query, type=item_type, limit=10)
+        for result in searchresults[item_type + "s"]["items"]:
+            title_spotify = Spotify.remove_parens(result["name"].lower())
+            if Spotify.has_unique_words(title_bb, title_spotify, ["cover", "karaoke", "remix"]):
                 continue
 
-            artist_spoffy = result["artists"][0]["name"].lower()
-            if has_bad_words(artist_bb, artist_spoffy, ["tribute", "karaoke"]):
+            artist_spotify = result["artists"][0]["name"].lower()
+            if Spotify.has_unique_words(artist_bb, artist_spotify, ["tribute", "karaoke"]):
                 break
 
-            if (LSSMatch(artist_bb, artist_spoffy) >= .75 or artist_bb == "soundtrack") \
-                and LSSMatch(title_spoffy, title_bb) >= .75:
-                return SpotifyItem(item_type, title, artist, search_result=result)
+            if (artist_bb == "soundtrack" or Spotify.lss_match(artist_bb, artist_spotify) >= .75) \
+                and Spotify.lss_match(title_bb, title_spotify) >= .75:
+                return SpotifyItem(item_type, title, artist, result)
 
-            failed.append("\t\"%s\" by %s" % (title_spoffy, result["artists"][0]["name"]))
+            failed.append(f"\t\"{title_spotify}\" by {result['artists'][0]['name']}")
 
-        LOG("\t\"%s\" not found" % (query))
+        LOG(f"\t\"{query}\" not found")
         for fail in failed[:5]:
             LOG("\t\t", fail)
 
         return SpotifyItem(item_type, title, artist)
 
     @staticmethod
-    def remove_parens(s): return re.sub(r"\(.+\)|\[.+\]", "", s)
+    def get_query(title, artist):
+        '''
+        Turns the title and artist into a Spotify search query.
+        '''
+        artist = " ".join(filter(
+            lambda word: (
+                "feat" not in word
+                and word not in punctuation
+            ), artist.lower().split()))
+        return Spotify.remove_parens(title) + " " + " ".join(re.split(r"\s|,", artist)[:3])
 
     @staticmethod
-    def has_bad_words(original, result, words):
+    def remove_parens(string):
+        '''
+        Removes parentheticals from strings.
+        '''
+        return re.sub(r"\(.+\)|\[.+\]", "", string)
+
+    @staticmethod
+    def has_unique_words(original, result, words):
+        '''
+        Checks if any of a given word appears in only one of original or result.
+        Useful for filtering out covers and karaoke version.
+        '''
         return any(word in original != word in result for word in words)
 
-
     @staticmethod
-    def LSSMatch(one, two):
+    def lss_match(one, two):
+        '''
+        Longest substring --- how much of the smaller string can be found in the larger string?
+        '''
         shortest, longest = (one, two) if len(one) < len(two) else (two, one)
-
         if len(shortest) == 0:
             return 0
 
-        matrix = [[0 for i in range(len(shortest) + 1)]
-                for j in range(len(longest) + 1)]
-        for x in range(1, len(longest) + 1):
-            for y in range(1, len(shortest) + 1):
+        matrix = [[0 for _ in range(len(shortest) + 1)] for _ in range(len(longest) + 1)]
+        for x in range(1, len(longest) + 1):        #pylint:disable=invalid-name
+            for y in range(1, len(shortest) + 1):   #pylint:disable=invalid-name
                 matrix[x][y] = (matrix[x - 1][y - 1] + 1) \
                     if longest[x - 1] == shortest[y - 1] \
                     else max(matrix[x - 1][y], matrix[x][y - 1])
@@ -99,58 +127,22 @@ class SpotifyItem:
     '''
     Encapsulation of an item to search for on Spotify.
     '''
-    def __init__(self, item_type, title, artist, search_result=None, uri=None):
-        self.type = item_type
-        self.details = {
-            "bb_artist": artist,
-            "bb_title": title
-        }
-
-        if uri:
-            uri_object = Spotify.get_instance().album(uri) if item_type=="album" \
-                         else Spotify.get_instance().track(uri)
-        elif search_result:
-            uri_object = search_result
-            if item_type == "track":
-                self.album_uri = search_result["album"]["uri"]
-                self.album_type = search_result["album"]["album_type"]
-        else:
-            return
-
-        if item_type == "album":
-            duration = sum(track["duration_ms"] for track \
-                           in uri_object["tracks"]["items"]) \
-                       if "tracks" in uri_object else -1
-        else:
-            duration = uri_object["duration_ms"]
-
-        self.details.update({
-            "uri": uri or uri_object["uri"],
-            "spoffy_artist": ",".join(x["name"] for x in uri_object["artists"]),
-            "spoffy_title": uri_object["name"],
-            "popularity": uri_object["popularity"] if "popularity" in uri_object else None,
-            "duration": duration,
-            "genres": ",".join(uri_object["genres"]) if "genres" in uri_object else None
-        })
-
-    def sql_prep(self, s):
-        return s # TODO: Stub
-
-    def get_keys(self):
-        return ",".join(x for x in self.details.keys()
-                        if self.details[x] is not None)
-
-    # TODO: this should NOT be calling an external function
-    def get_values(self):
-        return ",".join(self.sql_prep(x) for x in self.details.values() if x is not None)
+    def __init__(self, item_type, title, artist, searchres=None):
+        self.type           = item_type
+        self.title          = title
+        self.artist         = artist
+        self.uri            = searchres["uri"] if searchres else None
+        self.title_spotify  = searchres["name"] if searchres else None
+        self.artist_spotify = (",".join(x["name"] for x in searchres["artists"])
+                               if searchres else None)
+        self.popularity     = ((searchres["popularity"] if "popularity" in searchres
+                                else None) if searchres else None)
+        self.duration       = (((sum(track["duration_ms"] for track in searchres["tracks"]["items"])
+                                 if "tracks" in searchres else -1)
+                                if item_type == "album" else searchres["duration_ms"])
+                               if searchres else None)
+        self.genres         = ((",".join(searchres["genres"]) if "genres" in searchres else None)
+                               if searchres else None)
 
     def __str__(self):
-        return str(self.details)
-
-    def get_query(self, title, artist):
-        artist = " ".join(filter(
-            lambda word: "feat" not in word
-            and word not in string.punctuation and len(word) > 1,
-            artist.lower().split()))
-
-        return remove_parens(title) + " " + " ".join(re.split(r"\s|,", artist)[:3])
+        return  { field:getattr(self, field) for field in dir(self) if field[0] != "_" }
