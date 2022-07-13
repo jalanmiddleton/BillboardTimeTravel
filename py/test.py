@@ -7,6 +7,7 @@ from datetime import datetime
 from unittest import TestCase, main
 
 from scrape import scrape_chart
+from spotify import Spotify, SpotifyItem
 
 class TestScrape(TestCase):
     def test_scrape_hot100_7jan1984_50(self):
@@ -26,6 +27,42 @@ class TestScrape(TestCase):
         chart = scrape_chart("billboard-200", datetime(1976, 7, 24))
         self.assertEqual(len(chart), 200)
         self.assertEqual(chart[49], {"title": "Fever", "artist": "Ronnie Laws"})
+
+    def test_spotifyitem_rickroll(self):
+        '''
+        Can I get Never Gonna Give You Up?
+        '''
+        rick = Spotify.search("track", "Never Gonna Give You Up", "Rick Astley").get_details()
+        expected = {
+            'artist': 'Rick Astley',
+            'artist_spotify': 'Rick Astley',
+            'duration': 213573,
+            'genres': None,
+            'popularity': 80,
+            'title': 'Never Gonna Give You Up',
+            'title_spotify': 'Never Gonna Give You Up',
+            'type': 'track',
+            'uri': 'spotify:track:4cOdK2wGLETKBW3PvgPWqT'
+        }
+        self.assertEqual(rick, expected)
+
+    def test_spotifyitem_pearljam(self):
+        '''
+        Can I get Ten?
+        '''
+        pj = Spotify.search("album", "Ten", "Pearl Jam").get_details()
+        expected = {
+            'artist': 'Pearl Jam',
+            'artist_spotify': 'Pearl Jam',
+            'duration': -1,
+            'genres': None,
+            'popularity': None,
+            'title': 'Ten',
+            'title_spotify': 'Ten',
+            'type': 'album',
+            'uri': 'spotify:album:5B4PYA7wNN4WdEXdIJu58a'
+        }
+        self.assertEqual(pj, expected)
 
 
 if __name__ == '__main__':

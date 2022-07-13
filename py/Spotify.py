@@ -123,11 +123,12 @@ class Spotify:
 
         return float(matrix[-1][-1]) / len(shortest)
 
-class SpotifyItem:
+class SpotifyItem():
     '''
     Encapsulation of an item to search for on Spotify.
     '''
     def __init__(self, item_type, title, artist, searchres=None):
+        super().__init__()
         self.type           = item_type
         self.title          = title
         self.artist         = artist
@@ -144,5 +145,9 @@ class SpotifyItem:
         self.genres         = ((",".join(searchres["genres"]) if "genres" in searchres else None)
                                if searchres else None)
 
-    def __str__(self):
-        return  { field:getattr(self, field) for field in dir(self) if field[0] != "_" }
+    def get_details(self):
+        '''
+        Returns a dictionary of all fields in this class.
+        '''
+        return  { field:getattr(self, field) for field in dir(self)
+                  if field[0] != "_" and field != "get_details" }
