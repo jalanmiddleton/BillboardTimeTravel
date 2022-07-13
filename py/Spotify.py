@@ -10,7 +10,7 @@ from logger import LOG      #pylint: disable=import-error
 
 import spotipy
 from spotipy import oauth2
-#import spotipy.util as util
+from spotipy.oauth2 import CacheFileHandler
 
 class Spotify:
     '''
@@ -32,12 +32,13 @@ class Spotify:
 
     def __init__(self):
         if Spotify.instance is None:
+            handler = CacheFileHandler(username=secrets['SPOTIFY_USER'])
             Spotify.__oauth = oauth2.SpotifyOAuth(
-                username=secrets['SPOTIFY_USER'],
                 client_id=secrets["SPOTIPY_CLIENT_ID"],
                 client_secret=secrets["SPOTIPY_SECRET"],
                 redirect_uri=secrets["SPOTIPY_REDIRECT_URI"],
-                scope='playlist-modify-public'
+                scope='playlist-modify-public',
+                cache_handler=handler
             )
             Spotify.__token = Spotify.__oauth.get_access_token(as_dict=False)
             Spotify.instance = spotipy.Spotify(auth=Spotify.__token,
