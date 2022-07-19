@@ -1,12 +1,12 @@
 '''
 Spotify wrapper.
 '''
-
+import json
 import re
 from string import punctuation
+import traceback
 
 from secrets import secrets #pylint: disable=import-error,no-name-in-module
-from logger import LOG      #pylint: disable=import-error
 
 import spotipy
 from spotipy import oauth2
@@ -73,10 +73,6 @@ class Spotify:
 
             failed.append(f"\t\"{title_spotify}\" by {result['artists'][0]['name']}")
 
-        LOG(f"\t\"{query}\" not found")
-        for fail in failed[:5]:
-            LOG("\t\t", fail)
-
         return SpotifyItem(item_type, title, artist)
 
     @staticmethod
@@ -133,6 +129,7 @@ class SpotifyItem():
         self.type           = item_type
         self.title          = title
         self.artist         = artist
+
         self.uri            = searchres["uri"] if searchres else None
         self.title_spotify  = searchres["name"] if searchres else None
         self.artist_spotify = (",".join(x["name"] for x in searchres["artists"])
@@ -143,8 +140,11 @@ class SpotifyItem():
                                  if "tracks" in searchres else -1)
                                 if item_type == "album" else searchres["duration_ms"])
                                if searchres else None)
-        self.genres         = ((",".join(searchres["genres"]) if "genres" in searchres else None)
-                               if searchres else None)
+        self.problem        = "Not found." if searchres is None else None
+
+        #I'd love genres, but they don't seem to work.
+        #self.genres         = ((",".join(searchres["genres"]) if "genres" in searchres else None)
+        #                       if searchres else None)
 
     def get_details(self):
         '''
@@ -152,3 +152,33 @@ class SpotifyItem():
         '''
         return  { field:getattr(self, field) for field in dir(self)
                   if field[0] != "_" and field != "get_details" }
+
+if __name__ == "__main__":
+    # Assumption: total.json and uris.json are in the same order.
+    with open("py/data/hot-100/total.json", encoding="utf8") as infile:
+        songs = json.loads(infile.read())
+    with open("py/data/hot-100/uris.json", encoding="utf8") as infile:
+        uris = json.loads(infile.read())
+
+    alreadyread = len(uris)
+    for idx, song in enumerate(songs[alreadyread:], alreadyread+1):
+        print(idx)
+        try:
+            uri = Spotify().search("track", song["title"], song["artist"])
+            uris.append(uri.get_details())
+        except Exception as exc:
+            err = traceback.format_exc().split(", ", 1)[1]
+            print(err)
+            uris.append({
+                "artist": song["artist"],
+                "title": song["title"],
+                "problem": err,
+                "type": "track"
+            })
+
+        if idx % 1000 == 0:
+            with open("py/data/hot-100/uris.json", "w", encoding="utf8") as outfile:
+                outfile.write(json.dumps(uris, indent=2))
+
+    with open("py/data/hot-100/uris.json", "w", encoding="utf8") as outfile:
+        outfile.write(json.dumps(uris, indent=2))

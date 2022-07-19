@@ -30,13 +30,13 @@ def scramble(user):
     shuffle(playlists)
 
     for id, album in zip(ids, playlists):
-        Spotify.getInstance().user_playlist_replace_tracks(user, id, album.tracks)
-        Spotify.getInstance().user_playlist_change_details(user, id, album.name)
+        Spotify.get_instance().user_playlist_replace_tracks(user, id, album.tracks)
+        Spotify.get_instance().user_playlist_change_details(user, id, album.name)
 
 
 class Playlist:
     def __init__(self, partial_playlist):
-        playlist = Spotify.getInstance().playlist(partial_playlist["id"],
+        playlist = Spotify.get_instance().playlist(partial_playlist["id"],
                                       fields="id,name,tracks,uri,next")
 
         self.id = playlist['id']
@@ -54,13 +54,13 @@ def get_playlists(filt):
     user: The Spotify user id.
     filt: A function that returns true or false for whether the playlist qualifies.
     '''
-    all_playlists = Spotify.getInstance().current_user_playlists()["items"]
+    all_playlists = Spotify.get_instance().current_user_playlists()["items"]
     offset_now = 50
     results = []
 
     while len(all_playlists) > 0:
         results.extend(Playlist(p) for p in all_playlists if filt(p))
-        all_playlists = Spotify.getInstance().current_user_playlists(offset=offset_now)["items"]
+        all_playlists = Spotify.get_instance().current_user_playlists(offset=offset_now)["items"]
         offset_now += 50
 
     return results

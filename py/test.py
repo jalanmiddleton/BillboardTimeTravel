@@ -31,14 +31,15 @@ class TestScrape(TestCase):
     def test_spotifyitem_rickroll(self):
         '''
         Can I get Never Gonna Give You Up?
+        TODO: Setting Popularity at 80 is not futureproofed.
         '''
         rick = Spotify.search("track", "Never Gonna Give You Up", "Rick Astley").get_details()
         expected = {
             'artist': 'Rick Astley',
             'artist_spotify': 'Rick Astley',
             'duration': 213573,
-            'genres': None,
             'popularity': 80,
+            'problem': None,
             'title': 'Never Gonna Give You Up',
             'title_spotify': 'Never Gonna Give You Up',
             'type': 'track',
@@ -55,8 +56,8 @@ class TestScrape(TestCase):
             'artist': 'Pearl Jam',
             'artist_spotify': 'Pearl Jam',
             'duration': -1,
-            'genres': None,
             'popularity': None,
+            'problem': None,
             'title': 'Ten',
             'title_spotify': 'Ten',
             'type': 'album',
