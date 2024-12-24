@@ -150,3 +150,13 @@ class SpotifyItem():
         '''
         return  { field:getattr(self, field) for field in dir(self)
                   if field[0] != "_" and field != "get_details" }
+
+class Playlist:
+    def __init__(self, partial_playlist):
+        playlist = Spotify.get_instance().playlist(partial_playlist["id"],
+                                      fields="id,name,tracks,uri,next")
+
+        self.id = playlist['id']
+        self.name = playlist['name']
+        self.tracks = [t['track']['uri'] for t in playlist['tracks']['items']]
+        self.uri = playlist['uri']

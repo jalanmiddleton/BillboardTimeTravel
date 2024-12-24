@@ -4,7 +4,7 @@ The driver for the billboard scraper and storage.
 from random import shuffle
 
 from secrets import secrets #pylint: disable=import-error,no-name-in-module
-from spotify import Spotify #pylint: disable=import-error
+from spotify import Spotify, Playlist #pylint: disable=import-error
 
 def flag_filter(flag_start="POP-START", flag_end="POP-END"):
     '''
@@ -33,16 +33,6 @@ def scramble(user):
         Spotify.get_instance().user_playlist_replace_tracks(user, id, album.tracks)
         Spotify.get_instance().user_playlist_change_details(user, id, album.name)
 
-
-class Playlist:
-    def __init__(self, partial_playlist):
-        playlist = Spotify.get_instance().playlist(partial_playlist["id"],
-                                      fields="id,name,tracks,uri,next")
-
-        self.id = playlist['id']
-        self.name = playlist['name']
-        self.tracks = [t['track']['uri'] for t in playlist['tracks']['items']]
-        self.uri = playlist['uri']
 
 def get_playlists(filt):
     '''
