@@ -1,4 +1,3 @@
 .cache-*
 *.pyc
 *secret*
-*data

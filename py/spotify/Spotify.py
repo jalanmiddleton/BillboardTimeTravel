@@ -69,15 +69,17 @@ class SpotifyItem:
 
 
 class Playlist:
-    def __init__(self, partial_playlist):
+    def __init__(self, spotipy_reference):
         playlist = Spotify._get_instance().playlist(
-            partial_playlist["id"], fields="id,name,tracks,uri,next"
+            spotipy_reference["id"], fields="id,name,tracks,uri,next"
         )
 
         self.id = playlist["id"]
         self.name = playlist["name"]
         self.tracks = [t["track"]["uri"] for t in playlist["tracks"]["items"]]
         self.uri = playlist["uri"]
+
+    # def set_tracks(self, )
 
 
 class Spotify:
