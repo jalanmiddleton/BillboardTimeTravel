@@ -179,8 +179,8 @@ class Spotify:
         """
         Turns the title and artist into a Spotify search query.
         """
-        title = title.replace("%", "")  # crashed with "100% Pure Love,Crystal Waters"
-        artist = re.sub(r"((f|F)eat|(w|W)ith| (x|X) | & ).*$", "", artist)
+        title = "".join(c for c in title if c not in punctuation)  # crashed with "100% Pure Love,Crystal Waters"
+        artist = re.sub(r" ((f|F)eat|(w|W)ith|(a|A)nd|(x|X)|&).*$", "", artist)
         return f'track:"{title}" artist:"{artist}"'
 
     @staticmethod
