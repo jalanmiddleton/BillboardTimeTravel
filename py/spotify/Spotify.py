@@ -22,6 +22,20 @@ class SpotifyItem:
     Encapsulation of an item to search for on Spotify.
     """
 
+    @staticmethod
+    def from_uri(uri):
+        itemtype = uri.split(":")[1]
+
+        if itemtype == "track":
+            searchres = Spotify._get_instance().track(uri)
+        else:
+            searchres = Spotify._get_instance().album(uri)
+        
+        return SpotifyItem(itemtype, 
+                           searchres["name"], 
+                           ",".join(x["name"] for x in searchres["artists"]),
+                           searchres)
+
     def __init__(self, item_type, title, artist, searchres=None):
         super().__init__()
         self.type = item_type
@@ -33,11 +47,13 @@ class SpotifyItem:
         self.artist_spotify = (
             ",".join(x["name"] for x in searchres["artists"]) if searchres else None
         )
+
         self.popularity = (
             (searchres["popularity"] if "popularity" in searchres else None)
             if searchres
             else None
         )
+
         self.duration = (
             (
                 (
@@ -51,6 +67,7 @@ class SpotifyItem:
             if searchres
             else None
         )
+
         self.problem = "Not found." if searchres is None else None
 
 
@@ -63,6 +80,11 @@ class SpotifyItem:
             for field in dir(self)
             if field[0] != "_" and field != "get_details"
         }
+    
+    def get_genres(self):
+        track = Spotify._get_instance().track(self.uri)
+        artist = Spotify._get_instance().artist(track['artists'][0]['uri'])
+        return artist['genres']
     
     def __repr__(self):
         return pformat(self.get_details())
