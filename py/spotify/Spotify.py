@@ -3,15 +3,78 @@ Spotify wrapper.
 """
 
 import re
-from pprint import pprint
+from pprint import pprint, pformat
 from string import punctuation
-from typing import Sequence
+from typing import Generator, Sequence
 
-from secrets import secrets  # pylint: disable=import-error,no-name-in-module
+from .secrets import secrets  # pylint: disable=import-error,no-name-in-module
 
 import spotipy
 from spotipy import oauth2
 from spotipy.oauth2 import CacheFileHandler
+
+
+class SpotifyItem:
+    """
+    Encapsulation of an item to search for on Spotify.
+    """
+
+    def __init__(self, item_type, title, artist, searchres=None):
+        super().__init__()
+        self.type = item_type
+        self.title = title
+        self.artist = artist
+
+        self.uri = searchres["uri"] if searchres else None
+        self.title_spotify = searchres["name"] if searchres else None
+        self.artist_spotify = (
+            ",".join(x["name"] for x in searchres["artists"]) if searchres else None
+        )
+        self.popularity = (
+            (searchres["popularity"] if "popularity" in searchres else None)
+            if searchres
+            else None
+        )
+        self.duration = (
+            (
+                (
+                    sum(track["duration_ms"] for track in searchres["tracks"]["items"])
+                    if "tracks" in searchres
+                    else -1
+                )
+                if item_type == "album"
+                else searchres["duration_ms"]
+            )
+            if searchres
+            else None
+        )
+        self.problem = "Not found." if searchres is None else None
+
+
+    def get_details(self):
+        """
+        Returns a dictionary of all fields in this class.
+        """
+        return {
+            field: getattr(self, field)
+            for field in dir(self)
+            if field[0] != "_" and field != "get_details"
+        }
+    
+    def __repr__(self):
+        return pformat(self.get_details())
+
+
+class Playlist:
+    def __init__(self, partial_playlist):
+        playlist = Spotify.get_instance().playlist(
+            partial_playlist["id"], fields="id,name,tracks,uri,next"
+        )
+
+        self.id = playlist["id"]
+        self.name = playlist["name"]
+        self.tracks = [t["track"]["uri"] for t in playlist["tracks"]["items"]]
+        self.uri = playlist["uri"]
 
 
 class Spotify:
@@ -53,7 +116,7 @@ class Spotify:
             )
 
     @staticmethod
-    def _get_BB_playlists() -> Sequence["Playlist"]:
+    def _get_BB_playlists() -> Generator["Playlist"]:
         prefix = "BB-"
         offset = 0
         while (
@@ -77,36 +140,31 @@ class Spotify:
         return [pl for pl in Spotify._get_BB_playlists() if re.match(pattern, pl.name)]
 
     @staticmethod
-    def search(item_type, title, artist):
+    def search(title, artist, item_type="track"):
         """
         Search for a given item on Spotify.
         """
         if item_type not in ["track", "album"]:
             raise ValueError(f"Unknown type of Spotify item: {item_type}")
 
-        title_bb = title.lower().strip()
-        artist_bb = artist.lower().strip() if artist else ""
         query = Spotify.get_query(title, artist)
         failed = []
 
         searchresults = Spotify.get_instance().search(q=query, type=item_type, limit=10)
         for result in searchresults[item_type + "s"]["items"]:
-            title_spotify = Spotify.remove_parens(result["name"].lower())
+            title_spotify = result["name"]
             if Spotify.has_unique_words(
-                title_bb, title_spotify, ["cover", "karaoke", "remix"]
+                title, title_spotify, ["cover", "karaoke", "remix"]
             ):
                 continue
 
-            artist_spotify = result["artists"][0]["name"].lower()
+            artist_spotify = result["artists"][0]["name"]
             if Spotify.has_unique_words(
-                artist_bb, artist_spotify, ["tribute", "karaoke"]
+                artist, artist_spotify, ["tribute", "karaoke"]
             ):
-                break
+                continue
 
-            if (
-                artist_bb == "soundtrack"
-                or Spotify.lss_match(artist_bb, artist_spotify) >= 0.75
-            ) and Spotify.lss_match(title_bb, title_spotify) >= 0.75:
+            if Spotify.lss_match(artist, artist_spotify) >= 0.6 and Spotify.lss_match(title, title_spotify) >= 0.6:
                 return SpotifyItem(item_type, title, artist, result)
 
             failed.append(f"\t\"{title_spotify}\" by {result['artists'][0]['name']}")
@@ -114,41 +172,30 @@ class Spotify:
         return SpotifyItem(item_type, title, artist)
 
     @staticmethod
-    def get_query(title, artist):
+    def get_query(title: str, artist: str):
         """
         Turns the title and artist into a Spotify search query.
         """
-        artist = " ".join(
-            filter(
-                lambda word: ("feat" not in word and word not in punctuation),
-                artist.lower().split(),
-            )
-        )
-        return (
-            Spotify.remove_parens(title) + " " + " ".join(re.split(r"\s|,", artist)[:3])
-        )
+        title = title.replace("%", "")
+        artist = re.sub(r"((f|F)eat|(w|W)ith| (x|X) | & ).*$", "", artist)
+        return f'track:"{title}" artist:"{artist}"'
 
     @staticmethod
-    def remove_parens(string):
-        """
-        Removes parentheticals from strings.
-        """
-        return re.sub(r"\(.+\)|\[.+\]", "", string)
-
-    @staticmethod
-    def has_unique_words(original, result, words):
+    def has_unique_words(original: str, result: str, words):
         """
         Checks if any of a given word appears in only one of original or result.
         Useful for filtering out covers and karaoke version.
         """
-        return any(word in original != word in result for word in words)
+        return any(word in original.lower() != word in result.lower() for word in words)
 
     @staticmethod
-    def lss_match(one, two):
+    def lss_match(one: str, two: str):
         """
         Longest substring --- how much of the smaller string can be found in the larger string?
         """
         shortest, longest = (one, two) if len(one) < len(two) else (two, one)
+        shortest, longest = shortest.lower(), longest.lower()
+
         if len(shortest) == 0:
             return 0
 
@@ -165,65 +212,3 @@ class Spotify:
 
         return float(matrix[-1][-1]) / len(shortest)
 
-
-class SpotifyItem:
-    """
-    Encapsulation of an item to search for on Spotify.
-    """
-
-    def __init__(self, item_type, title, artist, searchres=None):
-        super().__init__()
-        self.type = item_type
-        self.title = title
-        self.artist = artist
-
-        self.uri = searchres["uri"] if searchres else None
-        self.title_spotify = searchres["name"] if searchres else None
-        self.artist_spotify = (
-            ",".join(x["name"] for x in searchres["artists"]) if searchres else None
-        )
-        self.popularity = (
-            (searchres["popularity"] if "popularity" in searchres else None)
-            if searchres
-            else None
-        )
-        self.duration = (
-            (
-                (
-                    sum(track["duration_ms"] for track in searchres["tracks"]["items"])
-                    if "tracks" in searchres
-                    else -1
-                )
-                if item_type == "album"
-                else searchres["duration_ms"]
-            )
-            if searchres
-            else None
-        )
-        self.problem = "Not found." if searchres is None else None
-
-        # I'd love genres, but they don't seem to work.
-        # self.genres         = ((",".join(searchres["genres"]) if "genres" in searchres else None)
-        #                       if searchres else None)
-
-    def get_details(self):
-        """
-        Returns a dictionary of all fields in this class.
-        """
-        return {
-            field: getattr(self, field)
-            for field in dir(self)
-            if field[0] != "_" and field != "get_details"
-        }
-
-
-class Playlist:
-    def __init__(self, partial_playlist):
-        playlist = Spotify.get_instance().playlist(
-            partial_playlist["id"], fields="id,name,tracks,uri,next"
-        )
-
-        self.id = playlist["id"]
-        self.name = playlist["name"]
-        self.tracks = [t["track"]["uri"] for t in playlist["tracks"]["items"]]
-        self.uri = playlist["uri"]

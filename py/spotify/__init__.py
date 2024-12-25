@@ -1,1 +1,1 @@
-from Spotify import Spotify, SpotifyItem, Playlist
+from .Spotify import Spotify, SpotifyItem, Playlist
