@@ -7,7 +7,7 @@ from spotify.Spotify import Spotify
 
 # data_csv = "../rwd-billboard-data/data-out/hot100_archive_1958_2021.csv"
 data_csv = "../rwd-billboard-data/data-out/hot-100-current.csv"
-outfile_csv = "./py/data/song_links.csv"
+outfile_csv = "./py/data/songlinks.csv"
 
 cache = set()
 with open(outfile_csv, "r") as already:

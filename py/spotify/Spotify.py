@@ -79,7 +79,25 @@ class Playlist:
         self.tracks = [t["track"]["uri"] for t in playlist["tracks"]["items"]]
         self.uri = playlist["uri"]
 
-    # def set_tracks(self, )
+    def set_tracks(self, tracks: Sequence[str]):
+        s = Spotify._get_instance()
+
+        if self.tracks:
+            s.user_playlist_remove_all_occurrences_of_tracks(           
+                user=secrets["SPOTIFY_USER"],
+                playlist_id=self.id,
+                tracks=self.tracks
+            )
+
+        result = s.user_playlist_replace_tracks(
+            user=secrets["SPOTIFY_USER"],
+            playlist_id=self.id,
+            tracks=tracks
+        )
+
+        print("Bye!")
+        print(result)
+        self.tracks = tracks
 
 
 class Spotify:
