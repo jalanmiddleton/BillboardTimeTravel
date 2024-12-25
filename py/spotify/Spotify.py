@@ -31,44 +31,29 @@ class SpotifyItem:
         else:
             searchres = Spotify._get_instance().album(uri)
         
-        return SpotifyItem(searchres, itemtype, 
-                           searchres["name"], 
-                           ",".join(x["name"] for x in searchres["artists"]))
+        return SpotifyItem(searchres)
 
-    def __init__(self, searchres, item_type, title, artist):
+    def __init__(self, searchres):
         super().__init__()
-        self.type = item_type
-        self.title = title
-        self.artist = artist
 
-        self.uri = searchres["uri"] if searchres else None
-        self.title_spotify = searchres["name"] if searchres else None
-        self.artist_spotify = (
-            ",".join(x["name"] for x in searchres["artists"]) if searchres else None
-        )
+        if not searchres:
+            return 
 
-        self.popularity = (
-            (searchres["popularity"] if "popularity" in searchres else None)
-            if searchres
-            else None
-        )
+        self.uri = searchres["uri"]
+        self.type = self.uri.split(":")[1]
+        self.title = searchres["name"]
+        self.artist =  ",".join(x["name"] for x in searchres["artists"])
 
+        self.popularity = (searchres["popularity"] if "popularity" in searchres else None)
         self.duration = (
             (
-                (
-                    sum(track["duration_ms"] for track in searchres["tracks"]["items"])
-                    if "tracks" in searchres
-                    else -1
-                )
-                if item_type == "album"
-                else searchres["duration_ms"]
+                sum(track["duration_ms"] for track in searchres["tracks"]["items"])
+                if "tracks" in searchres
+                else -1
             )
-            if searchres
-            else None
+            if self.type != "track"
+            else searchres["duration_ms"]
         )
-
-        self.problem = "Not found." if searchres is None else None
-
 
     def get_details(self):
         """
@@ -87,6 +72,21 @@ class SpotifyItem:
     
     def __repr__(self):
         return pformat(self.get_details())
+
+class MissingSpotifyItem(SpotifyItem):
+    """
+    Encapsulation of an item to search for on Spotify.
+    """
+
+    def __init__(self, title: str, artist: str, item_type: str):
+        super().__init__(None)
+        self.uri = None
+        self.title = title
+        self.artist = artist
+        self.type = item_type
+
+        self.popularity = -1
+        self.duration = -1
 
 
 class Playlist:
@@ -209,11 +209,11 @@ class Spotify:
                 continue
 
             if Spotify._lss_match(artist, artist_spotify) >= 0.6 and Spotify._lss_match(title, title_spotify) >= 0.6:
-                return SpotifyItem(result, item_type, title, artist)
+                return SpotifyItem(result)
 
-            failed.append(f"\t\"{title_spotify}\" by {result['artists'][0]['name']}")
+            failed.append(f'\t"{title_spotify}" by {result['artists'][0]['name']}')
 
-        return SpotifyItem(None, item_type, title, artist)
+        return MissingSpotifyItem(title, artist, item_type)
 
     @staticmethod
     def _get_query(title: str, artist: str):
