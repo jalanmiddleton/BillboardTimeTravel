@@ -3,11 +3,14 @@ Spotify wrapper.
 """
 
 import re
+from pathlib import Path
 from pprint import pprint, pformat
 from string import punctuation
+import sys
 from typing import Generator, Sequence
 
-from .secrets import secrets  # pylint: disable=import-error,no-name-in-module
+sys.path.append(str(Path(__file__).parent.parent))
+from spotify.secrets import secrets
 
 import spotipy
 from spotipy import oauth2
@@ -67,7 +70,7 @@ class SpotifyItem:
 
 class Playlist:
     def __init__(self, partial_playlist):
-        playlist = Spotify.get_instance().playlist(
+        playlist = Spotify._get_instance().playlist(
             partial_playlist["id"], fields="id,name,tracks,uri,next"
         )
 
@@ -82,14 +85,14 @@ class Spotify:
     My custom class for the Spotify utilities.
     """
 
-    instance = None
+    instance: spotipy.Spotify = None
     __oauth = None
     __token = None
 
     DEFAULT_PLAYLIST = "BB-DEFAULT"
 
     @staticmethod
-    def get_instance():
+    def _get_instance() -> spotipy.Spotify:
         """
         Singleton method for this class.
         """
@@ -120,7 +123,7 @@ class Spotify:
         prefix = "BB-"
         offset = 0
         while (
-            playlists := Spotify.get_instance().user_playlists(
+            playlists := Spotify._get_instance().user_playlists(
                 user=secrets["SPOTIFY_USER"], offset=offset
             )
         )['items']:
@@ -147,24 +150,24 @@ class Spotify:
         if item_type not in ["track", "album"]:
             raise ValueError(f"Unknown type of Spotify item: {item_type}")
 
-        query = Spotify.get_query(title, artist)
+        query = Spotify._get_query(title, artist)
         failed = []
 
-        searchresults = Spotify.get_instance().search(q=query, type=item_type, limit=10)
+        searchresults = Spotify._get_instance().search(q=query, type=item_type, limit=10)
         for result in searchresults[item_type + "s"]["items"]:
             title_spotify = result["name"]
-            if Spotify.has_unique_words(
+            if Spotify._has_unique_words(
                 title, title_spotify, ["cover", "karaoke", "remix"]
             ):
                 continue
 
             artist_spotify = result["artists"][0]["name"]
-            if Spotify.has_unique_words(
+            if Spotify._has_unique_words(
                 artist, artist_spotify, ["tribute", "karaoke"]
             ):
                 continue
 
-            if Spotify.lss_match(artist, artist_spotify) >= 0.6 and Spotify.lss_match(title, title_spotify) >= 0.6:
+            if Spotify._lss_match(artist, artist_spotify) >= 0.6 and Spotify._lss_match(title, title_spotify) >= 0.6:
                 return SpotifyItem(item_type, title, artist, result)
 
             failed.append(f"\t\"{title_spotify}\" by {result['artists'][0]['name']}")
@@ -172,7 +175,7 @@ class Spotify:
         return SpotifyItem(item_type, title, artist)
 
     @staticmethod
-    def get_query(title: str, artist: str):
+    def _get_query(title: str, artist: str):
         """
         Turns the title and artist into a Spotify search query.
         """
@@ -181,7 +184,7 @@ class Spotify:
         return f'track:"{title}" artist:"{artist}"'
 
     @staticmethod
-    def has_unique_words(original: str, result: str, words):
+    def _has_unique_words(original: str, result: str, words):
         """
         Checks if any of a given word appears in only one of original or result.
         Useful for filtering out covers and karaoke version.
@@ -189,7 +192,7 @@ class Spotify:
         return any(word in original.lower() != word in result.lower() for word in words)
 
     @staticmethod
-    def lss_match(one: str, two: str):
+    def _lss_match(one: str, two: str):
         """
         Longest substring --- how much of the smaller string can be found in the larger string?
         """

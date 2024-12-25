@@ -17,20 +17,11 @@ class SpotifyTest(unittest.TestCase):
         default_playlists = Spotify.get_playlists()
         self.assertSequenceEqual([p.name for p in default_playlists], [Spotify.DEFAULT_PLAYLIST])
 
-    # def test_search(self):
-    #     return self.assertFalse(True)
-
-    # def test_get_query(self):
-    #     return self.assertFalse(True)
-
-    # def test_remove_parens(self):
-    #     return self.assertFalse(True)
-
-    # def test_has_unique_words(self):
-    #     return self.assertFalse(True)
-
-    # def test_lss_match(self):
-    #     return self.assertFalse(True)
+    def test_search(self):
+        title = "Never Gonna Give You Up"
+        artist = "Rick Astley"
+        uri = Spotify.search(title, artist).uri
+        self.assertEqual(uri, "")
 
 
 # class SpotifyItemTest(unittest.TestCase):
