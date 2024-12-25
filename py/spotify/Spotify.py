@@ -31,12 +31,11 @@ class SpotifyItem:
         else:
             searchres = Spotify._get_instance().album(uri)
         
-        return SpotifyItem(itemtype, 
+        return SpotifyItem(searchres, itemtype, 
                            searchres["name"], 
-                           ",".join(x["name"] for x in searchres["artists"]),
-                           searchres)
+                           ",".join(x["name"] for x in searchres["artists"]))
 
-    def __init__(self, item_type, title, artist, searchres=None):
+    def __init__(self, searchres, item_type, title, artist):
         super().__init__()
         self.type = item_type
         self.title = title
@@ -210,11 +209,11 @@ class Spotify:
                 continue
 
             if Spotify._lss_match(artist, artist_spotify) >= 0.6 and Spotify._lss_match(title, title_spotify) >= 0.6:
-                return SpotifyItem(item_type, title, artist, result)
+                return SpotifyItem(result, item_type, title, artist)
 
             failed.append(f"\t\"{title_spotify}\" by {result['artists'][0]['name']}")
 
-        return SpotifyItem(item_type, title, artist)
+        return SpotifyItem(None, item_type, title, artist)
 
     @staticmethod
     def _get_query(title: str, artist: str):

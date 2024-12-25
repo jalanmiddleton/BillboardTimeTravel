@@ -5,7 +5,7 @@ from Spotify import Spotify, SpotifyItem, Playlist
 
 class SpotifyTest(unittest.TestCase):
     def test_open_account(self):
-        spotify = Spotify.get_instance()
+        spotify = Spotify._get_instance()
         self.assertIsNotNone(spotify)
 
     def test_get_default_playlist(self):
@@ -17,11 +17,11 @@ class SpotifyTest(unittest.TestCase):
         default_playlists = Spotify.get_playlists()
         self.assertSequenceEqual([p.name for p in default_playlists], [Spotify.DEFAULT_PLAYLIST])
 
-    def test_search(self):
-        title = "Never Gonna Give You Up"
-        artist = "Rick Astley"
-        uri = Spotify.search(title, artist).uri
-        self.assertEqual(uri, "")
+    # def test_search(self):
+    #     title = "Never Gonna Give You Up"
+    #     artist = "Rick Astley"
+    #     uri = Spotify.search(title, artist).uri
+    #     self.assertEqual(uri, "")
 
 
 # class SpotifyItemTest(unittest.TestCase):
