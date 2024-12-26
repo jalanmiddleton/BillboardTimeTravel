@@ -116,8 +116,6 @@ class Playlist:
             tracks=tracks
         )
 
-        print("Bye!")
-        print(result)
         self.tracks = tracks
 
 
