@@ -13,6 +13,8 @@ cache = set()
 with open(outfile_csv, "r") as already:
     next(already)
     for line in csv.reader(already):
+        if not line:
+            continue
         title, artist = line[0], line[1]
         cache.add(Spotify._get_query(title, artist))
 
