@@ -20,5 +20,6 @@ with open(data_csv, "r") as infile:
 songs = sorted(songs.items(), key=lambda key_date: key_date[1])
 with open(outfile_csv, "w", newline='') as outfile:
     writer = csv.writer(outfile)
+    writer.writerow(["title", "artist", "debut"])
     for (title, artist), date in songs:
         writer.writerow([title, artist, date.strftime("%Y-%m-%d")])
