@@ -11,6 +11,7 @@ from spotify.Spotify import Spotify
 song_csv = "../rwd-billboard-data/data-out/hot-100-current.csv"
 score_csv = "./py/data/top40score.csv"
 uri_csv = "./py/data/songlinks.csv"
+adj_csv = "./py/data/yearadjuster.csv"
 
 scores = {}
 with open(score_csv, "r") as score_infile:
@@ -26,6 +27,13 @@ with open(uri_csv, "r") as uri_infile:
     for title, artist, uri in uri_reader:
         uris[(title, artist)] = uri
 
+adjusters = {}
+with open(adj_csv, "r") as adj_infile:
+    adj_reader = csv.reader(adj_infile)
+    next(adj_reader)
+    for year, adj in adj_reader:
+        adjusters[int(year)] = float(adj)
+
 today = datetime.date.today()
 todays_songs = {}
 with open(song_csv, "r") as song_infile:
@@ -35,13 +43,13 @@ with open(song_csv, "r") as song_infile:
         day = datetime.date.fromisoformat(day)
         key = (title, artist)
         if day.day == today.day and day.month == today.month:
-            todays_songs[key] = (scores.get(key, 0), uris.get(key, None))
+            todays_songs[key] = (scores.get(key, 0) * adjusters[day.year], uris.get(key, None))
 
 todays_songs = sorted(todays_songs.items(), key=lambda item: item[1][0], reverse=True)
 todays_songs = [x for x in todays_songs if x[1][1]]  # if uri is not None
 
 chosen_songs = []
-random.seed(today.strftime("%d/%m/%Y"))
+random.seed(today.strftime("%Y-%m-%d"))
 chosen_songs.extend(random.sample(todays_songs[:40], 20))
 chosen_songs.extend(random.sample(todays_songs[40:70], 10))
 chosen_songs.extend(random.sample(todays_songs[70:100], 10))
