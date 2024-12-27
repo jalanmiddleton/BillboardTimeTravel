@@ -1,5 +1,6 @@
 import csv
 
+import random
 import sys
 import datetime
 from pathlib import Path
@@ -37,5 +38,15 @@ with open(song_csv, "r") as song_infile:
             todays_songs[key] = (scores.get(key, 0), uris.get(key, None))
 
 todays_songs = sorted(todays_songs.items(), key=lambda item: item[1][0], reverse=True)
-todays_songs = [uri for _, (_, uri) in todays_songs if uri][:40]
-Spotify.get_playlist().set_tracks(todays_songs)
+todays_songs = [x for x in todays_songs if x[1][1]]  # if uri is not None
+
+chosen_songs = []
+random.seed(today.strftime("%d/%m/%Y"))
+chosen_songs.extend(random.sample(todays_songs[:40], 20))
+chosen_songs.extend(random.sample(todays_songs[40:70], 10))
+chosen_songs.extend(random.sample(todays_songs[70:100], 10))
+chosen_songs = sorted(chosen_songs, key=lambda item: item[1][0], reverse=True)
+chosen_songs = [uri for _, (_, uri) in chosen_songs if uri]
+
+# All top ten
+Spotify.get_playlist().set_tracks(chosen_songs)
