@@ -23,6 +23,7 @@ with open(uri_csv, "r") as infile, open(genre_csv, "w", newline='') as outfile:
    genre_writer = csv.writer(outfile)
    genre_writer.writerow(["title", "artist", "genres..."])
    for *details, uri in uri_reader:
+      details = tuple(details)
       if details in already:
          genres = already[details]
       else:

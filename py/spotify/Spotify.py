@@ -154,7 +154,8 @@ class Spotify:
             )
             Spotify.__token = Spotify.__oauth.get_access_token(as_dict=False)
             Spotify.instance = spotipy.Spotify(
-                auth=Spotify.__token, oauth_manager=self.__oauth
+                auth=Spotify.__token, oauth_manager=self.__oauth,
+                requests_timeout=30
             )
 
     @staticmethod
