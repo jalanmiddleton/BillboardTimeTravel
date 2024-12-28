@@ -9,15 +9,26 @@ from spotify.Spotify import SpotifyItem
 uri_csv = "./py/data/songlinks.csv"
 genre_csv = "./py/data/songgenres.csv"
 
+already = {}
+with open(genre_csv, 'r') as infile:
+   genre_reader = csv.reader(infile)
+   next(genre_reader)
+
+   for title, artist, *genres in genre_reader:
+      already[(title, artist)] = genres
+
 with open(uri_csv, "r") as infile, open(genre_csv, "w", newline='') as outfile:
    uri_reader = csv.reader(infile)
    next(uri_reader)
    genre_writer = csv.writer(outfile)
    genre_writer.writerow(["title", "artist", "genres..."])
    for *details, uri in uri_reader:
-      genres = SpotifyItem.from_uri(uri).get_genres() if uri else ['']
-      if not genres:
-         genres = ['']
+      if details in already:
+         genres = already[details]
+      else:
+         genres = SpotifyItem.from_uri(uri).get_genres() if uri else ['']
+         if not genres:
+            genres = ['']
 
       row = [*details, *genres]
       print(str(row))
