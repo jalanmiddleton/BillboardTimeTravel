@@ -174,8 +174,8 @@ class Spotify:
         return None
 
     @staticmethod
-    def get_playlist(name: str = DEFAULT_PLAYLIST) -> "Playlist":
-        return next((pl for pl in Spotify._get_BB_playlists() if pl.name == name), None)
+    def get_playlist(pattern: str = DEFAULT_PLAYLIST) -> "Playlist":
+        return next((pl for pl in Spotify._get_BB_playlists() if re.match(pattern, pl.name)), None)
 
     @staticmethod
     def get_playlists(pattern: str = DEFAULT_PLAYLIST) -> Sequence["Playlist"]:
