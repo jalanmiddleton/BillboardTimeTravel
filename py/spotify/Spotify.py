@@ -66,9 +66,13 @@ class SpotifyItem:
         }
     
     def get_genres(self):
+        # TODO: What if it's not a track?
         track = Spotify._get_instance().track(self.uri)
         artist = Spotify._get_instance().artist(track['artists'][0]['uri'])
         return artist['genres']
+    
+    def get_first_artist(self):
+        return Spotify._get_instance().track(self.uri)['artists'][0]
     
     def __repr__(self):
         return pformat(self.get_details())

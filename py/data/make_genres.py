@@ -9,31 +9,55 @@ from spotify.Spotify import SpotifyItem
 
 uri_csv = "./py/data/songlinks.csv"
 genre_csv = "./py/data/songgenres.csv"
+artist_genre_csv = "./py/data/artistgenres.csv"
 
-already = {}
+already_artists = {}
+with open(artist_genre_csv, 'r') as infile:
+   genre_reader = csv.reader(infile)
+   next(genre_reader)
+
+   for artist, *genres in genre_reader:
+      already_artists[artist] = genres
+
+already_songs = {}
 with open(genre_csv, 'r') as infile:
    genre_reader = csv.reader(infile)
    next(genre_reader)
 
    for title, artist, *genres in genre_reader:
-      already[(title, artist)] = genres
+      already_songs[(title, artist)] = genres
 
-with open(uri_csv, "r") as infile, open(genre_csv, "w", newline='') as outfile:
+with open(artist_genre_csv, 'w') as outfile:
+   genre_writer = csv.writer(outfile)
+   genre_writer.writerow(["artist", "genres..."])
+
+   for (_, artist), *genres in already_songs.items():
+      if artist not in already_artists:
+         already_artists[artist] = genres
+         genre_writer.writerow([artist, *genres])
+exit()
+
+with (open(uri_csv, "r") as infile, 
+      open(genre_csv, "w", newline='') as outfile,
+      open(artist_genre_csv, 'a', newline='') as artist_outfile):
    uri_reader = csv.reader(infile)
    next(uri_reader)
+
    genre_writer = csv.writer(outfile)
    genre_writer.writerow(["title", "artist", "genres..."])
-   for *details, uri in uri_reader:
-      details = tuple(details)
-      if details in already:
-         genres = already[details]
-      else:
-         try:
-            genres = SpotifyItem.from_uri(uri).get_genres() if uri else ['']
-            if not genres:
-               genres = ['']
-         except spotipy.SpotifyException:
-            genres = ['']
+   artist_genre_writer = csv.writer(artist_outfile)
+
+   for title, artist, uri in uri_reader:
+      details = (title, artist)
+      genres = ['']
+      if details in already_songs:
+         genres = already_songs[details]
+      elif artist in already_artists:
+         genres = already_artists[artist]
+      elif uri:         
+         genres = SpotifyItem.from_uri(uri).get_genres() or ['']
+         already_artists[artist] = genres       
+         artist_genre_writer.writerow([artist, *genres])
 
       row = [*details, *genres]
       print(str(row))
