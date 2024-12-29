@@ -1,0 +1,735 @@
+artist,genres...
+Mariah Carey,"['dance pop', 'pop', 'urban contemporary']"
+Brenda Lee,"['adult standards', 'easy listening', 'lounge', 'rockabilly']"
+Bobby Helms,['']
+Burl Ives,"['adult standards', 'american folk revival']"
+Adele,"['british soul', 'pop', 'pop soul', 'uk pop']"
+Andy Williams,"['adult standards', 'easy listening']"
+Wham!,"['new romantic', 'new wave', 'new wave pop', 'soft rock']"
+Jose Feliciano,"['latin pop', 'puerto rican pop']"
+The Kid LAROI & Justin Bieber,['australian hip hop']
+The Ronettes,"['brill building pop', 'classic girl group', 'motown', 'rock-and-roll']"
+Nat King Cole,"['adult standards', 'easy listening', 'lounge', 'soul', 'swing', 'vocal jazz']"
+Dean Martin,"['adult standards', 'easy listening', 'lounge', 'vocal jazz']"
+Kelly Clarkson,"['dance pop', 'pop', 'talent show']"
+Lil Durk Featuring Morgan Wallen,"['chicago drill', 'chicago rap', 'drill', 'hip hop', 'pop rap', 'rap', 'trap']"
+Glass Animals,"['gauze pop', 'indietronica', 'modern rock', 'pov: indie', 'shiver pop']"
+Darlene Love,['']
+Perry Como And The Fontane Sisters With Mitchell Ayres And His Orchestra,"['adult standards', 'easy listening']"
+Ariana Grande,['pop']
+Gene Autry,"['classic oklahoma country', 'cowboy western', 'traditional country', 'yodeling']"
+Bing Crosby,"['adult standards', 'easy listening', 'lounge', 'swing']"
+Lil Nas X & Jack Harlow,['lgbtq+ hip hop']
+Ed Sheeran,"['pop', 'singer-songwriter pop', 'uk pop']"
+Doja Cat,"['dance pop', 'pop']"
+Chuck Berry,"['blues', 'blues rock', 'classic rock', 'rock', 'rock-and-roll', 'rockabilly', 'soul']"
+Kodak Black,"['florida drill', 'florida rap', 'melodic rap', 'miami hip hop', 'rap', 'trap', 'trap latino']"
+GAYLE,"['alt z', 'modern alternative pop']"
+Perry Como,"['adult standards', 'easy listening']"
+Elton John & Dua Lipa,['']
+Michael Buble,"['adult standards', 'canadian pop', 'jazz pop', 'lounge']"
+Silk Sonic (Bruno Mars & Anderson .Paak),"['dance pop', 'pop']"
+Frank Sinatra,"['adult standards', 'easy listening', 'lounge']"
+Thurl Ravenscroft,['movie tunes']
+Eartha Kitt With Henri Rene And His Orchestra,"['torch song', 'vocal jazz']"
+Paul McCartney,"['classic rock', 'mellow gold', 'rock', 'soft rock']"
+Vince Guaraldi Trio,['jazz trio']
+Olivia Rodrigo,['pop']
+Justin Bieber,"['canadian pop', 'pop']"
+Eagles,"['album rock', 'classic rock', 'heartland rock', 'mellow gold', 'rock', 'soft rock', 'yacht rock']"
+Jackson 5,"['motown', 'soul']"
+SZA,"['pop', 'r&b', 'rap']"
+The Beach Boys,"['baroque pop', 'classic rock', 'folk rock', 'mellow gold', 'psychedelic rock', 'rock', 'singer-songwriter', 'sunshine pop']"
+Walker Hayes,"['contemporary country', 'country', 'country road', 'modern country rock']"
+Lil Nas X,['lgbtq+ hip hop']
+Post Malone & The Weeknd,"['dfw rap', 'melodic rap', 'pop', 'rap']"
+Billie Eilish,"['art pop', 'pop']"
+CKay,"['afro r&b', 'afrobeats']"
+Drake Featuring 21 Savage & Project Pat,"['canadian hip hop', 'canadian pop', 'hip hop', 'pop rap', 'rap']"
+Dustin Lynch Featuring Lauren Alaina Or MacKenzie Porter,"['contemporary country', 'country', 'country road', 'modern country rock']"
+Ed Sheeran & Elton John,"['pop', 'singer-songwriter pop', 'uk pop']"
+NEIKED X Mae Muller X Polo G,['scandipop']
+Drake Featuring Future & Young Thug,"['canadian hip hop', 'canadian pop', 'hip hop', 'pop rap', 'rap']"
+Jordan Davis Featuring Luke Bryan,['contemporary country']
+THE ANXIETY: WILLOW & Tyler Cole,['modern alternative pop']
+Chris Stapleton,"['contemporary country', 'outlaw country']"
+Taylor Swift,['pop']
+Dan + Shay,"['contemporary country', 'country', 'country road']"
+Michael Ray,"['contemporary country', 'country road', 'modern country rock']"
+Drake Featuring Lil Baby,"['canadian hip hop', 'canadian pop', 'hip hop', 'pop rap', 'rap']"
+Morgan Wallen,['contemporary country']
+"Nardo Wick Featuring G Herbo, Lil Durk & 21 Savage","['florida drill', 'florida rap', 'southern hip hop']"
+Latto,['trap queen']
+Imagine Dragons X JID,"['modern rock', 'pop', 'rock']"
+Camila Cabello,"['dance pop', 'pop']"
+Blxst & Tyga Featuring Ty Dolla $ign,"['pop rap', 'westcoast flow']"
+Kane Brown,"['black americana', 'contemporary country', 'country', 'country road']"
+Juice WRLD,"['chicago rap', 'melodic rap', 'rap']"
+Chloe,['contemporary r&b']
+Roddy Ricch,"['melodic rap', 'rap', 'trap']"
+Rod Wave,['florida rap']
+Giveon,['r&b']
+Oliver Tree,['alternative hip hop']
+Cody Johnson,"['classic texas country', 'contemporary country', 'modern country pop']"
+Parker McCollum,"['classic texas country', 'contemporary country', 'modern country pop', 'texas country']"
+Coldplay x BTS,"['permanent wave', 'pop']"
+Roddy Ricch Featuring Lil Baby,"['melodic rap', 'rap', 'trap']"
+Jimmie Allen & Brad Paisley,"['black americana', 'contemporary country', 'country road', 'modern country rock']"
+Juice WRLD & Justin Bieber,"['chicago rap', 'melodic rap', 'rap']"
+Jon Pardi,"['contemporary country', 'country', 'country road', 'modern country rock']"
+Moneybagg Yo,"['memphis hip hop', 'rap', 'southern hip hop', 'tennessee hip hop', 'trap']"
+Roddy Ricch Featuring Kodak Black & 21 Savage,"['melodic rap', 'rap', 'trap']"
+Eric Church,"['contemporary country', 'country', 'country road']"
+Zac Brown Band,"['contemporary country', 'country', 'country road', 'modern country rock']"
+Young Thug With Drake & Travis Scott,"['atl hip hop', 'atl trap', 'gangster rap', 'hip hop', 'melodic rap', 'rap', 'trap']"
+Acraze Featuring Cherish,"['pop dance', 'tech house']"
+Summer Walker & SZA,"['r&b', 'rap']"
+Kenny Chesney,"['contemporary country', 'country', 'country road']"
+Baby Keem & Kendrick Lamar,"['hip hop', 'rap']"
+Wizkid Featuring Justin Bieber & Tems,"['afrobeats', 'afropop', 'azonto', 'nigerian hip hop', 'nigerian pop']"
+Doja Cat Featuring SZA,"['dance pop', 'pop']"
+Doja Cat & The Weeknd,"['dance pop', 'pop']"
+"Carolina Gaitan, Mauro Castillo, Adassa, Rhenzy Feliz, Diane Guerrero, Stephanie Beatriz & Encanto Cast",['']
+Jessica Darrow,['movie tunes']
+V,"['j-division', 'korean ost']"
+Muni Long,['']
+Luke Combs,"['contemporary country', 'country']"
+Kelsea Ballerini Featuring Kenny Chesney,"['contemporary country', 'country']"
+Wale Featuring J. Cole,"['pop rap', 'r&b', 'rap', 'southern hip hop', 'trap']"
+Emmy Meli,['alt z']
+Ari Lennox,['alternative r&b']
+"Dierks Bentley, Breland & HARDY","['contemporary country', 'country', 'country road']"
+Sam Hunt,"['contemporary country', 'country', 'country pop', 'modern country rock']"
+Dua Lipa,"['dance pop', 'pop', 'uk pop']"
+The Weeknd & Ariana Grande,"['canadian contemporary r&b', 'canadian pop', 'pop']"
+Jason Aldean & Carrie Underwood,"['contemporary country', 'country', 'country road', 'modern country rock']"
+Maneskin,"['indie rock italiano', 'italian pop']"
+Farruko,"['reggaeton', 'trap latino', 'urbano latino']"
+Ryan Hurd With Maren Morris,"['contemporary country', 'country pop', 'country road', 'modern country rock']"
+"Stephanie Beatriz, Olga Merediz & Encanto Cast","['hollywood', 'movie tunes']"
+Diane Guerrero & Stephanie Beatriz,['movie tunes']
+ERNEST Featuring Morgan Wallen,['modern country pop']
+Lauren Spencer-Smith,"['alt z', 'gen z singer-songwriter', 'singer-songwriter pop']"
+Stephanie Beatriz,"['hollywood', 'movie tunes']"
+Sebastian Yatra,"['colombian pop', 'latin pop', 'reggaeton', 'reggaeton colombiano', 'urbano latino']"
+Gunna & Future,"['atl hip hop', 'melodic rap', 'rap', 'trap']"
+Drake Featuring Travis Scott,"['canadian hip hop', 'canadian pop', 'hip hop', 'pop rap', 'rap']"
+Aventura x Bad Bunny,"['bachata', 'bachata dominicana', 'latin hip hop', 'latin pop', 'tropical', 'urbano latino']"
+H.E.R. Featuring Chris Brown,"['r&b', 'rap']"
+Russell Dickerson,"['contemporary country', 'country', 'country road', 'modern country rock']"
+Blake Shelton,"['classic oklahoma country', 'contemporary country', 'country', 'country road']"
+YoungBoy Never Broke Again & Birdman,"['baton rouge rap', 'rap']"
+"Yung Bleu, Chris Brown & 2 Chainz","['alabama rap', 'trap']"
+Swedish House Mafia & The Weeknd,"['edm', 'pop dance', 'progressive electro house']"
+"Nardo Wick, Lil Baby & Future","['florida drill', 'florida rap', 'southern hip hop']"
+The Walters,"['chicago indie', 'pov: indie']"
+Polo G,"['chicago rap', 'rap']"
+Carly Pearce & Ashley McBryde,"['contemporary country', 'country', 'country road']"
+Priscilla Block,"['contemporary country', 'modern country pop']"
+Gunna & Future Featuring Young Thug,"['atl hip hop', 'melodic rap', 'rap', 'trap']"
+The Weeknd,"['canadian contemporary r&b', 'canadian pop', 'pop']"
+Gunna & 21 Savage,"['atl hip hop', 'melodic rap', 'rap', 'trap']"
+Gunna Featuring Lil Baby,"['atl hip hop', 'melodic rap', 'rap', 'trap']"
+Gunna,"['atl hip hop', 'melodic rap', 'rap', 'trap']"
+Gunna Featuring Young Thug,"['atl hip hop', 'melodic rap', 'rap', 'trap']"
+Gunna Featuring Kodak Black,"['atl hip hop', 'melodic rap', 'rap', 'trap']"
+"The Weeknd Featuring Tyler, The Creator","['canadian contemporary r&b', 'canadian pop', 'pop']"
+Gunna Featuring G Herbo,"['atl hip hop', 'melodic rap', 'rap', 'trap']"
+The Weeknd Featuring Lil Wayne,"['canadian contemporary r&b', 'canadian pop', 'pop']"
+Maren Morris,"['classic texas country', 'contemporary country']"
+Gunna & Chloe,"['atl hip hop', 'melodic rap', 'rap', 'trap']"
+Gunna & Chris Brown Featuring Yung Bleu,"['atl hip hop', 'melodic rap', 'rap', 'trap']"
+Gunna Featuring Drake,"['atl hip hop', 'melodic rap', 'rap', 'trap']"
+The Game & Kanye West,"['detroit hip hop', 'gangster rap', 'hip hop', 'pop rap', 'rap', 'southern hip hop', 'trap']"
+YoungBoy Never Broke Again,"['baton rouge rap', 'rap']"
+Chris Brown,"['r&b', 'rap']"
+Cole Swindell / Lainey Wilson,"['contemporary country', 'country', 'country road', 'modern country rock']"
+Jason Aldean,"['contemporary country', 'country', 'country road', 'modern country rock']"
+JID Featuring 21 Savage & Baby Tate,"['hip hop', 'pop rap', 'rap', 'underground hip hop']"
+"Stephanie Beatriz, Olga Merediz, John Leguizamo, Adassa, Maluma & Encanto Cast","['hollywood', 'movie tunes']"
+Charlie Puth,"['pop', 'viral pop']"
+Internet Money Featuring YoungBoy Never Broke Again,"['pop rap', 'trap']"
+Key Glock,"['memphis hip hop', 'rap', 'southern hip hop', 'tennessee hip hop', 'trap']"
+Yung Bleu & Kehlani,"['alabama rap', 'trap']"
+Gucci Mane Featuring Lil Durk,"['atl hip hop', 'dirty south rap', 'hip hop', 'pop rap', 'rap', 'southern hip hop', 'trap']"
+The Chainsmokers,['pop']
+Benny The Butcher & J. Cole,"['alternative hip hop', 'boom bap', 'buffalo hip hop', 'hip hop', 'upstate ny rap']"
+Fireboy DML & Ed Sheeran,"['afrobeats', 'nigerian pop']"
+Miranda Lambert,"['contemporary country', 'country', 'country dawn', 'country road']"
+NLE Choppa,"['memphis hip hop', 'rap']"
+XXXTENTACION,"['emo rap', 'miami hip hop', 'rap']"
+Em Beihold,"['alt z', 'gen z singer-songwriter']"
+Jaymes Young,['indie poptimism']
+Tiesto & Ava Max,"['big room', 'brostep', 'dutch edm', 'edm', 'house', 'pop dance', 'progressive electro house', 'slap house', 'trance']"
+Megan Thee Stallion,"['houston rap', 'pop', 'rap', 'trap queen']"
+Carlos Vives,"['colombian pop', 'latin pop', 'vallenato']"
+Nicki Minaj X Lil Baby,"['hip pop', 'pop', 'queens hip hop', 'rap']"
+King Von & 21 Savage,"['chicago rap', 'rap']"
+Tate McRae,['pop']
+YG Featuring J. Cole & Moneybagg Yo,"['cali rap', 'hip hop', 'pop rap', 'rap', 'southern hip hop', 'trap']"
+Machine Gun Kelly & WILLOW,"['ohio hip hop', 'pop rap']"
+Red Hot Chili Peppers,"['alternative rock', 'funk metal', 'funk rock', 'permanent wave', 'rock']"
+$NOT & A$AP Rocky,"['cloud rap', 'florida rap', 'underground hip hop']"
+Queen Naija & Big Sean,"['pop r&b', 'r&b']"
+Alesso / Katy Perry,"['dance pop', 'edm', 'pop', 'pop dance', 'progressive electro house']"
+Becky G X Karol G,"['latin pop', 'latin viral pop', 'rap latina', 'reggaeton', 'trap latino', 'urbano latino']"
+Ed Sheeran Featuring Taylor Swift,"['pop', 'singer-songwriter pop', 'uk pop']"
+Dr. Dre Featuring Snoop Dogg,"['g funk', 'gangster rap', 'hip hop', 'rap', 'west coast rap']"
+Future,"['atl hip hop', 'hip hop', 'rap', 'southern hip hop', 'trap']"
+Eminem,"['detroit hip hop', 'hip hop', 'rap']"
+"Fivio Foreign, Kanye West & Alicia Keys","['brooklyn drill', 'new york drill', 'rap', 'trap']"
+"Dierks Bentley, BRELAND & HARDY","['contemporary country', 'country', 'country road']"
+Dove Cameron,['pop']
+Mary J. Blige,"['dance pop', 'hip pop', 'neo soul', 'r&b', 'urban contemporary']"
+Saweetie Featuring H.E.R.,"['cali rap', 'trap queen']"
+Jung Kook,['k-pop']
+Jack Harlow,"['deep underground hip hop', 'hip hop', 'kentucky hip hop', 'pop rap', 'rap']"
+Lil Durk,"['chicago drill', 'chicago rap', 'drill', 'hip hop', 'pop rap', 'rap', 'trap']"
+Yeat,"['pluggnb', 'rage rap']"
+Jessie Murph,"['modern country pop', 'singer-songwriter pop']"
+HARDY,"['contemporary country', 'modern country pop']"
+Tyga X Doja Cat,"['hip hop', 'pop rap', 'rap', 'southern hip hop', 'trap']"
+Labrinth & Zendaya,"['indie poptimism', 'pop']"
+Thomas Rhett,"['contemporary country', 'country', 'country road', 'modern country rock']"
+JNR CHOI & Sam Tompkins,['gambian hip hop']
+Lil Shordie Scott,['viral rap']
+Camila Cabello Featuring Ed Sheeran,"['dance pop', 'pop']"
+Elle King & Miranda Lambert,['modern blues rock']
+Russ Featuring Ktlyn,"['hawaiian hip hop', 'pop rap']"
+Gucci Mane,"['atl hip hop', 'dirty south rap', 'hip hop', 'pop rap', 'rap', 'southern hip hop', 'trap']"
+King Von,"['chicago rap', 'rap']"
+Machine Gun Kelly & Lil Wayne,"['ohio hip hop', 'pop rap']"
+DaBaby & YoungBoy Never Broke Again,"['hip hop', 'north carolina hip hop', 'pop rap', 'rap', 'trap']"
+King Von Featuring G Herbo,"['chicago rap', 'rap']"
+King Von Featuring Fivio Foreign,"['chicago rap', 'rap']"
+King Von & Lil Durk,"['chicago rap', 'rap']"
+King Von Featuring Moneybagg Yo,"['chicago rap', 'rap']"
+Megan Thee Stallion & Dua Lipa,"['houston rap', 'pop', 'rap', 'trap queen']"
+Lil Durk Featuring Gunna,"['chicago drill', 'chicago rap', 'drill', 'hip hop', 'pop rap', 'rap', 'trap']"
+Lil Durk Featuring Future,"['chicago drill', 'chicago rap', 'drill', 'hip hop', 'pop rap', 'rap', 'trap']"
+Kevin Gates Featuring Juicy J,"['baton rouge rap', 'pop rap', 'rap', 'southern hip hop', 'trap']"
+Nirvana,"['grunge', 'permanent wave', 'rock']"
+Lil Durk Featuring Summer Walker,"['chicago drill', 'chicago rap', 'drill', 'hip hop', 'pop rap', 'rap', 'trap']"
+Imagine Dragons,"['modern rock', 'pop', 'rock']"
+Coi Leray & Nicki Minaj,"['new jersey underground rap', 'trap queen']"
+4*TOWN (From Disney And Pixar's Turning Red),['movie tunes']
+Carrie Underwood,"['classic oklahoma country', 'contemporary country', 'country', 'country dawn', 'dance pop', 'pop']"
+AnnenMayKantereit & Giant Rooks,"['cologne indie', 'german singer-songwriter']"
+Machine Gun Kelly & Bring Me The Horizon,"['ohio hip hop', 'pop rap']"
+Lucky Daye,"['alternative r&b', 'r&b']"
+Russell Dickerson & Jake Scott,"['contemporary country', 'country', 'country road', 'modern country rock']"
+BoyWithUke X blackbear,['sad rap']
+Yahritza y Su Esencia,['sad sierreno']
+Nicki Minaj & Fivio Foreign,"['hip pop', 'pop', 'queens hip hop', 'rap']"
+Machine Gun Kelly X blackbear,"['ohio hip hop', 'pop rap']"
+Daddy Yankee & Bad Bunny,"['latin hip hop', 'reggaeton', 'trap latino', 'urbano latino']"
+Anitta,"['funk pop', 'funk rj', 'pagode baiano', 'pop', 'pop nacional']"
+J Balvin & Ed Sheeran,"['reggaeton', 'reggaeton colombiano', 'trap latino', 'urbano latino']"
+Harry Styles,['pop']
+Lil Tjay,"['brooklyn drill', 'melodic rap', 'nyc rap', 'rap']"
+Shawn Mendes,"['canadian pop', 'pop', 'viral pop']"
+JID & J. Cole Featuring Kenny Mason & Sheck Wes,['']
+Scotty McCreery,"['contemporary country', 'country', 'country road', 'modern country rock']"
+Parmalee,"['contemporary country', 'country road', 'modern country rock', 'modern uplift']"
+5 Seconds Of Summer,"['boy band', 'pop']"
+Gucci Mane Featuring Key Glock & Young Dolph,"['atl hip hop', 'dirty south rap', 'hip hop', 'pop rap', 'rap', 'southern hip hop', 'trap']"
+Rauw Alejandro & Chencho Corleone,"['puerto rican pop', 'reggaeton', 'trap latino', 'urbano latino']"
+Lil Baby,"['atl hip hop', 'atl trap', 'rap', 'trap']"
+BIA Featuring J. Cole,"['rap latina', 'trap queen']"
+Camila Cabello Featuring WILLOW,"['dance pop', 'pop']"
+42 Dugg & EST Gee,"['detroit trap', 'southern hip hop', 'trap']"
+Pusha T Featuring JAY-Z & Pharrell Williams,"['gangster rap', 'hip hop', 'pop rap', 'rap', 'southern hip hop', 'trap', 'virginia hip hop']"
+BRELAND Featuring Thomas Rhett,['black americana']
+Lizzo,"['escape room', 'minnesota hip hop', 'pop', 'trap queen']"
+"Kay Flock, Cardi B, Dougie B & Bory300","['bronx drill', 'melodic drill', 'new york drill']"
+6ix9ine,['emo rap']
+Bailey Zimmerman,"['contemporary country', 'modern country pop']"
+The Kid LAROI,['australian hip hop']
+Karol G,"['reggaeton', 'reggaeton colombiano', 'urbano latino']"
+Ed Sheeran Featuring Lil Baby,"['pop', 'singer-songwriter pop', 'uk pop']"
+Zach Bryan,['classic oklahoma country']
+"Southside, Travis Scott & Future","['atl hip hop', 'atl trap']"
+Pusha T Featuring Lil Uzi Vert & Don Toliver,"['gangster rap', 'hip hop', 'pop rap', 'rap', 'southern hip hop', 'trap', 'virginia hip hop']"
+Pusha T Featuring Kanye West & Kid Cudi,"['gangster rap', 'hip hop', 'pop rap', 'rap', 'southern hip hop', 'trap', 'virginia hip hop']"
+Pusha T Featuring Kanye West,"['gangster rap', 'hip hop', 'pop rap', 'rap', 'southern hip hop', 'trap', 'virginia hip hop']"
+Pusha T,"['gangster rap', 'hip hop', 'pop rap', 'rap', 'southern hip hop', 'trap', 'virginia hip hop']"
+Future Featuring Drake & Tems,"['atl hip hop', 'hip hop', 'rap', 'southern hip hop', 'trap']"
+Future Featuring Drake,"['atl hip hop', 'hip hop', 'rap', 'southern hip hop', 'trap']"
+Future Featuring Kanye West,"['atl hip hop', 'hip hop', 'rap', 'southern hip hop', 'trap']"
+Future Featuring Gunna & Young Thug,"['atl hip hop', 'hip hop', 'rap', 'southern hip hop', 'trap']"
+Future Featuring EST Gee,"['atl hip hop', 'hip hop', 'rap', 'southern hip hop', 'trap']"
+Future Featuring Kodak Black,"['atl hip hop', 'hip hop', 'rap', 'southern hip hop', 'trap']"
+Justin Bieber & Don Toliver,"['canadian pop', 'pop']"
+PSY Featuring SUGA,"['k-rap', 'korean old school hip hop']"
+Benson Boone,['singer-songwriter pop']
+Sam Smith,"['pop', 'uk pop']"
+Bad Bunny,"['reggaeton', 'trap latino', 'urbano latino']"
+Bad Bunny & Chencho Corleone,"['reggaeton', 'trap latino', 'urbano latino']"
+Bad Bunny & Rauw Alejandro,"['reggaeton', 'trap latino', 'urbano latino']"
+Kendrick Lamar,"['conscious hip hop', 'hip hop', 'rap', 'west coast rap']"
+Bad Bunny & Jhay Cortez,"['reggaeton', 'trap latino', 'urbano latino']"
+Jack Harlow Featuring Drake,"['deep underground hip hop', 'hip hop', 'kentucky hip hop', 'pop rap', 'rap']"
+Bad Bunny & Bomba Estereo,"['reggaeton', 'trap latino', 'urbano latino']"
+Bad Bunny & Tony Dize,"['reggaeton', 'trap latino', 'urbano latino']"
+Bad Bunny & The Marias,"['reggaeton', 'trap latino', 'urbano latino']"
+Bad Bunny & Buscabulla,"['reggaeton', 'trap latino', 'urbano latino']"
+Lady Gaga,"['art pop', 'dance pop', 'pop']"
+Nate Smith,"['contemporary country', 'modern country pop']"
+Jack Harlow Featuring Lil Wayne,"['deep underground hip hop', 'hip hop', 'kentucky hip hop', 'pop rap', 'rap']"
+"Kendrick Lamar, Blxst & Amanda Reifer","['conscious hip hop', 'hip hop', 'rap', 'west coast rap']"
+Kendrick Lamar & Kodak Black,"['conscious hip hop', 'hip hop', 'rap', 'west coast rap']"
+Kendrick Lamar Featuring Sampha,"['conscious hip hop', 'hip hop', 'rap', 'west coast rap']"
+Kendrick Lamar & Taylour Paige,"['conscious hip hop', 'hip hop', 'rap', 'west coast rap']"
+"Kendrick Lamar, Summer Walker & Ghostface Killah","['conscious hip hop', 'hip hop', 'rap', 'west coast rap']"
+"Kendrick Lamar, Baby Keem, & Sam Dew","['conscious hip hop', 'hip hop', 'rap', 'west coast rap']"
+Post Malone Featuring Roddy Ricch,"['dfw rap', 'melodic rap', 'pop', 'rap']"
+Kendrick Lamar & Tanna Leone,"['conscious hip hop', 'hip hop', 'rap', 'west coast rap']"
+Kendrick Lamar Featuring Beth Gibbons,"['conscious hip hop', 'hip hop', 'rap', 'west coast rap']"
+Quavo & Takeoff,['']
+Ella Mai,"['r&b', 'rap', 'uk contemporary r&b', 'urban contemporary']"
+Kate Bush,"['art pop', 'art rock', 'baroque pop', 'new wave pop', 'permanent wave', 'piano rock', 'singer-songwriter']"
+Kanye West & XXXTENTACION,"['chicago rap', 'hip hop', 'rap']"
+SleazyWorld Go Featuring Lil Baby,['southern hip hop']
+Sleepy Hallow Featuring 347aidan,"['brooklyn drill', 'nyc rap']"
+"Calvin Harris, Dua Lipa & Young Thug","['dance pop', 'edm', 'electro house', 'house', 'pop', 'progressive house', 'uk dance']"
+Cole Swindell,"['contemporary country', 'country', 'country road', 'modern country rock']"
+Nicky Youre & dazy,['singer-songwriter pop']
+Hitkidd & Glorilla,['memphis hip hop']
+Keith Urban,"['contemporary country', 'country', 'country road']"
+Tim McGraw,"['contemporary country', 'country', 'country road']"
+Stephen Sanchez,['gen z singer-songwriter']
+Post Malone Featuring Doja Cat,"['dfw rap', 'melodic rap', 'pop', 'rap']"
+Post Malone Featuring Gunna,"['dfw rap', 'melodic rap', 'pop', 'rap']"
+Post Malone,"['dfw rap', 'melodic rap', 'pop', 'rap']"
+Post Malone Featuring The Kid LAROI,"['dfw rap', 'melodic rap', 'pop', 'rap']"
+Post Malone Featuring Fleet Foxes,"['dfw rap', 'melodic rap', 'pop', 'rap']"
+Shakira & Rauw Alejandro,"['colombian pop', 'dance pop', 'latin pop', 'pop']"
+Joji,['viral pop']
+BTS,"['k-pop', 'k-pop boy group', 'pop']"
+"Pharrell Williams Featuring 21 Savage & Tyler, The Creator","['dance pop', 'pop']"
+Halsey,"['electropop', 'etherpop', 'indie poptimism', 'pop']"
+OneRepublic,"['piano rock', 'pop']"
+Tyler Hubbard,"['contemporary country', 'modern country pop']"
+Dylan Scott,"['contemporary country', 'country road', 'modern country rock']"
+Drake Featuring 21 Savage,"['canadian hip hop', 'canadian pop', 'hip hop', 'pop rap', 'rap']"
+Drake,"['canadian hip hop', 'canadian pop', 'hip hop', 'pop rap', 'rap']"
+Beyonce,"['pop', 'r&b']"
+"Lil Baby, 42 Dugg & Veeze","['atl hip hop', 'atl trap', 'rap', 'trap']"
+Corey Kent,"['modern country pop', 'texas country']"
+Charlie Puth Featuring Jung Kook,"['pop', 'viral pop']"
+Lil Nas X & Youngboy Never Broke Again,['lgbtq+ hip hop']
+Eminem & Snoop Dogg,"['detroit hip hop', 'hip hop', 'rap']"
+Chris Brown Featuring WizKid,['']
+Chris Brown Featuring Jack Harlow,"['r&b', 'rap']"
+Lil Durk Featuring EST Gee,"['chicago drill', 'chicago rap', 'drill', 'hip hop', 'pop rap', 'rap', 'trap']"
+Chris Brown Featuring Lil Baby,"['r&b', 'rap']"
+Lil Durk Featuring Doodie Lo,"['chicago drill', 'chicago rap', 'drill', 'hip hop', 'pop rap', 'rap', 'trap']"
+Chris Brown Featuring Lil Wayne & BLEU,"['r&b', 'rap']"
+"Cardi B, Ye & Lil Durk","['pop', 'rap']"
+Metallica,"['hard rock', 'metal', 'old school thrash', 'rock', 'thrash metal']"
+Jelly Roll,"['country rap', 'modern country pop', 'nashville hip hop', 'tennessee hip hop']"
+City Girls & Usher,"['scam rap', 'trap queen']"
+Ingrid Andress With Sam Hunt,"['contemporary country', 'country pop']"
+Luke Bryan,"['contemporary country', 'country', 'country road', 'modern country rock']"
+j-hope,"['k-pop', 'k-rap']"
+Marshmello & Khalid,"['brostep', 'edm', 'pop', 'progressive electro house']"
+Jake Owen,"['contemporary country', 'country', 'country road']"
+Sia,['pop']
+Steve Lacy,['afrofuturism']
+Brent Faiyaz,"['r&b', 'rap']"
+Yung Gravy,"['meme rap', 'minnesota hip hop']"
+"Brent Faiyaz & DJ Dahi Featuring Tyler, The Creator","['r&b', 'rap']"
+Burna Boy,"['afrobeats', 'dancehall', 'nigerian hip hop', 'nigerian pop']"
+Brent Faiyaz Featuring Alicia Keys,"['r&b', 'rap']"
+Brent Faiyaz Featuring Joony,"['r&b', 'rap']"
+Brent Faiyaz Featuring Drake,"['r&b', 'rap']"
+Mitchell Tenpenny,"['contemporary country', 'country road', 'heartland rock', 'modern country rock']"
+Tems,"['afro r&b', 'afrobeats', 'alte', 'nigerian pop']"
+Chris Young With Mitchell Tenpenny,"['contemporary country', 'country', 'country road']"
+Gabby Barrett,['contemporary country']
+Megan Thee Stallion Featuring Future,"['houston rap', 'pop', 'rap', 'trap queen']"
+John Rich,['']
+Justin Moore,"['arkansas country', 'contemporary country', 'country', 'country road']"
+Mac Miller,"['hip hop', 'pittsburgh rap', 'rap']"
+Russ & Ed Sheeran,"['hawaiian hip hop', 'pop rap']"
+Bizarrap & Quevedo,"['argentine hip hop', 'pop venezolano', 'trap argentino', 'trap latino', 'urbano latino']"
+Beyonce Featuring BEAM,"['pop', 'r&b']"
+"NAV, Travis Scott & Lil Baby","['canadian hip hop', 'canadian trap', 'melodic rap', 'rap', 'trap']"
+Beyonce Featuring Grace Jones & Tems,"['pop', 'r&b']"
+Jax,"['gen z singer-songwriter', 'singer-songwriter pop']"
+Nardo Wick,"['florida drill', 'florida rap', 'southern hip hop']"
+DJ Khaled Featuring Drake & Lil Baby,"['hip hop', 'miami hip hop', 'pop rap', 'rap']"
+"benny blanco, BTS & Snoop Dogg",['pop']
+YoungBoy Never Broke Again Featuring Rod Wave,"['baton rouge rap', 'rap']"
+"Trippie Redd, Moneybagg Yo & Offset","['melodic rap', 'rap', 'trap']"
+Rosalia,"['pop', 'r&b en espanol']"
+Nicki Minaj,"['hip pop', 'pop', 'queens hip hop', 'rap']"
+Rod Wave Featuring Jack Harlow,['florida rap']
+Megan Thee Stallion Featuring Key Glock,"['houston rap', 'pop', 'rap', 'trap queen']"
+Megan Thee Stallion Featuring Latto,"['houston rap', 'pop', 'rap', 'trap queen']"
+Jordan Davis,['contemporary country']
+BLACKPINK,"['k-pop', 'k-pop girl group', 'pop']"
+Offset,"['atl hip hop', 'hip hop', 'pop rap', 'rap', 'trap']"
+Jackson Dean,['modern country pop']
+Thomas Rhett Featuring Riley Green,"['contemporary country', 'country', 'country road', 'modern country rock']"
+Demi Lovato,"['pop', 'post-teen pop']"
+Rosa Linn,['alt z']
+Lee Brice,"['contemporary country', 'country', 'country road', 'modern country rock']"
+Manuel Turizo,"['colombian pop', 'latin pop', 'reggaeton', 'reggaeton colombiano', 'trap latino', 'urbano latino']"
+Elton John & Britney Spears,"['glam rock', 'mellow gold', 'piano rock', 'rock']"
+"DJ Khaled Featuring Rick Ross, Lil Wayne, JAY-Z, John Legend & Fridayy","['hip hop', 'miami hip hop', 'pop rap', 'rap']"
+DJ Khaled Featuring Future & SZA,"['hip hop', 'miami hip hop', 'pop rap', 'rap']"
+DJ Khaled Featuring Future & Lil Baby,"['hip hop', 'miami hip hop', 'pop rap', 'rap']"
+Karol G x Maldy,"['reggaeton', 'reggaeton colombiano', 'urbano latino']"
+DJ Khaled Featuring Kanye West & Eminem,['']
+DJ Khaled Featuring Juice WRLD,"['hip hop', 'miami hip hop', 'pop rap', 'rap']"
+"DJ Khaled Featuring Lil Durk, 21 Savage & Roddy Ricch","['hip hop', 'miami hip hop', 'pop rap', 'rap']"
+DJ Khaled Featuring Quavo & Takeoff,"['hip hop', 'miami hip hop', 'pop rap', 'rap']"
+JVKE,"['modern indie pop', 'pov: indie', 'singer-songwriter pop']"
+DJ Khaled Featuring Nardo Wick & Kodak Black,"['hip hop', 'miami hip hop', 'pop rap', 'rap']"
+DJ Khaled Featuring Drake,"['hip hop', 'miami hip hop', 'pop rap', 'rap']"
+David Guetta & Bebe Rexha,"['big room', 'dance pop', 'edm', 'pop', 'pop dance']"
+DJ Khaled Featuring Don Toliver & Travis Scott,"['hip hop', 'miami hip hop', 'pop rap', 'rap']"
+HARDY Featuring Lainey Wilson,"['contemporary country', 'modern country pop']"
+d4vd,"['bedroom pop', 'bedroom r&b']"
+Rema & Selena Gomez,"['afrobeats', 'nigerian pop']"
+Armani White,['indie hip hop']
+Romeo Santos & Justin Timberlake,"['bachata', 'latin hip hop', 'latin pop', 'trap latino', 'urbano latino']"
+Kane Brown With Katelyn Brown,"['black americana', 'contemporary country', 'country', 'country road']"
+Yeat Featuring Lil Uzi Vert,"['pluggnb', 'rage rap']"
+Ghost,"['hard rock', 'metal']"
+Omar Apollo,"['bedroom pop', 'bedroom soul']"
+Little Big Town,"['contemporary country', 'country', 'country dawn', 'country road']"
+BLEU & Nicki Minaj,['']
+EST Gee Featuring Jack Harlow,"['kentucky hip hop', 'memphis hip hop', 'southern hip hop', 'trap']"
+Sam Smith & Kim Petras,"['pop', 'uk pop']"
+GloRilla & Cardi B,['southern hip hop']
+AJR,['pov: indie']
+Grupo Frontera,['musica chihuahuense']
+Jimmie Allen,"['black americana', 'contemporary country', 'country road', 'modern country rock']"
+YG,"['cali rap', 'hip hop', 'pop rap', 'rap', 'southern hip hop', 'trap']"
+Megan Moroney,"['contemporary country', 'modern country pop']"
+Diddy & Bryson Tiller,"['dance pop', 'east coast hip hop', 'hip hop', 'hip pop', 'pop rap', 'rap']"
+Lewis Capaldi,"['pop', 'uk pop']"
+Carly Pearce,"['contemporary country', 'country', 'country road']"
+Lil Yachty,"['atl hip hop', 'melodic rap', 'rap', 'trap']"
+"Quavo, Takeoff & YoungBoy Never Broke Again","['atl hip hop', 'melodic rap', 'rap', 'trap']"
+"Rauw Alejandro, Lyanno & Brray","['puerto rican pop', 'reggaeton', 'trap latino', 'urbano latino']"
+Lil Baby Featuring Fridayy,"['atl hip hop', 'atl trap', 'rap', 'trap']"
+Lil Baby & Nardo Wick,"['atl hip hop', 'atl trap', 'rap', 'trap']"
+Lil Baby & Young Thug,"['atl hip hop', 'atl trap', 'rap', 'trap']"
+Lil Baby Featuring Future,"['atl hip hop', 'atl trap', 'rap', 'trap']"
+Marshmello & Juice WRLD,"['brostep', 'edm', 'pop', 'progressive electro house']"
+Lil Baby & Rylo Rodriguez,"['atl hip hop', 'atl trap', 'rap', 'trap']"
+Lil Baby Featuring Pooh Shiesty,"['atl hip hop', 'atl trap', 'rap', 'trap']"
+Blink-182,"['alternative metal', 'modern rock', 'pop punk', 'punk', 'rock', 'socal pop punk']"
+Lil Baby & EST Gee,"['atl hip hop', 'atl trap', 'rap', 'trap']"
+Lil Baby Featuring Jeremih,"['atl hip hop', 'atl trap', 'rap', 'trap']"
+Lil Uzi Vert,"['hip hop', 'melodic rap', 'philly rap', 'rage rap', 'rap', 'trap']"
+Taylor Swift Featuring Lana Del Rey,['pop']
+Shakira + Ozuna,"['colombian pop', 'dance pop', 'latin pop', 'pop']"
+Meghan Trainor,"['hip pop', 'pop']"
+Oliver Tree & Robin Schulz,['alternative hip hop']
+Rihanna,"['barbadian pop', 'pop', 'urban contemporary']"
+Michael Jackson,"['r&b', 'soul']"
+"Bobby ""Boris"" Pickett And The Crypt-Kickers",['']
+Ray Parker Jr.,['theme']
+JIN,['k-pop']
+Trippie Redd & Don Toliver,"['melodic rap', 'rap', 'trap']"
+Drake & 21 Savage,"['canadian hip hop', 'canadian pop', 'hip hop', 'pop rap', 'rap']"
+Drake & 21 Savage Featuring Travis Scott,"['canadian hip hop', 'canadian pop', 'hip hop', 'pop rap', 'rap']"
+21 Savage,"['atl hip hop', 'hip hop', 'rap']"
+Selena Gomez,"['pop', 'post-teen pop']"
+Lainey Wilson,"['contemporary country', 'modern country pop']"
+Pharrell Williams & Travis Scott,"['dance pop', 'pop']"
+Elvis Presley,"['rock-and-roll', 'rockabilly']"
+"Metro Boomin, The Weeknd & 21 Savage",['rap']
+"Metro Boomin, Future & Chris Brown",['rap']
+Metro Boomin Featuring Don Toliver & Future,['rap']
+"Metro Boomin, 21 Savage & Young Nudy",['rap']
+"Metro Boomin, Travis Scott & 21 Savage",['rap']
+Metro Boomin & Travis Scott,['rap']
+"Metro Boomin, Travis Scott & Young Thug",['rap']
+Metro Boomin & Young Thug,['rap']
+Metro Boomin & John Legend,['rap']
+Metro Boomin & 21 Savage Featuring Mustafa,['rap']
+Metro Boomin Featuring Don Toliver,['rap']
+Metro Boomin & Future Featuring Don Toliver,['rap']
+Metro Boomin & A$AP Rocky Featuring Takeoff,['rap']
+Metro Boomin & Gunna,['rap']
+Arcangel & Bad Bunny,"['latin hip hop', 'reggaeton', 'trap latino', 'urbano latino']"
+"Metro Boomin, Travis Scott & Future",['rap']
+RM With Youjeen,['k-rap']
+Kelly Clarkson & Ariana Grande,"['dance pop', 'pop', 'talent show']"
+RAYE Featuring 070 Shake,"['uk contemporary r&b', 'uk pop']"
+SZA Featuring Don Toliver,"['pop', 'r&b', 'rap']"
+SZA Featuring Phoebe Bridgers,"['pop', 'r&b', 'rap']"
+SZA Featuring Travis Scott,"['pop', 'r&b', 'rap']"
+SZA Featuring Ol' Dirty Bastard,"['pop', 'r&b', 'rap']"
+A Boogie Wit da Hoodie Featuring Kodak Black,"['melodic rap', 'rap', 'trap']"
+John & Yoko/The Plastic Ono Band With The Harlem Community Choir,"['classic rock', 'rock']"
+Donny Hathaway,"['chicago soul', 'classic soul', 'funk', 'neo soul', 'quiet storm', 'soul', 'southern soul']"
+Pentatonix Featuring Meghan Trainor,"['a cappella', 'viral pop']"
+Perry Como With Mitchell Ayers And His Orchestra,"['adult standards', 'easy listening']"
+Nengo Flow & Bad Bunny,"['reggaeton', 'trap latino', 'urbano latino']"
+Carin Leon X Grupo Frontera,"['corrido', 'musica mexicana', 'sad sierreno', 'sierreno']"
+Fuerza Regida X Grupo Frontera,"['corrido', 'corridos tumbados', 'sad sierreno', 'sierreno']"
+Tory Lanez,"['canadian hip hop', 'canadian trap', 'melodic rap', 'pop rap', 'r&b', 'rap', 'trap']"
+Hotel Ugly,['modern indie pop']
+Coi Leray,"['new jersey underground rap', 'trap queen']"
+Miguel,"['r&b', 'urban contemporary']"
+NewJeans,"['k-pop', 'k-pop girl group']"
+Brett Young,"['contemporary country', 'country', 'country road']"
+Miley Cyrus,['pop']
+Bizarrap & Shakira,"['argentine hip hop', 'pop venezolano', 'trap argentino', 'trap latino', 'urbano latino']"
+Moneybagg Yo x GloRilla,"['memphis hip hop', 'rap', 'southern hip hop', 'tennessee hip hop', 'trap']"
+Sabrina Carpenter,['pop']
+TAEYANG Featuring Jimin,"['k-pop', 'korean r&b']"
+Mac DeMarco,"['edmonton indie', 'lo-fi indie', 'pov: indie', 'slacker rock']"
+Gucci Mane & Kodak Black,"['atl hip hop', 'dirty south rap', 'hip hop', 'pop rap', 'rap', 'southern hip hop', 'trap']"
+Trippie Redd & Juice WRLD,"['melodic rap', 'rap', 'trap']"
+HARDY Featuring Morgan Wallen,"['contemporary country', 'modern country pop']"
+Tiesto Featuring Tate McRae,"['big room', 'brostep', 'dutch edm', 'edm', 'house', 'pop dance', 'progressive electro house', 'slap house', 'trance']"
+Kali Uchis,['colombian pop']
+Ice Spice & Lil Tjay,['bronx drill']
+TWICE,"['k-pop', 'k-pop girl group', 'pop']"
+"Trippie Redd, Future & Lil Baby","['melodic rap', 'rap', 'trap']"
+Trippie Redd & Travis Scott,"['melodic rap', 'rap', 'trap']"
+"Gabito Ballesteros, Peso Pluma & Natanael Cano","['corrido', 'corridos tumbados', 'musica mexicana', 'sad sierreno', 'sierreno']"
+NLE Choppa & 2Rare,"['memphis hip hop', 'rap']"
+Finesse2Tymes,['memphis hip hop']
+ThxSoMch,['bedroom r&b']
+Zach Bryan Featuring Maggie Rogers,['classic oklahoma country']
+Junior H X Oscar Maydon,['corrido']
+Ozuna Featuring Feid,"['puerto rican pop', 'reggaeton', 'trap latino', 'urbano latino']"
+P!nk,"['dance pop', 'pop']"
+PinkPantheress & Ice Spice,['bedroom pop']
+Karol G x Romeo Santos,"['reggaeton', 'reggaeton colombiano', 'urbano latino']"
+Peso Pluma X Natanael Cano,"['corridos tumbados', 'sad sierreno']"
+Falling In Reverse,"['alternative metal', 'rap metal']"
+Ice Spice,['bronx drill']
+Yandel & Feid,"['latin hip hop', 'reggaeton', 'trap latino', 'urbano latino']"
+Rihanna Featuring Jay-Z,"['barbadian pop', 'pop', 'urban contemporary']"
+Linkin Park,"['alternative metal', 'nu metal', 'post-grunge', 'rap metal', 'rock']"
+Rihanna Featuring Calvin Harris,"['barbadian pop', 'pop', 'urban contemporary']"
+Lizzo Featuring SZA,"['escape room', 'minnesota hip hop', 'pop', 'trap queen']"
+Superstar Pride,['southern hip hop']
+NF,"['hip hop', 'pop rap']"
+Toosii,['north carolina hip hop']
+Niall Horan,['pop']
+Polo G & Future,"['chicago rap', 'rap']"
+Lizzy McAlpine,"['alt z', 'boston folk', 'indie pop', 'singer-songwriter pop']"
+Latto Featuring LU KALA,['trap queen']
+Dierks Bentley,"['contemporary country', 'country', 'country road']"
+Karol G x Shakira,"['reggaeton', 'reggaeton colombiano', 'urbano latino']"
+Lil Wayne Featuring DMX,"['hip hop', 'new orleans rap', 'pop rap', 'rap', 'trap']"
+Don Toliver Featuring Justin Bieber & Future,['rap']
+Karol G & Ovy On The Drums,"['reggaeton', 'reggaeton colombiano', 'urbano latino']"
+Yeat Featuring YoungBoy Never Broke Again,"['pluggnb', 'rage rap']"
+Karol G & Quevedo,"['reggaeton', 'reggaeton colombiano', 'urbano latino']"
+"Karol G, Justin Quiles & Angel Dior","['reggaeton', 'reggaeton colombiano', 'urbano latino']"
+Karol G & Carla Morrison,"['reggaeton', 'reggaeton colombiano', 'urbano latino']"
+Morgan Wallen Featuring Eric Church,['contemporary country']
+Morgan Wallen Featuring ERNEST,['contemporary country']
+Morgan Wallen Featuring HARDY,['contemporary country']
+j-hope With J. Cole,"['k-pop', 'k-rap']"
+Miley Cyrus Featuring Brandi Carlile,['pop']
+Peso Pluma,"['corridos tumbados', 'sad sierreno']"
+Eslabon Armado X Peso Pluma,"['corrido', 'corridos tumbados', 'sad sierreno', 'sierreno']"
+Jimin,['k-pop']
+Hozier,"['irish singer-songwriter', 'modern rock', 'pop', 'pov: indie']"
+Yng Lvcas x Peso Pluma,"['reggaeton', 'urbano mexicano']"
+Chino Pacas,['corrido']
+Eladio Carrion & Bad Bunny,"['trap boricua', 'trap latino', 'trap triste', 'urbano latino']"
+Coco Jones,['pop r&b']
+Melanie Martinez,"['alt z', 'electropop', 'pop']"
+Russ,"['hawaiian hip hop', 'pop rap']"
+Fifty Fifty,['k-pop girl group']
+Rosalia & Rauw Alejandro,"['pop', 'r&b en espanol']"
+Lola Brooke X Latto X Yung Miami Or Featuring Billy B,['trap queen']
+"Tyler, The Creator","['hip hop', 'rap']"
+Fuerza Regida X Natanael Cano,"['corrido', 'corridos tumbados', 'sad sierreno', 'sierreno']"
+Old Dominion,"['contemporary country', 'country', 'country road', 'modern country rock']"
+"Tyler, The Creator Featuring A$AP Rocky","['hip hop', 'rap']"
+Kanii,"['bedroom r&b', 'krushclub', 'sped up']"
+Nardo Wick Featuring Lil Baby,"['florida drill', 'florida rap', 'southern hip hop']"
+Jack Black,"['comedy rock', 'comic']"
+NF & Cordae,"['hip hop', 'pop rap']"
+Junior H x Peso Pluma,"['corrido', 'corridos tumbados', 'musica mexicana', 'sad sierreno', 'sierreno']"
+Labrinth,"['indie poptimism', 'pop']"
+YoungBoy Never Broke Again Featuring Nicki Minaj,"['baton rouge rap', 'rap']"
+Ice Spice & Nicki Minaj,['bronx drill']
+Grupo Frontera X Bad Bunny,['musica chihuahuense']
+David Kushner,"['gen z singer-songwriter', 'singer-songwriter pop']"
+"Tyler, The Creator Featuring Kali Uchis","['hip hop', 'rap']"
+Becky G & Peso Pluma,"['latin pop', 'latin viral pop', 'rap latina', 'reggaeton', 'trap latino', 'urbano latino']"
+Fuerza Regida & Peso Pluma,"['corrido', 'corridos tumbados', 'sad sierreno', 'sierreno']"
+Grupo Marca Registrada X Grupo Frontera,"['corrido', 'norteno', 'sad sierreno']"
+The Weeknd Featuring Future,"['canadian contemporary r&b', 'canadian pop', 'pop']"
+Kim Petras Featuring Nicki Minaj,"['alt z', 'dance pop', 'pop', 'transpop']"
+Agust D,['k-rap']
+Yahritza y Su Esencia x Grupo Frontera,['sad sierreno']
+Jonas Brothers,"['boy band', 'pop']"
+Libianca,['afrobeats']
+Kali,"['rap', 'viral rap']"
+"Anuel AA, Mambo Kingz & DJ Luian","['reggaeton', 'reggaeton flow', 'trap boricua', 'trap latino', 'urbano latino']"
+Justin Moore & Priscilla Block,"['arkansas country', 'contemporary country', 'country', 'country road']"
+Lil Mabu,['']
+DaBaby,"['hip hop', 'north carolina hip hop', 'pop rap', 'rap', 'trap']"
+Doechii Featuring Kodak Black,['alternative r&b']
+Lil Durk Featuring J. Cole,"['chicago drill', 'chicago rap', 'drill', 'hip hop', 'pop rap', 'rap', 'trap']"
+Ed Sheeran Featuring Luke Combs,"['pop', 'singer-songwriter pop', 'uk pop']"
+Shakira,"['colombian pop', 'dance pop', 'latin pop', 'pop']"
+Hailey Whitters,"['contemporary country', 'country pop', 'modern country pop']"
+Fuerza Regida,"['corrido', 'corridos tumbados', 'sad sierreno', 'sierreno']"
+Beyonce Featuring Kendrick Lamar,"['pop', 'r&b']"
+Lana Del Rey,"['art pop', 'pop']"
+Summer Walker & J. Cole,"['r&b', 'rap']"
+"Kodak Black, NLE Choppa, Jimin, JVKE & Muni Long","['florida drill', 'florida rap', 'melodic rap', 'miami hip hop', 'rap', 'trap', 'trap latino']"
+"David Guetta, Anne-Marie & Coi Leray","['big room', 'dance pop', 'edm', 'pop', 'pop dance']"
+Taylor Swift Featuring Ice Spice,['pop']
+Lil Durk Featuring 21 Savage,"['chicago drill', 'chicago rap', 'drill', 'hip hop', 'pop rap', 'rap', 'trap']"
+Sexyy Red & Tay Keith & Nicki Minaj,['trap queen']
+Lil Durk & Chief Wuk,"['chicago drill', 'chicago rap', 'drill', 'hip hop', 'pop rap', 'rap', 'trap']"
+Lil Durk Featuring Juice WRLD,"['chicago drill', 'chicago rap', 'drill', 'hip hop', 'pop rap', 'rap', 'trap']"
+Lil Durk Featuring Kodak Black,"['chicago drill', 'chicago rap', 'drill', 'hip hop', 'pop rap', 'rap', 'trap']"
+Latto Featuring Cardi B,['trap queen']
+Bizarrap & Peso Pluma,"['argentine hip hop', 'pop venezolano', 'trap argentino', 'trap latino', 'urbano latino']"
+"Metro Boomin, Swae Lee & NAV Featuring A Boogie Wit da Hoodie",['rap']
+"The Weeknd, Playboi Carti & Madonna","['canadian contemporary r&b', 'canadian pop', 'pop']"
+"Metro Boomin, Swae Lee, Lil Wayne & Offset",['rap']
+"Metro Boomin, A$AP Rocky & Roisee",['rap']
+Moneybagg Yo Featuring Future,"['memphis hip hop', 'rap', 'southern hip hop', 'tennessee hip hop', 'trap']"
+"Metro Boomin, Future & Lil Uzi Vert",['rap']
+Metro Boomin & Coi Leray,['rap']
+Jelly Roll With Lainey Wilson,"['country rap', 'modern country pop', 'nashville hip hop', 'tennessee hip hop']"
+Metro Boomin & James Blake,['rap']
+Young Nudy Featuring 21 Savage,"['pluggnb', 'rap', 'southern hip hop', 'trap']"
+Offset & JID,"['atl hip hop', 'hip hop', 'pop rap', 'rap', 'trap']"
+Noah Kahan,"['pov: indie', 'singer-songwriter pop']"
+El Alfa x Peso Pluma,"['dembow', 'rap dominicano', 'trap latino', 'urbano latino']"
+Feid x Young Miko,"['colombian pop', 'pop reggaeton', 'reggaeton', 'reggaeton colombiano', 'trap latino', 'urbano latino']"
+Gucci Mane & Lil Baby,"['atl hip hop', 'dirty south rap', 'hip hop', 'pop rap', 'rap', 'southern hip hop', 'trap']"
+Nicki Minaj & Ice Spice With Aqua,"['hip pop', 'pop', 'queens hip hop', 'rap']"
+Young Thug Featuring Drake,"['atl hip hop', 'atl trap', 'gangster rap', 'hip hop', 'melodic rap', 'rap', 'trap']"
+Peso Pluma & Junior H,"['corridos tumbados', 'sad sierreno']"
+"Peso Pluma, Gabito Ballesteros & Junior H","['corridos tumbados', 'sad sierreno']"
+Young Thug Featuring Future,"['atl hip hop', 'atl trap', 'gangster rap', 'hip hop', 'melodic rap', 'rap', 'trap']"
+"Peso Pluma, Edgardo Nunez & Los Dareyes de La Sierra","['corridos tumbados', 'sad sierreno']"
+"Young Thug Featuring 21 Savage, Travis Scott & Yak Gotti","['atl hip hop', 'atl trap', 'gangster rap', 'hip hop', 'melodic rap', 'rap', 'trap']"
+Juice WRLD & Cordae,['']
+Young Thug Featuring 21 Savage,"['atl hip hop', 'atl trap', 'gangster rap', 'hip hop', 'melodic rap', 'rap', 'trap']"
+Young Thug Featuring Lil Uzi Vert,"['atl hip hop', 'atl trap', 'gangster rap', 'hip hop', 'melodic rap', 'rap', 'trap']"
+Young Thug,"['atl hip hop', 'atl trap', 'gangster rap', 'hip hop', 'melodic rap', 'rap', 'trap']"
+Peso Pluma & Jasiel Nunez,"['corridos tumbados', 'sad sierreno']"
+Young Thug Featuring Travis Scott,"['atl hip hop', 'atl trap', 'gangster rap', 'hip hop', 'melodic rap', 'rap', 'trap']"
+Lil Uzi Vert Featuring Nicki Minaj,"['hip hop', 'melodic rap', 'philly rap', 'rage rap', 'rap', 'trap']"
+Lil Uzi Vert Featuring Travis Scott,"['hip hop', 'melodic rap', 'philly rap', 'rage rap', 'rap', 'trap']"
+Peso Pluma & Grupo Frontera,"['corridos tumbados', 'sad sierreno']"
+Kaliii,"['rap', 'viral rap']"
+Tainy & Bad Bunny,"['pop reggaeton', 'reggaeton', 'trap latino', 'urbano latino']"
+Lil Uzi Vert Featuring Don Toliver,"['hip hop', 'melodic rap', 'philly rap', 'rage rap', 'rap', 'trap']"
+Lil Uzi Vert Featuring Bring Me The Horizon,"['hip hop', 'melodic rap', 'philly rap', 'rage rap', 'rap', 'trap']"
+Fall Out Boy,"['emo', 'modern rock', 'pop', 'rock']"
+Taylor Swift Featuring Hayley Williams,['pop']
+Taylor Swift Featuring Fall Out Boy,['pop']
+FendiDa Rappa With Cardi B,['']
+Myke Towers,"['reggaeton', 'trap latino', 'urbano latino']"
+Jung Kook Featuring Latto,['k-pop']
+Troye Sivan,"['australian pop', 'pop', 'viral pop']"
+Quavo & Future,"['atl hip hop', 'melodic rap', 'rap', 'trap']"
+Ryan Castro x Pe$o Pluma,"['reggaeton', 'trap colombiano', 'trap latino', 'urbano latino']"
+Rylo Rodriguez Featuring NoCap,"['alabama rap', 'atl trap', 'tennessee hip hop']"
+"That Mexican OT, Paul Wall & DRODi",['texas latin rap']
+"Travis Scott, Bad Bunny & The Weeknd","['rap', 'slap house']"
+Noah Kahan With Post Malone,"['pov: indie', 'singer-songwriter pop']"
+"Diplo, Jessie Murph & Polo G","['dance pop', 'edm', 'electro house', 'moombahton', 'pop dance']"
+Charli XCX,"['art pop', 'candy pop', 'metropopolis', 'pop', 'uk pop']"
+Ryan Gosling,['hollywood']
+Burna Boy & Byron Messia,"['afrobeats', 'dancehall', 'nigerian hip hop', 'nigerian pop']"
+Rylo Rodriguez,"['alabama rap', 'atl trap', 'tennessee hip hop']"
+Travis Scott Featuring Drake,"['rap', 'slap house']"
+Travis Scott Featuring Playboi Carti,"['rap', 'slap house']"
+Travis Scott,"['rap', 'slap house']"
+Travis Scott Featuring Rob49 & 21 Savage,"['rap', 'slap house']"
+Travis Scott Featuring Teezo Touchdown,"['rap', 'slap house']"
+Travis Scott & Beyonce,"['rap', 'slap house']"
+Travis Scott Featuring SZA & Future,"['rap', 'slap house']"
+Travis Scott Featuring Young Thug,"['rap', 'slap house']"
+Travis Scott Featuring The Weeknd & Swae Lee,"['rap', 'slap house']"
+Travis Scott Featuring James Blake & 21 Savage,"['rap', 'slap house']"
+Tyler Childers,"['kentucky indie', 'kentucky roots', 'outlaw country']"
+Travis Scott Featuring Westside Gunn,"['rap', 'slap house']"
+Travis Scott Featuring Kid Cudi,"['rap', 'slap house']"
+Travis Scott Featuring Yung Lean & Dave Chappelle,"['rap', 'slap house']"
+Offset & Cardi B,"['atl hip hop', 'hip hop', 'pop rap', 'rap', 'trap']"
+Drake & Central Cee,"['canadian hip hop', 'canadian pop', 'hip hop', 'pop rap', 'rap']"
+Ivan Cornejo,['sad sierreno']
+"Usher, Summer Walker & 21 Savage","['atl hip hop', 'contemporary r&b', 'dance pop', 'pop', 'r&b', 'rap', 'south carolina hip hop', 'urban contemporary']"
+Grupo Frontera & Grupo Firme,['musica chihuahuense']
+Oliver Anthony Music,['modern country pop']
+Karol G & Peso Pluma,"['reggaeton', 'reggaeton colombiano', 'urbano latino']"
+"DJ Khaled, Lil Baby, Future & Lil Uzi Vert","['hip hop', 'miami hip hop', 'pop rap', 'rap']"
+"Karol G, Cris Mj & Ryan Castro",['']
+Warren Zeiders,['modern country pop']
+Dominic Fike,"['alternative pop rock', 'pov: indie']"
+Teddy Swims,['']
+Zach Bryan Featuring Kacey Musgraves,['classic oklahoma country']
+Zach Bryan Featuring The War And Treaty,['classic oklahoma country']
+Zach Bryan Featuring The Lumineers,['classic oklahoma country']
+Zach Bryan Featuring Sierra Ferrell,['classic oklahoma country']
+Gucci Mane Featuring J. Cole & Mike WiLL Made-It,"['atl hip hop', 'dirty south rap', 'hip hop', 'pop rap', 'rap', 'southern hip hop', 'trap']"
+Carin Leon,"['corrido', 'musica mexicana', 'sad sierreno', 'sierreno']"
+Victoria Monet,"['alternative r&b', 'r&b']"
+Jimmy Buffett,['trop rock']
+Calle 24 x Chino Pacas x Fuerza Regida,"['corrido', 'corridos tumbados', 'sad sierreno', 'sierreno']"
+Sexyy Red,['trap queen']
+"Timbaland, Nelly Furtado & Justin Timberlake","['dance pop', 'pop', 'pop rap']"
+Cardi B & Megan Thee Stallion,"['pop', 'rap']"
+Peso Pluma x Jasiel Nunez x Junior H,"['corridos tumbados', 'sad sierreno']"
+Drake Featuring SZA,"['canadian hip hop', 'canadian pop', 'hip hop', 'pop rap', 'rap']"
+Rod Wave Featuring 21 Savage,['florida rap']
+Rod Wave & Wet,['florida rap']
+Rod Wave & Sadie Jean,['florida rap']
+"Diddy, French Montana & The Weeknd Featuring 21 Savage","['dance pop', 'east coast hip hop', 'hip hop', 'hip pop', 'pop rap', 'rap']"
+Kenya Grace,['singer-songwriter pop']
+Paul Russell,['indie r&b']
+Zach Bryan Featuring Noah Kahan,['classic oklahoma country']
+Zach Bryan Featuring Bon Iver,['classic oklahoma country']
+Shakira X Fuerza Regida,"['colombian pop', 'dance pop', 'latin pop', 'pop']"
+Lil Tecca,"['melodic rap', 'pluggnb', 'rap']"
+Mitski,"['brooklyn indie', 'pov: indie']"
+Maluma & Carin Leon,"['latin pop', 'reggaeton', 'reggaeton colombiano', 'trap latino', 'urbano latino']"
+Lil Tecca & Kodak Black,"['melodic rap', 'pluggnb', 'rap']"
+Jung Kook & Jack Harlow,['k-pop']
+*NSYNC,"['boy band', 'dance pop', 'pop']"
+Thomas Rhett Featuring Morgan Wallen,"['contemporary country', 'country', 'country road', 'modern country rock']"
+Tyla,['']
+Rick Ross & Meek Mill,"['dirty south rap', 'gangster rap', 'hip hop', 'rap', 'southern hip hop', 'trap']"
+Dustin Lynch,"['contemporary country', 'country', 'country road', 'modern country rock']"
+Lil Yachty & J. Cole,"['atl hip hop', 'melodic rap', 'rap', 'trap']"
+Drake Featuring J. Cole,"['canadian hip hop', 'canadian pop', 'hip hop', 'pop rap', 'rap']"
+Drake Featuring Yeat,"['canadian hip hop', 'canadian pop', 'hip hop', 'pop rap', 'rap']"
+Drake Featuring Sexyy Red & SZA,"['canadian hip hop', 'canadian pop', 'hip hop', 'pop rap', 'rap']"
+Drake Featuring Bad Bunny,"['canadian hip hop', 'canadian pop', 'hip hop', 'pop rap', 'rap']"
+Drake Featuring Teezo Touchdown,"['canadian hip hop', 'canadian pop', 'hip hop', 'pop rap', 'rap']"
+Drake Featuring PARTYNEXTDOOR,"['canadian hip hop', 'canadian pop', 'hip hop', 'pop rap', 'rap']"
+Drake Featuring Chief Keef,"['canadian hip hop', 'canadian pop', 'hip hop', 'pop rap', 'rap']"
+Drake Featuring Lil Yachty,"['canadian hip hop', 'canadian pop', 'hip hop', 'pop rap', 'rap']"
+Jessie Murph & Jelly Roll,"['modern country pop', 'singer-songwriter pop']"
+Noah Kahan With Kacey Musgraves,"['pov: indie', 'singer-songwriter pop']"
+Junior H,"['corrido', 'corridos tumbados', 'musica mexicana', 'sad sierreno', 'sierreno']"
+Bad Bunny & Young Miko,"['reggaeton', 'trap latino', 'urbano latino']"
+Bad Bunny & Feid,"['reggaeton', 'trap latino', 'urbano latino']"
+Bad Bunny & Mora,"['reggaeton', 'trap latino', 'urbano latino']"
+Bad Bunny & Luar La L,"['reggaeton', 'trap latino', 'urbano latino']"
+Bad Bunny & Bryant Myers,"['reggaeton', 'trap latino', 'urbano latino']"
+Offset Featuring Travis Scott,"['atl hip hop', 'hip hop', 'pop rap', 'rap', 'trap']"
+Bad Bunny & YOVNGCHIMI,"['reggaeton', 'trap latino', 'urbano latino']"
+Bad Bunny & Eladio Carrion,"['reggaeton', 'trap latino', 'urbano latino']"
+"Bad Bunny, Arcangel, De La Ghetto & Nengo Flow","['reggaeton', 'trap latino', 'urbano latino']"
+Offset & Don Toliver,"['atl hip hop', 'hip hop', 'pop rap', 'rap', 'trap']"
+"The Kid LAROI, Jung Kook & Central Cee",['australian hip hop']
+blink-182,"['alternative metal', 'modern rock', 'pop punk', 'punk', 'rock', 'socal pop punk']"
+The Citizens of Halloween,['']
+Lil Mabu & chriseanrock,['']
