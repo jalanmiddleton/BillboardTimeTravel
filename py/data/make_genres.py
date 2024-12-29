@@ -1,6 +1,7 @@
 import csv
 
 import sys
+import spotipy
 from pathlib import Path
 from pprint import pprint
 sys.path.append(str(Path(__file__).parent.parent))
@@ -27,8 +28,11 @@ with open(uri_csv, "r") as infile, open(genre_csv, "w", newline='') as outfile:
       if details in already:
          genres = already[details]
       else:
-         genres = SpotifyItem.from_uri(uri).get_genres() if uri else ['']
-         if not genres:
+         try:
+            genres = SpotifyItem.from_uri(uri).get_genres() if uri else ['']
+            if not genres:
+               genres = ['']
+         except spotipy.SpotifyException:
             genres = ['']
 
       row = [*details, *genres]
