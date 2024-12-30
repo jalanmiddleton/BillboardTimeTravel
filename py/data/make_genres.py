@@ -14,7 +14,8 @@ artist_genre_csv = "./py/data/artistgenres.csv"
 already_artists = {}
 with open(artist_genre_csv, 'r') as infile:
    genre_reader = csv.reader(infile)
-   next(genre_reader)
+   if genre_reader:
+      next(genre_reader)
 
    for artist, *genres in genre_reader:
       already_artists[artist] = genres
@@ -27,15 +28,15 @@ with open(genre_csv, 'r') as infile:
    for title, artist, *genres in genre_reader:
       already_songs[(title, artist)] = genres
 
-with open(artist_genre_csv, 'w') as outfile:
+with open(artist_genre_csv, 'w', newline='') as outfile:
    genre_writer = csv.writer(outfile)
    genre_writer.writerow(["artist", "genres..."])
 
-   for (_, artist), *genres in already_songs.items():
+   for (_, artist), genres in already_songs.items():
       if artist not in already_artists:
          already_artists[artist] = genres
+         print([artist, *genres])
          genre_writer.writerow([artist, *genres])
-exit()
 
 with (open(uri_csv, "r") as infile, 
       open(genre_csv, "w", newline='') as outfile,
