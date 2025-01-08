@@ -16,7 +16,7 @@ with open(data_csv, "r") as infile:
         if int(place) <= 40:
             songs[key] = songs.get(key, 0) + 1
 
-with open(outfile_csv, "w") as outfile:
+with open(outfile_csv, "w", newline='') as outfile:
     writer = csv.writer(outfile)
     writer.writerow(["title", "artist", "weeks_in_top_40"])
     for title_artist in sorted(songs.keys()):

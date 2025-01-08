@@ -190,6 +190,7 @@ title,artist,weeks_in_top_40
 2U,David Guetta Featuring Justin Bieber,7
 3,Britney Spears,17
 3 A.M. Eternal,The KLF,12
+30 For 30,SZA With Kendrick Lamar,1
 32 Flavors,Alana Davis,3
 34+35,Ariana Grande,27
 34+35,Ariana Grande Feat. Doja Cat & Megan Thee Stallion,1
@@ -249,7 +250,7 @@ title,artist,weeks_in_top_40
 99 Problems,JAY-Z,2
 @ MEH,Playboi Carti,1
 A Banda (Ah Bahn-da),Herb Alpert & The Tijuana Brass,3
-A Bar Song (Tipsy),Shaboozey,35
+A Bar Song (Tipsy),Shaboozey,38
 A Bay Bay,Hurricane Chris,14
 A Beautiful Morning,The Rascals,11
 A Better Love,Londonbeat,7
@@ -274,7 +275,7 @@ A Groovy Kind Of Love,The Mindbenders,10
 A Hard Day's Night,Ramsey Lewis Trio,4
 A Hard Day's Night,The Beatles,12
 A Hazy Shade Of Winter,Simon & Garfunkel,6
-A Holly Jolly Christmas,Burl Ives,35
+A Holly Jolly Christmas,Burl Ives,37
 A Horse With No Name,America,12
 A Hundred Pounds Of Clay,Gene McDaniels,12
 A Keeper,Drake,1
@@ -364,7 +365,7 @@ ABC,Jackson 5,12
 AM To PM,Christina Milian,7
 AMG,"Gabito Ballesteros, Peso Pluma & Natanael Cano",3
 ANNIE's SONG,John Denver,11
-APT.,ROSE & Bruno Mars,8
+APT.,ROSE & Bruno Mars,11
 ATLiens,OutKast,3
 ATM,J. Cole,1
 Aaron's Party (Come Get It),Aaron Carter,3
@@ -526,7 +527,7 @@ All I Wanna Do,Sheryl Crow,27
 All I Wanna Do Is Make Love To You,Heart,13
 All I Want,Toad The Wet Sprocket,18
 "All I Want (From ""GOOD Burger"")",702,4
-All I Want For Christmas Is You,Mariah Carey,66
+All I Want For Christmas Is You,Mariah Carey,68
 All I Want To Do,Sugarland,8
 All I Wanted,Kansas,10
 All I'm Missing Is You,"Glenn Medeiros Featuring Ray Parker, Jr.",4
@@ -886,6 +887,7 @@ BAD!,XXXTENTACION,3
 BAND4BAND,Central Cee & Lil Baby,5
 BBL Love Interlude,Drake,1
 BEBE,6ix9ine Featuring Anuel AA,1
+BMF,SZA,1
 BOP,DaBaby,23
 Babe,Styx,14
 Baby,Ashanti,13
@@ -922,6 +924,7 @@ Baby I'm - A Want You,Bread,10
 Baby I'm Back,Baby Bash Featuring Akon,13
 Baby I'm Burnin',Dolly Parton,7
 Baby I'm Yours,Shai,20
+Baby It's Cold Outside,Dean Martin,1
 Baby It's You,JoJo Featuring Bow Wow,7
 Baby It's You,Smith,11
 Baby It's You,The Shirelles,11
@@ -1158,7 +1161,7 @@ Beautiful People,Kenny O'Dell,2
 Beautiful Soul,Jesse McCartney,16
 Beautiful Stranger,Madonna,9
 Beautiful Sunday,Daniel Boone,11
-Beautiful Things,Benson Boone,47
+Beautiful Things,Benson Boone,49
 Beauty And A Beat,Justin Bieber Featuring Nicki Minaj,19
 Beauty And The Beast,Celine Dion And Peabo Bryson,14
 Beauty Is Only Skin Deep,The Temptations,9
@@ -1176,7 +1179,7 @@ Because The Night,Patti Smith Group,9
 Because They're Young,Duane Eddy And The Rebels,12
 "Because You Loved Me (From ""Up Close & Personal"")",Celine Dion,30
 Bed,J. Holiday,17
-Bed Chem,Sabrina Carpenter,12
+Bed Chem,Sabrina Carpenter,13
 Bed Of Roses,Bon Jovi,15
 BedRock,Young Money Featuring Lloyd,23
 Beds Are Burning,Midnight Oil,9
@@ -1317,7 +1320,7 @@ Bimbombey,Jimmie Rodgers,10
 Bird Dance Beat,The Trashmen,4
 Bird Dog,The Everly Brothers,15
 Birdland,Chubby Checker,7
-Birds Of A Feather,Billie Eilish,30
+Birds Of A Feather,Billie Eilish,33
 Birds Of A Feather,The Raiders,6
 Birthday,Katy Perry,11
 Birthday,Underground Sunshine,5
@@ -1401,7 +1404,7 @@ Blue Autumn,Bobby Goldsboro,3
 Blue Bayou,Linda Ronstadt,16
 Blue Bayou,Roy Orbison,5
 Blue Blue Day,Don Gibson,3
-Blue Christmas,Elvis Presley,10
+Blue Christmas,Elvis Presley,12
 Blue Collar Man (Long Nights),Styx,7
 Blue Eyes,Elton John,10
 Blue Eyes Crying In The Rain,Willie Nelson,9
@@ -1969,9 +1972,9 @@ Choo Choo Train,The Box Tops,6
 Choose,Color Me Badd,9
 Chopped 'N' Skrewed,T-Pain Featuring Ludacris,10
 Christine Sixteen,KISS,7
-Christmas (Baby Please Come Home),Darlene Love,21
+Christmas (Baby Please Come Home),Darlene Love,23
 Christmas Lights,Coldplay,2
-Christmastime Is Here,Vince Guaraldi Trio,1
+Christmastime Is Here,Vince Guaraldi Trio,2
 Chuck E.'s In Love,Rickie Lee Jones,12
 Chug-A-Lug,Roger Miller,8
 Chun-Li,Nicki Minaj,5
@@ -2475,7 +2478,7 @@ December,Collective Soul,30
 "December 1963 (Oh, What A Night)",The 4 Seasons,20
 "December, 1963 (Oh, What a Night)",The 4 Seasons,15
 Deck Of Cards,Wink Martindale,12
-Deck The Halls,Nat King Cole,11
+Deck The Halls,Nat King Cole,13
 Decode,Paramore,3
 Dedicate,Lil Wayne,1
 Dedicated,R. Kelly & Public Announcement,7
@@ -2566,7 +2569,7 @@ Die For You,The Weeknd & Ariana Grande,22
 Die From A Broken Heart,Maddie & Tae,9
 Die Hard,"Kendrick Lamar, Blxst & Amanda Reifer",1
 Die In Your Arms,Justin Bieber,1
-Die With A Smile,Lady Gaga & Bruno Mars,17
+Die With A Smile,Lady Gaga & Bruno Mars,20
 Die Young,Ke$ha,20
 Differences,Ginuwine,26
 Different Drum,Stone Poneys Featuring Linda Ronstadt,13
@@ -3180,7 +3183,7 @@ Escape Plan,Travis Scott,1
 Escape-ism (Part 1),James Brown,3
 Escapism,RAYE Featuring 070 Shake,17
 Eso Beso (That Kiss!),Paul Anka,5
-Espresso,Sabrina Carpenter,35
+Espresso,Sabrina Carpenter,37
 Essence,Wizkid Featuring Justin Bieber & Tems,26
 Esskeetit,Lil Pump,2
 Eternal Flame,The Bangles,14
@@ -3457,7 +3460,7 @@ Feels So Good,Xscape,6
 Feels So Good (Show Me Your Love),Lina Santiago,3
 Feels So Right,Alabama,8
 Feenin',Jodeci,8
-Feliz Navidad,Jose Feliciano,29
+Feliz Navidad,Jose Feliciano,31
 Fell In Love On Monday,Fats Domino,2
 Felt Good On My Lips,Tim McGraw,4
 Fergalicious,Fergie,23
@@ -4105,7 +4108,7 @@ Good Lovin',The Young Rascals,12
 Good Lovin' Ain't Easy To Come By,Marvin Gaye & Tammi Terrell,4
 Good Lovin' Gone Bad,Bad Company,2
 Good Luck Charm,Elvis Presley With The Jordanaires,11
-"Good Luck, Babe!",Chappell Roan,29
+"Good Luck, Babe!",Chappell Roan,31
 Good Morning,Chamillionaire,1
 Good Morning Beautiful,Steve Holy,9
 Good Morning Heartache,Diana Ross,4
@@ -4556,7 +4559,7 @@ Here And Now,Luther Vandross,15
 Here Come Those Tears Again,Jackson Browne,6
 Here Comes Goodbye,Rascal Flatts,8
 Here Comes My Baby,The Tremeloes,8
-Here Comes Santa Claus (Right Down Santa Claus Lane),Gene Autry,17
+Here Comes Santa Claus (Right Down Santa Claus Lane),Gene Autry,19
 Here Comes Summer,Jerry Keller,8
 Here Comes That Rainy Day Feeling Again,The Fortunes,9
 "Here Comes The Hotstepper (From ""Ready To Wear"")",Ini Kamoze,23
@@ -4659,7 +4662,7 @@ High Hopes,"Frank Sinatra ""and a bunch of kids""",1
 High Hopes,Panic! At The Disco,43
 High Infidelity,Taylor Swift,1
 High On You,Survivor,11
-High Road,Koe Wetzel & Jessie Murph,14
+High Road,Koe Wetzel & Jessie Murph,15
 High Road,Zach Bryan,1
 High School Dance,The Sylvers,10
 High School U.S.A.,Tommy Facenda,3
@@ -4754,6 +4757,7 @@ Holiday,The Other Ones,4
 Holla Holla,Ja Rule,7
 Hollaback Girl,Gwen Stefani,28
 Holly Holy,Neil Diamond,12
+Holly Jolly Christmas,Michael Buble,1
 Hollywood,Rufus Featuring Chaka Khan,3
 Hollywood Nights,Bob Seger & The Silver Bullet Band,10
 Hollywood Swinging,Kool & The Gang,11
@@ -4976,7 +4980,7 @@ I Ain't Worried,OneRepublic,22
 I Am A Rock,Simon & Garfunkel,10
 I Am By Your Side,Corey Hart,7
 I Am Love (Parts I & II),Jackson 5,7
-I Am Not Okay,Jelly Roll,23
+I Am Not Okay,Jelly Roll,24
 I Am Somebody Part II,Johnnie Taylor,2
 I Am Woman,Helen Reddy,14
 I Am...I Said/Done Too Soon,Neil Diamond,8
@@ -5195,7 +5199,7 @@ I Guess It's Fuck Me,Drake,1
 I Guess That's Why They Call It The Blues,Elton John,15
 I Guess The Lord Must Be In New York City,Nilsson,2
 I Had A Dream,Paul Revere & The Raiders Featuring Mark Lindsay,5
-I Had Some Help,Post Malone Featuring Morgan Wallen,31
+I Had Some Help,Post Malone Featuring Morgan Wallen,33
 I Had Too Much To Dream (Last Night),The Electric Prunes,8
 I Hate Everything,George Strait,3
 I Hate It Here,Taylor Swift,1
@@ -5354,6 +5358,7 @@ I Need Your Love Tonight,Elvis Presley With The Jordanaires,10
 I Need Your Lovin',Teena Marie,3
 I Need Your Loving,Don Gardner And Dee Dee Ford,7
 I Never Cry,Alice Cooper,14
+I Never Lie,Zach Top,1
 I Never Loved A Man (The Way I Love You),Aretha Franklin,9
 I Never Seen A Man Cry (aka I Seen A Man Die),Scarface,3
 I Only Have Eyes For You,Art Garfunkel,12
@@ -5690,6 +5695,7 @@ I'm Gonna Get Married,Lloyd Price,12
 I'm Gonna Getcha Good!,Shania Twain,5
 I'm Gonna Knock On Your Door,Eddie Hodges,8
 I'm Gonna Let My Heart Do The Walking,The Supremes,1
+I'm Gonna Love You,Cody Johnson & Carrie Underwood,1
 I'm Gonna Love You Just A Little More Baby,Barry White,12
 I'm Gonna Make You Love Me,Diana Ross And The Supremes & The Temptations,12
 I'm Gonna Make You Love Me,Madeline Bell,5
@@ -6145,8 +6151,8 @@ It's All Right,The Impressions,11
 "It's All The Way Live (Now) (From ""Eddie"")",Coolio,6
 It's Alright,Adam Faith With The Roulettes,2
 It's Been Awhile,Staind,34
-It's Beginning To Look A Lot Like Christmas,Michael Buble,19
-It's Beginning To Look A Lot Like Christmas,Perry Como And The Fontane Sisters With Mitchell Ayres And His Orchestra,20
+It's Beginning To Look A Lot Like Christmas,Michael Buble,21
+It's Beginning To Look A Lot Like Christmas,Perry Como And The Fontane Sisters With Mitchell Ayres And His Orchestra,22
 It's Ecstasy When You Lay Down Next To Me,Barry White,12
 It's Five O'Clock Somewhere,Alan Jackson & Jimmy Buffett,15
 It's Getting Better,Mama Cass,7
@@ -6199,7 +6205,7 @@ It's Sad To Belong,England Dan & John Ford Coley,8
 It's So Easy,Linda Ronstadt,12
 It's So Hard To Say Goodbye To Yesterday,Boyz II Men,19
 It's Still Rock And Roll To Me,Billy Joel,19
-It's The Most Wonderful Time Of The Year,Andy Williams,38
+It's The Most Wonderful Time Of The Year,Andy Williams,40
 It's The Same Old Song,Four Tops,8
 It's The Same Old Song,KC And The Sunshine Band,2
 It's Time,Imagine Dragons,29
@@ -6277,11 +6283,11 @@ Jimmy Lee,Aretha Franklin,4
 Jimmy Loves Mary-Anne,Looking Glass,3
 Jimmy Mack,Martha & The Vandellas,10
 Jimmy's Girl,Johnny Tillotson,5
-Jingle Bell Rock,Bobby Helms,41
+Jingle Bell Rock,Bobby Helms,43
 Jingle Bell Rock,Bobby Rydell/Chubby Checker,3
 Jingle Bells,Frank Sinatra,9
 Jingle Bells,Frank Sinatra With Orchestra Conducted By Gordon Jenkins,1
-Jingle Bells,Frank Sinatra With The Orchestra & Chorus Of Gordon Jenkins,4
+Jingle Bells,Frank Sinatra With The Orchestra & Chorus Of Gordon Jenkins,6
 Jingle Jangle,The Archies,10
 Jive Talkin',Bee Gees,12
 JoJo,Boz Scaggs,9
@@ -6622,7 +6628,7 @@ Language Of Love,John D. Loudermilk,3
 Larger Than Life,Backstreet Boys,9
 Last Chance To Turn Around,Gene Pitney,7
 Last Child,Aerosmith,10
-Last Christmas,Wham!,36
+Last Christmas,Wham!,38
 Last Dance,Donna Summer,14
 Last Date,Floyd Cramer,15
 Last Date,Lawrence Welk And His Orchestra,3
@@ -6741,7 +6747,7 @@ Let It Ride,Bachman-Turner Overdrive,9
 Let It Rock,Kevin Rudolf Featuring Lil Wayne,31
 Let It Shine/He Ain't Heavy...He's My Brother,Olivia Newton-John,4
 Let It Snow,Boyz II Men Featuring Brian McKnight,1
-Let It Snow! Let It Snow! Let It Snow!,Dean Martin,3
+Let It Snow! Let It Snow! Let It Snow!,Dean Martin,5
 "Let It Snow, Let It Snow, Let It Snow",Dean Martin,21
 "Let It Snow, Let It Snow, Let It Snow!",Dean Martin,6
 Let It Whip,Dazz Band,16
@@ -6855,6 +6861,7 @@ Levii's Jeans,Beyonce & Post Malone,1
 Levitating,Dua Lipa,37
 Levitating,Dua Lipa Featuring DaBaby,36
 Levon,Elton John,7
+Liar,Jelly Roll,1
 Liar,Profyle,10
 Liar,Three Dog Night,11
 "Liar, Liar",The Castaways,9
@@ -6867,7 +6874,7 @@ Lies,En Vogue,1
 Lies,Jonathan Butler,5
 Lies,The Knickerbockers,9
 Lies,Thompson Twins,5
-Lies Lies Lies,Morgan Wallen,20
+Lies Lies Lies,Morgan Wallen,21
 Life After You,Daughtry,4
 Life Changes,Thomas Rhett,1
 Life Goes On,BTS,2
@@ -6917,11 +6924,11 @@ Like A Virgin,Madonna,14
 Like An Old Time Movie,Scott McKenzie,3
 Like Crazy,Jimin,1
 Like Glue,Sean Paul,11
-Like Him,"Tyler, The Creator Featuring Lola Young",2
+Like Him,"Tyler, The Creator Featuring Lola Young",3
 Like I Love Country Music,Kane Brown,9
 Like I Love You,Justin Timberlake,14
 Like I'm Gonna Lose You,Meghan Trainor Featuring John Legend,23
-Like It's Christmas,Jonas Brothers,1
+Like It's Christmas,Jonas Brothers,2
 Like My Mother Does,Lauren Alaina,1
 Like No Other Night,Thirty Eight Special,9
 Like Strangers,The Everly Brothers,4
@@ -6997,7 +7004,7 @@ Little Ole Man (Uptight-Everything's Alright),Bill Cosby,8
 Little Red Corvette,Prince,17
 Little Red Rented Rowboat,Joe Dowell,4
 Little Red Rooster,Sam Cooke,8
-Little Saint Nick,The Beach Boys,5
+Little Saint Nick,The Beach Boys,6
 Little Sister,Elvis Presley,10
 Little Star,The Elegants,15
 Little Talks,Of Monsters And Men,17
@@ -7141,7 +7148,7 @@ Looks Like We Made It,Barry Manilow,13
 Loop De Loop,Johnny Thunder,9
 Lorelei,Styx,5
 Lose Control,Missy Elliott Featuring Ciara & Fat Man Scoop,22
-Lose Control,Teddy Swims,52
+Lose Control,Teddy Swims,54
 Lose It,Kane Brown,2
 Lose My Breath,Destiny's Child,22
 Lose My Mind,Young Jeezy Featuring Plies,1
@@ -7312,7 +7319,7 @@ Love Shack,The B-52s,17
 Love Sneakin' Up On You,Bonnie Raitt,10
 Love So Right,Bee Gees,16
 Love Somebody,Maroon 5,19
-Love Somebody,Morgan Wallen,8
+Love Somebody,Morgan Wallen,10
 Love Somebody,Rick Springfield,12
 Love Song,Anne Murray,10
 Love Song,Sara Bareilles,31
@@ -7427,7 +7434,7 @@ Lullaby,Shawn Mullins,16
 Lullaby Of Love,Frank Gari,6
 Luna,Peso Pluma & Junior H,1
 Lunch,Billie Eilish,12
-Luther,Kendrick Lamar & SZA,3
+Luther,Kendrick Lamar & SZA,6
 Luv,Tory Lanez,15
 Luv U Better,LL Cool J,17
 Luxurious,Gwen Stefani,10
@@ -7677,8 +7684,10 @@ Mercy Mercy Me (The Ecology)/I Want You,Robert Palmer,10
 "Mercy, Mercy Me (The Ecology)",Marvin Gaye,10
 "Mercy, Mercy, Mercy",Cannonball Adderley,8
 "Mercy, Mercy, Mercy",The Buckinghams,10
+Merry Christmas,Ed Sheeran & Elton John,1
 Mesmerize,Ja Rule Featuring Ashanti,17
 Message To Michael,Dionne Warwick,8
+Messy,Lola Young,1
 Method Of Modern Love,Daryl Hall John Oates,11
 Mexican Hat Rock,The Applejacks,9
 Mexico,Bob Moore and His Orch.,10
@@ -7722,7 +7731,7 @@ Miles Away,Winger,12
 Miles On It,Marshmello & Kane Brown,29
 Milkshake,Kelis,16
 Miller's Cave,Bobby Bare,2
-Million Dollar Baby,Tommy Richman,30
+Million Dollar Baby,Tommy Richman,31
 Million Reasons,Lady Gaga,7
 Mind Playing Tricks On Me,Geto Boys,11
 "Mind, Body and Soul",The Flaming Ember,6
@@ -8430,7 +8439,7 @@ Not Enough Time,INXS,7
 Not Finished,Lil Baby,1
 "Not Gon' Cry (From ""Waiting To Exhale"")",Mary J. Blige,17
 Not Just Another Girl,Ivan Neville,6
-Not Like Us,Kendrick Lamar,32
+Not Like Us,Kendrick Lamar,33
 Not Me,The Orlons,7
 Not Myself Tonight,Christina Aguilera,1
 Not One Minute More,Della Reese,8
@@ -9008,7 +9017,7 @@ Pineapple Princess,Annette With The Afterbeats,9
 Pink,Aerosmith,6
 Pink Cadillac,Natalie Cole,12
 Pink Houses,John Mellencamp,11
-Pink Pony Club,Chappell Roan,11
+Pink Pony Club,Chappell Roan,12
 Pink Shoe Laces,Dodie Stevens,14
 Pink Skies,Zach Bryan,24
 Pink Venom,BLACKPINK,1
@@ -9040,7 +9049,7 @@ Playground In My Mind,Clint Holmes,15
 Playing Games,Summer Walker,7
 Pleasant Valley Sunday,The Monkees,9
 Please,Sawyer Fredericks,1
-Please Come Home For Christmas,Eagles,8
+Please Come Home For Christmas,Eagles,9
 Please Come To Boston,Dave Loggins,10
 Please Don't Ask About Barbara,Bobby Vee,6
 Please Don't Go,Immature,3
@@ -9063,7 +9072,7 @@ Please Mr. Postman,Carpenters,12
 Please Mr. Postman,The Marvelettes,15
 Please Mr. Sun,Tommy Edwards,8
 Please Please Me,The Beatles,10
-Please Please Please,Sabrina Carpenter,25
+Please Please Please,Sabrina Carpenter,26
 Please Remember Me,Tim McGraw,16
 Please Return Your Love To Me,The Temptations,5
 Please Stay,The Drifters,8
@@ -9619,7 +9628,7 @@ Rocket Man,Elton John,12
 Rocket Ride,KISS,2
 Rocketeer,Far*East Movement Featuring Ryan Tedder,13
 Rockin' All Over The World,John Fogerty,6
-Rockin' Around The Christmas Tree,Brenda Lee,48
+Rockin' Around The Christmas Tree,Brenda Lee,50
 Rockin' At Midnight,The Honeydrippers,6
 Rockin' Chair,Gwen McCrae,8
 Rockin' Little Angel,Ray Smith,8
@@ -9699,7 +9708,7 @@ Rude,MAGIC!,33
 Rude Boy,Rihanna,21
 Rudolph The Red Nosed Reindeer,David Seville And The Chipmunks,1
 Rudolph The Red-Nosed Reindeer,Gene Autry,21
-Rudolph The Red-Nosed Reindeer,Gene Autry & The Pinafores,3
+Rudolph The Red-Nosed Reindeer,Gene Autry & The Pinafores,4
 Ruff Ryders' Anthem,DMX,1
 Ruffneck,MC Lyte,4
 Rumbleseat,John Mellencamp,4
@@ -9718,7 +9727,7 @@ Run For The Roses,Dan Fogelberg,8
 Run It!,Chris Brown,31
 Run Joey Run,David Geddes,9
 Run Red Run,The Coasters,1
-Run Rudolph Run,Chuck Berry,18
+Run Rudolph Run,Chuck Berry,20
 Run Run Run,Jo Jo Gunne,6
 Run Samson Run,Neil Sedaka,3
 Run The World (Girls),Beyonce,2
@@ -9792,7 +9801,7 @@ Sail,AWOLNATION,36
 Sail On,Commodores,12
 Sailing,Christopher Cross,13
 Sailor (Your Home Is The Sea),Lolita,14
-Sailor Song,Gigi Perez,8
+Sailor Song,Gigi Perez,9
 Saint-Tropez,Post Malone,2
 "Sally, Go 'round The Roses",The Jaynetts,9
 Salt Shaker,Ying Yang Twins Featuring Lil Jon & The East Side Boyz,19
@@ -9813,10 +9822,10 @@ Sandy,Larry Hall,11
 Sandy,Ronny And The Daytonas,5
 Sangria,Blake Shelton,7
 Sanguine Paradise,Lil Uzi Vert,2
-Santa Baby,Eartha Kitt With Henri Rene And His Orchestra,5
+Santa Baby,Eartha Kitt With Henri Rene And His Orchestra,7
 Santa Claus Is Comin' To Town,Jackson 5,6
 Santa Claus Is Coming To Town,The 4 Seasons,2
-Santa Tell Me,Ariana Grande,20
+Santa Tell Me,Ariana Grande,22
 Sara,Fleetwood Mac,11
 Sara,Starship,13
 Sara Smile,Daryl Hall John Oates,17
@@ -10345,7 +10354,7 @@ Sleep,Little Willie John,10
 Sleep Walk,Santo & Johnny,13
 Sleeping Bag,ZZ Top,13
 Sleeping Satellite,Tasmin Archer,5
-Sleigh Ride,The Ronettes,27
+Sleigh Ride,The Ronettes,29
 Slide,Calvin Harris Featuring Frank Ocean & Migos,11
 Slide,Goo Goo Dolls,34
 Slide,Slave,6
@@ -10390,6 +10399,7 @@ Smells Like Nirvana,"""Weird Al"" Yankovic",2
 Smells Like Teen Spirit,Nirvana,19
 Smile,Juice WRLD & The Weeknd,2
 Smile,Lonestar,2
+Smile,Morgan Wallen,1
 Smile,Scarface Featuring 2Pac & Johnny P,9
 Smile,Uncle Kracker,7
 Smile,Vitamin C Featuring Lady Saw,5
@@ -10695,7 +10705,7 @@ Spring Rain,Silvetti,3
 Springsteen,Eric Church,16
 Springtime Mama,Henry Gross,2
 Spy In The House Of Love,Was (Not Was),10
-Squabble Up,Kendrick Lamar,3
+Squabble Up,Kendrick Lamar,5
 Squeeze Box,The Who,10
 St. Chroma,"Tyler, The Creator Featuring Daniel Caesar",4
 St. Elmo's Fire (Man In Motion),John Parr,14
@@ -10733,7 +10743,7 @@ Star Wars Theme/Cantina Band,Meco,13
 Starboy,The Weeknd Featuring Daft Punk,30
 Starbright,Johnny Mathis,5
 Stardust,Nino Tempo & April Stevens,3
-Stargazing,Myles Smith,13
+Stargazing,Myles Smith,14
 Stargazing,Travis Scott,4
 Staring At The Sun,Post Malone Featuring SZA,1
 Staring At The Sun,U2,8
@@ -10818,7 +10828,7 @@ Stick-Up,The Honey Cone,10
 Sticks And Stones,Ray Charles and his Orchestra,1
 Stickwitu,The Pussycat Dolls,22
 Sticky,Drake,8
-Sticky,"Tyler, The Creator Featuring GloRilla, Sexyy Red & Lil Wayne",7
+Sticky,"Tyler, The Creator Featuring GloRilla, Sexyy Red & Lil Wayne",9
 Still,Bill Anderson,11
 Still,Commodores,15
 Still A G Thang,Snoop Dogg,10
@@ -11193,7 +11203,7 @@ TQM,Fuerza Regida,4
 TSOP (The Sound Of Philadelphia),MFSB Featuring The Three Degrees,14
 TSU,Drake,2
 TUSK,Fleetwood Mac,10
-TV Off,Kendrick Lamar Featuring Lefty Gunplay,3
+TV Off,Kendrick Lamar Featuring Lefty Gunplay,6
 Ta Ta,Clyde McPhatter,5
 Tainted Love,Soft Cell,15
 Take A Back Road,Rodney Atkins,10
@@ -11292,7 +11302,7 @@ Tapioca Tundra,The Monkees,1
 Tar And Cement,Verdelle Smith,2
 Tarot,Bad Bunny & Jhay Cortez,1
 "Tarzan Boy (From ""Teenage Mutant Ninja Turtles III"")",Baltimora,10
-Taste,Sabrina Carpenter,16
+Taste,Sabrina Carpenter,18
 Taste,Tyga Featuring Offset,25
 Taste Of Honey,Herb Alpert & The Tijuana Brass,13
 Tattoo,Jordin Sparks,26
@@ -11441,7 +11451,7 @@ That's My Kind Of Night,Luke Bryan,17
 That's Not My Name,The Ting Tings,1
 That's Old Fashioned (That's The Way Love Should Be),The Everly Brothers,7
 That's Rock 'N' Roll,Shaun Cassidy,15
-That's So True,Gracie Abrams,7
+That's So True,Gracie Abrams,10
 That's That,Snoop Dogg Featuring R. Kelly,10
 That's The Way,Jo Dee Messina,10
 That's The Way,Katrina And The Waves,6
@@ -11558,7 +11568,7 @@ The Chipmunk Song,The Chipmunks With David Seville,11
 The Chipmunk Song (Christmas Don't Be Late),David Seville And The Chipmunks,2
 The Chokin' Kind,Joe Simon,11
 The Christmas Song (Chestnuts Roasting On An Open Fire),Christina Aguilera,2
-The Christmas Song (Merry Christmas To You),"Nat ""King"" Cole",4
+The Christmas Song (Merry Christmas To You),"Nat ""King"" Cole",6
 The Christmas Song (Merry Christmas To You),Nat King Cole,29
 The Cinnamon Cinder (It's A Very Nice Dance),The Pastel Six,5
 The Circle Is Small (I Can See It In Your Eyes),Gordon Lightfoot,3
@@ -12135,7 +12145,7 @@ This Afternoon,Nickelback,4
 This Ain't A Love Song,Bon Jovi,13
 "This Ain't A Scene, It's An Arms Race",Fall Out Boy,13
 This Bitter Earth,Dinah Washington,6
-This Christmas,Donny Hathaway,3
+This Christmas,Donny Hathaway,4
 This Could Be The Night,Loverboy,10
 This D.J.,Warren G,14
 This Diamond Ring,Gary Lewis And The Playboys,11
@@ -12299,7 +12309,7 @@ Time Today,Moneybagg Yo,3
 Time Will Reveal,Debarge,11
 Time Won't Let Me,The Outsiders,10
 "Time, Love And Tenderness",Michael Bolton,13
-Timeless,The Weeknd & Playboi Carti,11
+Timeless,The Weeknd & Playboi Carti,13
 Times Of Your Life,Paul Anka,12
 Timothy,The Buoys,8
 Tin Man,America,11
@@ -12408,7 +12418,7 @@ Too Much Tequila,The Champs,5
 Too Much Time On My Hands,Styx,13
 "Too Much, Too Little, Too Late",Johnny Mathis/Deniece Williams,11
 Too Shy,Kajagoogoo,12
-Too Sweet,Hozier,38
+Too Sweet,Hozier,39
 Too Tight,ConFunkShun,1
 Too Weak To Fight,Clarence Carter,11
 Too Young,Donny Osmond,8
@@ -12684,7 +12694,7 @@ Under Your Spell Again,Johnny Rivers,3
 Undercover Angel,Alan O'Day,17
 Undercover Of The Night,The Rolling Stones,10
 Underneath It All,No Doubt Featuring Lady Saw,26
-Underneath The Tree,Kelly Clarkson,22
+Underneath The Tree,Kelly Clarkson,24
 Underneath Your Clothes,Shakira,13
 Understand Your Man,Johnny Cash,3
 Understanding,Bob Seger,8
@@ -13212,7 +13222,7 @@ Whatcha Gone Do?,Link,8
 Whatcha Gonna Do?,Pablo Cruise,14
 Whatcha Say,Jason Derulo,28
 Whatcha See Is Whatcha Get,The Dramatics,11
-Whatchu Kno About Me,GloRilla & Sexyy Red,8
+Whatchu Kno About Me,GloRilla & Sexyy Red,9
 Whatever,En Vogue,6
 Whatever Gets You Thru The Night,John Lennon With The Plastic Ono Nuclear Band,11
 Whatever It Is,Zac Brown Band,11
@@ -13381,7 +13391,7 @@ Whistle,Flo Rida,21
 White & Nerdy,"""Weird Al"" Yankovic",10
 White Christmas,Bing Crosby,21
 White Christmas,Bing Crosby With Ken Darby Singers & John Scott Trotter & His Orchestra,5
-White Christmas (1947),Bing Crosby With Ken Darby Singers & John Scott Trotter & His Orchestra,2
+White Christmas (1947),Bing Crosby With Ken Darby Singers & John Scott Trotter & His Orchestra,4
 White Flag,Dido,31
 White Horse,Chris Stapleton,12
 White Horse,Laid Back,4
@@ -13395,7 +13405,7 @@ White Room,Cream,9
 White Silver Sands,Bill Black's Combo,11
 White Walls,Macklemore & Ryan Lewis Featuring ScHoolboy Q & Hollis,13
 White Wedding,Billy Idol,3
-Who,Jimin,14
+Who,Jimin,15
 Who Am I,Beenie Man,2
 Who Am I,Petula Clark,6
 Who Are You,The Who,9
@@ -13513,7 +13523,7 @@ Wild!,Dee Dee Sharp,5
 Wildest Dreams,Taylor Swift,24
 Wildest Dreams (Taylor's Version),Taylor Swift,2
 Wildfire,Michael Murphey,13
-Wildflower,Billie Eilish,10
+Wildflower,Billie Eilish,11
 Wildflower,Skylark,14
 Wildside,Marky Mark & The Funky Bunch,12
 Wildwood Days,Bobby Rydell,5
@@ -13538,7 +13548,7 @@ Winchester Cathedral,The New Vaudeville Band,13
 "Wind Beneath My Wings (From ""Beaches"")",Bette Midler,15
 Wind It Up,Gwen Stefani,11
 Wind Of Change,Scorpions,16
-Wind Up Missin' You,Tucker Wetmore,1
+Wind Up Missin' You,Tucker Wetmore,2
 Window Shopper,50 Cent,5
 Winds Of Change,Jefferson Starship,2
 Windy,The Association,13
@@ -13620,7 +13630,7 @@ Wonder,Shawn Mendes,6
 Wonderful,Adam Ant,2
 Wonderful,Everclear,17
 Wonderful,Ja Rule Featuring R. Kelly & Ashanti,15
-Wonderful Christmastime,Paul McCartney,7
+Wonderful Christmastime,Paul McCartney,9
 Wonderful Summer,Robin Ward,7
 Wonderful Tonight,Eric Clapton,7
 Wonderful World,Herman's Hermits,8
@@ -13965,7 +13975,7 @@ You'll Think Of Me,Keith Urban,8
 You're A Friend Of Mine,Clarence Clemons & Jackson Browne,12
 You're A God,Vertical Horizon,13
 You're A Jerk,New Boyz,9
-"You're A Mean One, Mr. Grinch",Thurl Ravenscroft,7
+"You're A Mean One, Mr. Grinch",Thurl Ravenscroft,8
 You're A Part Of Me,Gene Cotton With Kim Carnes,3
 You're A Special Part Of Me,Diana Ross & Marvin Gaye,10
 You're A Wonderful One,Marvin Gaye,7

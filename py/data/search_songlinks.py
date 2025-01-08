@@ -18,7 +18,7 @@ with open(outfile_csv, "r") as already:
         title, artist = line[0], line[1]
         cache.add(Spotify._get_query(title, artist))
 
-with open(data_csv, "r") as infile, open(outfile_csv, "a") as outfile:
+with open(data_csv, "r") as infile, open(outfile_csv, "a", newline='') as outfile:
     writer = csv.writer(outfile)
     if not cache:
         writer.writerow(["title", "artist", "uri"])
