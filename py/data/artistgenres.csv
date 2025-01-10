@@ -3399,6 +3399,7 @@ matchbox 20,neo mellow,pop rock,post-grunge
 Natalie Imbruglia,dance pop,europop,lilith,new wave pop,pop rock
 Whitney Houston & Mariah Carey,dance pop,pop
 Martina McBride,contemporary country,country,country dawn,country road
+Garth Brooks,
 New Radicals,pop rock
 BlackHawk,country,country road
 Everything,
@@ -3456,6 +3457,7 @@ Trina & Tamara,contemporary r&b
 Ja Rule,dance pop,east coast hip hop,gangster rap,hip hop,hip pop,pop rap,queens hip hop,rap,urban contemporary
 Dave Hollister,contemporary r&b,new jack swing,r&b
 Blaque,contemporary r&b,girl group,hip pop,r&b,urban contemporary
+Patty Loveless,
 JT Money Featuring Sole,dirty south rap,miami hip hop
 Nas Featuring Puff Daddy,conscious hip hop,east coast hip hop,gangster rap,hardcore hip hop,hip hop,queens hip hop,rap
 Lit,alternative metal,nu metal,pop punk,pop rock,rap rock,socal pop punk
@@ -3552,7 +3554,6 @@ Macy Gray,neo soul
 Hoku,candy pop
 Hot Boys,dirty south rap,new orleans rap
 Jennifer Lopez Featuring Big Pun & Fat Joe,dance pop,pop,urban contemporary
-Garth Brooks,karaoke
 Clint Black With Steve Wariner,contemporary country,country,country road
 2Pac + Outlawz,g funk,gangster rap,hip hop,rap,west coast rap
 Phil Vassar,contemporary country,country,country road
@@ -3629,8 +3630,8 @@ Shyne Featuring Barrington Levy,gangster rap,hardcore hip hop,hip pop,jewish hip
 Trina,contemporary r&b,dirty south rap,hip pop,miami hip hop,r&b,rap latina,southern hip hop,trap queen
 Profyle,contemporary r&b
 Ja Rule Featuring Christina Milian,dance pop,east coast hip hop,gangster rap,hip hop,hip pop,pop rap,queens hip hop,rap,urban contemporary
-Patty Loveless,country,country dawn,country road,kentucky roots
 Ludacris Featuring Shawnna,atl hip hop,dance pop,dirty south rap,hip hop,old school atlanta hip hop,pop rap,rap,southern hip hop,trap
+Dream,
 Wyclef Jean Featuring Mary J. Blige,rap kreyol
 Musiq,contemporary r&b,neo soul,new jack swing,r&b,urban contemporary
 Beenie Man Featuring Mya,dancehall,jamaican dancehall,reggae fusion,soca
@@ -3704,7 +3705,6 @@ Eve Featuring Gwen Stefani,contemporary r&b,dance pop,hip pop,philly rap,r&b,urb
 Blu Cantrell,hip pop,urban contemporary
 Faith Evans Featuring Carl Thomas,contemporary r&b,hip pop,r&b,urban contemporary
 Ja Rule Featuring Lil' Mo,dance pop,east coast hip hop,gangster rap,hip hop,hip pop,pop rap,queens hip hop,rap,urban contemporary
-Dream,girl group
 Amanda,
 Lil' Romeo,
 Redman Featuring DJ Kool,east coast hip hop,hardcore hip hop,new jersey rap,wu fam
@@ -3767,6 +3767,7 @@ Ja Rule Featuring Ashanti,dance pop,east coast hip hop,gangster rap,hip hop,hip 
 "Janet Featuring Missy Elliott, P. Diddy & Carly Simon",dance pop,r&b,urban contemporary
 Steve Holy,country road
 Glenn Lewis,canadian pop,contemporary r&b,neo soul
+Fabolous,
 No Doubt Featuring Bounty Killer,dance pop,dance rock,permanent wave,pop rock,rock
 Jo Dee Messina With Tim McGraw,country,country dawn,country road
 Jonell & Method Man,
@@ -4118,11 +4119,11 @@ Lenny Kravitz Featuring Jay-Z,permanent wave,rock
 Seether Featuring Amy Lee,alternative metal,nu metal,post-grunge,south african rock
 Anthony Hamilton,contemporary r&b,neo soul,r&b,urban contemporary
 The Killers,alternative rock,dance rock,modern rock,permanent wave,rock
+Dem Franchize Boyz,
 Mynt Featuring Kim Sozzi,
 Breaking Benjamin,alternative metal,nu metal,post-grunge
 Trick Daddy Featuring Lil Jon & Twista,crunk,dirty south rap,miami hip hop,southern hip hop
 J-Kwon Featuring Sadiyyah,dirty south rap,southern hip hop
-Fabolous,gangster rap,hip hop,pop rap,rap,trap,urban contemporary
 Nitty,bronx hip hop
 LL Cool J Featuring 7 Aurelius,east coast hip hop,golden age hip hop,hip hop,old school hip hop,queens hip hop,rap
 Nelly & Christina Aguilera,dance pop,gangster rap,hip hop,pop rap,rap,st louis rap,urban contemporary
@@ -4342,7 +4343,6 @@ Chris Daughtry,
 The Wreckers,candy pop,country dawn
 Taylor Hicks,idol
 Dashboard Confessional,emo,neon pop punk,pop punk,pop rock
-Dem Franchize Boyz,atl hip hop,crunk,dirty south rap,southern hip hop
 Sean Paul Feat. Keyshia Cole,dance pop,dancehall,pop,pop rap
 Busta Rhymes Featuring will.i.am & Kelis,east coast hip hop,hardcore hip hop,hip hop,pop rap,rap
 Lupe Fiasco,chicago rap,conscious hip hop,hip hop,political hip hop,pop rap,rap,southern hip hop
@@ -4506,8 +4506,8 @@ Gorilla Zoe,atl hip hop,crunk,dirty south rap,futuristic swag,southern hip hop,t
 50 Cent Featuring Justin Timberlake & Timbaland,east coast hip hop,gangster rap,hip hop,pop rap,queens hip hop,rap
 UGK Featuring OutKast,dirty south rap
 will.i.am,dance pop,pop
+Zac Efron & Vanessa Anne Hudgens,
 Gym Class Heroes,dance pop,pop rap
-Zac Efron & Vanessa Anne Hudgens,hollywood,movie tunes,post-teen pop
 Yung Joc Featuring Gorilla Zoe,atl hip hop,crunk,dirty south rap,southern hip hop,trap
 Fabolous Featuring Jermaine Dupri,gangster rap,hip hop,pop rap,rap,trap,urban contemporary
 Rihanna Featuring Ne-Yo,barbadian pop,pop,urban contemporary
@@ -4540,10 +4540,10 @@ Webbie Featuring Lil' Phat & Lil' Boosie,baton rouge rap,crunk,dirty south rap,t
 Pitbull Featuring Trina & Young Bo$$,dance pop,miami hip hop,pop
 50 Cent Featuring Akon,east coast hip hop,gangster rap,hip hop,pop rap,queens hip hop,rap
 Lupe Fiasco Featuring Matthew Santos,chicago rap,conscious hip hop,hip hop,political hip hop,pop rap,rap,southern hip hop
+Alvin And The Chipmunks,
 Chingy Featuring Amerie,crunk,dirty south rap,hip pop,pop rap,southern hip hop
 Landon Pigg,acoustic pop
 Baby Bash Featuring Sean Kingston,chicano rap,latin hip hop,pop rap,southern hip hop,texas latin rap,urban contemporary
-Alvin And The Chipmunks,children's music
 Flyleaf,alternative metal,christian alternative rock,nu metal,post-grunge
 DragonForce,british power metal,fantasy metal,metal,power metal,speed metal
 Fat Joe Featuring J. Holiday,bronx hip hop,east coast hip hop,gangster rap,hardcore hip hop,hip hop,pop rap,rap,trap
@@ -4597,6 +4597,7 @@ David Banner Featuring Chris Brown,conscious hip hop,crunk,dirty south rap,missi
 "Three 6 Mafia Featuring Project Pat, Young D & Superpower",crunk,dirty south rap,gangster rap,memphis hip hop,southern hip hop,tennessee hip hop,trap
 Jason Mraz & Colbie Caillat,acoustic pop,dance pop,neo mellow,pop
 David Cook,idol,neo mellow,talent show
+David Archuleta,
 Julianne Hough,country dawn
 Kanye West Featuring Chris Martin,chicago rap,hip hop,rap
 Lil Wayne Featuring T-Pain,hip hop,new orleans rap,pop rap,rap,trap
@@ -4641,7 +4642,6 @@ Bow Wow Featuring Soulja Boy Tell'em,dance pop,hip pop,pop rap,r&b,rap,southern 
 Melissa Lawson,
 Keri Hilson,dance pop,hip pop,r&b,urban contemporary
 O.A.R.,neo mellow,pop rock
-David Archuleta,idol,lds youth,post-teen pop
 Kenny Chesney With The Wailers,contemporary country,country,country road
 Hit Masters,
 September,swedish electropop,swedish pop
@@ -4653,6 +4653,7 @@ Kevin Rudolf Featuring Lil Wayne,pop rap,wrestling
 Matt Nathanson,acoustic pop,neo mellow
 Slim Featuring Yung Joc,
 Gym Class Heroes Featuring The-Dream,dance pop,pop rap
+Shontelle,
 John Legend Featuring Andre 3000,neo soul,pop,pop soul,urban contemporary
 Jay-Z & T.I. Featuring Kanye West & Lil Wayne,east coast hip hop,gangster rap,hip hop,pop rap,rap
 Joshua Radin,acoustic pop,neo mellow
@@ -4886,7 +4887,6 @@ B.o.B,atl hip hop,dance pop,pop rap,rap,southern hip hop
 B.o.B Featuring Hayley Williams,atl hip hop,dance pop,pop rap,rap,southern hip hop
 Glee Cast Featuring Jonathan Groff,glee club,post-teen pop
 B.o.B Featuring T.I. & Playboy Tre,atl hip hop,dance pop,pop rap,rap,southern hip hop
-Shontelle,barbadian pop,dance pop,post-teen pop,talent show
 B.o.B Featuring Rivers Cuomo,atl hip hop,dance pop,pop rap,rap,southern hip hop
 Mike Posner,dance pop,pop,pop dance,pop rap
 Jerrod Niemann,contemporary country,country road
@@ -5011,3 +5011,1154 @@ The Lonely Island Featuring Akon,comedy rap,comic
 Troop 41,north carolina hip hop
 Gwyneth Paltrow,
 Sunny Sweeney,classic texas country,country dawn,texas country
+Brad Paisley Duet With Carrie Underwood,
+Justin Bieber Duet With Mariah Carey,
+Kanye West Featuring DJ Khaled,
+Sam Palladio & Clare Bowen,
+"A$AP Rocky Featuring Drake, 2 Chainz & Kendrick Lamar",
+Christina Perri Featuring Steve Kazee,
+Future Featuring Lil Wayne,
+Lil Wayne Featuring 2 Chainz,
+"Hustle Gang Featuring T.I., B.o.B, Kendrick Lamar & Kris Stephens",
+Candice Glover,
+Jay Z Featuring Rick Ross,
+The FiNATTiCZ,
+Green Shoe Studio Featuring Jacob Colgan & Fred Stobaugh,
+August Alsina Featuring Trinidad James,
+Katy Perry Featuring Juicy J,pop
+Maejor Ali Featuring Juicy J & Justin Bieber,detroit hip hop
+Linkin Park X Steve Aoki,alternative metal,nu metal,post-grunge,rap metal,rock
+Kid Ink Featuring Chris Brown,pop rap,rap,southern hip hop,trap
+Martin Garrix,dutch edm,edm,pop,pop dance,progressive house
+Armin van Buuren Featuring Trevor Guthrie,dutch house,dutch trance,edm,pop dance,progressive house,trance
+Macklemore & Ryan Lewis Featuring ScHoolboy Q & Hollis,pop rap,seattle hip hop
+Drake Featuring 2 Chainz & Big Sean,canadian hip hop,canadian pop,hip hop,pop rap,rap
+Drake Featuring JAY-Z,canadian hip hop,canadian pop,hip hop,pop rap,rap
+Drake Featuring Jhene Aiko,canadian hip hop,canadian pop,hip hop,pop rap,rap
+Kanye West Featuring Cam'ron & Consequence,chicago rap,hip hop,rap
+YG Featuring Jeezy & Rich Homie Quan,cali rap,hip hop,pop rap,rap,southern hip hop,trap
+Sevyn Streeter Featuring Chris Brown,hip pop,r&b,trap queen,urban contemporary
+Pitbull Featuring Ke$ha,dance pop,miami hip hop,pop
+K. Michelle,hip pop,r&b,urban contemporary
+Chase Rice,contemporary country,country,country road,modern country rock
+Avril Lavigne Featuring Chad Kroeger,canadian pop,candy pop,dance pop,pop
+Tegan And Sara,canadian indie,lilith,metropopolis,permanent wave
+Eric Paslay,contemporary country,country road,modern country rock
+ScHoolboy Q Featuring Kendrick Lamar,gangster rap,hip hop,pop rap,rap,southern hip hop,trap
+Lady Gaga Featuring R. Kelly,art pop,dance pop,pop
+Tyga & Justin Bieber,hip hop,pop rap,rap,southern hip hop,trap
+Travie McCoy Featuring Jason Mraz,pop rap
+A Great Big World & Christina Aguilera,neo mellow,piano rock,pop rock,viral pop
+James Wolpert,deep talent show
+Hunter Hayes Featuring Jason Mraz,contemporary country,country,country road,modern country rock
+Eminem Featuring Sia,detroit hip hop,hip hop,rap
+Matthew Schuler,deep talent show
+American Authors,modern rock,pop rock
+Justin Bieber Featuring R. Kelly,canadian pop,pop
+John Newman,dance pop
+T-Pain Featuring B.o.B,dance pop,gangster rap,hip hop,pop rap,r&b,rap,southern hip hop,trap,urban contemporary
+Will Champlin,deep talent show
+Idina Menzel,hollywood,movie tunes,show tunes
+Pentatonix,a cappella,viral pop
+John Mayer Featuring Katy Perry,neo mellow,singer-songwriter
+Frankie Ballard,contemporary country,country road,modern country rock
+Lupe Fiasco Featuring Ed Sheeran,chicago rap,conscious hip hop,hip hop,political hip hop,pop rap,rap,southern hip hop
+Arctic Monkeys,garage rock,modern rock,permanent wave,rock,sheffield indie
+Justin Bieber Featuring Chance The Rapper,canadian pop,pop
+Rebecca Black & Dave Days,electropop,social media pop
+Tessanne Chin,reggae fusion
+Lea Michele,hollywood,post-teen pop,viral pop
+Aloe Blacc,pop soul,r&b
+Jacquie Lee,deep talent show
+R. Kelly Featuring 2 Chainz,
+Tessanne Chin & Adam Levine,reggae fusion
+Jason Derulo Featuring 2 Chainz,dance pop,pop
+Ty Dolla $ign Featuring B.o.B,hip hop,pop rap,r&b,southern hip hop,trap,trap soul
+Beyonce Featuring Drake,pop,r&b
+DJ Snake & Lil Jon,dance pop,edm,electronic trap,pop,pop dance
+"Kristen Bell, Agatha Lee Monn & Katie Lopez",movie tunes
+Kristen Bell & Idina Menzel,movie tunes
+Lucy Hale,post-teen pop
+J. Cole Featuring Amber Coffman & The Cults,conscious hip hop,hip hop,north carolina hip hop,rap
+SoMo,pop r&b,r&b,teen pop
+Shakira Featuring Rihanna,colombian pop,dance pop,latin pop,pop
+Chris Brown Featuring Lil Wayne & French Montana Or Too $hort Or Tyga,r&b,rap
+Calvin Harris Featuring Ayah Marar,dance pop,edm,electro house,house,pop,progressive house,uk dance
+Cash Cash Featuring Bebe Rexha,dance pop,edm,electro house,electropowerpop,pop dance
+Hillsong UNITED,ccm,christian music,world worship,worship
+Austin Mahone Featuring Pitbull,pop,post-teen pop
+ScHoolboy Q,gangster rap,hip hop,pop rap,rap,southern hip hop,trap
+Enrique Iglesias Featuring Marco Antonio Solis,dance pop,latin pop,mexican pop
+The 1975,modern alternative rock,modern rock,pop,pov: indie,rock
+Rico Love,pop r&b
+Romeo Santos Featuring Drake,bachata,latin hip hop,latin pop,trap latino,urbano latino
+Jhene Aiko,r&b
+Tegan And Sara Featuring The Lonely Island,canadian indie,lilith,metropopolis,permanent wave
+Buck 22 Featuring Billy Ray Cyrus,
+MKTO,pop,post-teen pop
+Naughty Boy Featuring Sam Smith,uk contemporary r&b
+Pitbull Featuring G.R.L.,dance pop,miami hip hop,pop
+Fitz And The Tantrums,la indie,modern alternative rock,modern rock,pop rock,pov: indie
+Young Money Featuring Drake,dirty south rap,pop rap,rap,southern hip hop,trap
+Rick Ross Featuring Kanye West & Big Sean,dirty south rap,gangster rap,hip hop,rap,southern hip hop,trap
+Rick Ross Featuring JAY Z,dirty south rap,gangster rap,hip hop,rap,southern hip hop,trap
+Iggy Azalea Featuring Charli XCX,australian hip hop,dance pop,pop
+Wisin Featuring Jennifer Lopez & Ricky Martin,reggaeton,urbano latino
+Soko,french indie pop
+Kristen Bell & Santino Fontana,movie tunes
+YG Featuring Drake,cali rap,hip hop,pop rap,rap,southern hip hop,trap
+Eminem Featuring Nate Ruess,detroit hip hop,hip hop,rap
+Ty Dolla $ign Featuring Wiz Khalifa & DJ Mustard,hip hop,pop rap,r&b,southern hip hop,trap,trap soul
+Tiesto,big room,brostep,dutch edm,edm,house,pop dance,progressive electro house,slap house,trance
+Jennifer Lopez Featuring French Montana,dance pop,pop,urban contemporary
+"Future Featuring Pharrell, Pusha T & Casino",atl hip hop,hip hop,rap,southern hip hop,trap
+Disclosure Featuring Sam Smith,edm,house,indietronica,uk dance
+Rixton,post-teen pop,talent show,teen pop,viral pop
+B.o.B Featuring Priscilla,atl hip hop,dance pop,pop rap,rap,southern hip hop
+KONGOS,modern alternative rock,modern blues rock,south african rock
+Pitbull Featuring Jennifer Lopez & Claudia Leitte,dance pop,miami hip hop,pop
+KCamp Featuring 2 Chainz,atl hip hop,melodic rap,southern hip hop,trap
+"will.i.am Featuring Miley Cyrus, French Montana, Wiz Khalifa & DJ Mustard",dance pop,pop
+Nico & Vinz,afrobeats
+Josh Kaufman,deep talent show,indy indie
+MAGIC!,pop,reggae fusion
+Ariana Grande Featuring Iggy Azalea,pop
+Michael Jackson & Justin Timberlake,r&b,soul
+Jason Derulo Featuring Snoop Dogg,dance pop,pop
+Christina Grimmie,post-teen pop,viral pop
+Enrique Iglesias Featuring Descemer Bueno & Gente de Zona,dance pop,latin pop,mexican pop
+Iggy Azalea,australian hip hop,dance pop,pop
+Blake Shelton Featuring Gwen Sebastian,classic oklahoma country,contemporary country,country,country road
+Katy Tiz,
+Tinashe Featuring ScHoolboy Q,alternative r&b,dance pop,metropopolis,pop,r&b
+Jake Worthington,classic texas country,deep talent show,red dirt,texas country
+Christina Grimmie & Adam Levine,post-teen pop,viral pop
+Tove Lo,dance pop,metropopolis,pop,swedish electropop,swedish pop,swedish synthpop
+Tim McGraw Featuring Faith Hill,contemporary country,country,country road
+Becky G,latin pop,latin viral pop,rap latina,reggaeton,trap latino,urbano latino
+ScHoolboy Q Featuring BJ The Chicago Kid,gangster rap,hip hop,pop rap,rap,southern hip hop,trap
+Tiesto Featuring Matthew Koma,big room,brostep,dutch edm,edm,house,pop dance,progressive electro house,slap house,trance
+PSY Featuring Snoop Dogg,k-rap,korean old school hip hop
+Brantley Gilbert Featuring Justin Moore & Thomas Rhett,contemporary country,country,country road,modern country rock
+Clean Bandit Featuring Jess Glynne,pop,uk dance,uk funky
+Jamie N Commons & X Ambassadors,modern alternative rock,modern rock,stomp pop
+T.I. Featuring Iggy Azalea,atl hip hop,dirty south rap,gangster rap,hip hop,pop rap,rap,southern hip hop,trap
+Jeremih Featuring YG,chicago rap,pop rap,r&b,southern hip hop,trap,urban contemporary
+Vance Joy,folk-pop,modern rock
+Ariana Grande Featuring Zedd,pop
+Chris Brown Featuring Usher & Rick Ross,r&b,rap
+Busta Rhymes Featuring Eminem,east coast hip hop,hardcore hip hop,hip hop,pop rap,rap
+Iggy Azalea Featuring Rita Ora,australian hip hop,dance pop,pop
+Afrojack Featuring Wrabel,big room,dance pop,dutch house,edm,electro house,pop dance
+Echosmith,electropop,indie poptimism,viral pop
+Rich Gang Featuring Young Thug & Rich Homie Quan,
+Kiesza,electropop,pop edm
+Milky Chance,german pop,modern rock
+"Jessie J, Ariana Grande & Nicki Minaj",dance pop,pop
+Maddie & Tae,contemporary country,country,country road
+Bobby Shmurda,nyc rap,rap,trap
+Rae Sremmurd,melodic rap,mississippi hip hop,pop rap,rap,trap
+Jack & Jack,pop,teen pop
+Pitbull Featuring John Ryan,dance pop,miami hip hop,pop
+T.I. Featuring Young Thug,atl hip hop,dirty south rap,gangster rap,hip hop,pop rap,rap,southern hip hop,trap
+"Juicy J, Wiz Khalifa & Ty Dolla $ign Featuring Kill The Noise & Madsonik",crunk,memphis hip hop,pop rap,rap,southern hip hop,trap
+Tyga Featuring Young Thug,hip hop,pop rap,rap,southern hip hop,trap
+Mr. Probz,pop dance
+"Steve Aoki, Chris Lake & Tujamo Featuring Kid Ink",edm,electro house,pop dance
+Rich Homie Quan Featuring Problem,atl hip hop,rap,southern hip hop,trap
+Beyonce Featuring Nicki Minaj Or Chimamanda Ngozi Adichie,pop,r&b
+TeeFLii Featuring 2 Chainz,pop r&b,slow game,west coast trap
+Jeezy Featuring Jay Z,atl hip hop,crunk,dirty south rap,gangster rap,old school atlanta hip hop,rap,southern hip hop,trap
+Mary Lambert,neo mellow
+Calvin Harris Featuring John Newman,dance pop,edm,electro house,house,pop,progressive house,uk dance
+Lil Jon Featuring Tyga,atl hip hop,crunk,dance pop,dirty south rap,old school atlanta hip hop,pop rap,southern hip hop,trap
+Jennifer Lopez Featuring Iggy Azalea Or Pitbull,dance pop,pop,urban contemporary
+August Alsina,pop r&b,pop rap,r&b,southern hip hop,trap,urban contemporary
+Wiz Khalifa Featuring Snoop Dogg & Ty Dolla $ign,hip hop,pittsburgh rap,pop rap,rap,southern hip hop,trap
+I LOVE MAKONNEN Featuring Drake,atl hip hop,lgbtq+ hip hop,trap
+alt-J,indie rock,indietronica,modern alternative rock,modern rock,rock,shimmer pop
+Alesso Featuring Tove Lo,dance pop,edm,pop,pop dance,progressive electro house
+OG Maco Featuring 2 Chainz,atl hip hop
+Jimmy Fallon Featuring will.i.am,
+Ariana Grande & The Weeknd,pop
+Kid Ink Featuring Usher & Tinashe,pop rap,rap,southern hip hop,trap
+Jessie J Featuring 2 Chainz,dance pop,pop
+DeJ Loaf,detroit hip hop,r&b,trap,trap queen
+Flo Rida Featuring Sage The Gemini & Lookas,dance pop,miami hip hop,pop,pop rap
+Iggy Azalea Featuring M0,australian hip hop,dance pop,pop
+David Guetta Featuring Sam Martin,big room,dance pop,edm,pop,pop dance
+Snootie Wild Featuring K Camp,memphis hip hop,trap
+RaeLynn,contemporary country,country,country road,deep talent show
+"Nicki Minaj Featuring Drake, Lil Wayne & Chris Brown",hip pop,pop,queens hip hop,rap
+Ella Henderson,dance pop,pop dance,talent show,uk pop
+Taylor Swift Featuring Kendrick Lamar,pop
+WALK THE MOON,dance rock,modern alternative rock,modern rock,neo mellow,pop rock
+Mark Ronson Featuring Bruno Mars,pop soul
+Ne-Yo Featuring Juicy J,dance pop,pop,r&b,urban contemporary
+Band Aid 30,musical advocacy
+Nicki Minaj Featuring Skylar Grey,hip pop,pop,queens hip hop,rap
+O.T. Genasis,southern hip hop,trap
+Matt McAndrew,deep talent show
+Usher Featuring Juicy J,atl hip hop,contemporary r&b,dance pop,pop,r&b,rap,south carolina hip hop,urban contemporary
+James Newton Howard Featuring Jennifer Lawrence,orchestral soundtrack,soundtrack
+Craig Wayne Boyd,deep talent show
+Pitbull & Ne-Yo,dance pop,miami hip hop,pop
+Sheppard,australian indie,australian pop,folk-pop
+Blake Shelton Featuring Ashley Monroe,classic oklahoma country,contemporary country,country,country road
+Taylor John Williams,deep talent show
+The White Buffalo & The Forest Rangers,alternative roots rock,new americana
+Chris Jamison,deep talent show
+Nicki Minaj Featuring Beyonce,hip pop,pop,queens hip hop,rap
+Chris Jamison & Adam Levine,deep talent show
+Damien,acoustic pop,irish rock,irish singer-songwriter,neo mellow,singer-songwriter
+Matt McAndrew & Adam Levine,deep talent show
+Nicki Minaj Featuring Ariana Grande,hip pop,pop,queens hip hop,rap
+Prince Royce Featuring Snoop Dogg,bachata,latin hip hop,latin pop,urbano latino
+Kanye West Featuring Paul McCartney,chicago rap,hip hop,rap
+Rae Sremmurd Featuring Nicki Minaj & Young Thug,melodic rap,mississippi hip hop,pop rap,rap,trap
+Chase Bryant,contemporary country,country road,modern country rock
+G-Eazy Featuring Remo,indie pop rap,oakland hip hop,pop rap,rap
+Chris Brown & Tyga,r&b,rap
+Sophia Grace,social media pop
+I Prevail,alternative metal,nu-metalcore,post-grunge
+B.o.B Featuring Trey Songz,atl hip hop,dance pop,pop rap,rap,southern hip hop
+Omarion Featuring Chris Brown & Jhene Aiko,dance pop,hip pop,r&b,rap,southern hip hop,trap,urban contemporary
+Hoodie Allen Featuring Ed Sheeran,indie pop rap
+Common & John Legend,alternative hip hop,chicago rap,conscious hip hop,hardcore hip hop,hip hop,political hip hop
+Wale Featuring Jeremih,pop rap,r&b,rap,southern hip hop,trap
+Rihanna & Kanye West & Paul McCartney,barbadian pop,pop,urban contemporary
+Nicki Minaj Featuring Drake & Lil Wayne,hip pop,pop,queens hip hop,rap
+Fifth Harmony Featuring Kid Ink,girl group,pop,talent show
+Fetty Wap,new jersey rap,pop rap,rap,southern hip hop,trap
+Natalie La Rose Featuring Jeremih,
+George Ezra,folk-pop,neo-singer-songwriter
+Big Sean Featuring Drake,detroit hip hop,hip hop,pop rap,r&b,rap,southern hip hop,trap
+A-Trak + Milo & Otis Featuring Rich Kidz,canadian electronic,edm,electro house,electronic trap,fidget house,house,turntablism
+Empire Cast Featuring Jussie Smollett,pop r&b
+Wiz Khalifa & Iggy Azalea,hip hop,pittsburgh rap,pop rap,rap,southern hip hop,trap
+Zedd Featuring Selena Gomez,complextro,edm,german techno,pop,pop dance
+Empire Cast Featuring Jussie Smollett & Yazz,pop r&b
+Big Sean Featuring Kanye West,detroit hip hop,hip hop,pop rap,r&b,rap,southern hip hop,trap
+Tori Kelly,pop,post-teen pop
+A Thousand Horses,contemporary country,country pop,country road,modern country rock,modern southern rock
+Keith Urban Featuring Eric Church,contemporary country,country,country road
+Big Sean Featuring Kanye West & John Legend,detroit hip hop,hip hop,pop rap,r&b,rap,southern hip hop,trap
+Silento,chicago bop,pinoy hip hop
+"Kanye West Featuring Theophilus London, Allan Kingdom & Paul McCartney",chicago rap,hip hop,rap
+Empire Cast Featuring Estelle & Jussie Smollett,pop r&b
+Cashmere Cat Featuring Ariana Grande,downtempo,electropop,shiver pop
+Meek Mill,hip hop,philly rap,pop rap,rap,southern hip hop,trap
+Skrillex & Diplo With Justin Bieber,brostep,complextro,edm,electro,pop dance
+LunchMoney Lewis,miami hip hop
+Kenny Chesney With Grace Potter,contemporary country,country,country road
+Tim McGraw With Catherine Dunn,contemporary country,country,country road
+Wiz Khalifa Featuring Charlie Puth,hip hop,pittsburgh rap,pop rap,rap,southern hip hop,trap
+Kendrick Lamar Featuring George Clinton & Thundercat,conscious hip hop,hip hop,rap,west coast rap
+"Kendrick Lamar Featuring Bilal, Anna Wise & Thundercat",conscious hip hop,hip hop,rap,west coast rap
+"Kendrick Lamar Featuring Bilal, Anna Wise & Snoop Dogg",conscious hip hop,hip hop,rap,west coast rap
+Nicky Jam & Enrique Iglesias,latin hip hop,reggaeton,trap latino,urbano latino
+Iggy Azalea Featuring Jennifer Hudson,australian hip hop,dance pop,pop
+"David Guetta Featuring Nicki Minaj, Bebe Rexha & Afrojack",big room,dance pop,edm,pop,pop dance
+Action Bronson Featuring Chance The Rapper,alternative hip hop,east coast hip hop,hip hop,nyc rap,queens hip hop
+Canaan Smith,contemporary country,country road,modern country rock
+DJ Snake & AlunaGeorge,dance pop,edm,electronic trap,pop,pop dance
+Dillon Francis & DJ Snake,brostep,edm,electro house,moombahton,pop dance,progressive electro house,slap house
+Wale Featuring Usher,pop rap,r&b,rap,southern hip hop,trap
+Ludacris Featuring Miguel,atl hip hop,dance pop,dirty south rap,hip hop,old school atlanta hip hop,pop rap,rap,southern hip hop,trap
+Kelsea Ballerini,contemporary country,country
+"Kid Ink, Tyga, Wale, YG & Rich Homie Quan",pop rap,rap,southern hip hop,trap
+Who Is Fancy,
+Major Lazer & DJ Snake Featuring MO,dance pop,edm,electro house,moombahton,pop,pop dance
+T-Wayne,houston rap,viral trap
+Rachel Platten,post-teen pop,talent show,viral pop
+Kid Ink Featuring DeJ Loaf,pop rap,rap,southern hip hop,trap
+Sawyer Fredericks,deep talent show,folk-pop,ny roots
+X Ambassadors,modern alternative rock,modern rock,stomp pop
+Kimberly Nichole,deep talent show
+Nate Ruess,modern rock
+Bandit Gang Marco Featuring Dro,pop r&b
+Koryn Hawthorne,gospel,gospel r&b
+OMI,reggae fusion
+Kevin Gates Featuring August Alsina,baton rouge rap,pop rap,rap,southern hip hop,trap
+Chedda Da Connect,trap
+Britney Spears & Iggy Azalea,dance pop,pop
+"Shaggy Featuring Mohombi, Faydee, Costi",dance pop,pop rap,reggae fusion
+Jidenna Featuring Roman GianArthur,ghanaian hip hop,viral trap
+Nick Fradiani,talent show
+Zedd Featuring Jon Bellion,complextro,edm,german techno,pop,pop dance
+Meghan Linsey,deep talent show
+A$AP Rocky Featuring ScHoolboy Q,east coast hip hop,hip hop,rap
+Jamie Foxx Featuring Chris Brown,contemporary r&b,hip pop,pop rap,r&b,southern hip hop,trap,urban contemporary
+Jeremih Featuring J. Cole,chicago rap,pop rap,r&b,southern hip hop,trap,urban contemporary
+How I Became The Bomb,vapor pop
+A$AP Rocky Featuring Rod Stewart x Miguel x Mark Ronson,east coast hip hop,hip hop,rap
+Tech N9Ne Featuring 2 Chainz & B.o.B,detroit hip hop,kansas city hip hop,pop rap
+Travi$ Scott Featuring Future & 2 Chainz,rap,slap house
+Prince Royce Featuring Jennifer Lopez & Pitbull,bachata,latin hip hop,latin pop,urbano latino
+Madonna Featuring Nicki Minaj,dance pop,pop
+Charlie Puth Featuring Meghan Trainor,pop,viral pop
+Sage The Gemini Featuring Nick Jonas,hyphy,pop rap,southern hip hop,trap
+Selena Gomez Featuring A$AP Rocky,pop,post-teen pop
+Janet Featuring J. Cole,dance pop,r&b,urban contemporary
+Flo Rida Featuring Robin Thicke & Verdine White,dance pop,miami hip hop,pop,pop rap
+Meek Mill Featuring Chris Brown & Nicki Minaj,hip hop,philly rap,pop rap,rap,southern hip hop,trap
+Janelle Monae & Jidenna,afrofuturism,alternative r&b,atl hip hop,neo soul,r&b
+Fetty Wap Featuring Remy Boyz,new jersey rap,pop rap,rap,southern hip hop,trap
+Big Sean Featuring Chris Brown & Ty Dolla $ign,detroit hip hop,hip hop,pop rap,r&b,rap,southern hip hop,trap
+Pia Mia Featuring Chris Brown & Tyga,dance pop,pop,post-teen pop
+Meek Mill Featuring Nicki Minaj,hip hop,philly rap,pop rap,rap,southern hip hop,trap
+Fetty Wap Featuring Monty,new jersey rap,pop rap,rap,southern hip hop,trap
+NEEDTOBREATHE Featuring Gavin DeGraw,ccm,christian alternative rock,christian indie,christian music,folk-pop
+Meek Mill Featuring Future,hip hop,philly rap,pop rap,rap,southern hip hop,trap
+Meghan Trainor Featuring John Legend,hip pop,pop
+Elle King,modern blues rock
+Eminem Featuring Gwen Stefani,detroit hip hop,hip hop,rap
+Cam,contemporary country,modern country rock
+Calvin Harris & Disciples,dance pop,edm,electro house,house,pop,progressive house,uk dance
+R. City Featuring Adam Levine,reggae fusion,virgin islands reggae
+Bea Miller,alt z,pop,talent show
+"Dove Cameron, Cameron Boyce, Booboo Stewart & Sofia Carson",pop
+The Game Featuring Drake,detroit hip hop,gangster rap,hip hop,pop rap,rap,southern hip hop,trap
+K Camp,atl hip hop,melodic rap,southern hip hop,trap
+Alessia Cara,canadian contemporary r&b,canadian pop,pop
+Hailee Steinfeld,pop
+N.W.A,conscious hip hop,gangster rap,golden age hip hop,hip hop,old school hip hop,rap,west coast rap
+iLoveMemphis,chicago bop,viral trap
+Nelly Featuring Jeremih,dance pop,gangster rap,hip hop,pop rap,rap,st louis rap,urban contemporary
+"Macklemore & Ryan Lewis Featuring Eric Nally, Melle Mel, Kool Moe Dee & Grandmaster Caz",pop rap,seattle hip hop
+Andrew McMahon In The Wilderness,hopebeat,indie poptimism,piano rock
+The Weeknd Featuring Lana Del Rey,canadian contemporary r&b,canadian pop,pop
+The Weeknd Featuring Labrinth,canadian contemporary r&b,canadian pop,pop
+The Weeknd Featuring Ed Sheeran,canadian contemporary r&b,canadian pop,pop
+Wiz Khalifa Featuring Rae Sremmurd,hip hop,pittsburgh rap,pop rap,rap,southern hip hop,trap
+J Balvin,reggaeton,reggaeton colombiano,trap latino,urbano latino
+Ty Dolla $ign Featuring Future & Rae Sremmurd,hip hop,pop rap,r&b,southern hip hop,trap,trap soul
+Lil Wayne & Charlie Puth,hip hop,new orleans rap,pop rap,rap,trap
+Jess Glynne,dance pop,pop,uk pop
+Kygo Featuring Conrad,edm,pop,pop dance,tropical house
+Daya,alt z,pop
+Drake & Future,canadian hip hop,canadian pop,hip hop,pop rap,rap
+Lil Dicky Featuring Fetty Wap & Rich Homie Quan,comedy rap,indie pop rap,pop rap
+Naughty Boy Featuring Beyonce & Arrow Benjamin,uk contemporary r&b
+Major Lazer Featuring Ellie Goulding & Tarrus Riley,dance pop,edm,electro house,moombahton,pop,pop dance
+A Great Big World Featuring FUTURISTIC,neo mellow,piano rock,pop rock,viral pop
+Rudimental Featuring Ed Sheeran,pop dance,uk dance,uk funky
+DeJ Loaf Featuring Big Sean,detroit hip hop,r&b,trap,trap queen
+Brothers Osborne,contemporary country,country,country road,modern country rock,modern southern rock
+DNCE,dance pop,pop
+The Chainsmokers Featuring Rozes,pop
+LOCASH,contemporary country,country rap,country road,modern country rock
+G-Eazy x Bebe Rexha,indie pop rap,oakland hip hop,pop rap,rap
+DLOW,chicago bop
+Jordan Smith,deep talent show,idol
+Missy Elliott Featuring Pharrell Williams,dance pop,hip hop,hip pop,neo soul,pop rap,r&b,rap,urban contemporary,virginia hip hop
+Justin Bieber Featuring Halsey,canadian pop,pop
+Justin Bieber Featuring Travi$ Scott,canadian pop,pop
+Justin Bieber Featuring Nas,canadian pop,pop
+Shawn Mendes & Camila Cabello,canadian pop,pop,viral pop
+Luke Bryan Featuring Karen Fairchild,contemporary country,country,country road,modern country rock
+Yo Gotti Featuring Nicki Minaj,dirty south rap,gangster rap,memphis hip hop,rap,southern hip hop,tennessee hip hop,trap
+Barrett Baber,arkansas country,deep talent show
+PSY Featuring CL,k-rap,korean old school hip hop
+Madi Davis,deep talent show
+Dawin,nyc pop
+Granger Smith,classic texas country,contemporary country,country road,modern country rock
+G-Eazy,indie pop rap,oakland hip hop,pop rap,rap
+Rick Ross Featuring Chris Brown,dirty south rap,gangster rap,hip hop,rap,southern hip hop,trap
+G-Eazy Featuring Chris Brown & Tory Lanez,indie pop rap,oakland hip hop,pop rap,rap
+Emily Ann Roberts,
+Jordan Smith & Adam Levine,deep talent show,idol
+Lindsey Stirling,bow pop,pop violin
+Kevin Gates,baton rouge rap,pop rap,rap,southern hip hop,trap
+James Bay,neo mellow,pop,uk pop
+Robin Schulz Featuring Francesco Yates,deep euro house,deep house,edm,german dance,pop dance,tropical house
+David Guetta Featuring Sia & Fetty Wap,big room,dance pop,edm,pop,pop dance
+Empire Of The Sun,australian dance,australian electropop,dance rock,indietronica,neo-synthpop
+DJ Snake Featuring Bipolar Sunshine,dance pop,edm,electronic trap,pop,pop dance
+Lukas Graham,danish pop,scandipop
+Wiz Khalifa Featuring Travi$ Scott,hip hop,pittsburgh rap,pop rap,rap,southern hip hop,trap
+Curren$Y Featuring August Alsina & Lil Wayne,dirty south rap,new orleans rap,southern hip hop,underground hip hop
+Zayn,pop,uk pop
+Charlie Puth Featuring Selena Gomez,pop,viral pop
+"Kevin Gates Featuring Trey Songz, Ty Dolla $ign & Jamie Foxx",baton rouge rap,pop rap,rap,southern hip hop,trap
+Future Featuring The Weeknd,atl hip hop,hip hop,rap,southern hip hop,trap
+The Chainsmokers Featuring Daya,pop
+Sia Featuring Sean Paul,pop
+Zara Larsson & MNEK,pop,scandipop,swedish electropop,swedish pop
+DJ Luke Nasty,north carolina hip hop,pop r&b,trap
+Kid Ink Featuring Fetty Wap,pop rap,rap,southern hip hop,trap
+Ruth B,alt z,canadian contemporary r&b,canadian pop,pop
+Ty Dolla $ign Featuring E-40,hip hop,pop rap,r&b,southern hip hop,trap,trap soul
+O.T. Genasis Featuring Young Dolph,southern hip hop,trap
+Desiigner,pop rap,rap,southern hip hop,trap,viral trap
+Belly Featuring The Weeknd,canadian hip hop,canadian trap
+Fifth Harmony Featuring Ty Dolla $ign,girl group,pop,talent show
+Flo Rida Featuring Jason Derulo,dance pop,miami hip hop,pop,pop rap
+Zendaya Featuring Chris Brown,pop,post-teen pop
+Major Lazer Featuring Nyla & Fuse ODG,dance pop,edm,electro house,moombahton,pop,pop dance
+Jonas Blue Featuring Dakota,pop,pop dance,tropical house,uk dance
+Dreezy Featuring Jeremih,chicago rap,drill,trap queen
+Nick Jonas Featuring Tove Lo,dance pop,pop
+"Fat Joe, Remy Ma & Jay Z Featuring French Montana & Infared",bronx hip hop,east coast hip hop,gangster rap,hardcore hip hop,hip hop,pop rap,rap,trap
+Young Greatness,new orleans rap
+A$AP Ferg Featuring Future,hip hop,pop rap,rap,southern hip hop,trap
+MadeinTYO,atl hip hop,melodic rap,trap
+Drake Featuring The Throne,canadian hip hop,canadian pop,hip hop,pop rap,rap
+Drake Featuring WizKid & Kyla,canadian hip hop,canadian pop,hip hop,pop rap,rap
+PARTYNEXTDOOR Featuring Drake,r&b,rap,urban contemporary
+Flume Featuring Kai,australian dance,australian electropop,australian indie,downtempo,edm,indietronica
+Pitbull Featuring Enrique Iglesias,dance pop,miami hip hop,pop
+Yo Gotti Featuring E-40,dirty south rap,gangster rap,memphis hip hop,rap,southern hip hop,tennessee hip hop,trap
+Alan Walker,electro house
+gnash Featuring Olivia O'Brien,alt z,pop
+Grace Featuring G-Eazy,r&b
+Ariana Grande Featuring Lil Wayne,pop
+Beyonce Featuring The Weeknd,pop,r&b
+Beyonce Featuring Jack White,pop,r&b
+Beyonce Featuring James Blake,pop,r&b
+Calvin Harris Featuring Rihanna,dance pop,edm,electro house,house,pop,progressive house,uk dance
+Drake Featuring Future,canadian hip hop,canadian pop,hip hop,pop rap,rap
+Kent Jones,miami hip hop,viral trap
+Drake Featuring Pimp C & dvsn,canadian hip hop,canadian pop,hip hop,pop rap,rap
+Zedd & Kesha,complextro,edm,german techno,pop,pop dance
+Blake Shelton Featuring Gwen Stefani,classic oklahoma country,contemporary country,country,country road
+Keith Urban Featuring Carrie Underwood,contemporary country,country,country road
+Chance The Rapper Featuring Lil Wayne & 2 Chainz,chicago rap,conscious hip hop,hip hop,pop rap,rap,trap
+ScHoolboy Q Featuring Kanye West,gangster rap,hip hop,pop rap,rap,southern hip hop,trap
+Chance The Rapper Featuring Ty Dolla $ign,chicago rap,conscious hip hop,hip hop,pop rap,rap,trap
+Adam Wakefield,country pop
+Hannah Huston,deep talent show
+Kiiara,alt z,electropop
+Nicky Jam,latin hip hop,reggaeton,trap latino,urbano latino
+Alisan Porter,deep talent show
+Dierks Bentley Featuring Elle King,contemporary country,country,country road
+Chris Lane,contemporary country,country,country road,modern country rock
+Mike WiLL Made-It x Rihanna,atl hip hop,rap,southern hip hop,trap
+"Kanye West, Gucci Mane, Big Sean, 2 Chainz, Travi$ Scott, Yo Gotti, Quavo, Desiigner",chicago rap,hip hop,rap
+D.R.A.M. Featuring Lil Yachty,trap,underground hip hop,viral trap,virginia hip hop
+Jacob Sartorius,social media pop,teen pop
+Wale,pop rap,r&b,rap,southern hip hop,trap
+Fifth Harmony Featuring Fetty Wap,girl group,pop,talent show
+Broadway For Orlando,
+YG Featuring Drake & Kamaiyah,cali rap,hip hop,pop rap,rap,southern hip hop,trap
+"Lil Wayne, Wiz Khalifa & Imagine Dragons With Logic & Ty Dolla $ign Feat. X Ambassadors",hip hop,new orleans rap,pop rap,rap,trap
+DJ Khaled Featuring Jay Z & Future,hip hop,miami hip hop,pop rap,rap
+Usher Featuring Young Thug,atl hip hop,contemporary r&b,dance pop,pop,r&b,rap,south carolina hip hop,urban contemporary
+Ben Rector,acoustic pop,indiecoustica,lds youth,neo mellow,piano rock
+French Montana Featuring Kodak Black,hip hop,pop rap,rap,southern hip hop,trap
+Logic,conscious hip hop,hip hop,pop rap,rap
+Enrique Iglesias Feat. Wisin or Tinashe & Javada,dance pop,latin pop,mexican pop
+Marc E. Bassy Featuring G-Eazy,indie pop rap
+Carlos Vives & Shakira,colombian pop,latin pop,vallenato
+Zara Larsson,pop,scandipop,swedish electropop,swedish pop
+Galantis,dance pop,edm,pop,pop dance,progressive electro house
+Britney Spears Featuring G-Eazy,dance pop,pop
+French Montana Featuring Drake,hip hop,pop rap,rap,southern hip hop,trap
+Dae Dae,atl hip hop,trap
+Major Lazer Featuring Justin Bieber & MO,dance pop,edm,electro house,moombahton,pop,pop dance
+Skrillex & Rick Ross,brostep,complextro,edm,electro,pop dance
+Gucci Mane & Drake,atl hip hop,dirty south rap,hip hop,pop rap,rap,southern hip hop,trap
+Gucci Mane Featuring Kanye West,atl hip hop,dirty south rap,hip hop,pop rap,rap,southern hip hop,trap
+The Chainsmokers Featuring Halsey,pop
+Kenny Chesney Featuring P!nk,contemporary country,country,country road
+"DJ Khaled Featuring Big Sean, Kendrick Lamar & Betty Wright",hip hop,miami hip hop,pop rap,rap
+Hailee Steinfeld & Grey Featuring Zedd,pop
+Rob $tone Featuring J. Davi$ & Spooks,san diego rap,viral trap
+DJ Snake Featuring Justin Bieber,dance pop,edm,electronic trap,pop,pop dance
+"DJ Khaled Featuring Nicki Minaj, Chris Brown, August Alsina, Jeremih, Future & Rick Ross",hip hop,miami hip hop,pop rap,rap
+Young Thug And Travis Scott Featuring Quavo,atl hip hop,atl trap,gangster rap,hip hop,melodic rap,rap,trap
+Martin Garrix & Bebe Rexha,dutch edm,edm,pop,pop dance,progressive house
+"DJ Drama Featuring Chris Brown, Skeme & Lyquin",dirty south rap,philly rap,southern hip hop,trap
+DJ ESCO Featuring Future & Lil Uzi Vert,atl hip hop,hip hop,rap,southern hip hop,trap
+William Michael Morgan,country pop,modern country rock
+Ariana Grande Featuring Nicki Minaj,pop
+Florida Georgia Line Featuring Tim McGraw,contemporary country,country,country pop,country road,modern country rock
+Young M.A,alternative r&b,lgbtq+ hip hop,nyc rap,rap,trap
+Sia Featuring Kendrick Lamar,pop
+Amine,pop rap,portland hip hop,rap,underground hip hop
+Post Malone Featuring Justin Bieber,dfw rap,melodic rap,pop,rap
+Rae Sremmurd Featuring Gucci Mane,melodic rap,mississippi hip hop,pop rap,rap,trap
+21 Savage & Metro Boomin Featuring Future,atl hip hop,hip hop,rap
+"Artists Of Then, Now & Forever",
+The Weeknd Featuring Daft Punk,canadian contemporary r&b,canadian pop,pop
+Zay Hilfigerrr & Zayion McCall,viral trap
+YFN Lucci Featuring Migos & Trouble,arkansas hip hop,atl hip hop,melodic rap,memphis hip hop,southern hip hop,trap
+Frenship & Emily Warren,electropop,indie poptimism,la pop
+The Chainsmokers Featuring Phoebe Ryan,pop
+Flume Featuring Tove Lo,australian dance,australian electropop,australian indie,downtempo,edm,indietronica
+Solange,afrofuturism,alternative r&b,r&b,urban contemporary
+Solange Featuring Sampha,afrofuturism,alternative r&b,r&b,urban contemporary
+CL,k-pop
+The Game Featuring Jeremih,detroit hip hop,gangster rap,hip hop,pop rap,rap,southern hip hop,trap
+Maroon 5 Featuring Kendrick Lamar,pop
+Jon Bellion,indie pop rap
+Machine Gun Kelly x Camila Cabello,ohio hip hop,pop rap
+Marshmello,brostep,edm,pop,progressive electro house
+21 Savage & Metro Boomin,atl hip hop,hip hop,rap
+Pitbull Featuring Flo Rida & LunchMoney Lewis,dance pop,miami hip hop,pop
+James Arthur,pop,talent show,uk pop
+Meek Mill Featuring Tory Lanez,hip hop,philly rap,pop rap,rap,southern hip hop,trap
+Meek Mill Featuring Lil Uzi Vert & Nicki Minaj,hip hop,philly rap,pop rap,rap,southern hip hop,trap
+Meek Mill Featuring Young Thug & 21 Savage,hip hop,philly rap,pop rap,rap,southern hip hop,trap
+Meek Mill Featuring Quavo,hip hop,philly rap,pop rap,rap,southern hip hop,trap
+Shakira Featuring Maluma,colombian pop,dance pop,latin pop,pop
+The Chainsmokers Featuring XYLO,pop
+PnB Rock,melodic rap,rap,trap
+Eric Church Featuring Rhiannon Giddens,contemporary country,country,country road
+Leonard Cohen,canadian singer-songwriter,melancholia,permanent wave,singer-songwriter
+Migos Featuring Lil Uzi Vert,atl hip hop,hip hop,pop rap,rap,southern hip hop,trap
+Starley,aussietronica
+Britney Spears Featuring Tinashe,dance pop,pop
+The Weeknd Featuring Kendrick Lamar,canadian contemporary r&b,canadian pop,pop
+Auli'i Cravalho,movie tunes
+Dwayne Johnson,
+Opetaia Foa'i & Lin-Manuel Miranda,movie tunes
+Noah Cyrus Featuring Labrinth,alt z,pop
+Nicki Minaj X Mike WiLL Made-It,hip pop,pop,queens hip hop,rap
+gnash Featuring Johnny Yukon,alt z,pop
+Clean Bandit Featuring Sean Paul & Anne-Marie,pop,uk dance,uk funky
+Zayn / Taylor Swift,pop,uk pop
+Steve Aoki & Louis Tomlinson,edm,electro house,pop dance
+Sundance Head,classic texas country
+Post Malone Featuring Quavo,dfw rap,melodic rap,pop,rap
+Gucci Mane Featuring Drake,atl hip hop,dirty south rap,hip hop,pop rap,rap,southern hip hop,trap
+Chris Brown Featuring Usher & Gucci Mane,r&b,rap
+KYLE Featuring Lil Yachty,deep underground hip hop,indie pop rap,meme rap,pop rap,viral trap
+A Boogie Wit da Hoodie Featuring DJ SPINKING,melodic rap,rap,trap
+KALEO,icelandic indie,icelandic rock,modern alternative rock
+Olivia O'Brien,alt z,pop
+Chris Young Featuring Vince Gill,contemporary country,country,country road
+Bebe Rexha,dance pop,pop
+Ugly God,trap,underground hip hop
+Khalid,pop,pop r&b
+Luis Fonsi & Daddy Yankee Featuring Justin Bieber,latin pop,puerto rican pop
+PARTYNEXTDOOR,r&b,rap,urban contemporary
+Marian Hill,electropop
+Hey Violet,alt z,pixie
+Julia Michaels,pop
+2 Chainz x Gucci Mane x Quavo,atl hip hop,hip hop,pop rap,rap,southern hip hop,trap
+Calum Scott,pop
+Wale Featuring Lil Wayne,pop rap,r&b,rap,southern hip hop,trap
+Migos Featuring Gucci Mane,atl hip hop,hip hop,pop rap,rap,southern hip hop,trap
+Migos Featuring Travis Scott,atl hip hop,hip hop,pop rap,rap,southern hip hop,trap
+Major Lazer Featuring PARTYNEXTDOOR & Nicki Minaj,dance pop,edm,electro house,moombahton,pop,pop dance
+Missy Elliott Featuring Lamb,dance pop,hip hop,hip pop,neo soul,pop rap,r&b,rap,urban contemporary,virginia hip hop
+Martin Garrix & Dua Lipa,dutch edm,edm,pop,pop dance,progressive house
+Migos Featuring DJ Khaled,atl hip hop,hip hop,pop rap,rap,southern hip hop,trap
+G-Eazy Featuring Marc E. Bassy,indie pop rap,oakland hip hop,pop rap,rap
+Big Sean Featuring Eminem,detroit hip hop,hip hop,pop rap,r&b,rap,southern hip hop,trap
+Big Sean Featuring Migos,detroit hip hop,hip hop,pop rap,r&b,rap,southern hip hop,trap
+Ariana Grande & John Legend,pop
+Mariah Carey Featuring YG,dance pop,pop,urban contemporary
+Big Sean Featuring Jeremih,detroit hip hop,hip hop,pop rap,r&b,rap,southern hip hop,trap
+Katy Perry Featuring Skip Marley,pop
+Maroon 5 Featuring Future,pop
+Nick Jonas & Nicki Minaj,dance pop,pop
+DJ Khaled Featuring Beyonce & JAY Z,hip hop,miami hip hop,pop rap,rap
+Ariana Grande Featuring Future,pop
+Ayo & Teo,trap,viral rap,viral trap
+DJ Suede The Remix God,viral trap
+Kygo x Selena Gomez,edm,pop,pop dance,tropical house
+Linkin Park Featuring Kiiara,alternative metal,nu metal,post-grunge,rap metal,rock
+The Chainsmokers & Coldplay,pop
+Zedd & Alessia Cara,complextro,edm,german techno,pop,pop dance
+Calvin Harris Featuring Frank Ocean & Migos,dance pop,edm,electro house,house,pop,progressive house,uk dance
+Future Featuring Rihanna,atl hip hop,hip hop,rap,southern hip hop,trap
+Gucci Mane & Nicki Minaj,atl hip hop,dirty south rap,hip hop,pop rap,rap,southern hip hop,trap
+Florida Georgia Line Featuring Backstreet Boys,contemporary country,country,country pop,country road,modern country rock
+"Nicki Minaj, Drake & Lil Wayne",hip pop,pop,queens hip hop,rap
+Nicki Minaj & Lil Wayne,hip pop,pop,queens hip hop,rap
+6LACK,atl hip hop,melodic rap,r&b,rap,trap
+Drake Featuring Quavo & Travis Scott,canadian hip hop,canadian pop,hip hop,pop rap,rap
+Drake Featuring 2 Chainz & Young Thug,canadian hip hop,canadian pop,hip hop,pop rap,rap
+Drake Featuring Giggs,canadian hip hop,canadian pop,hip hop,pop rap,rap
+Drake Featuring Jorja Smith & Black Coffee,canadian hip hop,canadian pop,hip hop,pop rap,rap
+Drake Featuring Sampha,canadian hip hop,canadian pop,hip hop,pop rap,rap
+Drake Featuring Kanye West,canadian hip hop,canadian pop,hip hop,pop rap,rap
+Drake Featuring Young Thug,canadian hip hop,canadian pop,hip hop,pop rap,rap
+Machine Gun Kelly Featuring Hailee Steinfeld,ohio hip hop,pop rap
+Rick Ross Featuring Young Thug & Wale,dirty south rap,gangster rap,hip hop,rap,southern hip hop,trap
+Jason Derulo Featuring Nicki Minaj & Ty Dolla $ign,dance pop,pop
+Tim McGraw & Faith Hill,contemporary country,country,country road
+Zayn Featuring PARTYNEXTDOOR,pop,uk pop
+Thomas Rhett Featuring Maren Morris,contemporary country,country,country road,modern country rock
+"Enrique Iglesias Featuring Descemer Bueno, Zion & Lennox Or Sean Paul",dance pop,latin pop,mexican pop
+Tee Grizzley,detroit hip hop,detroit trap,rap,southern hip hop,trap
+Kodak Black Featuring Future,florida drill,florida rap,melodic rap,miami hip hop,rap,trap,trap latino
+"Calvin Harris Featuring Young Thug, Pharrell Williams & Ariana Grande",dance pop,edm,electro house,house,pop,progressive house,uk dance
+Rag'n'Bone Man,neo soul
+French Montana Featuring Swae Lee,hip hop,pop rap,rap,southern hip hop,trap
+YFN Lucci Featuring PnB Rock,arkansas hip hop,atl hip hop,melodic rap,memphis hip hop,southern hip hop,trap
+Flo Rida & 99 Percent,dance pop,miami hip hop,pop,pop rap
+Kendrick Lamar Featuring Rihanna,conscious hip hop,hip hop,rap,west coast rap
+Kendrick Lamar Featuring Zacari,conscious hip hop,hip hop,rap,west coast rap
+Kendrick Lamar Featuring U2,conscious hip hop,hip hop,rap,west coast rap
+G-Eazy & Kehlani,indie pop rap,oakland hip hop,pop rap,rap
+Lil Yachty Featuring Migos,atl hip hop,melodic rap,rap,trap
+Logic Featuring Damian Lemar Hudson,conscious hip hop,hip hop,pop rap,rap
+Lord Huron,indie folk,stomp and holler
+Lana Del Rey Featuring The Weeknd,art pop,pop
+blackbear,alt z,pop
+"DJ Khaled Featuring Justin Bieber, Quavo, Chance The Rapper & Lil Wayne",hip hop,miami hip hop,pop rap,rap
+Kygo & Ellie Goulding,edm,pop,pop dance,tropical house
+Katy Perry Featuring Migos,pop
+Playboi Carti Featuring Lil Uzi Vert,atl hip hop,plugg,pluggnb,rage rap,rap
+Midland,classic texas country,neo-traditional country
+Calvin Harris Featuring Future & Khalid,dance pop,edm,electro house,house,pop,progressive house,uk dance
+Maluma,latin pop,reggaeton,reggaeton colombiano,trap latino,urbano latino
+Cheat Codes Featuring Demi Lovato,edm,pop,pop dance
+Lauren Duski,country pop
+Liam Payne Featuring Quavo,pop
+Katy Perry Featuring Nicki Minaj,pop
+Chris Blue,deep talent show
+Gucci Mane Featuring Offset,atl hip hop,dirty south rap,hip hop,pop rap,rap,southern hip hop,trap
+Martin Garrix x Troye Sivan,dutch edm,edm,pop,pop dance,progressive house
+Halsey Featuring Lauren Jauregui,electropop,etherpop,indie poptimism,pop
+Fifth Harmony Featuring Gucci Mane,girl group,pop,talent show
+2 Chainz Featuring Travis Scott,atl hip hop,hip hop,pop rap,rap,southern hip hop,trap
+Meek Mill Featuring Chris Brown & Ty Dolla $ign,hip hop,philly rap,pop rap,rap,southern hip hop,trap
+"Major Lazer Featuring Travis Scott, Camila Cabello & Quavo",dance pop,edm,electro house,moombahton,pop,pop dance
+Jake Paul Featuring Team 10,social media pop
+David Guetta Featuring Justin Bieber,big room,dance pop,edm,pop,pop dance
+Wisin Featuring Ozuna,reggaeton,urbano latino
+Kane Brown Featuring Lauren Alaina,black americana,contemporary country,country,country road
+"2 Chainz Featuring Ty Dolla $ign, Trey Songz & Jhene Aiko",atl hip hop,hip hop,pop rap,rap,southern hip hop,trap
+DJ Khaled Featuring Rihanna & Bryson Tiller,hip hop,miami hip hop,pop rap,rap
+"Calvin Harris Featuring Pharrell Williams, Katy Perry & Big Sean",dance pop,edm,electro house,house,pop,progressive house,uk dance
+Portugal. The Man,indie rock,indietronica,modern alternative rock,modern rock
+Plies Featuring Kodak Black,dirty south rap,miami hip hop,southern hip hop,trap
+DJ Khaled & Calvin Harris Featuring Travis Scott & Jeremih,hip hop,miami hip hop,pop rap,rap
+Metro Boomin Featuring Offset & Drake,rap
+"DJ Khaled Featuring Travis Scott, Rick Ross & Big Sean",hip hop,miami hip hop,pop rap,rap
+GoldLink Featuring Brent Faiyaz & Shy Glizzy,alternative r&b
+J Balvin & Willy William Featuring Beyonce,reggaeton,reggaeton colombiano,trap latino,urbano latino
+Future Featuring YG,atl hip hop,hip hop,rap,southern hip hop,trap
+Kesha,dance pop,pop
+"JAY-Z Featuring Damian ""Jr. Gong"" Marely",east coast hip hop,gangster rap,hip hop,pop rap,rap
+JAY-Z Featuring Beyonce,east coast hip hop,gangster rap,hip hop,pop rap,rap
+JAY-Z Featuring Gloria Carter,east coast hip hop,gangster rap,hip hop,pop rap,rap
+JAY-Z Featuring Frank Ocean,east coast hip hop,gangster rap,hip hop,pop rap,rap
+Macklemore Featuring Skylar Grey,pop rap,seattle hip hop
+Zedd & Liam Payne,complextro,edm,german techno,pop,pop dance
+Selena Gomez Featuring Gucci Mane,pop,post-teen pop
+French Montana Featuring The Weeknd & Max B,hip hop,pop rap,rap,southern hip hop,trap
+Kesha Featuring The Dap-Kings Horns,dance pop,pop
+Louis Tomlinson Featuring Bebe Rexha & Digital Farm Animals,pop
+"China Anne McClain, Thomas Doherty & Dylan Playfair",movie tunes
+Meek Mill Featuring Young Thug,hip hop,philly rap,pop rap,rap,southern hip hop,trap
+Future Featuring Nicki Minaj,atl hip hop,hip hop,rap,southern hip hop,trap
+The Revivalists,modern alternative rock
+Tay-K,cali rap,dfw rap,rap,trap
+Camila Cabello Featuring Quavo,dance pop,pop
+Jacquees,atl hip hop,pop r&b,pop rap,r&b,rap,trap
+"Sofia Carson, Cameron Boyce, Booboo Stewart & Mitchell Hope",pop
+Camila Cabello Featuring Young Thug,dance pop,pop
+Marshmello Featuring Khalid,brostep,edm,pop,progressive electro house
+Wiz Khalifa Featuring Ty Dolla $ign,hip hop,pittsburgh rap,pop rap,rap,southern hip hop,trap
+Justin Bieber + BloodPop,canadian pop,pop
+Gucci Mane Featuring Migos,atl hip hop,dirty south rap,hip hop,pop rap,rap,southern hip hop,trap
+Kodak Black Featuring XXXTENTACION,florida drill,florida rap,melodic rap,miami hip hop,rap,trap,trap latino
+RiceGum Featuring Alissa Violet,social media pop
+Maroon 5 Featuring SZA,pop
+Lil Uzi Vert Featuring Pharrell Williams,hip hop,melodic rap,philly rap,rage rap,rap,trap
+Lil Uzi Vert Featuring The Weeknd,hip hop,melodic rap,philly rap,rage rap,rap,trap
+Bhad Bhabie,trap queen,viral rap
+LANCO,contemporary country,country road,modern country rock
+Miguel Featuring Travis Scott,r&b,urban contemporary
+Zayn Featuring Sia,pop,uk pop
+Lil Pump,emo rap,miami hip hop,pop rap,rap,trap
+G-Eazy Featuring A$AP Rocky & Cardi B,indie pop rap,oakland hip hop,pop rap,rap
+Hailee Steinfeld & Alesso Featuring Florida Georgia Line & Watt,pop
+Post Malone Featuring 21 Savage,dfw rap,melodic rap,pop,rap
+Gucci Mane Featuring The Weeknd,atl hip hop,dirty south rap,hip hop,pop rap,rap,southern hip hop,trap
+"Lorde Featuring Khalid, Post Malone & SZA",art pop,metropopolis,nz pop,pop
+Macklemore Featuring Kesha,pop rap,seattle hip hop
+A$AP Ferg Featuring Nicki Minaj,hip hop,pop rap,rap,southern hip hop,trap
+A Boogie Wit da Hoodie,melodic rap,rap,trap
+A Boogie Wit da Hoodie Featuring 21 Savage,melodic rap,rap,trap
+A Boogie Wit da Hoodie Featuring PnB Rock & YoungBoy Never Broke Again,melodic rap,rap,trap
+Lin-Manuel Miranda Featuring Artists For Puerto Rico,broadway,show tunes
+Sam Smith Featuring Logic,pop,uk pop
+Maren Morris Featuring Vince Gill,classic texas country,contemporary country
+MAX Featuring gnash,singer-songwriter pop,teen pop,viral pop
+Chris Brown Featuring Future & Young Thug,r&b,rap
+Gucci Mane Featuring Slim Jxmmi & Young Dolph,atl hip hop,dirty south rap,hip hop,pop rap,rap,southern hip hop,trap
+Becky G Featuring Bad Bunny,latin pop,latin viral pop,rap latina,reggaeton,trap latino,urbano latino
+Future & Young Thug Featuring Offset,atl hip hop,hip hop,rap,southern hip hop,trap
+Bebe Rexha & Florida Georgia Line,dance pop,pop
+Future & Young Thug,atl hip hop,hip hop,rap,southern hip hop,trap
+Selena Gomez X Marshmello,pop,post-teen pop
+Liam Payne,pop
+"Migos, Nicki Minaj & Cardi B",atl hip hop,hip hop,pop rap,rap,southern hip hop,trap
+"21 Savage, Offset & Metro Boomin Featuring Travis Scott",atl hip hop,hip hop,rap
+Offset & Metro Boomin,atl hip hop,hip hop,pop rap,rap,trap
+"21 Savage, Offset & Metro Boomin Featuring Quavo",atl hip hop,hip hop,rap
+Devin Dawson,contemporary country,country pop,country road,modern country rock
+N*E*R*D & Rihanna,
+YBN Nahmir,alabama rap,rap,trap
+Big Sean & Metro Boomin Featuring 21 Savage,detroit hip hop,hip hop,pop rap,r&b,rap,southern hip hop,trap
+"21 Savage, Offset & Metro Boomin",atl hip hop,hip hop,rap
+Eminem Featuring Beyonce,detroit hip hop,hip hop,rap
+NAV Featuring Lil Uzi Vert,canadian hip hop,canadian trap,melodic rap,rap,trap
+Lil Xan,cloud rap
+Famous Dex Featuring A$AP Rocky,chicago rap,drill,rap,trap
+Luis Fonsi & Demi Lovato,latin pop,puerto rican pop
+Lil Peep,cloud rap,emo rap,lgbtq+ hip hop
+Taylor Swift Featuring Ed Sheeran & Future,pop
+"Machine Gun Kelly, X Ambassadors & Bebe Rexha",ohio hip hop,pop rap
+Calvin Harris Featuring Kehlani & Lil Yachty,dance pop,edm,electro house,house,pop,progressive house,uk dance
+BTS Featuring Desiigner,k-pop,k-pop boy group,pop
+Kodak Black Featuring Lil Wayne,florida drill,florida rap,melodic rap,miami hip hop,rap,trap,trap latino
+"Farruko, Nicki Minaj, Bad Bunny, 21 Savage & Rvssian",reggaeton,trap latino,urbano latino
+Chloe Kohanski,deep talent show
+Shakira Featuring Nicky Jam,colombian pop,dance pop,latin pop,pop
+G-Eazy & Halsey,indie pop rap,oakland hip hop,pop rap,rap
+Romeo Santos Featuring Nicky Jam & Daddy Yankee,bachata,latin hip hop,latin pop,trap latino,urbano latino
+Natti Natasha x Ozuna,latin pop,rap latina,reggaeton,urbano latino
+Big Sean & Metro Boomin Featuring Travis Scott,detroit hip hop,hip hop,pop rap,r&b,rap,southern hip hop,trap
+Trippie Redd Featuring Travis Scott,melodic rap,rap,trap
+Migos & Marshmello,atl hip hop,hip hop,pop rap,rap,southern hip hop,trap
+Cardi B Featuring 21 Savage,pop,rap
+Eminem Featuring Ed Sheeran,detroit hip hop,hip hop,rap
+Ozuna x Cardi B,puerto rican pop,reggaeton,trap latino,urbano latino
+Huncho Jack Featuring Takeoff,melodic rap,trap
+Huncho Jack,melodic rap,trap
+Huncho Jack Featuring Offset,melodic rap,trap
+Bruno Mars & Cardi B,dance pop,pop
+Keala Settle & The Greatest Showman Ensemble,broadway,hollywood,show tunes
+Zac Efron & Zendaya,hollywood,movie tunes,post-teen pop
+Loren Allred,deep talent show,hollywood,movie tunes
+Maluma X Nego do Borel,latin pop,reggaeton,reggaeton colombiano,trap latino,urbano latino
+"Hugh Jackman, Keala Settle, Zac Efron, Zendaya & The Greatest Showman Ensemble",hollywood,show tunes
+"Sofi Tukker Featuring NERVO, The Knocks & Alisa Ueno",edm
+Liam Payne & Rita Ora,pop
+Lil Skies Featuring Landon Cube,melodic rap
+Clean Bandit Featuring Julia Michaels,pop,uk dance,uk funky
+Carrie Underwood Featuring Ludacris,classic oklahoma country,contemporary country,country,country dawn,dance pop,pop
+"6ix9ine, Fetty Wap & A Boogie Wit da Hoodie",emo rap
+"Jay Rock, Kendrick Lamar, Future & James Blake",conscious hip hop,hip hop,rap,southern hip hop,trap
+Enrique Iglesias Featuring Bad Bunny,dance pop,latin pop,mexican pop
+Bazzi,pop
+Plies,dirty south rap,miami hip hop,southern hip hop,trap
+Justin Timberlake Featuring Chris Stapleton,dance pop,pop
+Migos Featuring Drake,atl hip hop,hip hop,pop rap,rap,southern hip hop,trap
+"Zedd, Maren Morris & Grey",complextro,edm,german techno,pop,pop dance
+Migos Featuring 21 Savage,atl hip hop,hip hop,pop rap,rap,southern hip hop,trap
+Migos Featuring Post Malone,atl hip hop,hip hop,pop rap,rap,southern hip hop,trap
+"Migos Featuring Travis Scott, Ty Dolla $ign & Big Sean",atl hip hop,hip hop,pop rap,rap,southern hip hop,trap
+Rich The Kid Featuring Kendrick Lamar,atl hip hop,melodic rap,plugg,rap,trap
+Ozuna & Romeo Santos,puerto rican pop,reggaeton,trap latino,urbano latino
+The Weeknd & Kendrick Lamar,canadian contemporary r&b,canadian pop,pop
+Derez De'Shon,atl trap,memphis hip hop,trap
+Jacquees X Dej Loaf,atl hip hop,pop r&b,pop rap,r&b,rap,trap
+BlocBoy JB Featuring Drake,memphis hip hop,rap,tennessee hip hop,trap
+"ScHoolboy Q, 2 Chainz & Saudi",gangster rap,hip hop,pop rap,rap,southern hip hop,trap
+Rich The Kid,atl hip hop,melodic rap,plugg,rap,trap
+Khalid & Swae Lee,pop,pop r&b
+SOB X RBE,cali rap
+Kendrick Lamar & Travis Scott,conscious hip hop,hip hop,rap,west coast rap
+Marshmello & Anne-Marie,brostep,edm,pop,progressive electro house
+Lauv,pop
+Khalid & Normani,pop,pop r&b
+Daniel Caesar Featuring Kali Uchis,canadian contemporary r&b
+Post Malone Featuring Ty Dolla $ign,dfw rap,melodic rap,pop,rap
+6ix9ine Featuring Tory Lanez & Young Thug,emo rap
+Blac Youngsta,memphis hip hop,southern hip hop,trap
+High Valley,alberta country,canadian contemporary country,canadian country,contemporary country,country road,modern country rock
+Janelle Monae,afrofuturism,alternative r&b,atl hip hop,neo soul,r&b
+"DJ Khaled Featuring JAY Z, Future & B",hip hop,miami hip hop,pop rap,rap
+Logic & Marshmello,conscious hip hop,hip hop,pop rap,rap
+Rae Sremmurd & Juicy J,melodic rap,mississippi hip hop,pop rap,rap,trap
+Nicky Jam x J Balvin,latin hip hop,reggaeton,trap latino,urbano latino
+Joyner Lucas & Chris Brown,boston hip hop,hip hop,pop rap,rap
+Jhene Aiko Featuring Swae Lee Or Rae Sremmurd,r&b
+Bad Wolves,alternative metal,metal,post-grunge
+Logic Featuring Wiz Khalifa,conscious hip hop,hip hop,pop rap,rap
+Lil Yachty Featuring NBA YoungBoy,atl hip hop,melodic rap,rap,trap
+Lil Yachty Featuring Trippie Redd,atl hip hop,melodic rap,rap,trap
+Logic Featuring Big Sean,conscious hip hop,hip hop,pop rap,rap
+Lil Yachty Featuring Ugly God,atl hip hop,melodic rap,rap,trap
+Logic Featuring Young Sinatra,conscious hip hop,hip hop,pop rap,rap
+Lil Dicky Featuring Chris Brown,comedy rap,indie pop rap,pop rap
+Lin-Manuel Miranda & Ben Platt,show tunes
+XXXTENTACION Featuring Joey Bada$$,emo rap,miami hip hop,rap
+Shawn Mendes X Zedd,canadian pop,pop,viral pop
+Famous Dex,chicago rap,drill,rap,trap
+Morgan Wallen Featuring Florida Georgia Line,contemporary country
+Alice Merton,
+The Weeknd Featuring Gesaffelstein,canadian contemporary r&b,canadian pop,pop
+Queen Naija,pop r&b,r&b
+Chris Lane Featuring Tori Kelly,contemporary country,country,country road,modern country rock
+2 Chainz Featuring YG & Offset,atl hip hop,hip hop,pop rap,rap,southern hip hop,trap
+H.E.R.,r&b,rap
+"Cardi B, Bad Bunny & J Balvin",pop,rap
+Cardi B Featuring Migos,pop,rap
+Cardi B Featuring SZA,pop,rap
+Cardi B Featuring Kehlani,pop,rap
+Cardi B Featuring Chance The Rapper,pop,rap
+Cardi B & YG,pop,rap
+Calvin Harris & Dua Lipa,dance pop,edm,electro house,house,pop,progressive house,uk dance
+Halsey Featuring Big Sean & Stefflon Don,electropop,etherpop,indie poptimism,pop
+Young Thug Featuring Nicki Minaj,atl hip hop,atl trap,gangster rap,hip hop,melodic rap,rap,trap
+J. Cole Featuring kiLL edward,conscious hip hop,hip hop,north carolina hip hop,rap
+"Khalid, Ty Dolla $ign & 6LACK",pop,pop r&b
+Sugarland Featuring Taylor Swift,contemporary country,country,country dawn,country road
+"Casper Magico, Nio Garcia, Darell, Nicky Jam, Ozuna & Bad Bunny",reggaeton,trap latino,urbano latino
+Pitbull x El Chombo x Karol G Featuring Cutty Ranks,panamanian pop
+David Lee Murphy & Kenny Chesney,country,country road
+Rae Sremmurd & Travis Scott,melodic rap,mississippi hip hop,pop rap,rap,trap
+Post Malone Featuring Swae Lee,dfw rap,melodic rap,pop,rap
+Post Malone Featuring Nicki Minaj,dfw rap,melodic rap,pop,rap
+Post Malone Featuring G-Eazy & YG,dfw rap,melodic rap,pop,rap
+Mason Ramsey,contemporary country,country
+Kanye West Featuring T.I.,chicago rap,hip hop,rap
+Travis Scott Featuring Lil Uzi Vert & Kanye West,rap,slap house
+Shawn Mendes Featuring Khalid,canadian pop,pop,viral pop
+Charlie Puth Featuring Kehlani,pop,viral pop
+Bhad Bhabie Featuring Lil Yachty,trap queen,viral rap
+Lil Baby & Drake,atl hip hop,atl trap,rap,trap
+Reik Featuring Ozuna & Wisin,latin arena pop,latin pop,mexican pop,reggaeton,urbano latino
+Lil Skies,melodic rap
+Kris Wu,chinese hip hop,chinese idol pop
+Lil Baby Featuring Gunna & Lil Uzi Vert,atl hip hop,atl trap,rap,trap
+Pharrell Williams x Camila Cabello,dance pop,pop
+"Diplo, French Montana & Lil Pump Featuring Zhavia Ward",dance pop,edm,electro house,moombahton,pop dance
+NAV Featuring Travis Scott,canadian hip hop,canadian trap,melodic rap,rap,trap
+A$AP Rocky Featuring Skepta,east coast hip hop,hip hop,rap
+6ix9ine Featuring DJ SPINKING,emo rap
+"YG Featuring 2 Chainz, Big Sean & Nicki Minaj",cali rap,hip hop,pop rap,rap,southern hip hop,trap
+Jennifer Lopez Featuring DJ Khaled & Cardi B,dance pop,pop,urban contemporary
+Tyga Featuring Offset,hip hop,pop rap,rap,southern hip hop,trap
+Billie Eilish & Khalid,art pop,pop
+Maroon 5 Featuring Cardi B,pop
+Kanye West Featuring PARTYNEXTDOOR,chicago rap,hip hop,rap
+Gorillaz Featuring George Benson,alternative hip hop,modern rock,rock
+Becky G + Natti Natasha,latin pop,latin viral pop,rap latina,reggaeton,trap latino,urbano latino
+KIDS SEE GHOSTS,rap
+KIDS SEE GHOSTS Featuring Louis Prima,rap
+Lil Skies Featuring Yung Pinch,melodic rap
+"2 Chainz, Drake & Quavo",atl hip hop,hip hop,pop rap,rap,southern hip hop,trap
+Kygo & Imagine Dragons,edm,pop,pop dance,tropical house
+The Carters,
+Martin Garrix Featuring Khalid,dutch edm,edm,pop,pop dance,progressive house
+Jason Aldean Featuring Miranda Lambert,contemporary country,country,country road,modern country rock
+Nas Featuring Kanye West,conscious hip hop,east coast hip hop,gangster rap,hardcore hip hop,hip hop,queens hip hop,rap
+Keith Urban Featuring Julia Michaels,contemporary country,country,country road
+Clean Bandit Featuring Demi Lovato,pop,uk dance,uk funky
+Drake Featuring Michael Jackson,canadian hip hop,canadian pop,hip hop,pop rap,rap
+Drake Featuring Static Major & Ty Dolla $ign,canadian hip hop,canadian pop,hip hop,pop rap,rap
+Morgan Evans,australian country,contemporary country,country road,modern country rock
+Meek Mill Featuring Swizz Beatz,hip hop,philly rap,pop rap,rap,southern hip hop,trap
+Meek Mill Featuring Jeremih & PnB Rock,hip hop,philly rap,pop rap,rap,southern hip hop,trap
+Tiesto & Dzeko Featuring Preme & Post Malone,big room,brostep,dutch edm,edm,house,pop dance,progressive electro house,slap house,trance
+Lauren Daigle,ccm,christian alternative rock,christian music
+"benny blanco, Halsey & Khalid",pop
+Juice WRLD Featuring Lil Uzi Vert,chicago rap,melodic rap,rap
+Wiz Khalifa Featuring Swae Lee,hip hop,pittsburgh rap,pop rap,rap,southern hip hop,trap
+Wiz Khalifa Featuring Lil Skies,hip hop,pittsburgh rap,pop rap,rap,southern hip hop,trap
+lovelytheband,modern rock,pov: indie
+TK Kravitz Featuring Jacqueez,
+G-Eazy Featuring Yo Gotti & YBN Nahmir,indie pop rap,oakland hip hop,pop rap,rap
+Kygo Featuring Miguel,edm,pop,pop dance,tropical house
+6ix9ine Featuring Nicki Minaj & Murda Beatz,emo rap
+Chance The Rapper,chicago rap,conscious hip hop,hip hop,pop rap,rap,trap
+Daniel Caesar Featuring H.E.R.,canadian contemporary r&b
+Dennis Lloyd,israeli pop
+"DJ Khaled Featuring Justin Bieber, Chance The Rapper & Quavo",hip hop,miami hip hop,pop rap,rap
+Logic Featuring Ryan Tedder,conscious hip hop,hip hop,pop rap,rap
+The Chainsmokers Featuring Emily Warren,pop
+Yella Beezy,dfw rap,memphis hip hop,southern hip hop,trap
+YG Featuring A$AP Rocky,cali rap,hip hop,pop rap,rap,southern hip hop,trap
+Bazzi Featuring Camila Cabello,pop
+H.E.R. Featuring Bryson Tiller,r&b,rap
+Trippie Redd,melodic rap,rap,trap
+Nicki Minaj Featuring Eminem & Labrinth,hip pop,pop,queens hip hop,rap
+Bryce Vine,indie pop rap
+Nicki Minaj Featuring The Weeknd,hip pop,pop,queens hip hop,rap
+Marshmello & Bastille,brostep,edm,pop,progressive electro house
+Calvin Harris & Sam Smith,dance pop,edm,electro house,house,pop,progressive house,uk dance
+Young Thug Featuring Gunna & Lil Baby,atl hip hop,atl trap,gangster rap,hip hop,melodic rap,rap,trap
+Janet & Daddy Yankee,dance pop,r&b,urban contemporary
+BTS Featuring Nicki Minaj,k-pop,k-pop boy group,pop
+YoungBoy Never Broke Again Featuring Kevin Gates & Quando Rondo,baton rouge rap,rap
+Ozuna,puerto rican pop,reggaeton,trap latino,urbano latino
+Sheck Wes,pop rap,rap,trap
+Lil' Duval Featuring Snoop Dogg & Ball Greezy,florida rap,hip hop
+Zedd & Elley Duhe,complextro,edm,german techno,pop,pop dance
+Eminem Featuring Joyner Lucas,detroit hip hop,hip hop,rap
+Eminem Featuring Royce Da 5'9,detroit hip hop,hip hop,rap
+6ix9ine Featuring Anuel AA,emo rap
+Eminem & Jessie Reyez,detroit hip hop,hip hop,rap
+Eminem Featuring Jessie Reyez,detroit hip hop,hip hop,rap
+"Labrinth, Sia & Diplo Present... LSD",pop
+Kanye West & Lil Pump,chicago rap,hip hop,rap
+Machine Gun Kelly,ohio hip hop,pop rap
+Ozuna x Manuel Turizo,puerto rican pop,reggaeton,trap latino,urbano latino
+Silk City x Dua Lipa,edm,uk dance
+Lil Baby & Gunna,atl hip hop,atl trap,rap,trap
+Gucci Mane X Bruno Mars X Kodak Black,atl hip hop,dirty south rap,hip hop,pop rap,rap,southern hip hop,trap
+Lil Peep & XXXTENTACION,cloud rap,emo rap,lgbtq+ hip hop
+6LACK Featuring J. Cole,atl hip hop,melodic rap,r&b,rap,trap
+Flipp Dinero,melodic rap,trap
+Lil Mosey,melodic rap,rap conscient
+The Chainsmokers Featuring Kelsea Ballerini,pop
+Pardison Fontaine Featuring Cardi B,upstate ny rap
+Lil Wayne Featuring Kendrick Lamar,hip hop,new orleans rap,pop rap,rap,trap
+Lil Wayne Featuring XXXTENTACION,hip hop,new orleans rap,pop rap,rap,trap
+Lil Wayne Featuring Travis Scott,hip hop,new orleans rap,pop rap,rap,trap
+Lil Wayne Featuring Sosamann,hip hop,new orleans rap,pop rap,rap,trap
+"DJ Snake Featuring Selena Gomez, Ozuna & Cardi B",dance pop,edm,electronic trap,pop,pop dance
+Lady Gaga & Bradley Cooper,art pop,dance pop,pop
+Lil Wayne Featuring Reginae Carter,hip hop,new orleans rap,pop rap,rap,trap
+Lil Wayne Featuring Ashanti & Mack Maine,hip hop,new orleans rap,pop rap,rap,trap
+Lil Wayne Featuring Nivea,hip hop,new orleans rap,pop rap,rap,trap
+6ix9ine Featuring Bobby Shmurda,emo rap
+Lil Baby & Gunna Featuring Lil Durk & NAV,atl hip hop,atl trap,rap,trap
+Bradley Cooper,hollywood
+Kodak Black Featuring Travis Scott & Offset,florida drill,florida rap,melodic rap,miami hip hop,rap,trap,trap latino
+Bad Bunny Featuring Drake,reggaeton,trap latino,urbano latino
+Quavo Featuring Drake,atl hip hop,melodic rap,rap,trap
+Quavo Featuring 21 Savage,atl hip hop,melodic rap,rap,trap
+Quavo,atl hip hop,melodic rap,rap,trap
+Quavo Featuring Travis Scott,atl hip hop,melodic rap,rap,trap
+Quavo Featuring Lil Baby,atl hip hop,melodic rap,rap,trap
+Future & Juice WRLD,atl hip hop,hip hop,rap,southern hip hop,trap
+Future & Juice WRLD Featuring Young Scooter,atl hip hop,hip hop,rap,southern hip hop,trap
+Khalid & Kane Brown,pop,pop r&b
+Khalid Featuring Empress Of,pop,pop r&b
+Lil Yachty Featuring Juice WRLD,atl hip hop,melodic rap,rap,trap
+Dua Lipa & BLACKPINK,dance pop,pop,uk pop
+Lil Yachty Featuring Playboi Carti,atl hip hop,melodic rap,rap,trap
+Dierks Bentley Featuring Brothers Osborne,contemporary country,country,country road
+XXXTENTACION x Lil Pump Featuring Maluma & Swae Lee,emo rap,miami hip hop,rap
+TakeOff,atl hip hop,rap,trap
+Tory Lanez & Rich The Kid,canadian hip hop,canadian trap,melodic rap,pop rap,r&b,rap,trap
+Tyga & Nicki Minaj,hip hop,pop rap,rap,southern hip hop,trap
+Steve Aoki Featuring BTS,edm,electro house,pop dance
+Dean Lewis,australian pop,pop
+Metro Boomin Featuring 21 Savage,rap
+Metro Boomin Featuring Gunna,rap
+Metro Boomin Featuring Travis Scott,rap
+Metro Boomin Featuring Swae Lee & Travis Scott,rap
+"Metro Boomin Featuring Travis Scott, Kodak Black & 21 Savage",rap
+Anuel AA & Romeo Santos,reggaeton,reggaeton flow,trap boricua,trap latino,urbano latino
+Metro Boomin Featuring Travis Scott & Young Thug,rap
+Trippie Redd Featuring Juice WRLD,melodic rap,rap,trap
+Trippie Redd Featuring Kodie Shane,melodic rap,rap,trap
+City Girls Featuring Cardi B,scam rap,trap queen
+Ellie Goulding X Diplo Featuring Swae Lee,indietronica,metropopolis,pop,uk pop
+6ix9ine Featuring Nicki Minaj & Kanye West,emo rap
+6ix9ine Featuring Tory Lanez,emo rap
+6ix9ine Featuring Lil Baby,emo rap
+6ix9ine Featuring A Boogie Wit da Hoodie,emo rap
+Meek Mill Featuring Rick Ross & JAY-Z,hip hop,philly rap,pop rap,rap,southern hip hop,trap
+Meek Mill Featuring Cardi B,hip hop,philly rap,pop rap,rap,southern hip hop,trap
+Meek Mill Featuring Fabolous & Anuel AA,hip hop,philly rap,pop rap,rap,southern hip hop,trap
+Lil Baby Featuring Meek Mill,atl hip hop,atl trap,rap,trap
+Ski Mask The Slump God Featuring Juice WRLD,hip hop,miami hip hop,pop rap,rap,trap,underground hip hop
+Lil Baby Featuring Gunna,atl hip hop,atl trap,rap,trap
+Mark Ronson Featuring Miley Cyrus,pop soul
+Meek Mill Featuring Kodak Black,hip hop,philly rap,pop rap,rap,southern hip hop,trap
+"Meek Mill Featuring Future, Roddy Ricch & Young Thug",hip hop,philly rap,pop rap,rap,southern hip hop,trap
+Meek Mill Featuring 21 Savage,hip hop,philly rap,pop rap,rap,southern hip hop,trap
+Ski Mask The Slump God,hip hop,miami hip hop,pop rap,rap,trap,underground hip hop
+XXXTENTACION Featuring Kanye West & Travis Barker,emo rap,miami hip hop,rap
+Kodak Black Featuring Juice WRLD,florida drill,florida rap,melodic rap,miami hip hop,rap,trap,trap latino
+Ava Max,pop
+Kodak Black Featuring Lil Pump,florida drill,florida rap,melodic rap,miami hip hop,rap,trap,trap latino
+Calboy,chicago rap,melodic rap
+A Boogie Wit da Hoodie Featuring 6ix9ine,melodic rap,rap,trap
+A Boogie Wit da Hoodie Featuring Offset & Tyga,melodic rap,rap,trap
+A Boogie Wit da Hoodie Featuring Juice WRLD,melodic rap,rap,trap
+Pinkfong,cartoon,children's music,dong-yo
+Loud Luxury Featuring Brando,edm,pop dance
+benny blanco & Juice WRLD Featuring Brendon Urie,pop
+Gesaffelstein & The Weeknd,dark clubbing
+Sam Smith & Normani,pop,uk pop
+Kehlani Featuring Ty Dolla $ign,pop,r&b,rap
+Blueface,cali rap,rap,trap
+Alec Benjamin + Alessia Cara,alt z,pop,pov: indie
+Future Featuring Travis Scott,atl hip hop,hip hop,rap,southern hip hop,trap
+Anuel AA & Karol G,reggaeton,reggaeton flow,trap boricua,trap latino,urbano latino
+YNW Melly Featuring Kanye West,melodic rap,rap
+Mustard & Migos,cali rap,pop rap,rap,southern hip hop,trap
+YNW Melly,melodic rap,rap
+Hikaru Utada & Skrillex,anime,classic j-pop,j-pop,japanese singer-songwriter
+Yo Gotti Featuring Lil Baby,dirty south rap,gangster rap,memphis hip hop,rap,southern hip hop,tennessee hip hop,trap
+Lauv & Troye Sivan,pop
+Daddy Yankee & Katy Perry Featuring Snow,latin hip hop,reggaeton,trap latino,urbano latino
+The Chainsmokers Featuring 5 Seconds Of Summer,pop
+Cardi B & Bruno Mars,pop,rap
+Zedd & Katy Perry,complextro,edm,german techno,pop,pop dance
+YK Osiris,melodic rap,trap
+Offset Featuring Travis Scott & 21 Savage,atl hip hop,hip hop,pop rap,rap,trap
+Offset Featuring Cardi B,atl hip hop,hip hop,pop rap,rap,trap
+Offset Featuring  J. Cole,atl hip hop,hip hop,pop rap,rap,trap
+Lil Pump Featuring Lil Wayne,emo rap,miami hip hop,pop rap,rap,trap
+Summer Walker X Drake,r&b,rap
+City Girls,scam rap,trap queen
+Lil Nas X Featuring Billy Ray Cyrus,lgbtq+ hip hop
+"benny blanco, Tainy, Selena Gomez & J Balvin",pop
+2 Chainz Featuring Ariana Grande,atl hip hop,hip hop,pop rap,rap,southern hip hop,trap
+2 Chainz Featuring Kendrick Lamar,atl hip hop,hip hop,pop rap,rap,southern hip hop,trap
+Marshmello Featuring CHVRCHES,brostep,edm,pop,progressive electro house
+FLETCHER,alt z,pop
+Pedro Capo X Farruko,latin pop,puerto rican pop
+Lil Peep & iLoveMakonnen Featuring Fall Out Boy,cloud rap,emo rap,lgbtq+ hip hop
+NAV Featuring The Weeknd,canadian hip hop,canadian trap,melodic rap,rap,trap
+NAV Featuring Meek Mill,canadian hip hop,canadian trap,melodic rap,rap,trap
+Polo G Featuring Lil Tjay,chicago rap,rap
+Mabel,pop,uk pop
+Nipsey Hussle Featuring Roddy Ricch & Hit-Boy,conscious hip hop,gangster rap,hip hop,pop rap,rap,southern hip hop,trap
+Nipsey Hussle Featuring Belly & DOM KENNEDY,conscious hip hop,gangster rap,hip hop,pop rap,rap,southern hip hop,trap
+Ariana Grande & Victoria Monet,pop
+Nipsey Hussle Featuring YG,conscious hip hop,gangster rap,hip hop,pop rap,rap,southern hip hop,trap
+Nipsey Hussle Featuring Kendrick Lamar,conscious hip hop,gangster rap,hip hop,pop rap,rap,southern hip hop,trap
+Khalid With John Mayer,pop,pop r&b
+Khalid x SAFE,pop,pop r&b
+Khalid Featuring A Boogie Wit da Hoodie,pop,pop r&b
+Aventura,bachata,bachata dominicana,latin hip hop,latin pop,tropical,urbano latino
+Nipsey Hussle Featuring Stacy Barthe,conscious hip hop,gangster rap,hip hop,pop rap,rap,southern hip hop,trap
+BTS Featuring Halsey,k-pop,k-pop boy group,pop
+"Five Finger Death Punch Featuring Kenny Wayne Shepherd, Brantley Gilbert & Brian May",alternative metal,groove metal,nu metal
+Avicii Featuring Aloe Blacc,dance pop,edm,pop,pop dance
+BTS Featuring Lauv,k-pop,k-pop boy group,pop
+Lil Dicky,comedy rap,indie pop rap,pop rap
+French Montana Featuring Blueface & Lil Tjay,hip hop,pop rap,rap,southern hip hop,trap
+Taylor Swift Featuring Brendon Urie,pop
+ScHoolboy Q Featuring 21 Savage,gangster rap,hip hop,pop rap,rap,southern hip hop,trap
+Ozuna x Daddy Yankee x J Balvin x Farruko x Anuel AA,puerto rican pop,reggaeton,trap latino,urbano latino
+ScHoolboy Q + Travis Scott,gangster rap,hip hop,pop rap,rap,southern hip hop,trap
+"Marshmello, Tyga & Chris Brown",brostep,edm,pop,progressive electro house
+"SZA, The Weeknd & Travis Scott",pop,r&b,rap
+P!nk Featuring Chris Stapleton,dance pop,pop
+Logic Featuring Eminem,conscious hip hop,hip hop,pop rap,rap
+"YG, Tyga & Jon Z",cali rap,hip hop,pop rap,rap,southern hip hop,trap
+PnB Rock & XXXTENTACION,melodic rap,rap,trap
+Ed Sheeran & Justin Bieber,pop,singer-songwriter pop,uk pop
+"Lunay, Daddy Yankee & Bad Bunny",reggaeton,reggaeton flow,trap latino,urbano latino
+Nicky Jam X Ozuna,latin hip hop,reggaeton,trap latino,urbano latino
+DJ Khaled Featuring Cardi B & 21 Savage,hip hop,miami hip hop,pop rap,rap
+DJ Khaled Featuring Nipsey Hussle & John Legend,hip hop,miami hip hop,pop rap,rap
+DJ Khaled Featuring SZA,hip hop,miami hip hop,pop rap,rap
+"DJ Khaled Featuring Meek Mill, J Balvin, Lil Baby & Jeremih",hip hop,miami hip hop,pop rap,rap
+DJ Khaled Featuring Travis Scott & Post Malone,hip hop,miami hip hop,pop rap,rap
+"DJ Khaled Featuring Chris Brown, Lil Wayne & Big Sean",hip hop,miami hip hop,pop rap,rap
+DJ Khaled Featuring Meek Mill & Lil Baby,hip hop,miami hip hop,pop rap,rap
+"Young Thug, J. Cole & Travis Scott",atl hip hop,atl trap,gangster rap,hip hop,melodic rap,rap,trap
+Ed Sheeran Featuring Chance The Rapper & PnB Rock,pop,singer-songwriter pop,uk pop
+Joyner Lucas Featuring Logic,boston hip hop,hip hop,pop rap,rap
+"Yella Beezy, Gucci Mane & Quavo",dfw rap,memphis hip hop,southern hip hop,trap
+The Chainsmokers & Bebe Rexha,pop
+John Rich Featuring The Five,
+Bryce Vine Featuring YG,indie pop rap
+SHAED,electropop
+Chris Brown Featuring Drake,r&b,rap
+Blanco Brown,black americana,country rap
+Bad Bunny & Tainy,reggaeton,trap latino,urbano latino
+"Sech, Darell, Nicky Jam, Ozuna & Anuel AA",panamanian pop,reggaeton,trap latino,urbano latino
+Drake Featuring Rick Ross,canadian hip hop,canadian pop,hip hop,pop rap,rap
+"Dreamville Featuring JID, Bas, J. Cole, EARTHGANG & Young Nudy",hip hop,pop rap,rap
+Marshmello Featuring A Day To Remember,brostep,edm,pop,progressive electro house
+Ali Gatie,canadian hip hop
+Lil Nas X & Cardi B Or Nas,lgbtq+ hip hop
+Megan Thee Stallion Featuring DaBaby,houston rap,pop,rap,trap queen
+Martin Garrix Featuring Macklemore & Patrick Stump,dutch edm,edm,pop,pop dance,progressive house
+Ed Sheeran Featuring Khalid,pop,singer-songwriter pop,uk pop
+Kygo X Whitney Houston,edm,pop,pop dance,tropical house
+J Balvin & Bad Bunny,reggaeton,reggaeton colombiano,trap latino,urbano latino
+Chris Brown Featuring Justin Bieber & Ink,r&b,rap
+Saweetie,cali rap,trap queen
+Y2K & bbno$,pop rap,viral rap
+Post Malone Featuring Young Thug,dfw rap,melodic rap,pop,rap
+"Dreamville Featuring J. Cole, Lute & DaBaby",hip hop,pop rap,rap
+Ed Sheeran With Chris Stapleton & Bruno Mars,pop,singer-songwriter pop,uk pop
+"Dreamville Featuring Bas, JID, Guapdad 4000, Reese LAFLARE, Jace, Mez, Smokepurpp, Buddy & Ski Mask The Slump God",hip hop,pop rap,rap
+"Jhay Cortez, J Balvin & Bad Bunny",reggaeton,trap latino,urbano latino
+Ed Sheeran & Travis Scott,pop,singer-songwriter pop,uk pop
+Ed Sheeran Featuring Camila Cabello & Cardi B,pop,singer-songwriter pop,uk pop
+Ed Sheeran Featuring Eminem & 50 Cent,pop,singer-songwriter pop,uk pop
+"Mustard featuring NAV, Playboi Carti & A Boogie Wit da Hoodie",cali rap,pop rap,rap,southern hip hop,trap
+Ed Sheeran Featuring YEBBA,pop,singer-songwriter pop,uk pop
+Lil Baby & DaBaby,atl hip hop,atl trap,rap,trap
+"Anuel AA, Daddy Yankee, Karol G, Ozuna & J Balvin",reggaeton,reggaeton flow,trap boricua,trap latino,urbano latino
+"Beyonce, SAINt JHN & Wizkid Featuring Blue Ivy Carter",
+Ellie Goulding & Juice WRLD,indietronica,metropopolis,pop,uk pop
+"Beyonce, JAY-Z & Childish Gambino Featuring Oumou Sangare",pop,r&b
+Mustard & Roddy Ricch,cali rap,pop rap,rap,southern hip hop,trap
+Rick Ross Featuring Drake,dirty south rap,gangster rap,hip hop,rap,southern hip hop,trap
+Chance The Rapper Featuring MadeinTYO & DaBaby,chicago rap,conscious hip hop,hip hop,pop rap,rap,trap
+The Chainsmokers & ILLENIUM Featuring Lennon Stella,pop
+Blueface & Rich The Kid,cali rap,rap,trap
+Chance The Rapper Featuring John Legend,chicago rap,conscious hip hop,hip hop,pop rap,rap,trap
+Chance The Rapper Featuring Death Cab For Cutie,chicago rap,conscious hip hop,hip hop,pop rap,rap,trap
+Ariana Grande & Social House,pop
+Sarah Jeffery,movie tunes
+Ambjaay,cali rap,viral rap
+Brantley Gilbert + Lindsay Ell,contemporary country,country,country road,modern country rock
+Matt Stell,arkansas country,contemporary country,country pop
+"Megan Thee Stallion, Nicki Minaj & Ty Dolla $ign",houston rap,pop,rap,trap queen
+Trippie Redd Featuring Lil Baby & Lil Duke,melodic rap,rap,trap
+"Dove Cameron, Sofia Carson, Booboo Stewart, Cameron Boyce, Thomas Doherty, China Anne McClain & Dylan Playfair",pop
+Runaway June,contemporary country,country pop,country road
+DaBaby Featuring Offset,hip hop,north carolina hip hop,pop rap,rap,trap
+Young Thug Featuring Gunna,atl hip hop,atl trap,gangster rap,hip hop,melodic rap,rap,trap
+Young Thug Featuring Lil Baby,atl hip hop,atl trap,gangster rap,hip hop,melodic rap,rap,trap
+Normani,pop,r&b
+Swae Lee Featuring Drake,melodic rap,rap,trap
+Doja Cat & Tyga,dance pop,pop
+Young Thug Featuring Machine Gun Kelly,atl hip hop,atl trap,gangster rap,hip hop,melodic rap,rap,trap
+Taylor Swift Featuring Dixie Chicks,pop
+Chris Brown Featuring Gunna,r&b,rap
+Big Sean Featuring A$AP Ferg & Hit-Boy,detroit hip hop,hip hop,pop rap,r&b,rap,southern hip hop,trap
+for KING & COUNTRY,ccm,christian alternative rock,christian indie,christian music,world worship
+Post Malone Featuring Ozzy Osbourne & Travis Scott,dfw rap,melodic rap,pop,rap
+Post Malone Featuring DaBaby,dfw rap,melodic rap,pop,rap
+Post Malone Featuring Future & Halsey,dfw rap,melodic rap,pop,rap
+Post Malone Featuring Meek Mill & Lil Baby,dfw rap,melodic rap,pop,rap
+Post Malone Featuring SZA,dfw rap,melodic rap,pop,rap
+YNW Melly & 9lokknine,melodic rap,rap
+"Ariana Grande, Miley Cyrus & Lana Del Rey",pop
+Luke Combs & Brooks & Dunn,contemporary country,country
+"Tainy, Anuel AA & Ozuna",pop reggaeton,reggaeton,trap latino,urbano latino
+Lil Mosey x Gunna,melodic rap,rap conscient
+"DJ Snake, J. Balvin & Tyga",dance pop,edm,electronic trap,pop,pop dance
+DaBaby Featuring Lil Baby & Moneybagg Yo,hip hop,north carolina hip hop,pop rap,rap,trap
+DaBaby & Nicki Minaj,hip hop,north carolina hip hop,pop rap,rap,trap
+DaBaby Featuring Kevin Gates,hip hop,north carolina hip hop,pop rap,rap,trap
+DaBaby Featuring Migos,hip hop,north carolina hip hop,pop rap,rap,trap
+"DaBaby Featuring Chance The Rapper, Gucci Mane & YK Osiris",hip hop,north carolina hip hop,pop rap,rap,trap
+"French Montana Featuring Post Malone, Cardi B & Rvssian",hip hop,pop rap,rap,southern hip hop,trap
+DaBaby Featuring Stunna 4 Vegas,hip hop,north carolina hip hop,pop rap,rap,trap
+j-hope Featuring Becky G.,k-pop,k-rap
+Juice WRLD & YoungBoy Never Broke Again,chicago rap,melodic rap,rap
+Summer Walker & Usher,r&b,rap
+Summer Walker Featuring Jhene Aiko,r&b,rap
+Summer Walker Featuring A Boogie Wit da Hoodie,r&b,rap
+"Layton Greene, Lil Baby, City Girls & PnB Rock",melodic rap,trap
+Tones And I,australian pop
+Moneybagg Yo X Megan Thee Stallion,memphis hip hop,rap,southern hip hop,tennessee hip hop,trap
+"Internet Money, Lil Tecca & A Boogie Wit da Hoodie",pop rap,trap
+Kanye West Featuring Ty Dolla $ign & Ant Clemons,chicago rap,hip hop,rap
+Kanye West Featuring Clipse & Kenny G,chicago rap,hip hop,rap
+Kanye West Featuring Sunday Service Choir,chicago rap,hip hop,rap
+Kanye West Featuring Ant Clemons,chicago rap,hip hop,rap
+Kanye West Featuring Fred Hammond,chicago rap,hip hop,rap
+Roddy Ricch & Gunna,melodic rap,rap,trap
+Arizona Zervas,indie pop rap,pop rap,rhode island rap
+DaniLeigh Featuring Chris Brown,r&b,rap latina
+Gucci Mane Featuring Kodak Black & London On Da Track,atl hip hop,dirty south rap,hip hop,pop rap,rap,southern hip hop,trap
+Karol G & Nicki Minaj,reggaeton,reggaeton colombiano,urbano latino
+Ant Saunders,chill r&b
+Tory Lanez & T-Pain,canadian hip hop,canadian trap,melodic rap,pop rap,r&b,rap,trap
+Alicia Keys Featuring Miguel,neo soul,pop,r&b
+24kGoldn,cali rap,pop rap
+A Boogie Wit da Hoodie Featuring Lil Uzi Vert,melodic rap,rap,trap
+Jhene Aiko Featuring Big Sean,r&b
+Tory Lanez Featuring Chris Brown,canadian hip hop,canadian trap,melodic rap,pop rap,r&b,rap,trap
+Trevor Daniel,melodic rap
+Tory Lanez Featuring Snoop Dogg,canadian hip hop,canadian trap,melodic rap,pop rap,r&b,rap,trap
+Trippie Redd Featuring DaBaby,melodic rap,rap,trap
+Black Eyed Peas X J Balvin,dance pop,pop,pop rap
+Idina Menzel & AURORA,hollywood,movie tunes,show tunes
+Trippie Redd Featuring Juice WRLD & YNW Melly,melodic rap,rap,trap
