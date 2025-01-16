@@ -10,7 +10,7 @@ spotify_path = Path(__file__).parents[1]
 sys.path.append(str(spotify_path))
 from spotify import Spotify
 
-dirpath = "C:/Users/jalan/git/BillboardTimeTravel/"
+dirpath = ""  # C:/Users/jalan/git/BillboardTimeTravel/"
 
 def get_todays_songs() -> dict[tuple, tuple]:
     song_csv = path.join(dirpath, "../rwd-billboard-data/data-out/hot-100-current.csv")
@@ -81,10 +81,16 @@ def make_genre_playlist():
                            key = lambda key: len(todays_genres[key]), 
                            reverse=True)
     
-    todays_genre: str = random.sample(top_genres, 1)[0]
-    todays_picks = [uri for *_, uri in random.sample(todays_genres[todays_genre], 20)]
-    Spotify.get_playlist("BB-Genre-.*").set_tracks(todays_picks)    
-    Spotify._get_instance().playlist_change_details(playlist_id=Spotify.get_playlist("BB-Genre-.*").id, name="BB-Genre-%s" % todays_genre.title())
+
+    genre_picks: str = random.sample(top_genres, 3)
+    for genre, playlist in zip(genre_picks, Spotify.get_playlists("BB-Genre-.*")):
+        todays_picks = [
+            uri for *_, uri in random.sample(todays_genres[genre], 20)
+        ]
+        playlist.set_tracks(todays_picks)
+        Spotify._get_instance().playlist_change_details(
+            playlist_id=playlist.id, name="BB-Genre-%s" % genre.title()
+        )
 
 def makeplaylists():
     today = datetime.date.today()
