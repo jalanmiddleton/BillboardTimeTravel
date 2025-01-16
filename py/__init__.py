@@ -1,1 +1,1 @@
-from .spotify.Spotify import Spotify
+from spotify.Spotify import Spotify

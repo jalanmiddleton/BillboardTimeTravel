@@ -4,9 +4,11 @@ import random
 import sys
 import datetime
 import os.path as path
+from pathlib import Path
 
-sys.path.append("C:/Users/jalan/git/BillboardTimeTravel/py/spotify")
-from Spotify import Spotify
+spotify_path = Path(__file__).parents[1]
+sys.path.append(str(spotify_path))
+from spotify import Spotify
 
 dirpath = "C:/Users/jalan/git/BillboardTimeTravel/"
 
@@ -66,6 +68,9 @@ def make_genre_playlist():
 
     todays_genres = {}
     for song, artist, uri, _ in todays_songs:
+        if (song, artist) not in genres:
+            continue
+
         for genre in genres[(song, artist)]:
             if genre not in todays_genres:
                 todays_genres[genre] = []
