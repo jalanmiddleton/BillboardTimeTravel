@@ -66,6 +66,10 @@ def get_genres() -> dict[tuple[str, str], list[str]]:
     return genres
 
 
+def get_penalties() -> dict[tuple[str, str], int]:
+    return {}
+
+
 def get_song_iterator() -> Generator[tuple[date, int, str, str, int, int, int]]:
     # chart_week,current_week,title,performer,last_week,peak_pos,wks_on_chart
     song_csv = path.join(dirpath, "../rwd-billboard-data/data-out/hot-100-current.csv")
@@ -93,6 +97,10 @@ def get_song_iterator() -> Generator[tuple[date, int, str, str, int, int, int]]:
                 ],
             )
             yield chart_week, current_week, title, performer, last_week, peak_pos, wks_on_chart
+
+
+def penalize(list[tuple[str, str, str, int]]) -> None:
+    pass
 
 
 if __name__ == "__main__":

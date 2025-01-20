@@ -16,17 +16,20 @@ def get_todays_songs() -> list[tuple[str, str, str, int]]:
     scores = data.get_scores()
     uris = data.get_uris()
     adjusters = data.get_adjusters()
+    penalties = data.get_penalties()
 
     today = datetime.date.today()
     todays_songs = []
     for day, _, title, artist, *_ in data.get_song_iterator():
         if day.day == today.day and day.month == today.month:
+            title_artist = (title, artist)
             todays_songs.append(
                 (
                     title,
                     artist,
-                    uris.get((title, artist), None),
-                    scores.get((title, artist), 0) * adjusters[day.year],
+                    uris.get(title_artist, None),
+                    scores.get(title_artist, 0) * adjusters.get(day.year, 1)
+                    - penalties.get(title_artist, 0),
                 )
             )
 
@@ -41,10 +44,7 @@ def make_top40(todays_songs: list[tuple[str, str, str, int]]) -> None:
     chosen_songs.extend(random.sample(todays_songs[60:80], 10))
     chosen_songs.extend(random.sample(todays_songs[80:100], 10))
     chosen_songs = sorted(chosen_songs, key=lambda song: song[3], reverse=True)
-    chosen_songs = [uri for *_, uri, _ in chosen_songs]
-
-    # All top ten
-    Spotify.get_playlist("BB-Top40").set_tracks(chosen_songs)
+    Spotify.get_playlist("BB-Top40").set_tracks([uri for *_, uri, _ in chosen_songs])
 
 
 def make_top100(todays_songs: list[tuple[str, str, str, int]]) -> None:
