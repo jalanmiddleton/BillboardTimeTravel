@@ -6,6 +6,8 @@ import datetime
 import os.path as path
 from pathlib import Path
 
+import import_data as data
+
 spotify_path = Path(__file__).parents[1]
 sys.path.append(str(spotify_path))
 from spotify import Spotify
@@ -13,44 +15,18 @@ from spotify import Spotify
 dirpath = ""  # C:/Users/jalan/git/BillboardTimeTravel/"
 
 def get_todays_songs() -> dict[tuple, tuple]:
-    song_csv = path.join(dirpath, "../rwd-billboard-data/data-out/hot-100-current.csv")
-    score_csv = path.join(dirpath, "./py/data/top40score.csv")
-    uri_csv = path.join(dirpath, "./py/data/songlinks.csv")
-    adj_csv = path.join(dirpath, "./py/data/yearadjuster.csv")
-
-    scores = {}
-    with open(score_csv, "r") as score_infile:
-        score_reader = csv.reader(score_infile)
-        next(score_reader)
-        for title, artist, score in score_reader:
-            scores[(title, artist)] = int(score)
-
-    uris = {}
-    with open(uri_csv, "r") as uri_infile:
-        uri_reader = csv.reader(uri_infile)
-        next(uri_reader)
-        for title, artist, uri in uri_reader:
-            uris[(title, artist)] = uri
-
-    adjusters = {}
-    with open(adj_csv, "r") as adj_infile:
-        adj_reader = csv.reader(adj_infile)
-        next(adj_reader)
-        for year, adj in adj_reader:
-            adjusters[int(year)] = float(adj)
+    scores = data.get_scores()
+    uris = data.get_uris()
+    adjusters = data.get_adjusters()
 
     today = datetime.date.today()
     todays_songs = []
-    with open(song_csv, "r") as song_infile:
-        song_reader = csv.reader(song_infile)
-        next(song_infile)
-        for day, _, title, artist, *_ in song_reader:
-            day = datetime.date.fromisoformat(day)
-            if day.day == today.day and day.month == today.month:
-                todays_songs.append((title, 
-                                     artist, 
-                                     uris.get((title, artist), None), 
-                                     scores.get((title, artist), 0) * adjusters[day.year]))
+    for day, _, title, artist, *_ in data.get_song_iterator():
+        if day.day == today.day and day.month == today.month:
+            todays_songs.append((title, 
+                                    artist, 
+                                    uris.get((title, artist), None), 
+                                    scores.get((title, artist), 0) * adjusters[day.year]))
 
     todays_songs = sorted(todays_songs, key=lambda item: item[3], reverse=True)
     return todays_songs
@@ -109,15 +85,7 @@ def makeplaylists():
     # All top ten
     Spotify.get_playlist("BB-Top40").set_tracks(chosen_songs)
 
-    debuts_csv = path.join(dirpath, "./py/data/songdebuts.csv")
-    debuts = {(title, artist): None for title, artist, *_ in todays_songs}
-    with open(debuts_csv, "r") as debuts_infile:
-        debuts_reader = csv.reader(debuts_infile)
-        next(debuts_reader)
-        for *title_artist, debut in debuts_reader:
-            title_artist = tuple(title_artist)
-            if title_artist in debuts:
-                debuts[title_artist] = datetime.date.fromisoformat(debut)
+    debuts = data.get_debuts()
     todays_songs = sorted(todays_songs, key=lambda song: debuts[(song[0], song[1])])
     Spotify.get_playlist("BB-Hot100").set_tracks([uri for *_, uri, _ in todays_songs])
 
