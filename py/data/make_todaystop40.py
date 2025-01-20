@@ -3,7 +3,6 @@ import csv
 import random
 import sys
 import datetime
-import os.path as path
 from pathlib import Path
 
 import import_data as data
@@ -11,8 +10,6 @@ import import_data as data
 spotify_path = Path(__file__).parents[1]
 sys.path.append(str(spotify_path))
 from spotify import Spotify
-
-dirpath = ""  # C:/Users/jalan/git/BillboardTimeTravel/"
 
 
 def get_todays_songs() -> dict[tuple, tuple]:
