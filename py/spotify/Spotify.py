@@ -4,7 +4,7 @@ Spotify wrapper.
 
 import re
 from pathlib import Path
-from pprint import pprint, pformat
+from pprint import pformat
 from string import punctuation
 import sys
 from typing import Generator, Sequence
@@ -30,21 +30,21 @@ class SpotifyItem:
             searchres = Spotify._get_instance().track(uri)
         else:
             searchres = Spotify._get_instance().album(uri)
-        
+
         return SpotifyItem(searchres)
 
     def __init__(self, searchres):
         super().__init__()
 
         if not searchres:
-            return 
+            return
 
         self.uri = searchres["uri"]
         self.type = self.uri.split(":")[1]
         self.title = searchres["name"]
-        self.artist =  ",".join(x["name"] for x in searchres["artists"])
+        self.artist = ",".join(x["name"] for x in searchres["artists"])
 
-        self.popularity = (searchres["popularity"] if "popularity" in searchres else None)
+        self.popularity = searchres["popularity"] if "popularity" in searchres else None
         self.duration = (
             (
                 sum(track["duration_ms"] for track in searchres["tracks"]["items"])
@@ -64,18 +64,19 @@ class SpotifyItem:
             for field in dir(self)
             if field[0] != "_" and field != "get_details"
         }
-    
+
     def get_genres(self):
         # TODO: What if it's not a track?
         track = Spotify._get_instance().track(self.uri)
-        artist = Spotify._get_instance().artist(track['artists'][0]['uri'])
-        return artist['genres']
-    
+        artist = Spotify._get_instance().artist(track["artists"][0]["uri"])
+        return artist["genres"]
+
     def get_first_artist(self):
-        return Spotify._get_instance().track(self.uri)['artists'][0]
-    
+        return Spotify._get_instance().track(self.uri)["artists"][0]
+
     def __repr__(self):
         return pformat(self.get_details())
+
 
 class MissingSpotifyItem(SpotifyItem):
     """
@@ -108,19 +109,20 @@ class Playlist:
         s = Spotify._get_instance()
 
         if self.tracks:
-            s.user_playlist_remove_all_occurrences_of_tracks(           
-                user=secrets["SPOTIFY_USER"],
-                playlist_id=self.id,
-                tracks=self.tracks
+            s.user_playlist_remove_all_occurrences_of_tracks(
+                user=secrets["SPOTIFY_USER"], playlist_id=self.id, tracks=self.tracks
             )
 
-        result = s.user_playlist_replace_tracks(
-            user=secrets["SPOTIFY_USER"],
-            playlist_id=self.id,
-            tracks=tracks
+        s.user_playlist_replace_tracks(
+            user=secrets["SPOTIFY_USER"], playlist_id=self.id, tracks=tracks
         )
 
         self.tracks = tracks
+
+    def set_name(self, new_name: str):
+        Spotify._get_instance().playlist_change_details(
+            playlist_id=self.id, name=new_name
+        )
 
 
 class Spotify:
@@ -158,8 +160,7 @@ class Spotify:
             )
             Spotify.__token = Spotify.__oauth.get_access_token(as_dict=False)
             Spotify.instance = spotipy.Spotify(
-                auth=Spotify.__token, oauth_manager=self.__oauth,
-                requests_timeout=30
+                auth=Spotify.__token, oauth_manager=self.__oauth, requests_timeout=30
             )
 
     @staticmethod
@@ -170,9 +171,9 @@ class Spotify:
             playlists := Spotify._get_instance().user_playlists(
                 user=secrets["SPOTIFY_USER"], offset=offset
             )
-        )['items']:
-            for playlist in playlists['items']:
-                if playlist['name'].startswith(prefix):
+        )["items"]:
+            for playlist in playlists["items"]:
+                if playlist["name"].startswith(prefix):
                     yield Playlist(playlist)
             offset += 50
 
@@ -180,7 +181,10 @@ class Spotify:
 
     @staticmethod
     def get_playlist(pattern: str = DEFAULT_PLAYLIST) -> "Playlist":
-        return next((pl for pl in Spotify._get_BB_playlists() if re.match(pattern, pl.name)), None)
+        return next(
+            (pl for pl in Spotify._get_BB_playlists() if re.match(pattern, pl.name)),
+            None,
+        )
 
     @staticmethod
     def get_playlists(pattern: str = DEFAULT_PLAYLIST) -> Sequence["Playlist"]:
@@ -197,7 +201,9 @@ class Spotify:
         query = Spotify._get_query(title, artist)
         failed = []
 
-        searchresults = Spotify._get_instance().search(q=query, type=item_type, limit=10)
+        searchresults = Spotify._get_instance().search(
+            q=query, type=item_type, limit=10
+        )
         for result in searchresults[item_type + "s"]["items"]:
             title_spotify = result["name"]
             if Spotify._has_unique_words(
@@ -211,7 +217,10 @@ class Spotify:
             ):
                 continue
 
-            if Spotify._lss_match(artist, artist_spotify) >= 0.6 and Spotify._lss_match(title, title_spotify) >= 0.6:
+            if (
+                Spotify._lss_match(artist, artist_spotify) >= 0.6
+                and Spotify._lss_match(title, title_spotify) >= 0.6
+            ):
                 return SpotifyItem(result)
 
             failed.append(f'\t"{title_spotify}" by {result['artists'][0]['name']}')
@@ -223,7 +232,9 @@ class Spotify:
         """
         Turns the title and artist into a Spotify search query.
         """
-        title = "".join(c for c in title if c not in punctuation)  # crashed with "100% Pure Love,Crystal Waters"
+        title = "".join(
+            c for c in title if c not in punctuation
+        )  # crashed with "100% Pure Love,Crystal Waters"
         artist = re.sub(r" ((f|F)eat|(w|W)ith|(a|A)nd|(x|X)|&).*$", "", artist)
         return f'track:"{title}" artist:"{artist}"'
 
@@ -258,4 +269,3 @@ class Spotify:
                 )
 
         return float(matrix[-1][-1]) / len(shortest)
-

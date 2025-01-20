@@ -82,9 +82,7 @@ def make_genre_playlists(todays_songs: list[tuple[str, str, str, int]]):
     for genre, playlist in zip(genre_picks, Spotify.get_playlists("BB-Genre-.*")):
         todays_picks = [uri for *_, uri in random.sample(todays_genres[genre], 20)]
         playlist.set_tracks(todays_picks)
-        Spotify._get_instance().playlist_change_details(
-            playlist_id=playlist.id, name="BB-Genre-%s" % genre.title()
-        )
+        playlist.set_name("BB-Genre-%s" % genre.title())
 
 
 def makeplaylists():

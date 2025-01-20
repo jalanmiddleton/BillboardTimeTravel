@@ -99,7 +99,7 @@ def get_song_iterator() -> Generator[tuple[date, int, str, str, int, int, int]]:
             yield chart_week, current_week, title, performer, last_week, peak_pos, wks_on_chart
 
 
-def penalize(list[tuple[str, str, str, int]]) -> None:
+def penalize(songs: list[tuple[str, str, str, int]]) -> None:
     pass
 
 
