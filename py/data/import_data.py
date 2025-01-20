@@ -55,6 +55,17 @@ def get_debuts() -> dict[tuple[str, str], Optional[date]]:
     return debuts
 
 
+def get_genres() -> dict[tuple[str, str], list[str]]:
+    genre_csv = path.join(dirpath, "./py/data/songgenres.csv")
+    genres = {}
+    with open(genre_csv, "r") as genre_infile:
+        genre_reader = csv.reader(genre_infile)
+        next(genre_reader)
+        for song, artist, *gs in genre_reader:
+            genres[(song, artist)] = gs
+    return genres
+
+
 def get_song_iterator() -> Generator[tuple[date, int, str, str, int, int, int]]:
     # chart_week,current_week,title,performer,last_week,peak_pos,wks_on_chart
     song_csv = path.join(dirpath, "../rwd-billboard-data/data-out/hot-100-current.csv")

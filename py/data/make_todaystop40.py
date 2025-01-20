@@ -14,6 +14,7 @@ from spotify import Spotify
 
 dirpath = ""  # C:/Users/jalan/git/BillboardTimeTravel/"
 
+
 def get_todays_songs() -> dict[tuple, tuple]:
     scores = data.get_scores()
     uris = data.get_uris()
@@ -23,24 +24,22 @@ def get_todays_songs() -> dict[tuple, tuple]:
     todays_songs = []
     for day, _, title, artist, *_ in data.get_song_iterator():
         if day.day == today.day and day.month == today.month:
-            todays_songs.append((title, 
-                                    artist, 
-                                    uris.get((title, artist), None), 
-                                    scores.get((title, artist), 0) * adjusters[day.year]))
+            todays_songs.append(
+                (
+                    title,
+                    artist,
+                    uris.get((title, artist), None),
+                    scores.get((title, artist), 0) * adjusters[day.year],
+                )
+            )
 
     todays_songs = sorted(todays_songs, key=lambda item: item[3], reverse=True)
     return todays_songs
 
+
 def make_genre_playlist():
     todays_songs = get_todays_songs()
-
-    genre_csv = path.join(dirpath, "./py/data/songgenres.csv")
-    genres = {}
-    with open(genre_csv, "r") as genre_infile:
-        genre_reader = csv.reader(genre_infile)
-        next(genre_reader)
-        for song, artist, *gs in genre_reader:
-            genres[(song, artist)] = gs
+    genres = data.get_genres()
 
     todays_genres = {}
     for song, artist, uri, _ in todays_songs:
@@ -52,21 +51,25 @@ def make_genre_playlist():
                 todays_genres[genre] = []
             if uri:
                 todays_genres[genre].append((song, artist, uri))
-    
-    top_genres = sorted([key for key in todays_genres.keys() if len(todays_genres[key]) >= 20 and len(todays_genres[key]) <= 60],
-                           key = lambda key: len(todays_genres[key]), 
-                           reverse=True)
-    
+
+    top_genres = sorted(
+        [
+            key
+            for key in todays_genres.keys()
+            if len(todays_genres[key]) >= 20 and len(todays_genres[key]) <= 60
+        ],
+        key=lambda key: len(todays_genres[key]),
+        reverse=True,
+    )
 
     genre_picks: str = random.sample(top_genres, 3)
     for genre, playlist in zip(genre_picks, Spotify.get_playlists("BB-Genre-.*")):
-        todays_picks = [
-            uri for *_, uri in random.sample(todays_genres[genre], 20)
-        ]
+        todays_picks = [uri for *_, uri in random.sample(todays_genres[genre], 20)]
         playlist.set_tracks(todays_picks)
         Spotify._get_instance().playlist_change_details(
             playlist_id=playlist.id, name="BB-Genre-%s" % genre.title()
         )
+
 
 def makeplaylists():
     today = datetime.date.today()
@@ -90,6 +93,7 @@ def makeplaylists():
     Spotify.get_playlist("BB-Hot100").set_tracks([uri for *_, uri, _ in todays_songs])
 
     make_genre_playlist()
+
 
 if __name__ == "__main__":
     makeplaylists()
