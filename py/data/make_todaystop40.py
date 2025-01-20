@@ -1,17 +1,16 @@
-import csv
+"""pyinstaller -F --paths=./py .\py\data\make_todaystop40.py"""
 
 from datetime import date
 from pathlib import Path
 from pprint import pprint
+import os
 import random
 import sys
 from typing import Optional
 
-import import_data as data
-
-spotify_path = Path(__file__).parents[1]
-sys.path.append(str(spotify_path))
-from spotify import Spotify
+sys.path.append(str(Path(__file__).parent.parent))
+import data.import_data as data
+from spotify.Spotify import Spotify
 
 
 def get_days_songs(day: Optional[date] = None) -> list[tuple[str, str, str, int]]:
