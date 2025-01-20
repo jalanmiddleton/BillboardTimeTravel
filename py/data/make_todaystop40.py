@@ -68,15 +68,11 @@ def make_genre_playlists(todays_songs: list[tuple[str, str, str, int]]):
             if uri:
                 todays_genres[genre].append((song, artist, uri))
 
-    top_genres = sorted(
-        [
-            key
-            for key in todays_genres.keys()
-            if len(todays_genres[key]) >= 20 and len(todays_genres[key]) <= 60
-        ],
-        key=lambda key: len(todays_genres[key]),
-        reverse=True,
-    )
+    top_genres = [
+        key
+        for key in todays_genres.keys()
+        if len(todays_genres[key]) >= 20 and len(todays_genres[key]) <= 60
+    ]
 
     genre_picks: str = random.sample(top_genres, 3)
     for genre, playlist in zip(genre_picks, Spotify.get_playlists("BB-Genre-.*")):
