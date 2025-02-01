@@ -1,0 +1,9 @@
+To get things back up to speed:
+
+```
+# git pull the other directory
+python py/data/search_songlinks.py
+python py/data/make_top40score.py
+python py/data/make_songdebut.py
+python py/data/make_genres.py
+```
