@@ -1,9 +1,9 @@
 import csv
-from datetime import date
+from datetime import date, timedelta
 import os.path as path
-from typing import Generator, Optional
+from typing import Any, Generator, Optional
 
-dirpath = "/Users/justinmiddleton/git/BillboardTimeTravel/" # "C:/Users/jalan/git/BillboardTimeTravel/"
+dirpath = "/Users/justinmiddleton/git/BillboardTimeTravel/"  # "C:/Users/jalan/git/BillboardTimeTravel/"
 
 
 def get_scores() -> dict[tuple[str, str], int]:
@@ -66,14 +66,14 @@ def get_genres() -> dict[tuple[str, str], list[str]]:
     return genres
 
 
-def get_past_plays() -> dict[tuple[str, str], list[str]]:
+def get_past_plays() -> dict[tuple[str, str], list[int, Any]]:
     plays_csv = path.join(dirpath, "./py/data/songplays.csv")
     plays = {}
     with open(plays_csv, "r") as plays_infile:
         plays_reader = csv.reader(plays_infile)
         next(plays_reader)
-        for song, artist, _, *dates in plays_reader:
-            plays[(song, artist)] = dates
+        for song, artist, *num_dates in plays_reader:
+            plays[(song, artist)] = num_dates
     return plays
 
 
@@ -106,9 +106,37 @@ def get_song_iterator() -> Generator[tuple[date, int, str, str, int, int, int]]:
             yield chart_week, current_week, title, performer, last_week, peak_pos, wks_on_chart
 
 
-def penalize(songs: list[tuple[str, str, str, int]]) -> None:
-    pass
+def record_plays(songs: list[tuple[str, str, str, int]]) -> None:
+    plays_csv = path.join(dirpath, "./py/data/songplays.csv")
+    plays = get_past_plays()
+    one_month_ago = date.today() - timedelta(days=30)
+
+    print("RECORDING!")
+    for song, artist, *_ in songs:
+        past_plays = plays.get((song, artist), [0])
+        if len(past_plays) > 1 and date.fromisoformat(past_plays[-1]) <= one_month_ago:
+            past_plays = past_plays[:1]  # Reset
+        plays[(song, artist)] = [
+            int(past_plays[0]) + 1,
+            *past_plays[1:],
+            date.today().strftime("%Y-%m-%d"),
+        ]
+
+    with open(plays_csv, "w") as plays_outfile:
+        writer = csv.reader(plays_outfile)
+        writer.writerow(["title", "artist", "plays", "days..."])
+
+        for title_artist in plays:
+            writer.writerow(
+                [
+                    *title_artist,
+                    len(plays[title_artist]) - 1,
+                    *(plays[title_artist][1:]),
+                ]
+            )
+
+    return plays
 
 
 if __name__ == "__main__":
-    print(list(get_scores().items())[:5])
+    pass  # print(list(get_scores().items())[:5])

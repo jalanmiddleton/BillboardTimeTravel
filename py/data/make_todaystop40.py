@@ -46,12 +46,11 @@ def make_top40(
 ) -> list[tuple[str, str, str, int]]:
     # Assumption: songs are sorted when they come in.
     past_plays = data.get_past_plays()
-
     one_month_ago = date.today() - timedelta(days=30)
 
     def skip_song(song):
         title_artist = tuple(song[:2])
-        days = past_plays.get(title_artist, [])
+        days = past_plays.get(title_artist, [])[1:]
         return (
             (title_artist in past_plays)
             and (len(days) >= 3)
@@ -70,6 +69,8 @@ def make_top40(
         Spotify.get_playlist("BB-Top40").set_tracks(
             [uri for *_, uri, _ in chosen_songs]
         )
+    data.record_plays(chosen_songs)
+
     return chosen_songs
 
 
