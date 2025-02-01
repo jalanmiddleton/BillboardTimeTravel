@@ -54,7 +54,7 @@ def make_top40(
         return (
             (title_artist in past_plays)
             and (len(days) >= 3)
-            and (date.fromisoformat(days[-1]) > one_month_ago)
+            and (date.fromisoformat(days[0]) > one_month_ago)
         )
     todays_songs = [song for song in todays_songs if not skip_song(song)]
 
@@ -129,15 +129,15 @@ def makeplaylists(day: Optional[date] = None):
     days_songs = [song for song in get_days_songs(day) if song[2]]
     random.seed(day.strftime("%Y-%m-%d"))
 
-    is_dry_run = True
+    is_dry_run = False
     top40 = make_top40(days_songs, is_dry_run)
     top100 = make_top100(days_songs, is_dry_run)
     genres = make_genre_playlists(days_songs, is_dry_run)
 
     if is_dry_run:
         pprint(top40)
-        # pprint(top100)
-        # pprint(genres)
+        pprint(top100)
+        pprint(genres)
 
 
 if __name__ == "__main__":

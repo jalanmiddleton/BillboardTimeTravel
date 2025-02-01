@@ -127,12 +127,12 @@ Someone You Loved,Lewis Capaldi,2,2025-01-04,2025-02-01
 Don't Start Now,Dua Lipa,3,2025-01-04,2025-01-25,2025-02-01
 Dark Horse,Katy Perry Featuring Juicy J,2,2025-01-04,2025-02-01
 All Of Me,John Legend,3,2025-01-04,2025-01-18,2025-02-01
-Mack The Knife,Bobby Darin,2,2025-01-04,2025-01-18
+Mack The Knife,Bobby Darin,3,2025-01-04,2025-01-18,2025-02-01
 Blurred Lines,Robin Thicke Featuring T.I. + Pharrell,2,2025-01-04,2025-02-01
 When I'm Gone,3 Doors Down,2,2025-01-04,2025-01-25
 The Bones,Maren Morris,2,2025-01-04,2025-01-18
 Pompeii,Bastille,1,2025-01-04
-Twisted,Keith Sweat,2,2025-01-04,2025-01-18
+Twisted,Keith Sweat,3,2025-01-04,2025-01-18,2025-02-01
 The Game Of Love,Santana Featuring Michelle Branch,3,2025-01-04,2025-01-25,2025-02-01
 Ignition,R. Kelly,2,2025-01-04,2025-01-25
 Counting Blue Cars,Dishwalla,2,2025-01-04,2025-01-18
@@ -140,7 +140,7 @@ The Box,Roddy Ricch,4,2025-01-04,2025-01-11,2025-01-18,2025-02-01
 Nobody,Keith Sweat Featuring Athena Cage,5,2025-01-04,2025-01-11,2025-01-18,2025-01-25,2025-02-01
 The Little Drummer Boy,The Harry Simeone Chorale,6,2025-01-04,2025-01-05,2025-01-06,2025-01-11,2025-01-18,2025-01-26
 Die With A Smile,Lady Gaga & Bruno Mars,4,2025-01-04,2025-01-11,2025-01-18,2025-02-01
-Panini,Lil Nas X,2,2025-01-04,2025-01-11
+Panini,Lil Nas X,3,2025-01-04,2025-01-11,2025-02-01
 "Hold On, We're Going Home",Drake Featuring Majid Jordan,5,2025-01-04,2025-01-11,2025-01-18,2025-01-25,2025-02-01
 All 4 Love,Color Me Badd,2,2025-01-04,2025-01-11
 It's Beginning To Look A Lot Like Christmas,Perry Como And The Fontane Sisters With Mitchell Ayres And His Orchestra,2,2025-01-04,2025-01-06
@@ -150,7 +150,7 @@ How Will I Know,Whitney Houston,3,2025-01-04,2025-01-11,2025-01-25
 "Say You, Say Me",Lionel Richie,3,2025-01-04,2025-01-18,2025-02-01
 Burning Heart,Survivor,1,2025-01-04
 Separate Lives,Phil Collins and Marilyn Martin,5,2025-01-04,2025-01-11,2025-01-18,2025-01-25,2025-02-01
-El Paso,Marty Robbins,1,2025-01-04
+El Paso,Marty Robbins,2,2025-01-04,2025-02-01
 It's All Coming Back To Me Now,Celine Dion,4,2025-01-04,2025-01-11,2025-01-18,2025-02-01
 You Learn/You Oughta Know,Alanis Morissette,4,2025-01-04,2025-01-18,2025-01-25,2025-02-01
 Safe And Sound,Capital Cities,3,2025-01-04,2025-01-11,2025-01-18
@@ -342,7 +342,7 @@ I Had Some Help,Post Malone Featuring Morgan Wallen,2,2025-01-11,2025-01-18
 Wake Me Up!,Avicii,2,2025-01-11,2025-02-01
 Adore You,Harry Styles,1,2025-01-11
 Million Dollar Baby,Tommy Richman,1,2025-01-11
-Barely Breathing,Duncan Sheik,2,2025-01-11,2025-01-18
+Barely Breathing,Duncan Sheik,3,2025-01-11,2025-01-18,2025-02-01
 You're Makin' Me High/Let It Flow,Toni Braxton,2,2025-01-11,2025-01-25
 Macarena (Bayside Boys Mix),Los Del Rio,1,2025-01-11
 Hey Jude,The Beatles,1,2025-01-11
@@ -353,7 +353,7 @@ Demons,Imagine Dragons,3,2025-01-11,2025-01-18,2025-01-25
 Timber,Pitbull Featuring Ke$ha,3,2025-01-11,2025-01-25,2025-02-01
 Don't Let Go (Love),En Vogue,2,2025-01-11,2025-02-01
 Roar,Katy Perry,2,2025-01-11,2025-01-25
-"The Theme From ""A Summer Place""",Percy Faith And His Orchestra,1,2025-01-11
+"The Theme From ""A Summer Place""",Percy Faith And His Orchestra,2,2025-01-11,2025-02-01
 Mr. Blue,The Fleetwoods,1,2025-01-11
 Crimson And Clover,Tommy James And The Shondells,3,2025-01-11,2025-01-18,2025-01-25
 Ballin',Mustard & Roddy Ricch,4,2025-01-11,2025-01-18,2025-01-25,2025-02-01
@@ -495,7 +495,7 @@ I Miss You,Klymaxx,3,2025-01-18,2025-01-25,2025-02-01
 I Want To Hold Your Hand,The Beatles,2,2025-01-18,2025-01-25
 Picture,Kid Rock Featuring Sheryl Crow Or Allison Moorer,2,2025-01-18,2025-02-01
 You Got What It Takes,Marv Johnson,2,2025-01-18,2025-01-25
-Louie Louie,The Kingsmen,2,2025-01-18,2025-01-25
+Louie Louie,The Kingsmen,3,2025-01-18,2025-01-25,2025-02-01
 Somebody That I Used To Know,Gotye Featuring Kimbra,3,2025-01-19,2025-01-26,2025-01-28
 Ho Hey,The Lumineers,1,2025-01-19
 It's Been Awhile,Staind,1,2025-01-19
@@ -578,8 +578,8 @@ Feelings,Morris Albert,1,2025-01-24
 Too Sweet,Hozier,1,2025-01-25
 I Hope,Gabby Barrett Featuring Charlie Puth,1,2025-01-25
 Life Is Good,Future Featuring Drake,1,2025-01-25
-Please Please Please,Sabrina Carpenter,1,2025-01-25
-Falling,Trevor Daniel,1,2025-01-25
+Please Please Please,Sabrina Carpenter,2,2025-01-25,2025-02-01
+Falling,Trevor Daniel,2,2025-01-25,2025-02-01
 Turn Down For What,DJ Snake & Lil Jon,2,2025-01-25,2025-02-01
 Miss You,Aaliyah,1,2025-01-25
 Conga,Miami Sound Machine,2,2025-01-25,2025-02-01
@@ -655,3 +655,23 @@ Sixteen Reasons,Connie Stevens,1,2025-02-01
 She Loves You,The Beatles,1,2025-02-01
 "10,000 Hours",Dan + Shay & Justin Bieber,1,2025-02-01
 Let It Go,Idina Menzel,1,2025-02-01
+Not Like Us,Kendrick Lamar,1,2025-02-01
+Un-Break My Heart,Toni Braxton,1,2025-02-01
+That's What Friends Are For,Dionne & Friends,1,2025-02-01
+Save The Best For Last,Vanessa Williams,1,2025-02-01
+Broken Wings,Mr. Mister,1,2025-02-01
+Sweet Nothin's,Brenda Lee,1,2025-02-01
+Walk Of Life,Dire Straits,1,2025-02-01
+We Built This City,Starship,1,2025-02-01
+Finally,CeCe Peniston,1,2025-02-01
+No Diggity,BLACKstreet (Featuring Dr. Dre),1,2025-02-01
+Your Body Is A Wonderland,John Mayer,1,2025-02-01
+The Big Hurt,Miss Toni Fisher,1,2025-02-01
+Best Of My Love,Eagles,1,2025-02-01
+Teen Angel,Mark Dinning,1,2025-02-01
+Boogie On Reggae Woman,Stevie Wonder,1,2025-02-01
+We Got Love,Bobby Rydell,1,2025-02-01
+Lay Your Hands On Me,Thompson Twins,1,2025-02-01
+"When The Going Gets Tough, The Tough Get Going",Billy Ocean,1,2025-02-01
+What You Need,INXS,1,2025-02-01
+Build Me Up Buttercup,The Foundations,1,2025-02-01

@@ -111,11 +111,14 @@ def record_plays(songs: list[tuple[str, str, str, int]]) -> None:
     plays = get_past_plays()
     one_month_ago = date.today() - timedelta(days=30)
 
-    print("RECORDING!")
     for song, artist, *_ in songs:
         past_plays = plays.get((song, artist), [0])
-        if len(past_plays) > 1 and date.fromisoformat(past_plays[-1]) <= one_month_ago:
-            past_plays = past_plays[:1]  # Reset
+        if len(past_plays) > 1: 
+            first_play = date.fromisoformat(past_plays[1])
+            if date.fromisoformat(past_plays[-1]) == date.today():  # Edge case from testing repeatedly in one day.
+                continue
+            if first_play <= one_month_ago:
+                past_plays = past_plays[:1]  # Reset
         plays[(song, artist)] = [
             int(past_plays[0]) + 1,
             *past_plays[1:],
@@ -123,15 +126,14 @@ def record_plays(songs: list[tuple[str, str, str, int]]) -> None:
         ]
 
     with open(plays_csv, "w") as plays_outfile:
-        writer = csv.reader(plays_outfile)
+        writer = csv.writer(plays_outfile)
         writer.writerow(["title", "artist", "plays", "days..."])
 
         for title_artist in plays:
             writer.writerow(
                 [
                     *title_artist,
-                    len(plays[title_artist]) - 1,
-                    *(plays[title_artist][1:]),
+                    *(plays[title_artist]),
                 ]
             )
 
