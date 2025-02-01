@@ -1,6 +1,6 @@
 """pyinstaller -F --paths=./py .\py\data\make_todaystop40.py"""
 
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 from pprint import pprint
 import os
@@ -20,7 +20,6 @@ def get_days_songs(day: Optional[date] = None) -> list[tuple[str, str, str, int]
     scores = data.get_scores()
     uris = data.get_uris()
     adjusters = data.get_adjusters()
-    penalties = data.get_penalties()
 
     days_songs = []
     for song_day, _, title, artist, *_ in data.get_song_iterator():
@@ -31,8 +30,10 @@ def get_days_songs(day: Optional[date] = None) -> list[tuple[str, str, str, int]
                     title,
                     artist,
                     uris.get(title_artist, None),
-                    round(scores.get(title_artist, 0) * adjusters.get(song_day.year, 1)
-                    - penalties.get(title_artist, 0), 2),
+                    round(
+                        scores.get(title_artist, 0) * adjusters.get(song_day.year, 1),
+                        2,
+                    ),
                 )
             )
 
@@ -43,6 +44,21 @@ def get_days_songs(day: Optional[date] = None) -> list[tuple[str, str, str, int]
 def make_top40(
     todays_songs: list[tuple[str, str, str, int]], only_return: bool = False
 ) -> list[tuple[str, str, str, int]]:
+    # Assumption: songs are sorted when they come in.
+    past_plays = data.get_past_plays()
+
+    one_month_ago = date.today() - timedelta(days=30)
+
+    def skip_song(song):
+        title_artist = tuple(song[:2])
+        days = past_plays.get(title_artist, [])
+        return (
+            (title_artist in past_plays)
+            and (len(days) >= 3)
+            and (date.fromisoformat(days[-1]) > one_month_ago)
+        )
+    todays_songs = [song for song in todays_songs if not skip_song(song)]
+
     chosen_songs = []
     chosen_songs.extend(random.sample(todays_songs[:30], 10))
     chosen_songs.extend(random.sample(todays_songs[30:60], 10))
@@ -51,7 +67,9 @@ def make_top40(
     chosen_songs = sorted(chosen_songs, key=lambda song: song[3], reverse=True)
 
     if not only_return:
-        Spotify.get_playlist("BB-Top40").set_tracks([uri for *_, uri, _ in chosen_songs])
+        Spotify.get_playlist("BB-Top40").set_tracks(
+            [uri for *_, uri, _ in chosen_songs]
+        )
     return chosen_songs
 
 
@@ -64,7 +82,9 @@ def make_top100(
     )
 
     if not only_return:
-        Spotify.get_playlist("BB-Hot100").set_tracks([uri for *_, uri, _ in top_hundred])
+        Spotify.get_playlist("BB-Hot100").set_tracks(
+            [uri for *_, uri, _ in top_hundred]
+        )
     return top_hundred
 
 
@@ -108,15 +128,16 @@ def makeplaylists(day: Optional[date] = None):
     days_songs = [song for song in get_days_songs(day) if song[2]]
     random.seed(day.strftime("%Y-%m-%d"))
 
-    is_dry_run = False
+    is_dry_run = True
     top40 = make_top40(days_songs, is_dry_run)
     top100 = make_top100(days_songs, is_dry_run)
     genres = make_genre_playlists(days_songs, is_dry_run)
 
     if is_dry_run:
         pprint(top40)
-        pprint(top100)
-        pprint(genres)
+        # pprint(top100)
+        # pprint(genres)
+
 
 if __name__ == "__main__":
     makeplaylists()

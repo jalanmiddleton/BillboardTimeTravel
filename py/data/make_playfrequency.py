@@ -29,7 +29,7 @@ while day <= end:
 
 with open(outfile_csv, "w", newline='') as outfile:
     writer = csv.writer(outfile)
-    writer.writerow(["title", "artist", "plays..."])
+    writer.writerow(["title", "artist", "plays", "days..."])
     
     for title_artist in plays:
-        writer.writerow([*title_artist, *plays[title_artist]])
+        writer.writerow([*title_artist, len(plays[title_artist]), *plays[title_artist]])

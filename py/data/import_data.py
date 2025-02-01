@@ -3,7 +3,7 @@ from datetime import date
 import os.path as path
 from typing import Generator, Optional
 
-dirpath = "C:/Users/jalan/git/BillboardTimeTravel/"
+dirpath = "/Users/justinmiddleton/git/BillboardTimeTravel/" # "C:/Users/jalan/git/BillboardTimeTravel/"
 
 
 def get_scores() -> dict[tuple[str, str], int]:
@@ -66,8 +66,15 @@ def get_genres() -> dict[tuple[str, str], list[str]]:
     return genres
 
 
-def get_penalties() -> dict[tuple[str, str], int]:
-    return {}
+def get_past_plays() -> dict[tuple[str, str], list[str]]:
+    plays_csv = path.join(dirpath, "./py/data/songplays.csv")
+    plays = {}
+    with open(plays_csv, "r") as plays_infile:
+        plays_reader = csv.reader(plays_infile)
+        next(plays_reader)
+        for song, artist, _, *dates in plays_reader:
+            plays[(song, artist)] = dates
+    return plays
 
 
 def get_song_iterator() -> Generator[tuple[date, int, str, str, int, int, int]]:
