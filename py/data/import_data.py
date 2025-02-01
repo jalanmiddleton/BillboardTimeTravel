@@ -3,7 +3,7 @@ from datetime import date, timedelta
 import os.path as path
 from typing import Any, Generator, Optional
 
-dirpath = "/Users/justinmiddleton/git/BillboardTimeTravel/"  # "C:/Users/jalan/git/BillboardTimeTravel/"
+dirpath = "C:/Users/jalan/git/BillboardTimeTravel/"
 
 
 def get_scores() -> dict[tuple[str, str], int]:
