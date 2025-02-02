@@ -137,7 +137,7 @@ def record_plays(songs: list[tuple[str, str, str, int]]) -> None:
             date.today().strftime("%Y-%m-%d"),
         ]
 
-    with open(plays_csv, "w") as plays_outfile:
+    with open(plays_csv, "w", newline='') as plays_outfile:
         writer = csv.writer(plays_outfile)
         writer.writerow(["title", "artist", "plays", "days..."])
 
