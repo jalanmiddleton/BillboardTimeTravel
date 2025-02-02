@@ -73,6 +73,12 @@ class SpotifyItem:
 
     def get_first_artist(self):
         return Spotify._get_instance().track(self.uri)["artists"][0]
+    
+    def get_popularity(self):
+        if self.type != "track":
+            return -1
+
+        return Spotify._get_instance().track(self.uri)["popularity"]
 
     def __repr__(self):
         return pformat(self.get_details())
@@ -269,3 +275,9 @@ class Spotify:
                 )
 
         return float(matrix[-1][-1]) / len(shortest)
+
+
+if __name__ == "__main__":
+    uri = "spotify:track:4PTG3Z6ehGkBFwjybzWkR8"
+    item = SpotifyItem.from_uri(uri)
+    print(item.get_popularity())

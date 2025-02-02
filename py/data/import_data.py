@@ -77,6 +77,18 @@ def get_past_plays() -> dict[tuple[str, str], list[int, Any]]:
     return plays
 
 
+def get_popularities() -> dict[tuple[str, str], list[tuple[date, int]]]:
+    pops_csv = path.join(dirpath, "./py/data/popularities.csv")
+    pops = {}
+    with open(pops_csv, "r") as pops_infile:
+        pops_reader = csv.reader(pops_infile)
+        next(pops_reader)
+        for song, artist, *days_pops in pops_reader:
+            pops[(song, artist)] = []
+            for day, pop in zip(days_pops[::2], days_pops[1::2]):
+                pops[(song, artist)].extend([date.fromisoformat(day), pop])
+    return pops
+
 def get_song_iterator() -> Generator[tuple[date, int, str, str, int, int, int]]:
     # chart_week,current_week,title,performer,last_week,peak_pos,wks_on_chart
     song_csv = path.join(dirpath, "../rwd-billboard-data/data-out/hot-100-current.csv")
