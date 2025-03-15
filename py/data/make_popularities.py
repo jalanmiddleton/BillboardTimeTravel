@@ -9,7 +9,7 @@ import data.import_data as data
 from spotify.Spotify import SpotifyItem
 
 pops_csv = "./py/data/popularities.csv"
-pops = data.get_popularities() if os.path.exists(pops_csv) else {}
+pops = data.get_popularities()
 
 one_week_ago = date.today() - timedelta(days=7)
 songs = data.get_uris()
