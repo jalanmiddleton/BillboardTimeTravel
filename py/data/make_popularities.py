@@ -11,7 +11,7 @@ from spotify.Spotify import SpotifyItem
 pops_csv = "./py/data/popularities.csv"
 pops = data.get_popularities()
 
-one_week_ago = date.today() - timedelta(days=7)
+two_week_ago = date.today() - timedelta(days=14)
 songs = data.get_uris()
 
 with open(pops_csv, "w", newline='') as pops_outfile:
