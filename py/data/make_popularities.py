@@ -26,8 +26,8 @@ with open(pops_csv, "w", newline='') as pops_outfile:
 
         # Structure: (date, pop, date, pop, ...)
         print(song_artist)
-        if not past_pops or (past_pops[-2] < one_week_ago):
-            pop = SpotifyItem.from_uri(uri).get_popularity()
+        if not past_pops or (past_pops[-2] < two_week_ago):
+            pop = SpotifyItem.from_uri(uri).popularity # .get_popularity()
             past_pops.extend([date.today(), pop])
 
         for day_idx in range(0, len(past_pops), 2):
