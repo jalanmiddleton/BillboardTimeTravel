@@ -1,706 +1,1067 @@
 title,artist,plays,days...
-Heat Waves,Glass Animals,2,2025-01-01,2025-01-16
-Stay,The Kid LAROI & Justin Bieber,3,2025-01-01,2025-01-08,2025-01-15
-Bad Habits,Ed Sheeran,1,2025-01-01
-Ghost,Justin Bieber,1,2025-01-01
-Breakaway,Kelly Clarkson,2,2025-01-01,2025-01-22
-Whoomp! (There It Is),Tag Team,1,2025-01-01
-Need To Know,Doja Cat,2,2025-01-01,2025-01-29
-She Will Be Loved,Maroon 5,5,2025-01-01,2025-01-08,2025-01-15,2025-01-22,2025-01-29
+Heat Waves,Glass Animals,8,2025-03-13,2025-03-26,2025-03-27
+Stay,The Kid LAROI & Justin Bieber,4,2025-03-26
+Bad Habits,Ed Sheeran,4,2025-02-05,2025-02-12,2025-02-19
+Ghost,Justin Bieber,3,2025-02-12,2025-03-12
+Breakaway,Kelly Clarkson,5,2025-02-12,2025-02-19,2025-02-26
+Whoomp! (There It Is),Tag Team,4,2025-02-19,2025-02-26,2025-03-19
+Need To Know,Doja Cat,6,2025-03-26
+She Will Be Loved,Maroon 5,8,2025-03-26
 It's The Most Wonderful Time Of The Year,Andy Williams,3,2025-01-01,2025-01-07,2025-01-08
 Fancy Like,Walker Hayes,4,2025-01-01,2025-01-08,2025-01-15,2025-01-22
 A Holly Jolly Christmas,Burl Ives,4,2025-01-01,2025-01-04,2025-01-07,2025-01-07
 Let Me Love You,Mario,2,2025-01-01,2025-01-08
-Boulevard Of Broken Dreams,Green Day,2,2025-01-01,2025-01-22
+Boulevard Of Broken Dreams,Green Day,6,2025-03-26
 Down Under,Men At Work,2,2025-01-01,2025-01-22
-Shame On The Moon,Bob Seger & The Silver Bullet Band,4,2025-01-01,2025-01-08,2025-01-15,2025-01-29
+Shame On The Moon,Bob Seger & The Silver Bullet Band,8,2025-03-26
 Taste Of Honey,Herb Alpert & The Tijuana Brass,1,2025-01-01
-Let's Stay Together,Al Green,1,2025-01-01
-I Knew I Loved You,Savage Garden,2,2025-01-01,2025-01-29
-Do You Really Want To Hurt Me,Culture Club,3,2025-01-01,2025-01-08,2025-01-22
-Mickey,Toni Basil,3,2025-01-01,2025-01-08,2025-01-15
-You Don't Have To Be A Star (To Be In My Show),"Marilyn McCoo & Billy Davis, Jr.",4,2025-01-01,2025-01-08,2025-01-22,2025-01-29
+Let's Stay Together,Al Green,3,2025-02-26,2025-03-11
+I Knew I Loved You,Savage Garden,7,2025-03-11,2025-03-25,2025-04-01
+Do You Really Want To Hurt Me,Culture Club,7,2025-03-26
+Mickey,Toni Basil,5,2025-02-12,2025-02-26
+You Don't Have To Be A Star (To Be In My Show),"Marilyn McCoo & Billy Davis, Jr.",7,2025-02-05,2025-02-19,2025-03-05
 "Evergreen (Love Theme From ""A Star Is Born"")",Barbra Streisand,3,2025-01-01,2025-01-08,2025-01-22
 Feliz Navidad,Jose Feliciano,4,2025-01-01,2025-01-04,2025-01-04,2025-01-08
-Say My Name,Destiny's Child,2,2025-01-01,2025-01-29
-Five O'Clock World,The Vogues,3,2025-01-01,2025-01-15,2025-01-29
-Without You,Nilsson,3,2025-01-01,2025-01-08,2025-01-15
-Grenade,Bruno Mars,1,2025-01-01
-Maneater,Daryl Hall John Oates,2,2025-01-01,2025-01-15
-You Make Me Feel Like Dancing,Leo Sayer,2,2025-01-01,2025-01-29
-Tonight's The Night (Gonna Be Alright),Rod Stewart,2,2025-01-01,2025-01-29
-Easy On Me,Adele,3,2025-01-01,2025-01-08,2025-01-15
+Say My Name,Destiny's Child,8,2025-03-11,2025-03-18,2025-03-25
+Five O'Clock World,The Vogues,4,2025-02-19
+Without You,Nilsson,7,2025-03-11,2025-03-18
+Grenade,Bruno Mars,4,2025-03-26
+Maneater,Daryl Hall John Oates,6,2025-03-19
+You Make Me Feel Like Dancing,Leo Sayer,6,2025-03-12
+Tonight's The Night (Gonna Be Alright),Rod Stewart,3,2025-02-19
+Easy On Me,Adele,5,2025-03-05,2025-03-19
 Sleigh Ride,The Ronettes,1,2025-01-01
-The Power Of Love,Celine Dion,3,2025-01-01,2025-01-08,2025-01-22
-Please Forgive Me,Bryan Adams,2,2025-01-01,2025-01-22
+The Power Of Love,Celine Dion,8,2025-03-19,2025-03-26
+Please Forgive Me,Bryan Adams,6,2025-03-26
 My Boo,Usher And Alicia Keys,4,2025-01-01,2025-01-15,2025-01-22,2025-01-29
-Africa,Toto,3,2025-01-01,2025-01-15,2025-01-22
-Torn Between Two Lovers,Mary Macgregor,4,2025-01-01,2025-01-08,2025-01-15,2025-01-29
-Hungry Like The Wolf,Duran Duran,2,2025-01-01,2025-01-29
+Africa,Toto,7,2025-03-19
+Torn Between Two Lovers,Mary Macgregor,8,2025-03-12,2025-03-26
+Hungry Like The Wolf,Duran Duran,5,2025-02-05,2025-02-19,2025-02-26
 Disco Duck (Part I),Rick Dees & His Cast Of Idiots,4,2025-01-01,2025-01-08,2025-01-15,2025-01-29
 Over And Over,The Dave Clark Five,3,2025-01-01,2025-01-15,2025-01-22
 This Kiss,Faith Hill,2,2025-01-02,2025-01-30
-Trap Queen,Fetty Wap,2,2025-01-02,2025-01-09
-Go Crazy,Chris Brown & Young Thug,3,2025-01-02,2025-01-23,2025-01-30
-"Hey, Soul Sister",Train,2,2025-01-02,2025-01-09
-Mood,24kGoldn Featuring iann dior,2,2025-01-02,2025-01-23
-The Hills,The Weeknd,2,2025-01-02,2025-01-16
+Trap Queen,Fetty Wap,5,2025-03-14
+Go Crazy,Chris Brown & Young Thug,6,2025-03-06,2025-03-13,2025-03-27
+"Hey, Soul Sister",Train,7,2025-03-13,2025-03-27
+Mood,24kGoldn Featuring iann dior,6,2025-03-13
+The Hills,The Weeknd,5,2025-03-26
 North To Alaska,Johnny Horton,3,2025-01-02,2025-01-09,2025-01-30
-Exodus,Ferrante & Teicher,3,2025-01-02,2025-01-16,2025-01-30
-TiK ToK,Ke$ha,2,2025-01-02,2025-01-30
-Stressed Out,twenty one pilots,2,2025-01-02,2025-01-09
-...Baby One More Time,Britney Spears,2,2025-01-02,2025-01-23
+Exodus,Ferrante & Teicher,6,2025-03-20
+TiK ToK,Ke$ha,4,2025-02-27,2025-03-27
+Stressed Out,twenty one pilots,3,2025-02-06
+...Baby One More Time,Britney Spears,5,2025-02-13,2025-02-20,2025-02-27
 "End Of The Road (From ""Boomerang"")",Boyz II Men,2,2025-01-02,2025-01-16
-See You Again,Wiz Khalifa Featuring Charlie Puth,3,2025-01-02,2025-01-16,2025-01-23
+See You Again,Wiz Khalifa Featuring Charlie Puth,4,2025-02-13
 Don't Walk Away,Jade,2,2025-01-02,2025-01-16
-Wonderland By Night,Bert Kaempfert And His Orchestra,1,2025-01-02
-Will You Love Me Tomorrow,The Shirelles,3,2025-01-02,2025-01-23,2025-01-30
-A Thousand Stars,Kathy Young With The Innocents,4,2025-01-02,2025-01-09,2025-01-16,2025-01-30
-Knock Three Times,Dawn,3,2025-01-02,2025-01-09,2025-01-16
+Wonderland By Night,Bert Kaempfert And His Orchestra,2,2025-02-13
+Will You Love Me Tomorrow,The Shirelles,4,2025-02-13
+A Thousand Stars,Kathy Young With The Innocents,5,2025-02-06
+Knock Three Times,Dawn,6,2025-03-06,2025-03-13,2025-03-20
 I'll Be There,Jackson 5,1,2025-01-02
-Harden My Heart,Quarterflash,2,2025-01-02,2025-01-16
-Downtown,Petula Clark,1,2025-01-02
-Angel Of Mine,Monica,2,2025-01-02,2025-01-30
+Harden My Heart,Quarterflash,5,2025-03-06,2025-03-13,2025-03-20
+Downtown,Petula Clark,3,2025-02-27,2025-03-20
+Angel Of Mine,Monica,6,2025-03-27
 Sailor (Your Home Is The Sea),Lolita,3,2025-01-02,2025-01-09,2025-01-16
-Ditty,Paperboy,4,2025-01-02,2025-01-09,2025-01-16,2025-01-30
-One Less Bell To Answer,The 5th Dimension,2,2025-01-02,2025-01-09
-Lately,Divine,3,2025-01-02,2025-01-16,2025-01-23
-Believe,Cher,3,2025-01-02,2025-01-09,2025-01-30
-Save Tonight,Eagle-Eye Cherry,4,2025-01-02,2025-01-16,2025-01-23,2025-01-30
-The Sweetest Thing (I've Ever Known),Juice Newton,4,2025-01-02,2025-01-16,2025-01-23,2025-01-30
-Empire State Of Mind,Jay-Z + Alicia Keys,3,2025-01-02,2025-01-16,2025-01-30
-Telephone,Lady Gaga Featuring Beyonce,4,2025-01-02,2025-01-09,2025-01-16,2025-01-30
+Ditty,Paperboy,5,2025-03-20
+One Less Bell To Answer,The 5th Dimension,4,2025-02-06,2025-02-13
+Lately,Divine,4,2025-02-13
+Believe,Cher,4,2025-02-06
+Save Tonight,Eagle-Eye Cherry,8,2025-03-27
+The Sweetest Thing (I've Ever Known),Juice Newton,9,2025-03-13,2025-03-20
+Empire State Of Mind,Jay-Z + Alicia Keys,7,2025-03-13
+Telephone,Lady Gaga Featuring Beyonce,7,2025-03-27
 Baby-Baby-Baby,TLC,2,2025-01-02,2025-01-09
 "I'd Die Without You (From ""Boomerang"")",P.M. Dawn,3,2025-01-02,2025-01-09,2025-01-23
-If I Ever Fall In Love,Shai,4,2025-01-02,2025-01-09,2025-01-16,2025-01-23
-Where Are U Now,Skrillex & Diplo With Justin Bieber,2,2025-01-02,2025-01-23
-He Will Break Your Heart,Jerry Butler,2,2025-01-02,2025-01-23
-In My Head,Jason Derulo,2,2025-01-02,2025-01-09
+If I Ever Fall In Love,Shai,8,2025-03-20,2025-03-27
+Where Are U Now,Skrillex & Diplo With Justin Bieber,3,2025-03-21
+He Will Break Your Heart,Jerry Butler,3,2025-02-06
+In My Head,Jason Derulo,6,2025-03-20
 For The Good Times,Ray Price,1,2025-01-02
 The Tears Of A Clown,Smokey Robinson & The Miracles,3,2025-01-02,2025-01-16,2025-01-30
 We've Only Just Begun,Carpenters,1,2025-01-02
-Truly Madly Deeply,Savage Garden,2,2025-01-03,2025-01-24
-Love Story,Taylor Swift,2,2025-01-03,2025-01-31
-Here Without You,3 Doors Down,2,2025-01-03,2025-01-10
-Unwell,matchbox twenty,2,2025-01-03,2025-01-24
+Truly Madly Deeply,Savage Garden,6,2025-03-28
+Love Story,Taylor Swift,4,2025-02-07,2025-02-28
+Here Without You,3 Doors Down,6,2025-03-13,2025-03-20
+Unwell,matchbox twenty,6,2025-03-20
 Semi-Charmed Life,Third Eye Blind,1,2025-01-03
-Shake It Off,Taylor Swift,2,2025-01-03,2025-01-24
-All For You,Sister Hazel,1,2025-01-03
-Someday,Nickelback,3,2025-01-03,2025-01-24,2025-01-31
+Shake It Off,Taylor Swift,4,2025-02-28,2025-03-14
+All For You,Sister Hazel,3,2025-03-28
+Someday,Nickelback,5,2025-03-20
 You Found Me,The Fray,4,2025-01-03,2025-01-17,2025-01-24,2025-01-31
-Disturbia,Rihanna,2,2025-01-03,2025-01-17
-All About That Bass,Meghan Trainor,2,2025-01-03,2025-01-17
-Celebration,Kool & The Gang,2,2025-01-03,2025-01-17
-Another One Bites The Dust,Queen,4,2025-01-03,2025-01-10,2025-01-17,2025-01-24
-Hot N Cold,Katy Perry,2,2025-01-03,2025-01-24
+Disturbia,Rihanna,5,2025-02-07,2025-02-14,2025-02-21
+All About That Bass,Meghan Trainor,6,2025-03-21
+Celebration,Kool & The Gang,4,2025-02-07,2025-03-07
+Another One Bites The Dust,Queen,7,2025-02-07,2025-02-21,2025-02-28
+Hot N Cold,Katy Perry,6,2025-03-14,2025-03-28
 Come Together/Something,The Beatles,3,2025-01-03,2025-01-10,2025-01-17
-Mo Money Mo Problems,The Notorious B.I.G. Featuring Puff Daddy & Mase,2,2025-01-03,2025-01-31
-Keep On Loving You,REO Speedwagon,1,2025-01-03
-Poker Face,Lady Gaga,2,2025-01-03,2025-01-24
-(Just Like) Starting Over,John Lennon,3,2025-01-03,2025-01-24,2025-01-31
-Whatever You Like,T.I.,2,2025-01-03,2025-01-31
-The First Cut Is The Deepest,Sheryl Crow,3,2025-01-03,2025-01-10,2025-01-17
-So What,P!nk,1,2025-01-03
+Mo Money Mo Problems,The Notorious B.I.G. Featuring Puff Daddy & Mase,3,2025-02-14
+Keep On Loving You,REO Speedwagon,4,2025-03-21
+Poker Face,Lady Gaga,4,2025-03-07,2025-03-14
+(Just Like) Starting Over,John Lennon,7,2025-03-28
+Whatever You Like,T.I.,4,2025-03-14
+The First Cut Is The Deepest,Sheryl Crow,6,2025-03-13
+So What,P!nk,3,2025-02-21,2025-03-07
 Everybody Have Fun Tonight,Wang Chung,2,2025-01-03,2025-01-17
-At This Moment,Billy Vera & The Beaters,3,2025-01-03,2025-01-10,2025-01-24
+At This Moment,Billy Vera & The Beaters,7,2025-03-21
 The Way It Is,Bruce Hornsby & The Range,2,2025-01-03,2025-01-31
-Walk Like An Egyptian,The Bangles,2,2025-01-03,2025-01-24
+Walk Like An Egyptian,The Bangles,5,2025-02-07,2025-02-14,2025-02-28
 The Next Time I Fall,Peter Cetera With Amy Grant,4,2025-01-03,2025-01-10,2025-01-17,2025-01-31
-All Cried Out,Allure Featuring 112,3,2025-01-03,2025-01-17,2025-01-31
-Take Me To Church,Hozier,5,2025-01-03,2025-01-10,2025-01-17,2025-01-24,2025-01-31
-Numb,Linkin Park,3,2025-01-03,2025-01-24,2025-01-31
-Heartless,Kanye West,3,2025-01-03,2025-01-10,2025-01-31
+All Cried Out,Allure Featuring 112,5,2025-02-07,2025-02-14
+Take Me To Church,Hozier,8,2025-03-28
+Numb,Linkin Park,7,2025-03-20,2025-03-27
+Heartless,Kanye West,8,2025-03-21,2025-03-28
 He's So Shy,The Pointer Sisters,3,2025-01-03,2025-01-10,2025-01-17
 Upside Down,Diana Ross,2,2025-01-03,2025-01-10
-The Tide Is High,Blondie,3,2025-01-03,2025-01-10,2025-01-24
-Passion,Rod Stewart,4,2025-01-03,2025-01-10,2025-01-17,2025-01-31
-Every Woman In The World,Air Supply,2,2025-01-03,2025-01-10
-Keep Your Hands To Yourself,The Georgia Satellites,2,2025-01-03,2025-01-10
-I Write The Songs,Barry Manilow,3,2025-01-03,2025-01-17,2025-01-24
-Golden Years,David Bowie,5,2025-01-03,2025-01-10,2025-01-17,2025-01-24,2025-01-31
-Open Your Heart,Madonna,2,2025-01-03,2025-01-31
+The Tide Is High,Blondie,8,2025-03-14,2025-03-28
+Passion,Rod Stewart,7,2025-02-14,2025-02-28,2025-03-07
+Every Woman In The World,Air Supply,6,2025-03-21
+Keep Your Hands To Yourself,The Georgia Satellites,5,2025-03-21
+I Write The Songs,Barry Manilow,7,2025-03-27
+Golden Years,David Bowie,10,2025-03-20,2025-03-27
+Open Your Heart,Madonna,5,2025-02-21,2025-02-28,2025-03-07
 Rockin' Around The Christmas Tree,Brenda Lee,5,2025-01-04,2025-01-04,2025-01-06,2025-01-09,2025-01-09
 Foolish Games/You Were Meant For Me,Jewel,6,2025-01-04,2025-01-10,2025-01-17,2025-01-24,2025-01-31,2025-02-01
 Jingle Bell Rock,Bobby Helms,5,2025-01-04,2025-01-05,2025-01-06,2025-01-09,2025-01-12
 A Bar Song (Tipsy),Shaboozey,2,2025-01-04,2025-01-18
-Someone You Loved,Lewis Capaldi,2,2025-01-04,2025-02-01
-Don't Start Now,Dua Lipa,3,2025-01-04,2025-01-25,2025-02-01
+Someone You Loved,Lewis Capaldi,6,2025-03-21,2025-03-28
+Don't Start Now,Dua Lipa,4,2025-03-21
 Dark Horse,Katy Perry Featuring Juicy J,2,2025-01-04,2025-02-01
-All Of Me,John Legend,3,2025-01-04,2025-01-18,2025-02-01
+All Of Me,John Legend,5,2025-02-08,2025-02-15
 Mack The Knife,Bobby Darin,3,2025-01-04,2025-01-18,2025-02-01
-Blurred Lines,Robin Thicke Featuring T.I. + Pharrell,2,2025-01-04,2025-02-01
-When I'm Gone,3 Doors Down,3,2025-01-04,2025-01-25,2025-02-01
-The Bones,Maren Morris,2,2025-01-04,2025-01-18
-Pompeii,Bastille,2,2025-01-04,2025-02-01
-Twisted,Keith Sweat,3,2025-01-04,2025-01-18,2025-02-01
-The Game Of Love,Santana Featuring Michelle Branch,3,2025-01-04,2025-01-25,2025-02-01
-Ignition,R. Kelly,2,2025-01-04,2025-01-25
-Counting Blue Cars,Dishwalla,3,2025-01-04,2025-01-18,2025-02-01
-The Box,Roddy Ricch,4,2025-01-04,2025-01-11,2025-01-18,2025-02-01
-Nobody,Keith Sweat Featuring Athena Cage,5,2025-01-04,2025-01-11,2025-01-18,2025-01-25,2025-02-01
-The Little Drummer Boy,The Harry Simeone Chorale,6,2025-01-04,2025-01-05,2025-01-06,2025-01-11,2025-01-18,2025-01-26
+Blurred Lines,Robin Thicke Featuring T.I. + Pharrell,3,2025-03-08
+When I'm Gone,3 Doors Down,7,2025-03-29
+The Bones,Maren Morris,6,2025-03-28
+Pompeii,Bastille,4,2025-02-22,2025-03-15
+Twisted,Keith Sweat,6,2025-02-15,2025-02-22,2025-03-08
+The Game Of Love,Santana Featuring Michelle Branch,6,2025-02-08,2025-03-01,2025-03-08
+Ignition,R. Kelly,5,2025-02-22,2025-03-01,2025-03-08
+Counting Blue Cars,Dishwalla,4,2025-03-01
+The Box,Roddy Ricch,8,2025-03-21
+Nobody,Keith Sweat Featuring Athena Cage,6,2025-02-08
+The Little Drummer Boy,The Harry Simeone Chorale,7,2025-02-09
 Die With A Smile,Lady Gaga & Bruno Mars,4,2025-01-04,2025-01-11,2025-01-18,2025-02-01
 Panini,Lil Nas X,3,2025-01-04,2025-01-11,2025-02-01
-"Hold On, We're Going Home",Drake Featuring Majid Jordan,5,2025-01-04,2025-01-11,2025-01-18,2025-01-25,2025-02-01
-All 4 Love,Color Me Badd,3,2025-01-04,2025-01-11,2025-02-01
+"Hold On, We're Going Home",Drake Featuring Majid Jordan,8,2025-03-29
+All 4 Love,Color Me Badd,5,2025-02-22,2025-03-21
 It's Beginning To Look A Lot Like Christmas,Perry Como And The Fontane Sisters With Mitchell Ayres And His Orchestra,2,2025-01-04,2025-01-06
 Love Child,Diana Ross & The Supremes,4,2025-01-04,2025-01-18,2025-01-25,2025-02-01
 Heartaches By The Number,Guy Mitchell,4,2025-01-04,2025-01-11,2025-01-18,2025-02-01
-How Will I Know,Whitney Houston,3,2025-01-04,2025-01-11,2025-01-25
-"Say You, Say Me",Lionel Richie,3,2025-01-04,2025-01-18,2025-02-01
-Burning Heart,Survivor,1,2025-01-04
+How Will I Know,Whitney Houston,5,2025-03-29
+"Say You, Say Me",Lionel Richie,6,2025-03-22
+Burning Heart,Survivor,3,2025-03-29
 Separate Lives,Phil Collins and Marilyn Martin,5,2025-01-04,2025-01-11,2025-01-18,2025-01-25,2025-02-01
-El Paso,Marty Robbins,2,2025-01-04,2025-02-01
-It's All Coming Back To Me Now,Celine Dion,4,2025-01-04,2025-01-11,2025-01-18,2025-02-01
+El Paso,Marty Robbins,4,2025-03-07,2025-03-28
+It's All Coming Back To Me Now,Celine Dion,6,2025-02-08,2025-02-22
 You Learn/You Oughta Know,Alanis Morissette,4,2025-01-04,2025-01-18,2025-01-25,2025-02-01
-Safe And Sound,Capital Cities,3,2025-01-04,2025-01-11,2025-01-18
-Wrecking Ball,Miley Cyrus,2,2025-01-04,2025-02-01
-Hanging By A Moment,Lifehouse,2,2025-01-05,2025-01-26
-Without Me,Halsey,2,2025-01-05,2025-02-02
-Family Affair,Mary J. Blige,3,2025-01-05,2025-01-12,2025-02-02
-Girls Like You,Maroon 5 Featuring Cardi B,2,2025-01-05,2025-01-19
-Apologize,Timbaland Featuring OneRepublic,1,2025-01-05
+Safe And Sound,Capital Cities,5,2025-02-08,2025-03-01
+Wrecking Ball,Miley Cyrus,3,2025-03-22
+Hanging By A Moment,Lifehouse,3,2025-02-24
+Without Me,Halsey,4,2025-02-16,2025-03-16
+Family Affair,Mary J. Blige,6,2025-02-09,2025-02-16,2025-02-23
+Girls Like You,Maroon 5 Featuring Cardi B,3,2025-03-16
+Apologize,Timbaland Featuring OneRepublic,4,2025-02-16,2025-02-23,2025-03-15
 Chantilly Lace,Big Bopper,3,2025-01-05,2025-01-12,2025-01-19
-Thrift Shop,Macklemore & Ryan Lewis Featuring Wanz,2,2025-01-05,2025-02-02
-A Lover's Question,Clyde McPhatter,3,2025-01-05,2025-01-19,2025-02-02
-Sicko Mode,Travis Scott,2,2025-01-05,2025-01-19
+Thrift Shop,Macklemore & Ryan Lewis Featuring Wanz,5,2025-03-23
+A Lover's Question,Clyde McPhatter,7,2025-03-23
+Sicko Mode,Travis Scott,5,2025-02-09,2025-02-16,2025-03-02
 Limbo Rock,Chubby Checker,1,2025-01-05
-In The End,Linkin Park,2,2025-01-05,2025-01-12
-Bubbly,Colbie Caillat,2,2025-01-05,2025-01-19
-Lucid Dreams,Juice WRLD,2,2025-01-05,2025-02-02
-I Like It,"Cardi B, Bad Bunny & J Balvin",3,2025-01-05,2025-01-19,2025-01-26
+In The End,Linkin Park,6,2025-03-16,2025-03-23,2025-03-30
+Bubbly,Colbie Caillat,5,2025-03-15,2025-03-22
+Lucid Dreams,Juice WRLD,6,2025-03-23
+I Like It,"Cardi B, Bad Bunny & J Balvin",5,2025-02-23,2025-03-02
 High Hopes,Panic! At The Disco,3,2025-01-05,2025-01-19,2025-01-26
-U Got It Bad,Usher,3,2025-01-05,2025-01-12,2025-01-19
+U Got It Bad,Usher,5,2025-02-23,2025-03-23
 The Most Beautiful Girl,Charlie Rich,3,2025-01-05,2025-01-12,2025-01-19
-Until You Come Back To Me (That's What I'm Gonna Do),Aretha Franklin,1,2025-01-05
-Our Song,Taylor Swift,2,2025-01-05,2025-01-12
+Until You Come Back To Me (That's What I'm Gonna Do),Aretha Franklin,3,2025-03-09,2025-03-23
+Our Song,Taylor Swift,5,2025-03-29
 Last Christmas,Wham!,2,2025-01-05,2025-01-06
-Lights,Ellie Goulding,3,2025-01-05,2025-01-28,2025-02-02
+Lights,Ellie Goulding,6,2025-03-10
 Pop Muzik,M,2,2025-01-05,2025-01-12
 Return To Sender,Elvis Presley With The Jordanaires,4,2025-01-05,2025-01-12,2025-01-19,2025-01-26
 One More Night,Maroon 5,3,2025-01-05,2025-01-19,2025-02-02
-Crank That (Soulja Boy),Soulja Boy Tell'em,3,2025-01-05,2025-01-12,2025-01-26
+Crank That (Soulja Boy),Soulja Boy Tell'em,5,2025-02-09,2025-02-16
 Lonesome Town,Ricky Nelson,3,2025-01-05,2025-01-19,2025-01-26
-Show And Tell,Al Wilson,3,2025-01-05,2025-01-19,2025-01-26
-The Joker,The Steve Miller Band,2,2025-01-05,2025-02-02
+Show And Tell,Al Wilson,6,2025-02-23,2025-03-02,2025-03-09
+The Joker,The Steve Miller Band,5,2025-02-16,2025-02-23,2025-03-02
 Midnight Train To Georgia,Gladys Knight And The Pips,1,2025-01-05
-Love's Theme,Love Unlimited Orchestra,2,2025-01-05,2025-01-26
-Rock With You,Michael Jackson,3,2025-01-05,2025-01-12,2025-01-26
-From A Distance,Bette Midler,3,2025-01-05,2025-01-19,2025-02-02
-Shallow,Lady Gaga & Bradley Cooper,3,2025-01-05,2025-01-26,2025-02-02
-I Will Wait,Mumford & Sons,2,2025-01-05,2025-01-19
-Telstar,The Tornadoes,4,2025-01-05,2025-01-12,2025-01-19,2025-01-26
-With You,Chris Brown,3,2025-01-05,2025-01-19,2025-02-02
-Stagger Lee,Lloyd Price,3,2025-01-05,2025-01-19,2025-01-26
-The Hawaiian Wedding Song (Ke Kali Nei Au),Andy Williams,3,2025-01-05,2025-01-12,2025-01-19
+Love's Theme,Love Unlimited Orchestra,6,2025-03-23,2025-03-30
+Rock With You,Michael Jackson,7,2025-03-22,2025-03-29
+From A Distance,Bette Midler,7,2025-03-16
+Shallow,Lady Gaga & Bradley Cooper,6,2025-02-09,2025-02-16,2025-02-23
+I Will Wait,Mumford & Sons,5,2025-03-02,2025-03-09,2025-03-30
+Telstar,The Tornadoes,5,2025-02-16
+With You,Chris Brown,6,2025-03-08,2025-03-15,2025-03-22
+Stagger Lee,Lloyd Price,7,2025-03-30
+The Hawaiian Wedding Song (Ke Kali Nei Au),Andy Williams,6,2025-03-23
 All I Want For Christmas Is You,Mariah Carey,2,2025-01-06,2025-01-09
-Last Night,Morgan Wallen,2,2025-01-06,2025-01-27
-Stick Season,Noah Kahan,2,2025-01-06,2025-01-20
-Greedy,Tate McRae,4,2025-01-06,2025-01-13,2025-01-20,2025-01-27
-Paint The Town Red,Doja Cat,1,2025-01-06
-That's What I Like,Bruno Mars,1,2025-01-06
-Agora Hills,Doja Cat,3,2025-01-06,2025-01-13,2025-01-20
-Chasing Cars,Snow Patrol,1,2025-01-06
-The Way You Love Me,Faith Hill,1,2025-01-06
-If You're Gone,matchbox twenty,1,2025-01-06
-Rockstar,Post Malone Featuring 21 Savage,2,2025-01-06,2025-01-13
+Last Night,Morgan Wallen,5,2025-03-09,2025-03-18,2025-03-23
+Stick Season,Noah Kahan,7,2025-03-30
+Greedy,Tate McRae,6,2025-03-09,2025-03-30
+Paint The Town Red,Doja Cat,3,2025-02-17,2025-03-09
+That's What I Like,Bruno Mars,3,2025-02-25,2025-03-11
+Agora Hills,Doja Cat,4,2025-02-10
+Chasing Cars,Snow Patrol,4,2025-02-24,2025-03-24
+The Way You Love Me,Faith Hill,6,2025-03-24
+If You're Gone,matchbox twenty,5,2025-02-17,2025-02-24,2025-03-03
+Rockstar,Post Malone Featuring 21 Savage,4,2025-03-31
 "Gangsta's Paradise (From ""Dangerous Minds"")",Coolio Featuring L.V.,2,2025-01-06,2025-01-27
-SexyBack,Justin Timberlake,1,2025-01-06
-Water,Tyla,3,2025-01-06,2025-01-20,2025-01-27
-Feather,Sabrina Carpenter,4,2025-01-06,2025-01-13,2025-01-20,2025-01-27
-Le Freak,Chic,2,2025-01-06,2025-01-27
+SexyBack,Justin Timberlake,3,2025-02-17,2025-03-03
+Water,Tyla,7,2025-03-30
+Feather,Sabrina Carpenter,6,2025-02-17,2025-03-09
+Le Freak,Chic,6,2025-03-17,2025-03-31
 Love Is Blue (L'amour Est Bleu),Paul Mauriat And His Orchestra,3,2025-01-06,2025-01-13,2025-01-20
-Feel It Still,Portugal. The Man,2,2025-01-06,2025-01-27
+Feel It Still,Portugal. The Man,8,2025-03-24,2025-03-31
 Hot Child In The City,Nick Gilder,1,2025-01-06
-Peppermint Twist - Part I,Joey Dee & the Starliters,1,2025-01-06
-Lips Of An Angel,Hinder,1,2025-01-06
-Far Away,Nickelback,2,2025-01-06,2025-01-13
-Kiss From A Rose,Seal,3,2025-01-06,2025-01-20,2025-01-27
-I Will Survive,Gloria Gaynor,2,2025-01-06,2025-01-20
-Too Much Heaven,Bee Gees,4,2025-01-06,2025-01-13,2025-01-20,2025-01-27
-Back To Life,Soul II Soul,3,2025-01-06,2025-01-13,2025-01-20
-Say It Right,Nelly Furtado,3,2025-01-06,2025-01-13,2025-01-20
-My Love,Justin Timberlake Featuring T.I.,1,2025-01-06
-Walk It Out,Unk,3,2025-01-06,2025-01-20,2025-01-27
-The Lion Sleeps Tonight,The Tokens,2,2025-01-06,2025-01-27
-Different Drum,Stone Poneys Featuring Linda Ronstadt,3,2025-01-06,2025-01-13,2025-01-20
-The Wanderer,Dion,2,2025-01-06,2025-01-13
-Cotton Fields,The Highwaymen,2,2025-01-06,2025-01-13
-As I Lay Me Down,Sophie B. Hawkins,1,2025-01-06
+Peppermint Twist - Part I,Joey Dee & the Starliters,4,2025-03-03,2025-03-10
+Lips Of An Angel,Hinder,4,2025-02-10,2025-02-17,2025-02-24
+Far Away,Nickelback,3,2025-02-24
+Kiss From A Rose,Seal,4,2025-02-17
+I Will Survive,Gloria Gaynor,4,2025-02-17
+Too Much Heaven,Bee Gees,5,2025-02-24
+Back To Life,Soul II Soul,7,2025-03-24
+Say It Right,Nelly Furtado,6,2025-02-10,2025-02-17,2025-02-24
+My Love,Justin Timberlake Featuring T.I.,5,2025-03-24
+Walk It Out,Unk,7,2025-03-31
+The Lion Sleeps Tonight,The Tokens,5,2025-02-10,2025-02-24
+Different Drum,Stone Poneys Featuring Linda Ronstadt,5,2025-02-10,2025-02-17
+The Wanderer,Dion,5,2025-03-31
+Cotton Fields,The Highwaymen,5,2025-03-24
+As I Lay Me Down,Sophie B. Hawkins,4,2025-03-02,2025-03-16,2025-03-30
 December,Collective Soul,2,2025-01-06,2025-01-27
-Anti-Hero,Taylor Swift,1,2025-01-07
-Something In The Orange,Zach Bryan,3,2025-01-07,2025-01-14,2025-01-28
-I'm Good (Blue),David Guetta & Bebe Rexha,3,2025-01-07,2025-01-21,2025-01-28
-Creepin',"Metro Boomin, The Weeknd & 21 Savage",3,2025-01-07,2025-01-14,2025-01-28
-Rolling In The Deep,Adele,2,2025-01-07,2025-01-21
+Anti-Hero,Taylor Swift,6,2025-03-25,2025-04-01
+Something In The Orange,Zach Bryan,6,2025-02-18,2025-02-25,2025-03-18
+I'm Good (Blue),David Guetta & Bebe Rexha,7,2025-04-01
+Creepin',"Metro Boomin, The Weeknd & 21 Savage",7,2025-03-25
+Rolling In The Deep,Adele,7,2025-03-26
 Party Rock Anthem,LMFAO Featuring Lauren Bennett & GoonRock,3,2025-01-07,2025-01-14,2025-01-21
-Calm Down,Rema & Selena Gomez,1,2025-01-07
-How Deep Is Your Love,Bee Gees,3,2025-01-07,2025-01-21,2025-01-28
-Under The Influence,Chris Brown,1,2025-01-07
+Calm Down,Rema & Selena Gomez,4,2025-04-01
+How Deep Is Your Love,Bee Gees,6,2025-03-18
+Under The Influence,Chris Brown,4,2025-03-11,2025-03-25,2025-04-01
 Bad Habit,Steve Lacy,1,2025-01-07
-Unholy,Sam Smith & Kim Petras,3,2025-01-07,2025-01-14,2025-01-21
+Unholy,Sam Smith & Kim Petras,4,2025-02-18
 We Belong Together,Mariah Carey,1,2025-01-07
-Stayin' Alive,Bee Gees,3,2025-01-07,2025-01-14,2025-01-28
-Cheap Thrills,Sia Featuring Sean Paul,1,2025-01-07
-We Found Love,Rihanna Featuring Calvin Harris,4,2025-01-07,2025-01-14,2025-01-21,2025-01-28
-100% Pure Love,Crystal Waters,2,2025-01-07,2025-01-28
+Stayin' Alive,Bee Gees,5,2025-02-11,2025-03-11
+Cheap Thrills,Sia Featuring Sean Paul,3,2025-02-25
+We Found Love,Rihanna Featuring Calvin Harris,7,2025-03-31
+100% Pure Love,Crystal Waters,5,2025-02-11,2025-03-04,2025-03-11
 Don't Cha,The Pussycat Dolls Featuring Busta Rhymes,3,2025-01-07,2025-01-14,2025-01-28
-Because Of You,Kelly Clarkson,2,2025-01-07,2025-01-28
-24K Magic,Bruno Mars,2,2025-01-07,2025-01-21
-Sexy And I Know It,LMFAO,2,2025-01-07,2025-01-28
+Because Of You,Kelly Clarkson,8,2025-03-25,2025-04-01
+24K Magic,Bruno Mars,5,2025-03-25,2025-04-01
+Sexy And I Know It,LMFAO,4,2025-03-24
 Islands In The Stream,Kenny Rogers Duet With Dolly Parton,3,2025-01-07,2025-01-14,2025-01-21
 Say Say Say,Paul McCartney And Michael Jackson,1,2025-01-07
-Treat You Better,Shawn Mendes,2,2025-01-07,2025-01-21
-Tootsee Roll,69 Boyz,4,2025-01-07,2025-01-14,2025-01-21,2025-01-28
-You Gotta Be,Des'ree,3,2025-01-07,2025-01-14,2025-01-28
-Waiting For A Star To Fall,Boy Meets Girl,3,2025-01-07,2025-01-14,2025-01-21
-Look Away,Chicago,3,2025-01-07,2025-01-14,2025-01-21
+Treat You Better,Shawn Mendes,6,2025-02-18,2025-03-04,2025-03-18
+Tootsee Roll,69 Boyz,5,2025-03-25
+You Gotta Be,Des'ree,4,2025-04-01
+Waiting For A Star To Fall,Boy Meets Girl,5,2025-02-11,2025-02-18
+Look Away,Chicago,6,2025-02-11,2025-02-18,2025-03-04
 How Can I Fall?,Breathe,3,2025-01-07,2025-01-14,2025-01-21
-Someone Like You,Adele,3,2025-01-07,2025-01-14,2025-01-21
-Straight Up,Paula Abdul,2,2025-01-07,2025-01-21
+Someone Like You,Adele,6,2025-02-25,2025-03-03,2025-03-12
+Straight Up,Paula Abdul,5,2025-03-04,2025-03-11,2025-03-18
 Making Love Out Of Nothing At All,Air Supply,1,2025-01-07
-Just The Way You Are,Billy Joel,1,2025-01-07
-Don't It Make My Brown Eyes Blue,Crystal Gayle,2,2025-01-07,2025-01-14
-Creep,TLC,3,2025-01-07,2025-01-14,2025-01-28
-I'm The Only One,Melissa Etheridge,1,2025-01-07
+Just The Way You Are,Billy Joel,7,2025-03-18,2025-03-25
+Don't It Make My Brown Eyes Blue,Crystal Gayle,3,2025-01-07,2025-01-14,2025-02-04
+Creep,TLC,6,2025-03-25
+I'm The Only One,Melissa Etheridge,4,2025-03-04,2025-03-18,2025-04-01
 Winchester Cathedral,The New Vaudeville Band,3,2025-01-07,2025-01-14,2025-01-21
-Giving You The Best That I Got,Anita Baker,3,2025-01-07,2025-01-21,2025-01-28
-Shivers,Ed Sheeran,4,2025-01-08,2025-01-15,2025-01-22,2025-01-29
-Good 4 U,Olivia Rodrigo,1,2025-01-08
-Just The Way You Are,Bruno Mars,2,2025-01-08,2025-01-29
-I Wanna Know,Joe,1,2025-01-08
-Industry Baby,Lil Nas X & Jack Harlow,2,2025-01-08,2025-01-29
+Giving You The Best That I Got,Anita Baker,5,2025-02-11,2025-02-18
+Shivers,Ed Sheeran,7,2025-03-19
+Good 4 U,Olivia Rodrigo,4,2025-02-12,2025-02-26,2025-03-05
+Just The Way You Are,Bruno Mars,5,2025-03-19
+I Wanna Know,Joe,2,2025-01-08,2025-02-05
+Industry Baby,Lil Nas X & Jack Harlow,5,2025-03-05,2025-03-12,2025-03-19
 If I Die Young,The Band Perry,2,2025-01-08,2025-01-15
-Gloria,Laura Branigan,1,2025-01-08
-Thats What I Want,Lil Nas X,2,2025-01-08,2025-01-22
-Firework,Katy Perry,1,2025-01-08
-Goodies,Ciara Featuring Petey Pablo,2,2025-01-08,2025-01-15
-I Like Dreamin',Kenny Nolan,3,2025-01-08,2025-01-15,2025-01-22
+Gloria,Laura Branigan,3,2025-03-05,2025-03-12
+Thats What I Want,Lil Nas X,3,2025-02-26
+Firework,Katy Perry,3,2025-03-05
+Goodies,Ciara Featuring Petey Pablo,5,2025-02-19,2025-03-05
+I Like Dreamin',Kenny Nolan,6,2025-02-19,2025-03-05,2025-03-12
 Someday,Sugar Ray,2,2025-01-08,2025-01-29
-All That She Wants,Ace Of Base,3,2025-01-08,2025-01-15,2025-01-29
-Scorpio,Dennis Coffey & The Detroit Guitar Band,1,2025-01-08
+All That She Wants,Ace Of Base,6,2025-03-05,2025-03-12,2025-03-26
+Scorpio,Dennis Coffey & The Detroit Guitar Band,3,2025-02-12,2025-02-19
 Lean Back,Terror Squad,3,2025-01-08,2025-01-15,2025-01-22
-Disco Inferno,50 Cent,2,2025-01-08,2025-01-29
-Teenage Dream,Katy Perry,3,2025-01-08,2025-01-15,2025-01-22
+Disco Inferno,50 Cent,4,2025-02-26
+Teenage Dream,Katy Perry,5,2025-03-05,2025-03-12
 Who Can It Be Now?,Men At Work,1,2025-01-08
-Don't Leave Me This Way,Thelma Houston,3,2025-01-08,2025-01-15,2025-01-22
-Dreamlover,Mariah Carey,1,2025-01-08
-You Can't Hurry Love,Phil Collins,1,2025-01-08
-Allentown,Billy Joel,2,2025-01-08,2025-01-22
-We Can Work It Out,The Beatles,4,2025-01-08,2025-01-15,2025-01-22,2025-01-29
-She's Just My Style,Gary Lewis And The Playboys,2,2025-01-08,2025-01-15
-For The Night,Pop Smoke Featuring Lil Baby & DaBaby,2,2025-01-09,2025-01-23
-Physical,Olivia Newton-John,2,2025-01-09,2025-01-23
+Don't Leave Me This Way,Thelma Houston,6,2025-03-19
+Dreamlover,Mariah Carey,4,2025-02-12,2025-02-19
+You Can't Hurry Love,Phil Collins,5,2025-03-26
+Allentown,Billy Joel,5,2025-03-19
+We Can Work It Out,The Beatles,7,2025-02-12,2025-02-19,2025-02-26
+She's Just My Style,Gary Lewis And The Playboys,3,2025-02-19
+For The Night,Pop Smoke Featuring Lil Baby & DaBaby,4,2025-02-20,2025-03-06
+Physical,Olivia Newton-John,4,2025-03-27
 Mr. Lonely,Bobby Vinton,2,2025-01-09,2025-01-16
 Love Yourself,Justin Bieber,2,2025-01-09,2025-01-23
-Centerfold,The J. Geils Band,3,2025-01-09,2025-01-16,2025-01-23
-Last Date,Floyd Cramer,2,2025-01-09,2025-01-23
+Centerfold,The J. Geils Band,4,2025-02-20
+Last Date,Floyd Cramer,4,2025-02-13,2025-02-20
 I Think I Love You,The Partridge Family Starring Shirley Jones Featuring David Cassidy,2,2025-01-09,2025-01-30
-Rockstar,DaBaby Featuring Roddy Ricch,1,2025-01-09
-Dazzey Duks,Duice,3,2025-01-09,2025-01-16,2025-01-30
-Waiting For A Girl Like You,Foreigner,4,2025-01-09,2025-01-16,2025-01-23,2025-01-30
+Rockstar,DaBaby Featuring Roddy Ricch,3,2025-02-13
+Dazzey Duks,Duice,6,2025-02-20,2025-02-27,2025-03-06
+Waiting For A Girl Like You,Foreigner,5,2025-02-13
 Come See About Me,The Supremes,1,2025-01-09
 Levitating,Dua Lipa Featuring DaBaby,3,2025-01-09,2025-01-23,2025-01-30
 Stay,Maurice Williams & The Zodiacs,2,2025-01-09,2025-01-30
 Are You Lonesome To-night?,Elvis Presley With The Jordanaires,3,2025-01-09,2025-01-23,2025-01-30
 "Hungry Eyes (From ""Dirty Dancing"")",Eric Carmen,2,2025-01-09,2025-01-30
-Seasons Change,Expose,2,2025-01-09,2025-01-23
-Hotline Bling,Drake,3,2025-01-09,2025-01-16,2025-01-23
+Seasons Change,Expose,4,2025-03-26
+Hotline Bling,Drake,6,2025-02-13,2025-02-20,2025-02-27
 She's Not There,The Zombies,2,2025-01-09,2025-01-23
-Wheels,The String-A-Longs,2,2025-01-09,2025-01-30
+Wheels,The String-A-Longs,4,2025-02-20,2025-03-20
 Calcutta,Lawrence Welk And His Orchestra,2,2025-01-09,2025-01-30
-Shop Around,"The Miracles (featuring Bill ""Smokey"" Robinson)",2,2025-01-09,2025-01-16
-I Don't Want To Wait,Paula Cole,1,2025-01-10
-Bohemian Rhapsody,Queen,1,2025-01-10
-Uptown Funk!,Mark Ronson Featuring Bruno Mars,2,2025-01-10,2025-01-17
-Viva La Vida,Coldplay,1,2025-01-10
-How's It Going To Be,Third Eye Blind,1,2025-01-10
-Together Again,Janet,2,2025-01-10,2025-01-24
-Raindrops Keep Fallin' On My Head,B.J. Thomas,3,2025-01-10,2025-01-17,2025-01-31
-Get Low,Lil Jon & The East Side Boyz Featuring Ying Yang Twins,2,2025-01-10,2025-01-31
-Chandelier,Sia,3,2025-01-10,2025-01-17,2025-01-31
-White Flag,Dido,3,2025-01-10,2025-01-17,2025-01-31
+Shop Around,"The Miracles (featuring Bill ""Smokey"" Robinson)",6,2025-03-27
+I Don't Want To Wait,Paula Cole,5,2025-03-28
+Bohemian Rhapsody,Queen,4,2025-02-21,2025-03-13,2025-03-21
+Uptown Funk!,Mark Ronson Featuring Bruno Mars,3,2025-02-21
+Viva La Vida,Coldplay,3,2025-02-28,2025-03-07
+How's It Going To Be,Third Eye Blind,3,2025-03-21,2025-03-28
+Together Again,Janet,5,2025-03-21
+Raindrops Keep Fallin' On My Head,B.J. Thomas,6,2025-02-14,2025-03-07,2025-03-14
+Get Low,Lil Jon & The East Side Boyz Featuring Ying Yang Twins,5,2025-02-14,2025-02-28
+Chandelier,Sia,6,2025-02-28,2025-03-07,2025-03-14
+White Flag,Dido,5,2025-02-14,2025-02-28
 Candle In The Wind 1997/Something About The Way You Look Tonight,Elton John,2,2025-01-10,2025-01-17
-Let It Rock,Kevin Rudolf Featuring Lil Wayne,2,2025-01-10,2025-01-31
+Let It Rock,Kevin Rudolf Featuring Lil Wayne,4,2025-03-14
 Love Machine (Part 1),The Miracles,1,2025-01-10
-Earned It (Fifty Shades Of Grey),The Weeknd,1,2025-01-10
+Earned It (Fifty Shades Of Grey),The Weeknd,6,2025-03-21,2025-03-28
 Leaving On A Jet Plane,"Peter, Paul & Mary",2,2025-01-10,2025-01-17
-Gives You Hell,The All-American Rejects,1,2025-01-10
-Tubthumping,Chumbawamba,3,2025-01-10,2025-01-24,2025-01-31
-My Immortal,Evanescence,2,2025-01-10,2025-01-24
+Gives You Hell,The All-American Rejects,4,2025-02-14,2025-03-07,2025-03-14
+Tubthumping,Chumbawamba,6,2025-02-28,2025-03-07,2025-03-28
+My Immortal,Evanescence,4,2025-03-06,2025-03-27
 Closer,Ne-Yo,1,2025-01-10
 Human,The Human League,2,2025-01-10,2025-01-17
-Land Of Confusion,Genesis,2,2025-01-10,2025-01-17
-Baby Boy,Beyonce Featuring Sean Paul,4,2025-01-10,2025-01-17,2025-01-24,2025-01-31
-My Love Is The Shhh!,Somethin' For The People Featuring Trina & Tamara,2,2025-01-10,2025-01-17
+Land Of Confusion,Genesis,3,2025-03-07
+Baby Boy,Beyonce Featuring Sean Paul,6,2025-02-14,2025-02-21
+My Love Is The Shhh!,Somethin' For The People Featuring Trina & Tamara,3,2025-02-14
 Word Up,Cameo,1,2025-01-10
-Lose Control,Teddy Swims,3,2025-01-11,2025-01-20,2025-01-27
-Beautiful Things,Benson Boone,3,2025-01-11,2025-01-18,2025-01-25
-Circles,Post Malone,2,2025-01-11,2025-01-25
-Counting Stars,OneRepublic,3,2025-01-11,2025-01-18,2025-01-25
+Lose Control,Teddy Swims,5,2025-02-10,2025-03-02
+Beautiful Things,Benson Boone,6,2025-03-30
+Circles,Post Malone,5,2025-02-22,2025-03-14
+Counting Stars,OneRepublic,5,2025-03-22,2025-03-29
 I Had Some Help,Post Malone Featuring Morgan Wallen,2,2025-01-11,2025-01-18
-Wake Me Up!,Avicii,2,2025-01-11,2025-02-01
-Adore You,Harry Styles,1,2025-01-11
+Wake Me Up!,Avicii,6,2025-03-29
+Adore You,Harry Styles,3,2025-02-15,2025-03-07
 Million Dollar Baby,Tommy Richman,1,2025-01-11
-Barely Breathing,Duncan Sheik,3,2025-01-11,2025-01-18,2025-02-01
+Barely Breathing,Duncan Sheik,7,2025-03-22
 You're Makin' Me High/Let It Flow,Toni Braxton,2,2025-01-11,2025-01-25
 Macarena (Bayside Boys Mix),Los Del Rio,1,2025-01-11
 Hey Jude,The Beatles,1,2025-01-11
-Truth Hurts,Lizzo,3,2025-01-11,2025-01-18,2025-02-01
-Royals,Lorde,2,2025-01-11,2025-01-18
-I Love You Always Forever,Donna Lewis,2,2025-01-11,2025-02-01
-Demons,Imagine Dragons,3,2025-01-11,2025-01-18,2025-01-25
-Timber,Pitbull Featuring Ke$ha,3,2025-01-11,2025-01-25,2025-02-01
-Don't Let Go (Love),En Vogue,2,2025-01-11,2025-02-01
-Roar,Katy Perry,2,2025-01-11,2025-01-25
-"The Theme From ""A Summer Place""",Percy Faith And His Orchestra,2,2025-01-11,2025-02-01
+Truth Hurts,Lizzo,5,2025-02-15,2025-02-22
+Royals,Lorde,4,2025-03-29
+I Love You Always Forever,Donna Lewis,6,2025-03-22
+Demons,Imagine Dragons,7,2025-03-29
+Timber,Pitbull Featuring Ke$ha,5,2025-03-29
+Don't Let Go (Love),En Vogue,4,2025-03-01,2025-03-29
+Roar,Katy Perry,4,2025-03-08,2025-03-22
+"The Theme From ""A Summer Place""",Percy Faith And His Orchestra,6,2025-03-21,2025-03-28
 Mr. Blue,The Fleetwoods,1,2025-01-11
-Crimson And Clover,Tommy James And The Shondells,3,2025-01-11,2025-01-18,2025-01-25
-Ballin',Mustard & Roddy Ricch,4,2025-01-11,2025-01-18,2025-01-25,2025-02-01
-Alive & Kicking,Simple Minds,3,2025-01-11,2025-01-25,2025-02-01
-Everything I Wanted,Billie Eilish,1,2025-01-11
+Crimson And Clover,Tommy James And The Shondells,6,2025-02-15,2025-02-22,2025-03-08
+Ballin',Mustard & Roddy Ricch,5,2025-03-21
+Alive & Kicking,Simple Minds,5,2025-02-15,2025-03-01
+Everything I Wanted,Billie Eilish,2,2025-03-28
 Dilemma,Nelly Featuring Kelly Rowland,2,2025-01-11,2025-01-18
 Taste,Sabrina Carpenter,3,2025-01-11,2025-01-25,2025-02-01
 Java,Al (He's the King) Hirt,2,2025-01-11,2025-01-25
-Unchained Melody,The Righteous Brothers,1,2025-01-12
-How You Remind Me,Nickelback,3,2025-01-12,2025-01-26,2025-02-02
+Unchained Melody,The Righteous Brothers,3,2025-03-02,2025-03-23
+How You Remind Me,Nickelback,4,2025-03-23
 Sunflower (Spider-Man: Into The Spider-Verse),Post Malone & Swae Lee,1,2025-01-12
-Better Now,Post Malone,1,2025-01-12
+Better Now,Post Malone,3,2025-02-16,2025-03-09
 Big Girls Don't Cry,Fergie,1,2025-01-12
-Eastside,"benny blanco, Halsey & Khalid",2,2025-01-12,2025-01-26
-Some Nights,fun.,3,2025-01-12,2025-01-19,2025-02-02
-Low,Flo Rida Featuring T-Pain,3,2025-01-12,2025-01-19,2025-02-02
-The Way I Are,Timbaland Featuring Keri Hilson,2,2025-01-12,2025-02-02
-"To Know Him, Is To Love Him",The Teddy Bears,1,2025-01-12
-Come And Get Your Love,Redbone,3,2025-01-12,2025-01-19,2025-02-02
-Youngblood,5 Seconds Of Summer,1,2025-01-12
+Eastside,"benny blanco, Halsey & Khalid",3,2025-03-16
+Some Nights,fun.,4,2025-02-23
+Low,Flo Rida Featuring T-Pain,6,2025-02-23,2025-03-01,2025-03-08
+The Way I Are,Timbaland Featuring Keri Hilson,5,2025-02-23,2025-03-01
+"To Know Him, Is To Love Him",The Teddy Bears,2,2025-02-23
+Come And Get Your Love,Redbone,6,2025-03-30
+Youngblood,5 Seconds Of Summer,4,2025-02-16,2025-02-23,2025-03-09
 I Feel For You,Chaka Khan,1,2025-01-12
-Differences,Ginuwine,2,2025-01-12,2025-01-19
+Differences,Ginuwine,3,2025-02-16
 Big Girls Don't Cry,The 4 Seasons,1,2025-01-12
-Jungle Boogie,Kool & The Gang,2,2025-01-12,2025-01-19
-Smoke Gets In Your Eyes,The Platters,2,2025-01-12,2025-02-02
-Top Of The World,Carpenters,3,2025-01-12,2025-01-19,2025-01-26
-Lonely Teardrops,Jackie Wilson,2,2025-01-12,2025-02-02
-Out Of Touch,Daryl Hall John Oates,3,2025-01-12,2025-01-19,2025-01-26
-Rhythm Of The Rain,The Cascades,3,2025-01-12,2025-01-19,2025-01-26
+Jungle Boogie,Kool & The Gang,5,2025-03-02,2025-03-09,2025-03-16
+Smoke Gets In Your Eyes,The Platters,6,2025-03-23
+Top Of The World,Carpenters,4,2025-02-16
+Lonely Teardrops,Jackie Wilson,6,2025-03-23,2025-03-30
+Out Of Touch,Daryl Hall John Oates,4,2025-03-02
+Rhythm Of The Rain,The Cascades,7,2025-03-30
 Bobby's Girl,Marcie Blane,3,2025-01-12,2025-01-19,2025-01-26
-Seasons In The Sun,Terry Jacks,2,2025-01-12,2025-01-26
-"Never, Never Gonna Give Ya Up",Barry White,2,2025-01-12,2025-01-26
-Gotta Travel On,Billy Grammer,3,2025-01-12,2025-01-19,2025-01-26
-Strut,Sheena Easton,2,2025-01-12,2025-02-02
-I Cried A Tear,LaVern Baker,1,2025-01-12
-Thinkin' Bout Me,Morgan Wallen,1,2025-01-13
-Flowers,Miley Cyrus,2,2025-01-13,2025-01-28
-Kill Bill,SZA,4,2025-01-13,2025-01-14,2025-01-20,2025-01-28
-Before He Cheats,Carrie Underwood,2,2025-01-13,2025-01-27
-How To Save A Life,The Fray,3,2025-01-13,2025-01-20,2025-01-27
-Meant To Be,Bebe Rexha & Florida Georgia Line,1,2025-01-13
-Kryptonite,3 Doors Down,3,2025-01-13,2025-01-20,2025-01-27
-What Was I Made For?,Billie Eilish,2,2025-01-13,2025-01-20
-Y.M.C.A.,Village People,1,2025-01-13
+Seasons In The Sun,Terry Jacks,5,2025-03-16,2025-03-23
+"Never, Never Gonna Give Ya Up",Barry White,3,2025-02-23
+Gotta Travel On,Billy Grammer,5,2025-03-16,2025-03-30
+Strut,Sheena Easton,3,2025-01-12,2025-02-02,2025-02-09
+I Cried A Tear,LaVern Baker,2,2025-03-30
+Thinkin' Bout Me,Morgan Wallen,5,2025-03-16,2025-03-18,2025-03-23
+Flowers,Miley Cyrus,8,2025-03-25,2025-04-01
+Kill Bill,SZA,6,2025-03-25
+Before He Cheats,Carrie Underwood,6,2025-02-17,2025-03-03,2025-03-17
+How To Save A Life,The Fray,5,2025-03-10,2025-03-17
+Meant To Be,Bebe Rexha & Florida Georgia Line,5,2025-03-31
+Kryptonite,3 Doors Down,5,2025-03-17,2025-03-31
+What Was I Made For?,Billie Eilish,5,2025-03-09,2025-03-16,2025-03-23
+Y.M.C.A.,Village People,3,2025-03-24
 Moon River,Henry Mancini And His Orchestra,2,2025-01-13,2025-01-27
 Missing,Everything But The Girl,1,2025-01-13
-Run-Around,Blues Traveler,1,2025-01-13
-Havana,Camila Cabello Featuring Young Thug,3,2025-01-13,2025-01-20,2025-01-27
+Run-Around,Blues Traveler,2,2025-01-13,2025-02-03
+Havana,Camila Cabello Featuring Young Thug,4,2025-03-24
 Bust A Move,Young M.C.,1,2025-01-13
-Da Ya Think I'm Sexy?,Rod Stewart,1,2025-01-13
-New Rules,Dua Lipa,2,2025-01-13,2025-01-20
-Thank You,Dido,2,2025-01-13,2025-01-20
-Again,Lenny Kravitz,2,2025-01-13,2025-01-20
-Run To Him,Bobby Vee,2,2025-01-13,2025-01-27
-Judy In Disguise (With Glasses),John Fred And The Playboys,2,2025-01-13,2025-01-27
+Da Ya Think I'm Sexy?,Rod Stewart,5,2025-02-17,2025-03-03,2025-03-17
+New Rules,Dua Lipa,4,2025-03-10
+Thank You,Dido,3,2025-01-13,2025-01-20,2025-02-10
+Again,Lenny Kravitz,3,2025-01-13,2025-01-20,2025-02-03
+Run To Him,Bobby Vee,3,2025-02-24
+Judy In Disguise (With Glasses),John Fred And The Playboys,5,2025-02-17,2025-02-24,2025-03-02
 Sharing The Night Together,Dr. Hook,3,2025-01-13,2025-01-20,2025-01-27
 What Hurts The Most,Rascal Flatts,2,2025-01-13,2025-01-20
 Unforgettable,French Montana Featuring Swae Lee,1,2025-01-13
-South Side,Moby Featuring Gwen Stefani,3,2025-01-13,2025-01-20,2025-01-27
-Anything,3T,2,2025-01-13,2025-01-27
+South Side,Moby Featuring Gwen Stefani,6,2025-03-10,2025-03-24,2025-03-31
+Anything,3T,6,2025-03-02,2025-03-16,2025-03-30
 Bodak Yellow (Money Moves),Cardi B,3,2025-01-13,2025-01-20,2025-01-27
-Thunder,Imagine Dragons,2,2025-01-13,2025-01-27
-It's Not Over,Daughtry,1,2025-01-13
-Rock And A Hard Place,Bailey Zimmerman,1,2025-01-14
-Beverly Hills,Weezer,1,2025-01-14
-Give Me Everything,"Pitbull Featuring Ne-Yo, Afrojack & Nayer",1,2025-01-14
-Don't Let Me Down,The Chainsmokers Featuring Daya,1,2025-01-14
-Feel Good Inc,Gorillaz,2,2025-01-14,2025-01-21
-Just A Kiss,Lady Antebellum,1,2025-01-14
-Unwritten,Natasha Bedingfield,1,2025-01-14
-You Light Up My Life,Debby Boone,2,2025-01-14,2025-01-21
-Say You Won't Let Go,James Arthur,1,2025-01-14
-Sail,AWOLNATION,2,2025-01-14,2025-01-18
-Wild Night,John Mellencamp With Me'Shell Ndegeocello,1,2025-01-14
-The Motto,Drake Featuring Lil Wayne,2,2025-01-14,2025-01-28
+Thunder,Imagine Dragons,6,2025-03-24
+It's Not Over,Daughtry,5,2025-03-03,2025-03-10,2025-03-24
+Rock And A Hard Place,Bailey Zimmerman,4,2025-03-11,2025-03-25
+Beverly Hills,Weezer,2,2025-01-14,2025-02-04
+Give Me Everything,"Pitbull Featuring Ne-Yo, Afrojack & Nayer",2,2025-01-14,2025-02-11
+Don't Let Me Down,The Chainsmokers Featuring Daya,5,2025-03-26
+Feel Good Inc,Gorillaz,7,2025-03-25,2025-04-01
+Just A Kiss,Lady Antebellum,4,2025-02-18
+Unwritten,Natasha Bedingfield,7,2025-04-01
+You Light Up My Life,Debby Boone,3,2025-01-14,2025-01-21,2025-02-04
+Say You Won't Let Go,James Arthur,3,2025-03-11,2025-03-18
+Sail,AWOLNATION,6,2025-03-01,2025-03-02,2025-03-08
+Wild Night,John Mellencamp With Me'Shell Ndegeocello,2,2025-03-11
+The Motto,Drake Featuring Lil Wayne,6,2025-03-31
 Devil With A Blue Dress On & Good Golly Miss Molly,Mitch Ryder And The Detroit Wheels,2,2025-01-14,2025-01-21
 Born Free,Roger Williams,1,2025-01-14
-When Can I See You,Babyface,1,2025-01-14
-Be Without You,Mary J. Blige,2,2025-01-14,2025-01-28
-Always,Bon Jovi,3,2025-01-14,2025-01-21,2025-01-28
-Good Feeling,Flo Rida,1,2025-01-14
+When Can I See You,Babyface,3,2025-01-14,2025-02-04,2025-02-11
+Be Without You,Mary J. Blige,6,2025-03-25
+Always,Bon Jovi,4,2025-03-18
+Good Feeling,Flo Rida,5,2025-03-24
 "Baby, I Love Your Way/Freebird Medley",Will To Power,2,2025-01-14,2025-01-21
-Stereo Hearts,Gym Class Heroes Featuring Adam Levine,3,2025-01-14,2025-01-21,2025-01-28
-My Prerogative,Bobby Brown,1,2025-01-14
-Karma Chameleon,Culture Club,1,2025-01-14
-Save Your Tears,The Weeknd & Ariana Grande,1,2025-01-15
-Amazed,Lonestar,1,2025-01-15
-Kiss Me More,Doja Cat Featuring SZA,2,2025-01-15,2025-01-22
-You Right,Doja Cat & The Weeknd,1,2025-01-15
-I Need To Know,Marc Anthony,2,2025-01-15,2025-01-29
-You And I,Eddie Rabbitt With Crystal Gayle,1,2025-01-15
-Higher,Creed,1,2025-01-15
-Drop It Like It's Hot,Snoop Dogg Featuring Pharrell,2,2025-01-15,2025-01-29
-Super Gremlin,Kodak Black,2,2025-01-15,2025-01-29
+Stereo Hearts,Gym Class Heroes Featuring Adam Levine,5,2025-02-25,2025-03-03
+My Prerogative,Bobby Brown,5,2025-03-25
+Karma Chameleon,Culture Club,6,2025-03-31
+Save Your Tears,The Weeknd & Ariana Grande,3,2025-03-05,2025-03-12
+Amazed,Lonestar,3,2025-02-26,2025-03-04
+Kiss Me More,Doja Cat Featuring SZA,4,2025-02-19
+You Right,Doja Cat & The Weeknd,5,2025-03-26
+I Need To Know,Marc Anthony,5,2025-02-19,2025-03-18
+You And I,Eddie Rabbitt With Crystal Gayle,5,2025-03-12,2025-03-19
+Higher,Creed,2,2025-03-25
+Drop It Like It's Hot,Snoop Dogg Featuring Pharrell,4,2025-03-19
+Super Gremlin,Kodak Black,4,2025-02-26,2025-03-12
 Montero (Call Me By Your Name),Lil Nas X,1,2025-01-15
-The Sound Of Silence,Simon & Garfunkel,3,2025-01-15,2025-01-22,2025-01-29
-Brand New Key,Melanie,2,2025-01-15,2025-01-22
-Hot Line,The Sylvers,2,2025-01-15,2025-01-22
-You Are,Lionel Richie,3,2025-01-15,2025-01-22,2025-01-29
-Family Affair,Sly & The Family Stone,1,2025-01-15
-You Are Everything,The Stylistics,1,2025-01-15
-Blinding Lights,The Weeknd,3,2025-01-16,2025-01-25,2025-01-30
-Too Close,Next,2,2025-01-16,2025-01-23
-Need You Now,Lady Antebellum,2,2025-01-16,2025-01-23
-Watch Me,Silento,1,2025-01-16
-679,Fetty Wap Featuring Remy Boyz,1,2025-01-16
+The Sound Of Silence,Simon & Garfunkel,4,2025-02-19
+Brand New Key,Melanie,3,2025-02-26
+Hot Line,The Sylvers,4,2025-02-19,2025-02-26
+You Are,Lionel Richie,7,2025-03-26
+Family Affair,Sly & The Family Stone,2,2025-01-15,2025-02-05
+You Are Everything,The Stylistics,2,2025-02-19
+Blinding Lights,The Weeknd,6,2025-03-14,2025-03-21,2025-03-27
+Too Close,Next,4,2025-03-21
+Need You Now,Lady Antebellum,6,2025-03-27
+Watch Me,Silento,4,2025-03-14
+679,Fetty Wap Featuring Remy Boyz,2,2025-03-19
 Start Me Up,The Rolling Stones,1,2025-01-16
 Jump Around,House Of Pain,1,2025-01-16
-Whatcha Say,Jason Derulo,2,2025-01-16,2025-01-30
-Angel,Sarah McLachlan,2,2025-01-16,2025-01-23
-Wings Of A Dove,Ferlin Husky,2,2025-01-16,2025-01-23
-Replay,Iyaz,2,2025-01-16,2025-01-23
-Amos Moses,Jerry Reed,3,2025-01-16,2025-01-23,2025-01-30
-Shake Your Love,Debbie Gibson,3,2025-01-16,2025-01-23,2025-01-30
+Whatcha Say,Jason Derulo,6,2025-02-27,2025-03-13,2025-03-20
+Angel,Sarah McLachlan,5,2025-02-20,2025-02-27,2025-03-06
+Wings Of A Dove,Ferlin Husky,5,2025-03-20,2025-03-27
+Replay,Iyaz,6,2025-02-27,2025-03-13,2025-03-27
+Amos Moses,Jerry Reed,6,2025-02-27,2025-03-06,2025-03-13
+Shake Your Love,Debbie Gibson,4,2025-02-27
 (I've Had) The Time Of My Life,Bill Medley & Jennifer Warnes,1,2025-01-16
-Got My Mind Set On You,George Harrison,2,2025-01-16,2025-01-30
-Tell It To My Heart(Dub),Taylor Dayne,1,2025-01-16
-How Do I Live,LeAnn Rimes,3,2025-01-17,2025-01-24,2025-01-31
-I'm Yours,Jason Mraz,3,2025-01-17,2025-01-24,2025-01-31
-Stand By Me,Ben E. King,1,2025-01-17
-Stay With Me,Sam Smith,1,2025-01-17
+Got My Mind Set On You,George Harrison,6,2025-02-20,2025-02-27,2025-03-12
+Tell It To My Heart(Dub),Taylor Dayne,4,2025-02-27,2025-03-19
+How Do I Live,LeAnn Rimes,7,2025-03-28
+I'm Yours,Jason Mraz,4,2025-03-21
+Stand By Me,Ben E. King,3,2025-02-21
+Stay With Me,Sam Smith,3,2025-03-07,2025-03-28
 Breaking Up Is Hard To Do,Neil Sedaka,2,2025-01-17,2025-01-31
-Just Dance,Lady Gaga Featuring Colby O'Donis,1,2025-01-17
-Someday We'll Be Together,Diana Ross & The Supremes,1,2025-01-17
-I Love A Rainy Night,Eddie Rabbitt,3,2025-01-17,2025-01-24,2025-01-31
-Blank Space,Taylor Swift,3,2025-01-17,2025-01-24,2025-01-31
-Don't Dream It's Over,Crowded House,2,2025-01-17,2025-01-31
-Tipsy,J-Kwon,3,2025-01-17,2025-01-24,2025-01-31
-Love On The Rocks,Neil Diamond,2,2025-01-17,2025-01-24
-Bang Bang,"Jessie J, Ariana Grande & Nicki Minaj",1,2025-01-17
+Just Dance,Lady Gaga Featuring Colby O'Donis,4,2025-02-28,2025-03-07,2025-03-14
+Someday We'll Be Together,Diana Ross & The Supremes,2,2025-01-17,2025-02-14
+I Love A Rainy Night,Eddie Rabbitt,5,2025-03-07,2025-03-14
+Blank Space,Taylor Swift,7,2025-03-28
+Don't Dream It's Over,Crowded House,5,2025-03-07,2025-03-14
+Tipsy,J-Kwon,6,2025-03-13,2025-03-20,2025-03-27
+Love On The Rocks,Neil Diamond,3,2025-02-28
+Bang Bang,"Jessie J, Ariana Grande & Nicki Minaj",4,2025-02-28,2025-03-07
 Sunny Came Home,Shawn Colvin,2,2025-01-17,2025-01-31
 Espresso,Sabrina Carpenter,2,2025-01-18,2025-02-01
 Birds Of A Feather,Billie Eilish,2,2025-01-18,2025-01-25
 "Good Luck, Babe!",Chappell Roan,2,2025-01-18,2025-01-25
-Memories,Maroon 5,2,2025-01-18,2025-02-01
-Change The World,Eric Clapton,1,2025-01-18
+Memories,Maroon 5,3,2025-03-07
+Change The World,Eric Clapton,3,2025-03-01,2025-03-22
 "I Believe I Can Fly (From ""Space Jam"")",R. Kelly,2,2025-01-18,2025-01-25
-I Miss You,Klymaxx,3,2025-01-18,2025-01-25,2025-02-01
-I Want To Hold Your Hand,The Beatles,2,2025-01-18,2025-01-25
-Picture,Kid Rock Featuring Sheryl Crow Or Allison Moorer,2,2025-01-18,2025-02-01
-You Got What It Takes,Marv Johnson,3,2025-01-18,2025-01-25,2025-02-01
-Louie Louie,The Kingsmen,3,2025-01-18,2025-01-25,2025-02-01
-Somebody That I Used To Know,Gotye Featuring Kimbra,3,2025-01-19,2025-01-26,2025-01-28
-Ho Hey,The Lumineers,1,2025-01-19
+I Miss You,Klymaxx,5,2025-03-15,2025-03-22
+I Want To Hold Your Hand,The Beatles,6,2025-03-28
+Picture,Kid Rock Featuring Sheryl Crow Or Allison Moorer,4,2025-03-01
+You Got What It Takes,Marv Johnson,7,2025-03-28
+Louie Louie,The Kingsmen,4,2025-02-22
+Somebody That I Used To Know,Gotye Featuring Kimbra,5,2025-02-18,2025-03-10
+Ho Hey,The Lumineers,3,2025-03-16
 It's Been Awhile,Staind,1,2025-01-19
-No One,Alicia Keys,2,2025-01-19,2025-01-26
-Tom Dooley,The Kingston Trio,1,2025-01-19
-The Way We Were,Barbra Streisand,1,2025-01-19
-Home,Phillip Phillips,1,2025-01-19
-Hero,Enrique Iglesias,2,2025-01-19,2025-02-02
-Wanted,Hunter Hayes,1,2025-01-19
-I Want To Know What Love Is,Foreigner,2,2025-01-19,2025-01-26
+No One,Alicia Keys,3,2025-03-15
+Tom Dooley,The Kingston Trio,3,2025-01-19,2025-02-09,2025-02-16
+The Way We Were,Barbra Streisand,4,2025-02-23,2025-03-02
+Home,Phillip Phillips,2,2025-03-09
+Hero,Enrique Iglesias,5,2025-03-09,2025-03-16,2025-03-30
+Wanted,Hunter Hayes,3,2025-01-19,2025-02-09,2025-02-16
+I Want To Know What Love Is,Foreigner,6,2025-03-02,2025-03-09,2025-03-16
 Caribbean Queen (No More Love On The Run),Billy Ocean,1,2025-01-19
-Cruel Summer,Taylor Swift,1,2025-01-20
-Dance The Night,Dua Lipa,1,2025-01-20
-Let's Twist Again,Chubby Checker,1,2025-01-20
+Cruel Summer,Taylor Swift,4,2025-03-09,2025-03-23,2025-03-30
+Dance The Night,Dua Lipa,4,2025-02-24,2025-03-09
+Let's Twist Again,Chubby Checker,2,2025-01-20,2025-02-03
 Please Mr. Postman,The Marvelettes,1,2025-01-20
-Name,Goo Goo Dolls,1,2025-01-20
-I Heard It Through The Grapevine,Gladys Knight And The Pips,1,2025-01-20
-With Arms Wide Open,Creed,1,2025-01-20
+Name,Goo Goo Dolls,6,2025-03-02,2025-03-16,2025-03-30
+I Heard It Through The Grapevine,Gladys Knight And The Pips,2,2025-01-20,2025-02-10
+With Arms Wide Open,Creed,2,2025-03-24
 Big Bad John,Jimmy Dean,1,2025-01-20
-My Life,Billy Joel,2,2025-01-20,2025-01-27
-Fire,The Pointer Sisters,2,2025-01-20,2025-01-27
-Love Shack,The B-52s,1,2025-01-20
+My Life,Billy Joel,4,2025-03-10
+Fire,The Pointer Sisters,6,2025-02-24,2025-03-10,2025-03-17
+Love Shack,The B-52s,3,2025-02-24
 Attention,Charlie Puth,1,2025-01-20
-Rockstar,Nickelback,2,2025-01-20,2025-01-27
-Little Willy,The Sweet,1,2025-01-20
-Snooze,SZA,1,2025-01-21
-Wait For U,Future Featuring Drake & Tems,2,2025-01-21,2025-01-28
-I Go Crazy,Paul Davis,2,2025-01-21,2025-01-28
-Congratulations,Post Malone Featuring Quavo,1,2025-01-21
-(Love Is) Thicker Than Water,Andy Gibb,2,2025-01-21,2025-01-28
-Moves Like Jagger,Maroon 5 Featuring Christina Aguilera,1,2025-01-21
-The Kind Of Love We Make,Luke Combs,1,2025-01-21
-Thought You Should Know,Morgan Wallen,1,2025-01-21
-Sure Thing,Miguel,1,2025-01-21
-My Humps,The Black Eyed Peas,1,2025-01-21
-Red Red Wine,UB40,2,2025-01-21,2025-01-28
-All Night Long (All Night),Lionel Richie,2,2025-01-21,2025-01-28
-Temperature,Sean Paul,1,2025-01-21
+Rockstar,Nickelback,3,2025-01-20,2025-01-27,2025-02-03
+Little Willy,The Sweet,5,2025-02-24,2025-03-03,2025-03-24
+Snooze,SZA,6,2025-03-30
+Wait For U,Future Featuring Drake & Tems,4,2025-03-04,2025-03-11
+I Go Crazy,Paul Davis,4,2025-03-11
+Congratulations,Post Malone Featuring Quavo,4,2025-02-25,2025-03-11,2025-03-18
+(Love Is) Thicker Than Water,Andy Gibb,4,2025-03-04
+Moves Like Jagger,Maroon 5 Featuring Christina Aguilera,5,2025-03-03,2025-03-10,2025-03-24
+The Kind Of Love We Make,Luke Combs,3,2025-02-25
+Thought You Should Know,Morgan Wallen,7,2025-04-01
+Sure Thing,Miguel,4,2025-02-25,2025-03-04,2025-03-25
+My Humps,The Black Eyed Peas,5,2025-02-25,2025-03-04,2025-03-18
+Red Red Wine,UB40,5,2025-03-03,2025-03-31
+All Night Long (All Night),Lionel Richie,4,2025-02-25
+Temperature,Sean Paul,3,2025-02-25,2025-03-18
 I'm A Believer,The Monkees,1,2025-01-21
-Girl You Know It's True,Milli Vanilli,2,2025-01-21,2025-01-28
+Girl You Know It's True,Milli Vanilli,6,2025-04-01
 "Kokomo (From""Cocktail"" )",The Beach Boys,2,2025-01-21,2025-01-28
-Joanna,Kool & The Gang,1,2025-01-21
-Smooth,Santana Featuring Rob Thomas,1,2025-01-22
-Breathe,Faith Hill,1,2025-01-22
+Joanna,Kool & The Gang,5,2025-03-31
+Smooth,Santana Featuring Rob Thomas,3,2025-04-01
+Breathe,Faith Hill,4,2025-04-01
 Where My Girls At?,702,2,2025-01-22,2025-01-29
-Dynamite,Taio Cruz,2,2025-01-22,2025-01-29
-Everything You Want,Vertical Horizon,2,2025-01-22,2025-01-29
+Dynamite,Taio Cruz,6,2025-03-05,2025-03-19,2025-03-26
+Everything You Want,Vertical Horizon,4,2025-02-26,2025-03-11
 Big Energy,Latto,1,2025-01-22
 American Pie (Parts I & II),Don McLean,1,2025-01-22
-Breathe Again,Toni Braxton,1,2025-01-22
-DJ Got Us Fallin' In Love,Usher Featuring Pitbull,1,2025-01-22
+Breathe Again,Toni Braxton,4,2025-03-12,2025-03-19
+DJ Got Us Fallin' In Love,Usher Featuring Pitbull,3,2025-03-19
 "Baby, Come To Me",Patti Austin A Duet With James Ingram,1,2025-01-22
-Billie Jean,Michael Jackson,2,2025-01-22,2025-01-29
+Billie Jean,Michael Jackson,4,2025-03-19,2025-03-26
 Let's Hang On!,"The 4 Seasons Featuring the ""Sound of Frankie Valli""",1,2025-01-22
-Just Like Me,Paul Revere & The Raiders Featuring Mark Lindsay,2,2025-01-22,2025-01-29
-No Matter What Shape (Your Stomach's In),The T-Bones,2,2025-01-22,2025-01-29
-Wasted On You,Morgan Wallen,2,2025-01-23,2025-01-30
-Stitches,Shawn Mendes,1,2025-01-23
-Lean On,Major Lazer & DJ Snake Featuring MO,1,2025-01-23
-Sorry,Justin Bieber,1,2025-01-23
-Need You Tonight,INXS,1,2025-01-23
-Sexy Chick,David Guetta Featuring Akon,1,2025-01-23
-Whats Poppin,"Jack Harlow Featuring DaBaby, Tory Lanez & Lil Wayne",1,2025-01-23
+Just Like Me,Paul Revere & The Raiders Featuring Mark Lindsay,5,2025-02-26,2025-03-05
+No Matter What Shape (Your Stomach's In),The T-Bones,5,2025-02-26,2025-03-05
+Wasted On You,Morgan Wallen,5,2025-03-06,2025-03-20
+Stitches,Shawn Mendes,4,2025-02-27,2025-03-05,2025-03-26
+Lean On,Major Lazer & DJ Snake Featuring MO,5,2025-03-12,2025-03-19
+Sorry,Justin Bieber,4,2025-03-19
+Need You Tonight,INXS,3,2025-03-12,2025-03-26
+Sexy Chick,David Guetta Featuring Akon,4,2025-03-06,2025-03-27
+Whats Poppin,"Jack Harlow Featuring DaBaby, Tory Lanez & Lil Wayne",2,2025-01-23,2025-02-06
 Goin' Out Of My Head,Little Anthony And The Imperials,2,2025-01-23,2025-01-30
-Apache,Jorgen Ingmann & His Guitar,1,2025-01-23
-Faith,George Michael,2,2025-01-23,2025-01-30
-"No, No, No",Destiny's Child,1,2025-01-24
+Apache,Jorgen Ingmann & His Guitar,2,2025-01-23,2025-02-06
+Faith,George Michael,5,2025-02-27,2025-03-05
+"No, No, No",Destiny's Child,3,2025-01-24,2025-02-14,2025-02-21
 I'll Be Missing You,Puff Daddy & Faith Evans Featuring 112,1,2025-01-24
-Shut Up And Dance,WALK THE MOON,2,2025-01-24,2025-01-31
-Why Don't You & I,Santana Featuring Alex Band Or Chad Kroeger,1,2025-01-24
-Lady,Kenny Rogers,1,2025-01-24
+Shut Up And Dance,WALK THE MOON,4,2025-03-28
+Why Don't You & I,Santana Featuring Alex Band Or Chad Kroeger,4,2025-02-28,2025-03-13
+Lady,Kenny Rogers,2,2025-03-14
 Woman In Love,Barbra Streisand,1,2025-01-24
-Shake You Down,Gregory Abbott,1,2025-01-24
-9 To 5,Dolly Parton,2,2025-01-24,2025-01-31
-Suga Suga,Baby Bash Featuring Frankie J,1,2025-01-24
-Love Me Like You Do,Ellie Goulding,1,2025-01-24
-Kiss On My List,Daryl Hall John Oates,2,2025-01-24,2025-01-31
-Woman,John Lennon,1,2025-01-24
+Shake You Down,Gregory Abbott,5,2025-02-28,2025-03-07,2025-03-14
+9 To 5,Dolly Parton,4,2025-02-28,2025-03-14
+Suga Suga,Baby Bash Featuring Frankie J,5,2025-03-13,2025-03-27
+Love Me Like You Do,Ellie Goulding,4,2025-03-07,2025-03-14,2025-03-28
+Kiss On My List,Daryl Hall John Oates,5,2025-02-28,2025-03-21,2025-03-28
+Woman,John Lennon,5,2025-02-28,2025-03-21,2025-03-28
 Feelings,Morris Albert,1,2025-01-24
 Too Sweet,Hozier,1,2025-01-25
-I Hope,Gabby Barrett Featuring Charlie Puth,1,2025-01-25
-Life Is Good,Future Featuring Drake,2,2025-01-25,2025-02-01
+I Hope,Gabby Barrett Featuring Charlie Puth,6,2025-03-06,2025-03-13,2025-03-14
+Life Is Good,Future Featuring Drake,4,2025-03-28
 Please Please Please,Sabrina Carpenter,2,2025-01-25,2025-02-01
-Falling,Trevor Daniel,2,2025-01-25,2025-02-01
-Turn Down For What,DJ Snake & Lil Jon,2,2025-01-25,2025-02-01
-Miss You,Aaliyah,2,2025-01-25,2025-02-01
-Conga,Miami Sound Machine,2,2025-01-25,2025-02-01
-Story Of My Life,One Direction,2,2025-01-25,2025-02-01
-Everyday People,Sly & The Family Stone,2,2025-01-25,2025-02-01
-Wherever You Will Go,The Calling,1,2025-01-26
-Drops Of Jupiter (Tell Me),Train,1,2025-01-26
-Call Me Maybe,Carly Rae Jepsen,1,2025-01-26
-Happier,Marshmello & Bastille,2,2025-01-26,2025-02-02
-Blurry,Puddle Of Mudd,1,2025-01-26
+Falling,Trevor Daniel,3,2025-01-25,2025-02-01,2025-02-15
+Turn Down For What,DJ Snake & Lil Jon,4,2025-03-01,2025-03-15
+Miss You,Aaliyah,4,2025-03-01,2025-03-08
+Conga,Miami Sound Machine,5,2025-03-01,2025-03-08
+Story Of My Life,One Direction,5,2025-03-01,2025-03-15,2025-03-29
+Everyday People,Sly & The Family Stone,4,2025-03-08
+Wherever You Will Go,The Calling,4,2025-03-02,2025-03-16,2025-03-30
+Drops Of Jupiter (Tell Me),Train,4,2025-03-02,2025-03-24
+Call Me Maybe,Carly Rae Jepsen,4,2025-03-17
+Happier,Marshmello & Bastille,3,2025-01-26,2025-02-02,2025-02-23
+Blurry,Puddle Of Mudd,4,2025-03-02,2025-03-09
 Fallin',Alicia Keys,2,2025-01-26,2025-02-02
-Dancing With A Stranger,Sam Smith & Normani,1,2025-01-26
+Dancing With A Stranger,Sam Smith & Normani,3,2025-03-30
 Careless Whisper,Wham! Featuring George Michael,1,2025-01-26
-Donna,Ritchie Valens,1,2025-01-26
-Love Song,Sara Bareilles,2,2025-01-26,2025-02-02
+Donna,Ritchie Valens,3,2025-01-26,2025-02-09,2025-02-16
+Love Song,Sara Bareilles,3,2025-03-29
 It's Only Make Believe,Conway Twitty,2,2025-01-26,2025-02-02
-Locked Out Of Heaven,Bruno Mars,1,2025-01-26
-My Sacrifice,Creed,1,2025-01-26
-Always On Time,Ja Rule Featuring Ashanti,1,2025-01-26
+Locked Out Of Heaven,Bruno Mars,5,2025-03-02,2025-03-16,2025-03-23
+My Sacrifice,Creed,5,2025-03-09,2025-03-16,2025-03-30
+Always On Time,Ja Rule Featuring Ashanti,4,2025-03-23
 Lover Boy,Billy Ocean,1,2025-01-26
-The Twist,Chubby Checker,1,2025-01-27
-Fast Car,Luke Combs,1,2025-01-27
-Lovin On Me,Jack Harlow,1,2025-01-27
-The Sweet Escape,Gwen Stefani Featuring Akon,1,2025-01-27
-I Hope You Dance,Lee Ann Womack,1,2025-01-27
+The Twist,Chubby Checker,4,2025-03-03,2025-03-17
+Fast Car,Luke Combs,4,2025-03-30
+Lovin On Me,Jack Harlow,4,2025-03-02,2025-03-09
+The Sweet Escape,Gwen Stefani Featuring Akon,6,2025-03-03,2025-03-17,2025-03-31
+I Hope You Dance,Lee Ann Womack,5,2025-03-10,2025-03-17,2025-03-31
 "Woman, Woman",The Union Gap Featuring Gary Puckett,1,2025-01-27
-(Sittin' On) The Dock Of The Bay,Otis Redding,1,2025-01-27
-A Little More Love,Olivia Newton-John,1,2025-01-27
-Irreplaceable,Beyonce,1,2025-01-27
-Smack That,Akon Featuring Eminem,1,2025-01-27
+(Sittin' On) The Dock Of The Bay,Otis Redding,5,2025-03-02,2025-03-16,2025-03-23
+A Little More Love,Olivia Newton-John,4,2025-03-03,2025-03-24
+Irreplaceable,Beyonce,5,2025-03-03,2025-03-10,2025-03-17
+Smack That,Akon Featuring Eminem,5,2025-03-17,2025-03-24
 "Sittin' Up In My Room (From ""Waiting To Exhale"")",Brandy,1,2025-01-27
-You Don't Bring Me Flowers,Barbra Streisand & Neil Diamond,1,2025-01-27
-You Proof,Morgan Wallen,1,2025-01-28
+You Don't Bring Me Flowers,Barbra Streisand & Neil Diamond,3,2025-01-27,2025-02-10,2025-02-17
+You Proof,Morgan Wallen,4,2025-03-04,2025-03-18,2025-04-01
 Hold My Hand,Hootie & The Blowfish,1,2025-01-28
-Gold Digger,Kanye West Featuring Jamie Foxx,1,2025-01-28
-Thank God,Kane Brown With Katelyn Brown,1,2025-01-28
+Gold Digger,Kanye West Featuring Jamie Foxx,3,2025-03-18,2025-04-01
+Thank God,Kane Brown With Katelyn Brown,2,2025-03-04
 Total Eclipse Of The Heart,Bonnie Tyler,1,2025-01-28
-Heathens,twenty one pilots,1,2025-01-28
-I'll Make Love To You,Boyz II Men,1,2025-01-28
-"Wild, Wild West",The Escape Club,1,2025-01-28
-Glad You Came,The Wanted,1,2025-01-28
-Owner Of A Lonely Heart,Yes,1,2025-01-28
-Photograph,Nickelback,1,2025-01-28
+Heathens,twenty one pilots,4,2025-03-25
+I'll Make Love To You,Boyz II Men,2,2025-01-28,2025-02-11
+"Wild, Wild West",The Escape Club,3,2025-01-28,2025-02-11,2025-02-18
+Glad You Came,The Wanted,3,2025-01-28,2025-02-18,2025-02-25
+Owner Of A Lonely Heart,Yes,5,2025-03-03,2025-03-24
+Photograph,Nickelback,4,2025-03-04,2025-03-11,2025-04-01
 F**k You! (Forget You),CeeLo Green,1,2025-01-29
-Levitating,Dua Lipa,1,2025-01-29
-"1, 2 Step",Ciara Featuring Missy Elliott,1,2025-01-29
+Levitating,Dua Lipa,2,2025-03-05
+"1, 2 Step",Ciara Featuring Missy Elliott,2,2025-01-29,2025-02-26
 The Sign,Ace Of Base,1,2025-01-29
 I Like It,Enrique Iglesias Featuring Pitbull,1,2025-01-29
-These Boots Are Made For Walkin',Nancy Sinatra,1,2025-01-29
+These Boots Are Made For Walkin',Nancy Sinatra,3,2025-03-12
 The Rubberband Man,The Spinners,1,2025-01-29
 Got To Be There,Michael Jackson,1,2025-01-29
-The Lion Sleeps Tonight,Robert John,1,2025-01-29
-Slide,Goo Goo Dolls,1,2025-01-30
-Use Somebody,Kings Of Leon,1,2025-01-30
-Down,Jay Sean Featuring Lil Wayne,1,2025-01-30
-Can't Feel My Face,The Weeknd,1,2025-01-30
-Before You Go,Lewis Capaldi,1,2025-01-30
-Pony Time,Chubby Checker,1,2025-01-30
-The Birds And The Bees,Jewel Akens,1,2025-01-30
-Rose Garden,Lynn Anderson,1,2025-01-30
-Yeah!,Usher Featuring Lil Jon & Ludacris,1,2025-01-31
-I Want You Back,Jackson 5,1,2025-01-31
-C'est La Vie,Robbie Nevil,1,2025-01-31
-Rude,MAGIC!,1,2025-01-31
-Sara Smile,Daryl Hall John Oates,1,2025-01-31
-Livin' On A Prayer,Bon Jovi,1,2025-01-31
-Bad Guy,Billie Eilish,1,2025-02-01
-Happy,Pharrell Williams,1,2025-02-01
-He'll Have To Go,Jim Reeves,1,2025-02-01
+The Lion Sleeps Tonight,Robert John,3,2025-01-29,2025-02-12,2025-02-26
+Slide,Goo Goo Dolls,3,2025-03-20
+Use Somebody,Kings Of Leon,4,2025-03-07
+Down,Jay Sean Featuring Lil Wayne,2,2025-03-13
+Can't Feel My Face,The Weeknd,2,2025-03-19
+Before You Go,Lewis Capaldi,4,2025-03-14
+Pony Time,Chubby Checker,4,2025-03-20
+The Birds And The Bees,Jewel Akens,3,2025-03-13
+Rose Garden,Lynn Anderson,3,2025-01-30,2025-02-06,2025-02-13
+Yeah!,Usher Featuring Lil Jon & Ludacris,4,2025-03-06,2025-03-27
+I Want You Back,Jackson 5,3,2025-03-07,2025-03-21
+C'est La Vie,Robbie Nevil,2,2025-03-14
+Rude,MAGIC!,3,2025-01-31,2025-02-07,2025-02-14
+Sara Smile,Daryl Hall John Oates,5,2025-03-06,2025-03-20
+Livin' On A Prayer,Bon Jovi,2,2025-03-28
+Bad Guy,Billie Eilish,3,2025-03-07
+Happy,Pharrell Williams,2,2025-02-01,2025-02-22
+He'll Have To Go,Jim Reeves,3,2025-03-28
 I Am Not Okay,Jelly Roll,1,2025-02-01
-Where Do You Go,No Mercy,1,2025-02-01
-Sixteen Reasons,Connie Stevens,1,2025-02-01
-She Loves You,The Beatles,1,2025-02-01
+Where Do You Go,No Mercy,2,2025-02-01,2025-02-08
+Sixteen Reasons,Connie Stevens,3,2025-03-14,2025-03-21
+She Loves You,The Beatles,4,2025-03-21
 "10,000 Hours",Dan + Shay & Justin Bieber,1,2025-02-01
-Let It Go,Idina Menzel,1,2025-02-01
+Let It Go,Idina Menzel,4,2025-03-08
 Not Like Us,Kendrick Lamar,1,2025-02-01
-Un-Break My Heart,Toni Braxton,1,2025-02-01
-That's What Friends Are For,Dionne & Friends,1,2025-02-01
-Save The Best For Last,Vanessa Williams,1,2025-02-01
+Un-Break My Heart,Toni Braxton,2,2025-02-01,2025-02-08
+That's What Friends Are For,Dionne & Friends,4,2025-03-15
+Save The Best For Last,Vanessa Williams,3,2025-03-07
 Broken Wings,Mr. Mister,1,2025-02-01
-Sweet Nothin's,Brenda Lee,1,2025-02-01
-Walk Of Life,Dire Straits,1,2025-02-01
-We Built This City,Starship,1,2025-02-01
-Finally,CeCe Peniston,1,2025-02-01
-No Diggity,BLACKstreet (Featuring Dr. Dre),1,2025-02-01
-Your Body Is A Wonderland,John Mayer,1,2025-02-01
-The Big Hurt,Miss Toni Fisher,1,2025-02-01
-Best Of My Love,Eagles,1,2025-02-01
-Teen Angel,Mark Dinning,1,2025-02-01
-Boogie On Reggae Woman,Stevie Wonder,1,2025-02-01
+Sweet Nothin's,Brenda Lee,6,2025-03-07,2025-03-21,2025-03-28
+Walk Of Life,Dire Straits,3,2025-03-22
+We Built This City,Starship,3,2025-02-01,2025-02-08,2025-02-15
+Finally,CeCe Peniston,5,2025-03-07,2025-03-14,2025-03-28
+No Diggity,BLACKstreet (Featuring Dr. Dre),6,2025-03-08,2025-03-15,2025-03-29
+Your Body Is A Wonderland,John Mayer,4,2025-03-15
+The Big Hurt,Miss Toni Fisher,3,2025-02-01,2025-02-08,2025-02-22
+Best Of My Love,Eagles,4,2025-03-08
+Teen Angel,Mark Dinning,4,2025-03-21,2025-03-28
+Boogie On Reggae Woman,Stevie Wonder,3,2025-03-08
 We Got Love,Bobby Rydell,1,2025-02-01
 Lay Your Hands On Me,Thompson Twins,1,2025-02-01
-"When The Going Gets Tough, The Tough Get Going",Billy Ocean,1,2025-02-01
-What You Need,INXS,1,2025-02-01
-Build Me Up Buttercup,The Foundations,1,2025-02-01
-Sucker,Jonas Brothers,1,2025-02-01
-I Heard It Through The Grapevine,Marvin Gaye,1,2025-02-01
-Laughter In The Rain,Neil Sedaka,1,2025-02-01
-Team,Lorde,1,2025-02-01
-Best Day Of My Life,American Authors,1,2025-02-01
-Handy Man,Jimmy Jones,1,2025-02-01
-(Hey Won't You Play) Another Somebody Done Somebody Wrong Song,B.J. Thomas,1,2025-02-01
-Secret Lovers,Atlantic Starr,1,2025-02-01
-Party All The Time,Eddie Murphy,1,2025-02-01
+"When The Going Gets Tough, The Tough Get Going",Billy Ocean,4,2025-03-08,2025-03-29
+What You Need,INXS,6,2025-03-08,2025-03-15,2025-03-22
+Build Me Up Buttercup,The Foundations,5,2025-03-08,2025-03-22,2025-03-29
+Sucker,Jonas Brothers,3,2025-03-23
+I Heard It Through The Grapevine,Marvin Gaye,3,2025-02-01,2025-02-08,2025-02-15
+Laughter In The Rain,Neil Sedaka,3,2025-02-01,2025-02-15,2025-03-01
+Team,Lorde,5,2025-03-15,2025-03-22
+Best Day Of My Life,American Authors,6,2025-03-15,2025-03-22,2025-03-29
+Handy Man,Jimmy Jones,4,2025-03-07,2025-03-14
+(Hey Won't You Play) Another Somebody Done Somebody Wrong Song,B.J. Thomas,6,2025-03-08,2025-03-15,2025-03-22
+Secret Lovers,Atlantic Starr,4,2025-03-22
+Party All The Time,Eddie Murphy,3,2025-02-01,2025-02-15,2025-03-01
 Never,Heart,1,2025-02-01
 Dance Monkey,Tones And I,1,2025-02-01
-Loyal,Chris Brown Featuring Lil Wayne & French Montana Or Too $hort Or Tyga,1,2025-02-01
-Wichita Lineman,Glen Campbell,1,2025-02-01
-Easy Lover,Philip Bailey With Phil Collins,1,2025-02-02
-Love Lies,Khalid & Normani,1,2025-02-02
+Loyal,Chris Brown Featuring Lil Wayne & French Montana Or Too $hort Or Tyga,3,2025-03-22
+Wichita Lineman,Glen Campbell,2,2025-02-01,2025-02-08
+Easy Lover,Philip Bailey With Phil Collins,3,2025-03-09
+Love Lies,Khalid & Normani,3,2025-02-02,2025-02-09,2025-02-16
 I Just Called To Say I Love You,Stevie Wonder,1,2025-02-02
-The First Time,Surface,1,2025-02-02
-High Enough,Damn Yankees,1,2025-02-02
-Please Don't Go,KC And The Sunshine Band,1,2025-02-02
-Livin' It Up,Ja Rule Featuring Case,1,2025-02-02
-Ain't It Funny,Jennifer Lopez Featuring Ja Rule,1,2025-02-02
-Tattoo,Jordin Sparks,1,2025-02-02
-7 Rings,Ariana Grande,1,2025-02-02
-Let Me Be There,Olivia Newton-John,1,2025-02-02
+The First Time,Surface,6,2025-03-09,2025-03-16,2025-03-30
+High Enough,Damn Yankees,4,2025-03-23
+Please Don't Go,KC And The Sunshine Band,3,2025-02-02,2025-02-09,2025-02-16
+Livin' It Up,Ja Rule Featuring Case,2,2025-02-02,2025-02-16
+Ain't It Funny,Jennifer Lopez Featuring Ja Rule,3,2025-02-02,2025-02-09,2025-02-16
+Tattoo,Jordin Sparks,5,2025-03-15,2025-03-29
+7 Rings,Ariana Grande,5,2025-03-09,2025-03-23
+Let Me Be There,Olivia Newton-John,4,2025-03-09
 Goodbye Yellow Brick Road,Elton John,1,2025-02-02
 Just Don't Want To Be Lonely,The Main Ingredient,1,2025-02-02
 Just You 'n' Me,Chicago,1,2025-02-02
 Queen Of The Hop,Bobby Darin,1,2025-02-02
-Rock On,David Essex,1,2025-02-02
+Rock On,David Essex,3,2025-03-09,2025-03-30
+Fukumean,Gunna,2,2025-02-03,2025-02-10
+Only Wanna Be With You,Hootie & The Blowfish,4,2025-03-09
+Stumblin' In,Suzi Quatro & Chris Norman,5,2025-03-17,2025-03-31
+I Was Made For Dancin',Leif Garrett,4,2025-03-24
+How Am I Supposed To Live Without You,Michael Bolton,6,2025-03-10,2025-03-24,2025-03-31
+Case Of The Ex (Whatcha Gonna Do),Mya,3,2025-02-03,2025-02-10,2025-02-24
+Midnight In Moscow,Kenny Ball and his Jazzmen,2,2025-02-03,2025-02-10
+Boogaloo Down Broadway,The Fantastic Johnny C,1,2025-02-03
+Hey! Baby,Bruce Channel,5,2025-03-10,2025-03-31
+I Second That Emotion,Smokey Robinson & The Miracles,1,2025-02-03
+La - La - Means I Love You,The Delfonics,1,2025-02-03
+Sunshine Of Your Love,Cream,1,2025-02-03
+Goodbye Cruel World,James Darren,2,2025-02-03,2025-02-10
+Green Tambourine,The Lemon Pipers,3,2025-02-03,2025-02-10,2025-02-17
+Never Be The Same,Camila Cabello,4,2025-03-10,2025-03-17,2025-03-31
+Can't Stop The Feeling!,Justin Timberlake,2,2025-02-04,2025-02-11
+I Like You (A Happier Song),Post Malone Featuring Doja Cat,3,2025-02-04,2025-02-11,2025-02-18
+Super Bass,Nicki Minaj,1,2025-02-04
+About Damn Time,Lizzo,2,2025-02-04,2025-02-11
+Night Fever,Bee Gees,5,2025-03-25,2025-04-01
+Stronger (What Doesn't Kill You),Kelly Clarkson,4,2025-03-17,2025-03-24
+Footloose,Kenny Loggins,6,2025-03-10,2025-03-24,2025-03-31
+Sunroof,Nicky Youre & dazy,2,2025-02-04,2025-02-11
+We Are The Champions,Queen,5,2025-03-18,2025-04-01
+Broccoli,D.R.A.M. Featuring Lil Yachty,2,2025-02-04,2025-02-25
+Drive By,Train,5,2025-03-10,2025-03-17,2025-03-31
+Without You,David Guetta Featuring Usher,5,2025-03-17,2025-03-31
+Location,Khalid,4,2025-03-11,2025-03-18
+Let Me Love You,DJ Snake Featuring Justin Bieber,3,2025-03-25
+Vegas,Doja Cat,1,2025-02-04
+Jump,Van Halen,3,2025-03-24,2025-03-31
+Talking In Your Sleep,The Romantics,5,2025-03-17,2025-03-24,2025-03-31
+I Guess That's Why They Call It The Blues,Elton John,3,2025-03-17,2025-03-24
+Since U Been Gone,Kelly Clarkson,2,2025-02-05,2025-03-05
+Back At One,Brian McKnight,3,2025-03-18,2025-03-25
+California Dreamin',The Mamas & The Papas,3,2025-02-05,2025-02-12,2025-02-19
+Heart Of Gold,Neil Young,2,2025-02-05,2025-02-12
+Hero,Mariah Carey,3,2025-02-05,2025-02-12,2025-02-19
+Thong Song,Sisqo,3,2025-02-05,2025-02-12,2025-02-19
+Let Me Go,3 Doors Down,4,2025-03-19,2025-03-26
+Because The Night,"10,000 Maniacs",2,2025-03-26
+Get It On Tonite,Montell Jordan,2,2025-02-05,2025-02-26
+One Right Now,Post Malone & The Weeknd,3,2025-02-05,2025-02-19,2025-02-26
+Rock The Casbah,The Clash,1,2025-02-05
+Sexual Healing,Marvin Gaye,1,2025-02-05
+You Belong With Me,Taylor Swift,4,2025-03-20
+Every Morning,Sugar Ray,1,2025-02-06
+You've Lost That Lovin' Feelin',The Righteous Brothers,4,2025-03-13,2025-03-27
+Dedicated To The One I Love,The Shirelles,3,2025-03-13
+Wishing Well,Terence Trent D'Arby,4,2025-03-26
+Angel,Aerosmith,3,2025-03-12
+Rump Shaker,Wreckx-N-Effect,5,2025-03-13,2025-03-20
+Real Love,Mary J. Blige,4,2025-03-13,2025-03-20
+Shake It Up,The Cars,4,2025-03-27
+Party In The U.S.A.,Miley Cyrus,3,2025-02-06,2025-02-27,2025-03-06
+Haven't Met You Yet,Michael Buble,5,2025-03-13,2025-03-27
+Breakeven,The Script,4,2025-03-13
+Two Princes,Spin Doctors,2,2025-03-13
+Turn Your Love Around,George Benson,5,2025-03-13,2025-03-20
+You Make Me Wanna...,Usher,3,2025-03-14
+Thinking Out Loud,Ed Sheeran,2,2025-02-07,2025-02-28
+Hey Ya!,OutKast,3,2025-02-07,2025-02-21,2025-03-06
+Make Em' Say Uhh!,"Master P Feat. Fiend, Silkk The Shocker, Mia X & Mystikal",2,2025-02-07,2025-02-21
+Nothing's Gonna Stop Us Now,Starship,4,2025-03-21
+Freek-A-Leek,Petey Pablo,3,2025-02-07,2025-02-14,2025-02-21
+You Give Love A Bad Name,Bon Jovi,2,2025-02-07,2025-02-14
+Stand Up,Ludacris Featuring Shawnna,2,2025-02-07,2025-02-21
+Venus,The Shocking Blue,2,2025-02-07,2025-02-28
+Whole Lotta Love,Led Zeppelin,3,2025-02-07,2025-02-14,2025-02-28
+I'm Not The Only One,Sam Smith,2,2025-02-07,2025-02-14
+The Winner Takes It All,ABBA,2,2025-02-07,2025-02-28
+Master Blaster (Jammin'),Stevie Wonder,1,2025-02-07
+What About Us,Total,1,2025-02-07
+Nice & Slow,Usher,1,2025-02-07
+Senorita,Shawn Mendes & Camila Cabello,1,2025-02-08
+Tears In Heaven,Eric Clapton,6,2025-03-14,2025-03-21,2025-03-28
+Talk Dirty,Jason Derulo Featuring 2 Chainz,3,2025-03-29
+Before The Next Teardrop Falls,Freddy Fender,4,2025-03-15
+Can't Nobody Hold Me Down,Puff Daddy (Featuring Mase),5,2025-03-22,2025-03-29
+Running Bear,Johnny Preston,2,2025-03-21
+Let's Go All The Way,Sly Fox,3,2025-03-22
+Radioactive,Imagine Dragons,5,2025-03-16,2025-03-23
+Do That To Me One More Time,Captain & Tennille,3,2025-02-09,2025-02-23,2025-03-01
+Paralyzer,Finger Eleven,3,2025-03-29
+Drip Too Hard,Lil Baby & Gunna,5,2025-03-16,2025-03-23
+16 Candles,The Crests,2,2025-03-23
+It's Just A Matter Of Time,Brook Benton,3,2025-03-16
+Venus,Frankie Avalon,3,2025-03-30
+One Night,Elvis Presley,1,2025-02-09
+Vampire,Olivia Rodrigo,4,2025-03-30
+Waiting On The World To Change,John Mayer,2,2025-02-10,2025-02-17
+Twistin' The Night Away,Sam Cooke,3,2025-02-10,2025-02-17,2025-02-24
+Love Song,Tesla,3,2025-03-17
+Let There Be Drums,Sandy Nelson,1,2025-02-10
+Can't Help Falling In Love,Elvis Presley With The Jordanaires,3,2025-02-10,2025-02-17,2025-03-03
+Let Me In,The Sensations,3,2025-02-10,2025-02-24,2025-03-10
+Dance To The Music,Sly & The Family Stone,1,2025-02-10
+Another Night,Real McCoy,3,2025-02-11,2025-02-18,2025-03-04
+Move Along,The All-American Rejects,3,2025-03-18
+Cuff It,Beyonce,3,2025-02-11,2025-02-18,2025-03-04
+Uptown Girl,Billy Joel,2,2025-02-11,2025-02-18
+Lay Down Sally,Eric Clapton,4,2025-03-18,2025-03-25,2025-04-01
+Freak Like Me,Adina Howard,5,2025-03-18,2025-03-25,2025-04-01
+Bad And Boujee,Migos Featuring Lil Uzi Vert,2,2025-03-18
+You And Me,Lifehouse,6,2025-03-18,2025-03-19,2025-03-26
+I Gotcha,Joe Tex,3,2025-02-12,2025-02-26,2025-03-11
+Mr. Roboto,Styx,4,2025-03-19
+Maria Maria,Santana Featuring The Product G&B,2,2025-02-12,2025-02-19
+My Love Is Your Love,Whitney Houston,2,2025-02-12,2025-02-26
+Raise Your Glass,P!nk,3,2025-03-26
+Essence,Wizkid Featuring Justin Bieber & Tems,2,2025-02-12,2025-02-26
+I Will Always Love You,Whitney Houston,3,2025-02-13,2025-02-20,2025-03-03
+Endless Summer Nights,Richard Marx,3,2025-03-19
+Heaven Is A Place On Earth,Belinda Carlisle,1,2025-02-13
+I Can't Go For That (No Can Do),Daryl Hall John Oates,4,2025-03-27
+My House,Flo Rida,5,2025-03-19,2025-03-26
+Can I Get A...,Jay-Z Featuring Amil (Of Major Coinz) & Ja,5,2025-03-20,2025-03-27
+Leader Of The Band,Dan Fogelberg,4,2025-03-20
+Let's Groove,"Earth, Wind & Fire",3,2025-02-13,2025-02-20,2025-03-06
+I Love Rock 'N Roll,Joan Jett & the Blackhearts,3,2025-03-27
+Could've Been,Tiffany,3,2025-03-26
+Sugar,Maroon 5,4,2025-03-21
+Bridge Over Troubled Water,Simon & Garfunkel,2,2025-02-14,2025-02-21
+No Guidance,Chris Brown Featuring Drake,3,2025-02-15,2025-02-22,2025-03-07
+Underneath It All,No Doubt Featuring Lady Saw,3,2025-02-15,2025-03-01,2025-03-08
+My Eyes Adored You,Frankie Valli,4,2025-03-22
+Shining Star,"Earth, Wind & Fire",4,2025-03-22
+Can't Hold Us,Macklemore & Ryan Lewis Featuring Ray Dalton,3,2025-02-16,2025-03-09,2025-03-16
+Bennie And The Jets,Elton John,2,2025-02-16,2025-03-16
+Call Me,Blondie,5,2025-03-22,2025-03-29
+Love Takes Time,Mariah Carey,3,2025-02-16,2025-02-23,2025-03-02
+It's Time,Imagine Dragons,4,2025-03-23
+I Remember Everything,Zach Bryan Featuring Kacey Musgraves,3,2025-03-30
+Shape Of You,Ed Sheeran,4,2025-03-25
+Perfect,Ed Sheeran,5,2025-03-24,2025-03-31
+Don't Know Much,Linda Ronstadt (Featuring Aaron Neville),3,2025-02-17,2025-03-03,2025-03-10
+Pump Up The Jam,Technotronic Featuring Felly,3,2025-02-17,2025-02-24,2025-03-03
+Spooky,Classics IV,2,2025-02-17,2025-02-24
+Body Like A Back Road,Sam Hunt,2,2025-04-01
+Despacito,Luis Fonsi & Daddy Yankee Featuring Justin Bieber,3,2025-02-18,2025-03-04,2025-03-11
+You're Beautiful,James Blunt,2,2025-02-18,2025-02-25
+"Dance, Dance",Fall Out Boy,2,2025-04-01
+Angel In Your Arms,Hot,2,2025-02-19,2025-03-05
+Lonely No More,Rob Thomas,2,2025-02-19,2025-03-19
+The Ballad Of The Green Berets,SSgt Barry Sadler,3,2025-03-26
+Bring It All To Me,Blaque,1,2025-02-19
+Whatta Man,Salt-N-Pepa Featuring En Vogue,1,2025-02-19
+Rhythm Is A Dancer,Snap!,2,2025-02-20,2025-03-06
+King Of The Road,Roger Miller,1,2025-02-20
+Freak Me,Silk,2,2025-02-20,2025-03-06
+Never Gonna Give You Up,Rick Astley,4,2025-03-26
+You're Still The One,Shania Twain,2,2025-03-28
+This Love,Maroon 5,2,2025-02-21,2025-02-28
+The Way You Move,OutKast Featuring Sleepy Brown,2,2025-03-27
+I Love You,Climax Blues Band,4,2025-03-28
+I Don't Wanna Know,Mario Winans Featuring Enya & P. Diddy,3,2025-02-21,2025-02-28,2025-03-06
+Let Her Go,Passenger,2,2025-03-29
+The Freshmen,The Verve Pipe,3,2025-02-22,2025-03-01,2025-03-22
+Get Busy,Sean Paul,2,2025-02-22,2025-03-08
+Kiss,Prince And The Revolution,2,2025-02-22,2025-03-01
+In Da Club,50 Cent,3,2025-02-22,2025-03-08,2025-03-15
+Manic Monday,The Bangles,3,2025-02-22,2025-03-01,2025-03-08
+Talk,Khalid,2,2025-02-23,2025-03-16
+She's Gone,Daryl Hall John Oates,3,2025-03-30
+What's Luv?,Fat Joe Featuring Ashanti,3,2025-02-23,2025-03-09,2025-03-23
+The End Of The World,Skeeter Davis,3,2025-02-23,2025-03-09,2025-03-16
+Pink Shoe Laces,Dodie Stevens,4,2025-03-30
+Hooked On A Feeling,Blue Swede,2,2025-02-23,2025-03-09
+Nobody Knows,The Tony Rich Project,2,2025-03-30
+God's Plan,Drake,3,2025-03-31
+Tie A Yellow Ribbon Round The Ole Oak Tree,Dawn Featuring Tony Orlando,4,2025-03-31
+Ride Wit Me,Nelly Featuring City Spud,3,2025-02-24,2025-03-10,2025-03-17
+Sending All My Love,Linear,4,2025-03-31
+The Ballad Of Bonnie And Clyde,Georgie Fame,1,2025-02-24
+As It Was,Harry Styles,2,2025-04-01
+Believer,Imagine Dragons,4,2025-04-01
+We Are Young,fun. Featuring Janelle Monae,3,2025-03-31
+I Know,Dionne Farris,4,2025-04-01
+Bad Day,Daniel Powter,4,2025-04-01
+Emotion,Samantha Sang,3,2025-02-25,2025-03-04,2025-03-11
+Nice To Be With You,Gallery,1,2025-02-26
+Over And Over,Nelly Featuring Tim McGraw,1,2025-02-26
+I Gotta Feeling,The Black Eyed Peas,1,2025-02-27
+Bad Romance,Lady Gaga,3,2025-02-27,2025-03-06,2025-03-20
+Kiss Me,Sixpence None The Richer,3,2025-02-27,2025-03-06,2025-03-20
+Work,Rihanna Featuring Drake,2,2025-02-27,2025-03-19
+Key Largo,Bertie Higgins,3,2025-02-27,2025-03-13,2025-03-20
+867-5309/jenny,Tommy Tutone,3,2025-02-27,2025-03-06,2025-03-13
+"Get Outta My Dreams, Get Into My Car",Billy Ocean,2,2025-02-27,2025-03-05
+So Emotional,Whitney Houston,1,2025-02-27
+Spirit In The Sky,Norman Greenbaum,2,2025-02-28,2025-03-28
+The Lady In Red,Chris de Burgh,1,2025-02-28
+Damn!,YoungBloodZ Featuring Lil Jon,2,2025-02-28,2025-03-13
+Just The Two Of Us,"Grover Washington, Jr. With Bill Withers",1,2025-02-28
+Live Your Life,T.I. Featuring Rihanna,1,2025-02-28
+Hard To Say I'm Sorry,Az Yet Featuring Peter Cetera,3,2025-03-01,2025-03-15,2025-03-22
+Lost In Love,Air Supply,3,2025-03-01,2025-03-08,2025-03-15
+Cars,Gary Numan,3,2025-03-01,2025-03-08,2025-03-15
+Addicted To Love,Robert Palmer,3,2025-03-01,2025-03-08,2025-03-29
+Ooh Aah... Just A Little Bit,Gina G,3,2025-03-01,2025-03-08,2025-03-15
+Da' Dip,Freak Nasty,2,2025-03-01,2025-03-08
+This Is Your Night,Amber,2,2025-03-01,2025-03-08
+Beautiful,Christina Aguilera,3,2025-03-01,2025-03-15,2025-03-29
+Need A Favor,Jelly Roll,2,2025-03-02,2025-03-16
+A Thousand Miles,Vanessa Carlton,2,2025-03-02,2025-03-09
+Foolish,Ashanti,2,2025-03-02,2025-03-23
+Just Give Me A Reason,P!nk Featuring Nate Ruess,3,2025-03-02,2025-03-16,2025-03-23
+When I Was Your Man,Bruno Mars,2,2025-03-02,2025-03-23
+What Makes You Beautiful,One Direction,3,2025-03-03,2025-03-17,2025-03-31
+Drift Away,Dobie Gray,2,2025-03-03,2025-03-17
+Thriller,Michael Jackson,3,2025-03-03,2025-03-10,2025-03-17
+Hold Me Now,Thompson Twins,3,2025-03-03,2025-03-10,2025-03-17
+Wild Ones,Flo Rida Featuring Sia,2,2025-03-03,2025-03-17
+Mine,Bazzi,1,2025-03-03
+I Wanna Love You,Akon Featuring Snoop Dogg,2,2025-03-03,2025-03-10
+Fergalicious,Fergie,2,2025-03-03,2025-03-17
+Set Fire To The Rain,Adele,2,2025-03-03,2025-03-12
+I Won't Give Up,Jason Mraz,2,2025-03-03,2025-03-10
+I Wanna Be Rich,Calloway,1,2025-03-03
+Closer,The Chainsmokers Featuring Halsey,3,2025-03-04,2025-03-18,2025-03-25
+There You Go,P!nk,3,2025-03-04,2025-03-11,2025-04-01
+Ridin',Chamillionaire Featuring Krayzie Bone,3,2025-03-04,2025-03-18,2025-03-25
+All I Wanna Do,Sheryl Crow,3,2025-03-04,2025-03-11,2025-03-18
+Take A Bow,Madonna,2,2025-03-04,2025-03-11
+The Living Years,Mike + The Mechanics,2,2025-03-04,2025-03-25
+Jack And Jill,Raydio,3,2025-03-04,2025-03-11,2025-03-25
+Can't Smile Without You,Barry Manilow,3,2025-03-04,2025-03-11,2025-03-18
+Feels So Good,Chuck Mangione,3,2025-03-04,2025-03-11,2025-03-18
+Wild Thing,Tone-Loc,2,2025-03-04,2025-03-18
+Mr. Brightside,The Killers,2,2025-03-05,2025-03-12
+Little Red Corvette,Prince,3,2025-03-05,2025-03-12,2025-03-19
+Come To My Window,Melissa Etheridge,3,2025-03-05,2025-03-12,2025-03-26
+Don't You Want Me,Jody Watley,1,2025-03-05
+Naughty Girls (Need Love Too),Samantha Fox,2,2025-03-05,2025-03-12
+(You're My) Soul And Inspiration,The Righteous Brothers,1,2025-03-05
+E.T.,Katy Perry Featuring Kanye West,1,2025-03-05
+Just Can't Get Enough,The Black Eyed Peas,2,2025-03-05,2025-03-26
+If I Ain't Got You,Alicia Keys,2,2025-03-06,2025-03-27
+Nobody's Supposed To Be Here,Deborah Cox,1,2025-03-06
+This Diamond Ring,Gary Lewis And The Playboys,3,2025-03-06,2025-03-13,2025-03-20
+Can't You Hear My Heartbeat,Herman's Hermits,2,2025-03-06,2025-03-13
+Mr. Bojangles,Nitty Gritty Dirt Band,3,2025-03-06,2025-03-20,2025-03-27
+What's Going On,Marvin Gaye,3,2025-03-06,2025-03-13,2025-03-20
+It's Impossible,Perry Como,1,2025-03-06
+Groove Me,King Floyd,1,2025-03-06
+Don't Worry,Marty Robbins,3,2025-03-06,2025-03-13,2025-03-20
+"Hello, Dolly!",Louis Armstrong And The All Stars,3,2025-03-07,2025-03-14,2025-03-21
+I Don't Care,Ed Sheeran & Justin Bieber,1,2025-03-07
+Return Of The Mack,Mark Morrison,3,2025-03-08,2025-03-15,2025-03-22
+Cruisin',Smokey Robinson,1,2025-03-08
+I'm With You,Avril Lavigne,2,2025-03-08,2025-03-22
+Mirrors,Justin Timberlake,2,2025-03-09,2025-03-23
+My Happiness,Connie Francis,2,2025-03-09,2025-03-16
+The Loco-Motion,Grand Funk,1,2025-03-09
+Mashed Potato Time,Dee Dee Sharp,2,2025-03-10,2025-03-31
+Buy U A Drank (Shawty Snappin'),T-Pain Featuring Yung Joc,2,2025-03-10,2025-03-17
+Hello,Lionel Richie,3,2025-03-10,2025-03-17,2025-03-31
+Psycho,Post Malone Featuring Ty Dolla $ign,3,2025-03-10,2025-03-17,2025-03-24
+Follow Me,Uncle Kracker,3,2025-03-10,2025-03-17,2025-03-24
+Starships,Nicki Minaj,1,2025-03-10
+Against All Odds (Take A Look At Me Now),Phil Collins,3,2025-03-10,2025-03-17,2025-03-31
+Borderline,Madonna,3,2025-03-10,2025-03-24,2025-03-31
+Slow Twistin',Chubby Checker (with Dee Dee Sharp),2,2025-03-10,2025-03-17
+Over My Head (Cable Car),The Fray,3,2025-03-11,2025-03-18,2025-03-25
+You Sang To Me,Marc Anthony,3,2025-03-11,2025-03-18,2025-03-25
+"Dance, Dance, Dance (Yowsah, Yowsah, Yowsah)",Chic,2,2025-03-11,2025-04-01
+Favorite Song,Toosii,3,2025-03-11,2025-03-18,2025-03-25
+The Lover In Me,Sheena Easton,2,2025-03-11,2025-03-25
+Needed Me,Rihanna,2,2025-03-12,2025-03-26
+I'm Your Boogie Man,KC And The Sunshine Band,2,2025-03-12,2025-03-19
+Separate Ways (Worlds Apart),Journey,2,2025-03-12,2025-03-19
+Hazy Shade Of Winter,The Bangles,2,2025-03-12,2025-03-19
+Cake By The Ocean,DNCE,2,2025-03-12,2025-03-19
+I Took A Pill In Ibiza,Mike Posner,3,2025-03-12,2025-03-19,2025-03-26
+Jumpman,Drake & Future,2,2025-03-12,2025-03-26
+"Me, Myself & I",G-Eazy x Bebe Rexha,3,2025-03-12,2025-03-19,2025-03-26
+Don't You Want Me,The Human League,1,2025-03-13
+Joy To The World,Three Dog Night,1,2025-03-13
+"More, More, More Pt. 1",Andrea True Connection,3,2025-03-13,2025-03-20,2025-03-27
+My Girl,The Temptations,2,2025-03-13,2025-03-27
+Intentions,Justin Bieber Featuring Quavo,2,2025-03-14,2025-03-21
+Greenfields,The Brothers Four,2,2025-03-14,2025-03-21
+I Know You Want Me (Calle Ocho),Pitbull,2,2025-03-14,2025-03-21
+Bleeding Love,Leona Lewis,3,2025-03-15,2025-03-22,2025-03-29
+Bring Me To Life,Evanescence Featuring Paul McCoy,1,2025-03-15
+Pocketful Of Sunshine,Natasha Bedingfield,2,2025-03-15,2025-03-22
+Ride Like The Wind,Christopher Cross,3,2025-03-15,2025-03-22,2025-03-29
+Something About You,Level 42,3,2025-03-15,2025-03-22,2025-03-29
+Teardrops On My Guitar,Taylor Swift,3,2025-03-15,2025-03-24,2025-03-29
+Dizzy,Tommy Roe,3,2025-03-15,2025-03-22,2025-03-29
+The Monster,Eminem Featuring Rihanna,1,2025-03-15
+My Hitta,YG Featuring Jeezy & Rich Homie Quan,1,2025-03-15
+Don't Stop The Music,Rihanna,1,2025-03-15
+"Yes, I'm Ready",Teri DeSario With K.C.,1,2025-03-15
+"Working My Way Back To You/Forgive Me, Girl",The Spinners,1,2025-03-15
+Wow.,Post Malone,2,2025-03-16,2025-03-23
+Dancing Machine,Jackson 5,3,2025-03-16,2025-03-23,2025-03-30
+Young Girl,The Union Gap Featuring Gary Puckett,2,2025-03-16,2025-03-23
+Spiders & Snakes,Jim Stafford,3,2025-03-16,2025-03-23,2025-03-30
+Girlfriend,Avril Lavigne,2,2025-03-17,2025-03-31
+He Wasn't Man Enough,Toni Braxton,1,2025-03-18
+Cowgirls,Morgan Wallen Featuring ERNEST,1,2025-03-18
+Eternal Flame,The Bangles,2,2025-03-18,2025-04-01
+Good Lovin',The Young Rascals,2,2025-03-19,2025-03-26
+Work From Home,Fifth Harmony Featuring Ty Dolla $ign,2,2025-03-19,2025-03-26
+What Do You Mean?,Justin Bieber,1,2025-03-19
+The Reason,Hoobastank,1,2025-03-20
+Burn,Usher,1,2025-03-20
+Break Your Heart,Taio Cruz Featuring Ludacris,1,2025-03-20
+Misty Blue,Dorothy Moore,2,2025-03-20,2025-03-27
+Cast Your Fate To The Wind,Sounds Orchestral,1,2025-03-20
+Hitchin' A Ride,Vanity Fare,2,2025-03-21,2025-03-28
+My Lovin' (You're Never Gonna Get It),En Vogue,1,2025-03-21
+Thank God I'm A Country Boy,John Denver,1,2025-03-22
+Crazy Little Thing Called Love,Queen,2,2025-03-22,2025-03-29
+West End Girls,Pet Shop Boys,2,2025-03-22,2025-03-29
+Hair,The Cowsills,1,2025-03-22
+Old Town Road,Lil Nas X Featuring Billy Ray Cyrus,2,2025-03-23,2025-03-30
+Honey,Bobby Goldsboro,2,2025-03-23,2025-03-30
+Ironic,Alanis Morissette,2,2025-03-23,2025-03-30
+Stranger On The Shore,Mr. Acker Bilk,1,2025-03-24
+Home,Daughtry,1,2025-03-24
+Hold On,Wilson Phillips,2,2025-03-24,2025-03-31
+Playground In My Mind,Clint Holmes,2,2025-03-24,2025-03-31
+Reunited,Peaches & Herb,1,2025-03-24
+What Would You Do?,City High,2,2025-03-24,2025-03-31
+"Sugar, We're Goin' Down",Fall Out Boy,1,2025-03-25
+Run It!,Chris Brown,1,2025-03-25
+Something Just Like This,The Chainsmokers & Coldplay,2,2025-03-25,2025-04-01
+The First Time Ever I Saw Your Face,Roberta Flack,1,2025-03-25
+All This Time,Tiffany,1,2025-03-25
+The Way You Love Me,Karyn White,2,2025-03-25,2025-04-01
+Forever Your Girl,Paula Abdul,2,2025-03-25,2025-04-01
+No Scrubs,TLC,1,2025-03-27
+Leave The Door Open,Silk Sonic (Bruno Mars & Anderson .Paak),1,2025-03-27
+Just My Imagination (Running Away With Me),The Temptations,1,2025-03-27
+Runaway,Del Shannon,1,2025-03-27
+A Hundred Pounds Of Clay,Gene McDaniels,1,2025-03-27
+Fly Away,Lenny Kravitz,1,2025-03-27
+Quit Playing Games (With My Heart),Backstreet Boys,1,2025-03-28
+Twist And Shout,The Beatles,1,2025-03-28
+Get Ready,Rare Earth,1,2025-03-28
+Gettin' Jiggy Wit It,Will Smith,1,2025-03-28
+Aquarius/Let The Sunshine In (The Flesh Failures),The 5th Dimension,1,2025-03-29
+I Can't Wait,Nu Shooz,1,2025-03-29
+On My Own,Patti LaBelle & Michael McDonald,1,2025-03-29
+I Want You,Savage Garden,1,2025-03-29
+Love Won't Let Me Wait,Major Harris,1,2025-03-29
+Lollipop,Lil Wayne Featuring Static Major,1,2025-03-29
+Mouth,Merril Bainbridge,1,2025-03-29
+Surfin' U.S.A.,The Beach Boys,1,2025-03-30
+We Can't Be Friends (Wait For Your Love),Ariana Grande,1,2025-03-30
+C'mon N' Ride It (The Train),Quad City DJ's,1,2025-03-30
+TSOP (The Sound Of Philadelphia),MFSB Featuring The Three Degrees,1,2025-03-30
+Soldier Boy,The Shirelles,1,2025-03-31
+Everybody Talks,Neon Trees,1,2025-03-31
+The Candy Man,"Sammy Davis, Jr. with The Mike Curb Congregation",1,2025-04-01
+"Betcha By Golly, Wow","The Stylistics Featuring Russell Thompkins,Jr.",1,2025-04-01
+If I Can't Have You,Yvonne Elliman,1,2025-04-01
+Baby Come Back,Player,1,2025-04-01
+You're The One That I Want,John Travolta & Olivia Newton-John,1,2025-04-01
