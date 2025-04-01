@@ -3,7 +3,8 @@ from datetime import date, timedelta
 import os.path as path
 from typing import Any, Generator, Optional
 
-dirpath = "C:/Users/jalan/git/BillboardTimeTravel/"
+# dirpath = "C:/Users/jalan/git/BillboardTimeTravel/"
+dirpath = "/Users/justinmiddleton/git/BillboardTimeTravel/"
 
 
 def get_scores() -> dict[tuple[str, str], int]:
@@ -77,7 +78,7 @@ def get_past_plays() -> dict[tuple[str, str], list[int, Any]]:
     return plays
 
 
-def get_popularities() -> dict[tuple[str, str], list[tuple[date, int]]]:
+def get_popularities() -> dict[tuple[str, str], list[Any]]:
     pops_csv = path.join(dirpath, "./py/data/popularities.csv")
     pops = {}
     with open(pops_csv, "r") as pops_infile:

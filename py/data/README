@@ -6,4 +6,5 @@ python py/data/search_songlinks.py
 python py/data/make_top40score.py
 python py/data/make_songdebut.py
 python py/data/make_genres.py
+python py/data/make_popularities.py
 ```

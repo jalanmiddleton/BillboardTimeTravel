@@ -11,7 +11,7 @@ from spotify.Spotify import SpotifyItem
 pops_csv = "./py/data/popularities.csv"
 pops = data.get_popularities()
 
-one_week_ago = date.today() - timedelta(days=7)
+two_week_ago = date.today() - timedelta(days=14)
 songs = data.get_uris()
 
 with open(pops_csv, "w", newline='') as pops_outfile:
@@ -22,11 +22,12 @@ with open(pops_csv, "w", newline='') as pops_outfile:
         if not uri:
             continue
 
-        print(song_artist)
         past_pops = pops.get(song_artist, [])
 
-        if not past_pops or (past_pops[-2] < one_week_ago):
-            pop = SpotifyItem.from_uri(uri).get_popularity()
+        # Structure: (date, pop, date, pop, ...)
+        print(song_artist)
+        if not past_pops or (past_pops[-2] < two_week_ago):
+            pop = SpotifyItem.from_uri(uri).popularity # .get_popularity()
             past_pops.extend([date.today(), pop])
 
         for day_idx in range(0, len(past_pops), 2):
