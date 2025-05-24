@@ -190,7 +190,7 @@ title,artist,weeks_in_top_40
 2U,David Guetta Featuring Justin Bieber,7
 3,Britney Spears,17
 3 A.M. Eternal,The KLF,12
-30 For 30,SZA With Kendrick Lamar,12
+30 For 30,SZA With Kendrick Lamar,20
 32 Flavors,Alana Davis,3
 34+35,Ariana Grande,27
 34+35,Ariana Grande Feat. Doja Cat & Megan Thee Stallion,1
@@ -251,7 +251,7 @@ title,artist,weeks_in_top_40
 99 Problems,JAY-Z,2
 @ MEH,Playboi Carti,1
 A Banda (Ah Bahn-da),Herb Alpert & The Tijuana Brass,3
-A Bar Song (Tipsy),Shaboozey,49
+A Bar Song (Tipsy),Shaboozey,57
 A Bay Bay,Hurricane Chris,14
 A Beautiful Morning,The Rascals,11
 A Better Love,Londonbeat,7
@@ -366,7 +366,7 @@ ABC,Jackson 5,12
 AM To PM,Christina Milian,7
 AMG,"Gabito Ballesteros, Peso Pluma & Natanael Cano",3
 ANNIE's SONG,John Denver,11
-APT.,ROSE & Bruno Mars,22
+APT.,ROSE & Bruno Mars,30
 ATLiens,OutKast,3
 ATM,J. Cole,1
 Aaron's Party (Come Get It),Aaron Carter,3
@@ -377,7 +377,7 @@ About Damn Time,Lizzo,29
 About This Thing Called Love,Fabian,3
 About Us,Brooke Hogan Featuring Paul Wall,1
 Abra-Ca-Dabra,The De Franco Family,4
-Abracadabra,Lady Gaga,7
+Abracadabra,Lady Gaga,15
 Abracadabra,The Steve Miller Band,19
 "Abraham, Martin And John",Dion,12
 "Abraham, Martin And John",Moms Mabley,2
@@ -582,6 +582,7 @@ All The Stars,Kendrick Lamar & SZA,19
 "All The Things (Your Man Won't Do) (From ""Don't Be A Menace..."")",Joe,15
 All The Things She Said,Simple Minds,6
 All The Things She Said,t.A.T.u.,9
+All The Way,BigXthaPlug Featuring Bailey Zimmerman,6
 All The Way Up,"Fat Joe, Remy Ma & Jay Z Featuring French Montana & Infared",8
 All The Young Dudes,Mott The Hoople,3
 All This Love,Debarge,10
@@ -655,6 +656,7 @@ Always Together,Al Martino,4
 Always Together,The Dells,5
 Am I Dreaming,Ol Skool [Featuring Keith Sweat & Xscape],3
 Am I Losing You,Jim Reeves,4
+Am I Okay?,Megan Moroney,1
 Am I That Easy To Forget,Debbie Reynolds,8
 Am I That Easy To Forget,Engelbert Humperdinck,7
 Am I The Man,Jackie Wilson,2
@@ -765,7 +767,7 @@ Antichrist,Eminem,1
 Anticipation,Carly Simon,10
 Antidote,Travis Scott,19
 Antisocial,Ed Sheeran & Travis Scott,1
-Anxiety,Doechii,2
+Anxiety,Doechii,10
 Any Day Now,Ronnie Milsap,9
 Any Day Now (My Wild Beautiful Bird),Chuck Jackson,6
 Any Man Of Mine/Whose Bed Have Your Boots Been Under?,Shania Twain,7
@@ -880,6 +882,7 @@ Axel F,Harold Faltermeyer,12
 Aye,Lil Uzi Vert Featuring Travis Scott,1
 Ayo,Chris Brown & Tyga,15
 Ayo Technology,50 Cent Featuring Justin Timberlake & Timbaland,17
+Azizam,Ed Sheeran,2
 B**** Better Have My Money,Rihanna,21
 B-A-B-Y,Carla Thomas,10
 B.B.D. (I Thought It Was Me)?,Bell Biv DeVoe,5
@@ -1012,6 +1015,7 @@ Backfield In Motion,Mel And Tim,11
 Backin' It Up,Pardison Fontaine Featuring Cardi B,1
 Backseat,New Boyz Featuring The Cataracs & Dev,11
 Backstage,Gene Pitney,5
+Backup Plan,Bailey Zimmerman & Luke Combs,1
 Backyard Boogie,Mack 10,6
 Bad,Michael Jackson,11
 Bad,Wale Featuring Tiara Thomas Or Rihanna,21
@@ -1029,6 +1033,7 @@ Bad Boy For Life,"P. Diddy, Black Rob & Mark Curry",3
 "Bad Case Of Loving You (Doctor, Doctor)",Robert Palmer,10
 Bad Day,Daniel Powter,27
 Bad Decisions,"benny blanco, BTS & Snoop Dogg",1
+Bad Dreams,Teddy Swims,6
 Bad Energy,Juice WRLD,1
 Bad Girl,Madonna,3
 Bad Girl,Neil Sedaka,4
@@ -1166,7 +1171,7 @@ Beautiful People,Kenny O'Dell,2
 Beautiful Soul,Jesse McCartney,16
 Beautiful Stranger,Madonna,9
 Beautiful Sunday,Daniel Boone,11
-Beautiful Things,Benson Boone,60
+Beautiful Things,Benson Boone,68
 Beauty And A Beat,Justin Bieber Featuring Nicki Minaj,19
 Beauty And The Beast,Celine Dion And Peabo Bryson,14
 Beauty Is Only Skin Deep,The Temptations,9
@@ -1184,7 +1189,7 @@ Because The Night,Patti Smith Group,9
 Because They're Young,Duane Eddy And The Rebels,12
 "Because You Loved Me (From ""Up Close & Personal"")",Celine Dion,30
 Bed,J. Holiday,17
-Bed Chem,Sabrina Carpenter,24
+Bed Chem,Sabrina Carpenter,25
 Bed Of Roses,Bon Jovi,15
 BedRock,Young Money Featuring Lloyd,23
 Beds Are Burning,Midnight Oil,9
@@ -1325,7 +1330,7 @@ Bimbombey,Jimmie Rodgers,10
 Bird Dance Beat,The Trashmen,4
 Bird Dog,The Everly Brothers,15
 Birdland,Chubby Checker,7
-Birds Of A Feather,Billie Eilish,44
+Birds Of A Feather,Billie Eilish,52
 Birds Of A Feather,The Raiders,6
 Birthday,Katy Perry,11
 Birthday,Underground Sunshine,5
@@ -1419,6 +1424,7 @@ Blue Money,Van Morrison,8
 Blue Moon,The Marcels,11
 "Blue Morning, Blue Day",Foreigner,8
 Blue On Blue,Bobby Vinton,10
+Blue Strips,Jessie Murph,4
 Blue Suede Shoes,Johnny Rivers,2
 Blue Tango,Bill Black's Combo,7
 Blue Tint,Drake,1
@@ -1644,6 +1650,7 @@ Burn It Down,Linkin Park,1
 Burnin' For You,Blue Oyster Cult,3
 Burnin' It Down,Jason Aldean,16
 Burnin' Up,Jonas Brothers,11
+Burning Blue,Mariah The Scientist,2
 Burning Bridges,Jack Scott,12
 Burning Bridges,The Mike Curb Congregation,4
 Burning Down The House,Talking Heads,11
@@ -1822,6 +1829,7 @@ Car Wash,Rose Royce,14
 "Cara, Mia",Jay & The Americans,11
 Cara-Lin,The Strangeloves,1
 Caramel,City High Featuring Eve,20
+Caramel,Sleep Token,1
 Cardigan,Taylor Swift,5
 Carefree Highway,Gordon Lightfoot,7
 Careless Whisper,Wham! Featuring George Michael,18
@@ -2407,6 +2415,7 @@ Dancing Machine,Jackson 5,16
 Dancing On The Ceiling,Lionel Richie,14
 Dancing Queen,ABBA,15
 Dancing With A Stranger,Sam Smith & Normani,41
+Dandelion,Ariana Grande,1
 Dandelion,The Rolling Stones,6
 Dandy,Herman's Hermits,8
 Dang Me,Roger Miller,8
@@ -2430,6 +2439,7 @@ Dark Horse,George Harrison,6
 Dark Horse,Katy Perry Featuring Juicy J,46
 Dark Lady,Cher,12
 Dark Side Of The Moon,Lil Wayne Featuring Nicki Minaj,1
+Dark Thoughts,Lil Tecca,3
 Darkness,Eminem,1
 Darlin',The Beach Boys,6
 Darling Be Home Soon,The Lovin' Spoonful,5
@@ -2519,7 +2529,7 @@ Delresto (Echoes),Travis Scott & Beyonce,1
 Delta Dawn,Helen Reddy,14
 Demons,Drake Featuring Fivio Foreign & Sosa Geek,1
 Demons,Imagine Dragons,35
-Denial Is A River,Doechii,7
+Denial Is A River,Doechii,10
 Denise,Randy & The Rainbows,10
 Dependin' On You,The Doobie Brothers,6
 Der Kommissar,After The Fire,14
@@ -2583,7 +2593,7 @@ Die From A Broken Heart,Maddie & Tae,9
 Die Hard,"Kendrick Lamar, Blxst & Amanda Reifer",1
 Die In Your Arms,Justin Bieber,1
 Die Trying,"PARTYNEXTDOOR, Drake & Yebba",4
-Die With A Smile,Lady Gaga & Bruno Mars,31
+Die With A Smile,Lady Gaga & Bruno Mars,39
 Die Young,Ke$ha,20
 Differences,Ginuwine,26
 Different Drum,Stone Poneys Featuring Linda Ronstadt,13
@@ -3200,7 +3210,7 @@ Escape Plan,Travis Scott,1
 Escape-ism (Part 1),James Brown,3
 Escapism,RAYE Featuring 070 Shake,17
 Eso Beso (That Kiss!),Paul Anka,5
-Espresso,Sabrina Carpenter,48
+Espresso,Sabrina Carpenter,56
 Essence,Wizkid Featuring Justin Bieber & Tems,26
 Esskeetit,Lil Pump,2
 Eternal Flame,The Bangles,14
@@ -3315,7 +3325,7 @@ Everytime You Go Away,Paul Young,15
 Everywhere,Fleetwood Mac,10
 Everywhere,Michelle Branch,13
 Evil,Eminem,1
-Evil J0rdan,Playboi Carti,1
+Evil J0rdan,Playboi Carti,2
 Evil Ways,Drake Featuring J. Cole,1
 Evil Ways,Santana,11
 Evil Woman,Electric Light Orchestra,12
@@ -3671,7 +3681,7 @@ Forget Me Nots,Patrice Rushen,7
 Forget You,Glee Cast Featuring Gwyneth Paltrow,2
 Forgot About Dre,Dr. Dre Featuring Eminem,12
 Formation,Beyonce,2
-Fortnight,Taylor Swift Featuring Post Malone,16
+Fortnight,Taylor Swift Featuring Post Malone,17
 Fortress Around Your Heart,Sting,11
 Fortunate,Maxwell,21
 Fortunate Son,Creedence Clearwater Revival,3
@@ -4130,13 +4140,14 @@ Good Lovin',The Young Rascals,12
 Good Lovin' Ain't Easy To Come By,Marvin Gaye & Tammi Terrell,4
 Good Lovin' Gone Bad,Bad Company,2
 Good Luck Charm,Elvis Presley With The Jordanaires,11
-"Good Luck, Babe!",Chappell Roan,42
+"Good Luck, Babe!",Chappell Roan,45
 Good Morning,Chamillionaire,1
 Good Morning Beautiful,Steve Holy,9
 Good Morning Heartache,Diana Ross,4
 Good Morning Starshine,Oliver,11
 Good News,Mac Miller,2
 Good News,Sam Cooke,7
+Good News,Shaboozey,4
 Good Old Rock 'N Roll,Cat Mother & the All Night News Boys,6
 Good Stuff,The B-52s,7
 Good Thing,Fine Young Cannibals,13
@@ -4350,6 +4361,7 @@ Happy Xmas (War Is Over),John & Yoko/The Plastic Ono Band With The Harlem Commun
 Happy-Go-Lucky-Me,Paul Evans,8
 Harbor Lights,The Platters,11
 Hard,Rihanna Featuring Jeezy,14
+Hard Fought Hallelujah,Brandon Lake X Jelly Roll,1
 Hard Habit To Break,Chicago,15
 Hard Headed Woman,Elvis Presley With The Jordanaires,5
 Hard Knock Life (Ghetto Anthem),JAY-Z,16
@@ -4995,6 +5007,7 @@ I (Who Have Nothing),Sylvester,2
 I (Who Have Nothing),Tom Jones,7
 I Adore Him,The Angels,5
 I Adore Mi Amor,Color Me Badd,14
+I Ain't Coming Back,Morgan Wallen & Post Malone,4
 I Ain't Gonna Stand For It,Stevie Wonder,11
 I Ain't Got Time Anymore,The Glass Bottle,3
 I Ain't Never,Webb Pierce,7
@@ -5221,7 +5234,7 @@ I Guess It's Fuck Me,Drake,1
 I Guess That's Why They Call It The Blues,Elton John,15
 I Guess The Lord Must Be In New York City,Nilsson,2
 I Had A Dream,Paul Revere & The Raiders Featuring Mark Lindsay,5
-I Had Some Help,Post Malone Featuring Morgan Wallen,44
+I Had Some Help,Post Malone Featuring Morgan Wallen,52
 I Had Too Much To Dream (Last Night),The Electric Prunes,8
 I Hate Everything,George Strait,3
 I Hate It Here,Taylor Swift,1
@@ -5380,7 +5393,7 @@ I Need Your Love Tonight,Elvis Presley With The Jordanaires,10
 I Need Your Lovin',Teena Marie,3
 I Need Your Loving,Don Gardner And Dee Dee Ford,7
 I Never Cry,Alice Cooper,14
-I Never Lie,Zach Top,3
+I Never Lie,Zach Top,11
 I Never Loved A Man (The Way I Love You),Aretha Franklin,9
 I Never Seen A Man Cry (aka I Seen A Man Die),Scarface,3
 I Only Have Eyes For You,Art Garfunkel,12
@@ -5669,6 +5682,7 @@ I'm A Greedy Man - Part I,James Brown,3
 I'm A Happy Man,The Jive Five,3
 I'm A Hog For You,The Coasters,1
 I'm A Hustla,Cassidy,4
+I'm A Little Crazy,Morgan Wallen,4
 I'm A Man,Fabian,3
 I'm A Man,The Spencer Davis Group,7
 I'm A Man,The Yardbirds,7
@@ -5794,7 +5808,7 @@ I'm The Girl From Wolverton Mountain,Jo Ann Campbell,3
 I'm The One,"DJ Khaled Featuring Justin Bieber, Quavo, Chance The Rapper & Lil Wayne",21
 I'm The One You Need,Jody Watley,11
 I'm The Only One,Melissa Etheridge,29
-I'm The Problem,Morgan Wallen,7
+I'm The Problem,Morgan Wallen,15
 I'm Too Sexy,Right Said Fred,17
 I'm Upset,Drake,9
 I'm With You,Avril Lavigne,24
@@ -6042,6 +6056,7 @@ Indian Lake,The Cowsills,9
 Indian Outlaw,Tim McGraw,10
 Indian Reservation (The Lament Of The Cherokee Reservation Indian),The Raiders,15
 Indiana Wants Me,R. Dean Taylor,13
+Indigo,Sam Barber Featuring Avery Anna,1
 Industry Baby,Lil Nas X & Jack Harlow,41
 Infatuation,Rod Stewart,13
 Informer,Snow,19
@@ -6415,6 +6430,7 @@ Just Give Me A Reason,P!nk Featuring Nate Ruess,30
 Just Got Lucky,Joboxers,4
 Just Got Paid,Johnny Kemp,11
 Just Got Started Lovin' You,James Otto,6
+Just In Case,Morgan Wallen,8
 Just Keep It Up,Dee Clark,9
 Just Kickin' It,Xscape,17
 Just Like A Pill,P!nk,17
@@ -7174,7 +7190,7 @@ Looks Like We Made It,Barry Manilow,13
 Loop De Loop,Johnny Thunder,9
 Lorelei,Styx,5
 Lose Control,Missy Elliott Featuring Ciara & Fat Man Scoop,22
-Lose Control,Teddy Swims,65
+Lose Control,Teddy Swims,73
 Lose It,Kane Brown,2
 Lose My Breath,Destiny's Child,22
 Lose My Mind,Young Jeezy Featuring Plies,1
@@ -7345,7 +7361,7 @@ Love Shack,The B-52s,17
 Love Sneakin' Up On You,Bonnie Raitt,10
 Love So Right,Bee Gees,16
 Love Somebody,Maroon 5,19
-Love Somebody,Morgan Wallen,21
+Love Somebody,Morgan Wallen,29
 Love Somebody,Rick Springfield,12
 Love Song,Anne Murray,10
 Love Song,Sara Bareilles,31
@@ -7460,7 +7476,7 @@ Lullaby,Shawn Mullins,16
 Lullaby Of Love,Frank Gari,6
 Luna,Peso Pluma & Junior H,1
 Lunch,Billie Eilish,12
-Luther,Kendrick Lamar & SZA,17
+Luther,Kendrick Lamar & SZA,25
 Luv,Tory Lanez,15
 Luv U Better,LL Cool J,17
 Luxurious,Gwen Stefani,10
@@ -7713,7 +7729,7 @@ Mercy Mercy Me (The Ecology)/I Want You,Robert Palmer,10
 Merry Christmas,Ed Sheeran & Elton John,1
 Mesmerize,Ja Rule Featuring Ashanti,17
 Message To Michael,Dionne Warwick,8
-Messy,Lola Young,12
+Messy,Lola Young,20
 Method Of Modern Love,Daryl Hall John Oates,11
 Mexican Hat Rock,The Applejacks,9
 Mexico,Bob Moore and His Orch.,10
@@ -7852,6 +7868,7 @@ Money Honey,Bay City Rollers,11
 Money In The Bank,Lil Scrappy Featuring Young Buck,9
 Money In The Grave,Drake Featuring Rick Ross,22
 Money Maker,Ludacris Featuring Pharrell,20
+Money On Money,Young Thug Featuring Future,1
 Money To Blow,Birdman Featuring Lil Wayne & Drake,11
 Money$ Too Tight (To Mention),Simply Red,6
 "Money, Power & Respect",The Lox [Featuring DMX & Lil' Kim],11
@@ -8008,6 +8025,7 @@ Must Be Doin' Somethin' Right,Billy Currington,1
 Must Be Nice,Lyfe Jennings,1
 Must Of Got Lost,The J. Geils Band,7
 Mustang Sally,Wilson Pickett,6
+Mutt,Leon Thomas,8
 My All,Mariah Carey,18
 My Angel Baby,Toby Beau,12
 My Baby,Lil' Romeo,10
@@ -8172,6 +8190,7 @@ Myron,Lil Uzi Vert,1
 Mysterious Ways,U2,15
 Mystery Lady,Billy Ocean,8
 Mystic Eyes,Them,2
+Mystical Magical,Benson Boone,1
 N 2 Deep,Drake Featuring Future,2
 N.H.I.E.,21 Savage & Doja Cat,1
 "N.y., You Got Me Dancing",Andrea True Connection,5
@@ -8394,7 +8413,7 @@ No One,Ray Charles,5
 No One Else,Total,14
 No One Is To Blame,Howard Jones,14
 No One Knows,Dion & The Belmonts,8
-No One Noticed,The Marias,5
+No One Noticed,The Marias,13
 No One To Depend On,Santana,4
 No Ordinary Love,Sade,4
 "No Other Arms, No Other Lips",The Chordettes,4
@@ -8449,7 +8468,7 @@ Nobody's Fool,Cinderella,8
 Nobody's Perfect,Hannah Montana,4
 Nobody's Supposed To Be Here,Deborah Cox,27
 Noid,"Tyler, The Creator",2
-Nokia,Drake,5
+Nokia,Drake,13
 Nola,Billy Williams,3
 Nolia Clap,"Juvenile, Wacko & Skip",4
 None Of Your Business,Salt-N-Pepa,5
@@ -8468,7 +8487,7 @@ Not Enough Time,INXS,7
 Not Finished,Lil Baby,1
 "Not Gon' Cry (From ""Waiting To Exhale"")",Mary J. Blige,17
 Not Just Another Girl,Ivan Neville,6
-Not Like Us,Kendrick Lamar,44
+Not Like Us,Kendrick Lamar,52
 Not Me,The Orlons,7
 Not Myself Tonight,Christina Aguilera,1
 Not One Minute More,Della Reese,8
@@ -8796,7 +8815,7 @@ Operator (That's Not the Way it Feels),Jim Croce,8
 Opportunities (Let's Make Lots Of Money),Pet Shop Boys,9
 Opposites Attract,Paula Abdul (Duet With The Wild Pair),14
 Opus 17 (Don't You Worry 'Bout Me),"The 4 Seasons Featuring the ""Sound of Frankie Valli""",7
-Ordinary,Alex Warren,1
+Ordinary,Alex Warren,9
 Ordinary Day,Vanessa Carlton,8
 Ordinary Life,Chad Brock,2
 Ordinary People,John Legend,11
@@ -9050,7 +9069,7 @@ Pineapple Princess,Annette With The Afterbeats,9
 Pink,Aerosmith,6
 Pink Cadillac,Natalie Cole,12
 Pink Houses,John Mellencamp,11
-Pink Pony Club,Chappell Roan,19
+Pink Pony Club,Chappell Roan,27
 Pink Shoe Laces,Dodie Stevens,14
 Pink Skies,Zach Bryan,24
 Pink Venom,BLACKPINK,1
@@ -9400,7 +9419,7 @@ Rapture,Blondie,14
 Rare,Selena Gomez,1
 Raspberry Beret,Prince And The Revolution,15
 Rather Be,Clean Bandit Featuring Jess Glynne,23
-Rather Lie,Playboi Carti & The Weeknd,1
+Rather Lie,Playboi Carti & The Weeknd,3
 Raw-Hide,Link Wray And The Wraymen,3
 Ray Of Light,Madonna,11
 Reach Out And Touch (Somebody's Hand),Diana Ross,8
@@ -9837,7 +9856,7 @@ Sail,AWOLNATION,36
 Sail On,Commodores,12
 Sailing,Christopher Cross,13
 Sailor (Your Home Is The Sea),Lolita,14
-Sailor Song,Gigi Perez,18
+Sailor Song,Gigi Perez,23
 Saint-Tropez,Post Malone,2
 "Sally, Go 'round The Roses",The Jaynetts,9
 Salt Shaker,Ying Yang Twins Featuring Lil Jon & The East Side Boyz,19
@@ -10657,6 +10676,7 @@ Sorry,Buckcherry,19
 Sorry,Justin Bieber,37
 Sorry (I Ran All The Way Home),The Impalas,11
 Sorry 2004,Ruben Studdard,15
+Sorry I'm Here For Someone Else,Benson Boone,5
 Sorry Not Sorry,"DJ Khaled Featuring Nas, JAY-Z & James Fauntleroy",1
 Sorry Not Sorry,Demi Lovato,29
 Sorry Seems To Be The Hardest Word,Elton John,11
@@ -10739,14 +10759,14 @@ Splish Splash,Bobby Darin,5
 Spoil My Night,Post Malone Featuring Swae Lee,1
 Spooky,Atlanta Rhythm Section,8
 Spooky,Classics IV,12
-Sports Car,Tate McRae,6
+Sports Car,Tate McRae,14
 Spotless,Zach Bryan Featuring The Lumineers,2
 Spotlight,Jennifer Hudson,11
 Spring Rain,Silvetti,3
 Springsteen,Eric Church,16
 Springtime Mama,Henry Gross,2
 Spy In The House Of Love,Was (Not Was),10
-Squabble Up,Kendrick Lamar,16
+Squabble Up,Kendrick Lamar,24
 Squeeze Box,The Who,10
 St. Chroma,"Tyler, The Creator Featuring Daniel Caesar",4
 St. Elmo's Fire (Man In Motion),John Parr,14
@@ -10784,7 +10804,7 @@ Star Wars Theme/Cantina Band,Meco,13
 Starboy,The Weeknd Featuring Daft Punk,30
 Starbright,Johnny Mathis,5
 Stardust,Nino Tempo & April Stevens,3
-Stargazing,Myles Smith,23
+Stargazing,Myles Smith,31
 Stargazing,Travis Scott,4
 Staring At The Sun,Post Malone Featuring SZA,1
 Staring At The Sun,U2,8
@@ -11105,6 +11125,7 @@ Superfly,Curtis Mayfield,13
 Superhero (Heroes & Villains),"Metro Boomin, Future & Chris Brown",16
 Superman,Eminem,10
 Superman,Herbie Mann,6
+Superman,Morgan Wallen,1
 Superman,Taylor Swift,1
 Superman (It's Not Easy),Five For Fighting,22
 Supernatural,Ariana Grande,2
@@ -11244,7 +11265,7 @@ TQM,Fuerza Regida,4
 TSOP (The Sound Of Philadelphia),MFSB Featuring The Three Degrees,14
 TSU,Drake,2
 TUSK,Fleetwood Mac,10
-TV Off,Kendrick Lamar Featuring Lefty Gunplay,17
+TV Off,Kendrick Lamar Featuring Lefty Gunplay,25
 Ta Ta,Clyde McPhatter,5
 Tainted Love,Soft Cell,15
 Take A Back Road,Rodney Atkins,10
@@ -11343,7 +11364,7 @@ Tapioca Tundra,The Monkees,1
 Tar And Cement,Verdelle Smith,2
 Tarot,Bad Bunny & Jhay Cortez,1
 "Tarzan Boy (From ""Teenage Mutant Ninja Turtles III"")",Baltimora,10
-Taste,Sabrina Carpenter,29
+Taste,Sabrina Carpenter,37
 Taste,Tyga Featuring Offset,25
 Taste Of Honey,Herb Alpert & The Tijuana Brass,13
 Tattoo,Jordin Sparks,26
@@ -11492,7 +11513,7 @@ That's My Kind Of Night,Luke Bryan,17
 That's Not My Name,The Ting Tings,1
 That's Old Fashioned (That's The Way Love Should Be),The Everly Brothers,7
 That's Rock 'N' Roll,Shaun Cassidy,15
-That's So True,Gracie Abrams,21
+That's So True,Gracie Abrams,29
 That's That,Snoop Dogg Featuring R. Kelly,10
 That's The Way,Jo Dee Messina,10
 That's The Way,Katrina And The Waves,6
@@ -11695,7 +11716,7 @@ The Girl I Knew Somewhere,The Monkees,1
 The Girl I Used To Know,Brother Beyond,4
 The Girl Is Mine,Michael Jackson And Paul McCartney,14
 The Git Up,Blanco Brown,15
-The Giver,Chappell Roan,1
+The Giver,Chappell Roan,4
 The Glamorous Life,Sheila E.,16
 The Good Life,Tony Bennett,6
 The Good Ones,Gabby Barrett,12
@@ -12351,7 +12372,7 @@ Time Today,Moneybagg Yo,3
 Time Will Reveal,Debarge,11
 Time Won't Let Me,The Outsiders,10
 "Time, Love And Tenderness",Michael Bolton,13
-Timeless,The Weeknd & Playboi Carti,24
+Timeless,The Weeknd & Playboi Carti,32
 Times Of Your Life,Paul Anka,12
 Timothy,The Buoys,8
 Tin Man,America,11
@@ -12460,7 +12481,7 @@ Too Much Tequila,The Champs,5
 Too Much Time On My Hands,Styx,13
 "Too Much, Too Little, Too Late",Johnny Mathis/Deniece Williams,11
 Too Shy,Kajagoogoo,12
-Too Sweet,Hozier,50
+Too Sweet,Hozier,51
 Too Tight,ConFunkShun,1
 Too Weak To Fight,Clarence Carter,11
 Too Young,Donny Osmond,8
@@ -12647,6 +12668,7 @@ Twenty-Five Miles,Edwin Starr,9
 Twerk,City Girls Featuring Cardi B,1
 Twilight,Electric Light Orchestra,2
 Twilight World,Swing Out Sister,3
+Twilight Zone,Ariana Grande,1
 Twilight Zone,Golden Earring,15
 Twilight Zone/Twilight Tone,The Manhattan Transfer,4
 Twine Time,Alvin Cash & The Crawlers,7
@@ -12745,6 +12767,7 @@ Understand Your Man,Johnny Cash,3
 Understanding,Bob Seger,8
 Understanding,Xscape,14
 Undo It,Carrie Underwood,11
+Undressed,sombr,1
 Undun,The Guess Who,6
 Uneasy Rider,Charlie Daniels,9
 Unfaithful,Rihanna,18
@@ -13120,6 +13143,7 @@ Welcome To The Boomtown,David & David,3
 Welcome To The Jungle,Guns N' Roses,12
 "Well, I Told You",The Chantels,3
 Weltita,Bad Bunny & Chuwi,2
+Weren't For The Wind,Ella Langley,3
 Werewolves Of London,Warren Zevon,6
 West Coast,Lana Del Rey,1
 West End Girls,Pet Shop Boys,14
@@ -13219,6 +13243,7 @@ What Time Is It,High School Musical 2 Cast,5
 What U Gon' Do,Lil Jon & The East Side Boyz Featuring Lil Scrappy,9
 What Was I Made For?,Billie Eilish,29
 What Was I Thinkin',Dierks Bentley,10
+What Was That,Lorde,1
 What Will My Mary Say,Johnny Mathis,10
 What Would Pluto Do,Drake,1
 What Would You Do?,City High,25
@@ -13727,6 +13752,7 @@ Worldwide Steppers,Kendrick Lamar,1
 Worried Guy,Johnny Tillotson,2
 Worst Day,Future,1
 Worst That Could Happen,Brooklyn Bridge,10
+Worst Way,Riley Green,5
 Worth It,Fifth Harmony Featuring Kid Ink,24
 Wot's It To Ya,Robbie Nevil,9
 Would I Lie To You?,Charles & Eddie,20
